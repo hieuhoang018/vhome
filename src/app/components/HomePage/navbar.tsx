@@ -10,7 +10,7 @@ export default function MainHeader() {
         <div className="container mx-auto px-4 flex items-center justify-between">
           {/* Logo */}
           <Link href="/">
-            <Image src={logo} alt="VHome logo" width={80}/>
+            <Image src={logo} alt="VHome logo" width={80} />
           </Link>
 
           {/* Navigation */}

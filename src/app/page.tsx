@@ -1,8 +1,11 @@
+import HeroSection from "./components/HomePage/hero-section"
+import ShopSection from "./components/HomePage/shop-section"
 
 export default function Home() {
   return (
     <>
-      <h1>home</h1>
+      <HeroSection />
+      <ShopSection />
     </>
   )
 }
