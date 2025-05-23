@@ -38,17 +38,19 @@ export default function ShopSection() {
 
   return (
     <>
-      <section className="h-150">
-        <h1 className="text-center text-4xl m-5 mt-20">Shop By Room</h1>
-        <p className="text-center text-xl text-furniture-charcoal/70 max-w-200 mx-auto">
-          Find the perfect pieces for every space in your home. Each category
-          features carefully selected items that blend style, function, and
-          quality.
-        </p>
-        <div className="grid grid-cols-4 gap-6 mt-10">
-          {categories.map((category) => {
-            return <FeaturedRoom key={category.name} room={category} />
-          })}
+      <section className="h-150 p-10 section-padding bg-furniture-offwhite">
+        <div className="container mx-auto">
+          <h1 className="text-center font-serif font-semibold text-4xl m-5 mt-10">Shop By Room</h1>
+          <p className="text-center text-xl text-furniture-charcoal/70 max-w-200 mx-auto">
+            Find the perfect pieces for every space in your home. Each category
+            features carefully selected items that blend style, function, and
+            quality.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mt-10">
+            {categories.map((category) => {
+              return <FeaturedRoom key={category.name} room={category} />
+            })}
+          </div>
         </div>
       </section>
     </>

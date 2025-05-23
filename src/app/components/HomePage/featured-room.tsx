@@ -5,7 +5,7 @@ import Link from "next/link"
 export default function FeaturedRoom({ room }: { room: FeatureRoom }) {
   return (
     <>
-      <div className="group relative rounded-md overflow-hidden hover-lift">
+      <div className="group relative rounded-md overflow-hidden hover-lift w-80">
         <div className="aspect-[3/4] relative">
           <Image
             src={room.imageSrc}
@@ -15,9 +15,16 @@ export default function FeaturedRoom({ room }: { room: FeatureRoom }) {
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
           <div className="absolute bottom-0 left-0 right-0 p-6">
-            <p className="text-5xl text-white mb-4">{room.name}</p>
-            <p className="text-xl text-white mb-7">{room.description}</p>
-            <Link href={room.link} className="text-white text-2xl">Shop now</Link>
+            <p className="text-2xl font-serif text-white font-semibold mb-2">
+              {room.name}
+            </p>
+            <p className=" text-white/80 mb-4 text-sm">{room.description}</p>
+            <Link
+              href={room.link}
+              className="inline-flex items-center text-white hover:text-furniture-terracotta transition-colors"
+            >
+              Shop now
+            </Link>
           </div>
         </div>
       </div>
