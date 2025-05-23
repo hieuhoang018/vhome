@@ -1,13 +1,32 @@
+"use client"
 
 import { Heart, Search, ShoppingCart, User } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import logo from "@/app/assets/logo.jpg"
+import logo from "@/app/assets/logo.png"
+import { useState, useEffect } from "react"
 
 export default function MainHeader() {
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+      <header
+        className={
+          isScrolled
+            ? "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm py-3"
+            : "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-5"
+        }
+      >
         <div className="container mx-auto px-4 flex items-center justify-between">
           {/* Logo */}
           <Link href="/">
