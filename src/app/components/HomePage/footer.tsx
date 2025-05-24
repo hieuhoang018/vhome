@@ -46,13 +46,19 @@ export default function Footer() {
             </div>
           </div>
         </div>
+
         <hr
           className="my-8 border-t border-white/20 mx-auto"
           style={{ width: "97%" }}
         />
-        <div>
-          <div className="container mx-auto">
+
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm">
             <h2>VHome</h2>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <h1>test</h1>
+              <h1>test 2</h1>
+            </div>
           </div>
         </div>
       </footer>

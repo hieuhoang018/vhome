@@ -38,9 +38,11 @@ export default function ShopSection() {
 
   return (
     <>
-      <section className="p-10 section-padding bg-furniture-offwhite">
+      <section className="p-10 section-padding">
         <div className="container mx-auto">
-          <h1 className="text-center font-serif font-semibold text-4xl m-5 mt-10">Shop By Room</h1>
+          <h1 className="text-center font-serif font-semibold text-4xl m-5 mt-10">
+            Shop By Room
+          </h1>
           <p className="text-center text-xl text-furniture-charcoal/70 max-w-200 mx-auto">
             Find the perfect pieces for every space in your home. Each category
             features carefully selected items that blend style, function, and
