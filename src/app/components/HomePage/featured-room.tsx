@@ -10,6 +10,7 @@ export default function FeaturedRoom({ room }: { room: FeatureRoom }) {
           <Image
             src={room.imageSrc}
             alt={room.name}
+            fill
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>

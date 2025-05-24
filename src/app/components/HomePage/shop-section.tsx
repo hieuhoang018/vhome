@@ -1,7 +1,3 @@
-import livingRoomImage from "@/app/assets/living-room.png"
-import bedroomImage from "@/app/assets/bedroom.png"
-import bathoomImage from "@/app/assets/bathroom.png"
-import kitchenImage from "@/app/assets/kitchen.png"
 import FeaturedRoom from "./featured-room"
 
 export default function ShopSection() {
@@ -10,28 +6,28 @@ export default function ShopSection() {
       name: "Living Room",
       description:
         "Create a welcoming space with our stylish sofas, coffee tables, and accent pieces.",
-      imageSrc: livingRoomImage,
+      imageSrc: "/images/living-room.png",
       link: "/living-room",
     },
     {
       name: "Bedroom",
       description:
         "Transform your bedroom into a sanctuary with our elegant beds and storage solutions.",
-      imageSrc: bedroomImage,
+      imageSrc: "/images/bedroom.png",
       link: "/bedroom",
     },
     {
       name: "Bathroom",
       description:
         "Transform your bathroom with elegant and practical furniture solutions.",
-      imageSrc: bathoomImage,
+      imageSrc: "/images/bathroom.png",
       link: "/bathroom",
     },
     {
       name: "Kitchen",
       description:
         "Discover stylish and functional kitchen furniture designed to elevate your space.",
-      imageSrc: kitchenImage,
+      imageSrc: "/images/kitchen.png",
       link: "/kitchen",
     },
   ]

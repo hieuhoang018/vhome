@@ -3,7 +3,6 @@
 import { Heart, Search, ShoppingCart, User } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import logo from "@/app/assets/logo.png"
 import { useState, useEffect } from "react"
 
 export default function MainHeader() {
@@ -30,7 +29,7 @@ export default function MainHeader() {
         <div className="container mx-auto px-4 flex items-center justify-between">
           {/* Logo */}
           <Link href="/">
-            <Image src={logo} alt="VHome logo" width={80} />
+            <Image src={"/images/logo.png"} alt="VHome logo" width={80} height={80} />
           </Link>
 
           {/* Navigation */}

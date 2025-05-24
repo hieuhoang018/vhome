@@ -1,5 +1,4 @@
 import Image from "next/image"
-import logo from "@/app/assets/logo.png"
 
 export default function Footer() {
   return (
@@ -12,7 +11,7 @@ export default function Footer() {
           <div className="grid grid-cols-5 gap-15">
             {/* Column 1 */}
             <div className="col-span-2">
-              <Image src={logo} alt="VHome logo" width={150} />
+              <Image src={"/images/logo.png"} alt="VHome logo" width={150} height={150} />
               <p className="mt-5">
                 Creating beautiful, functional spaces with furniture that stands
                 the test of time. Quality craftsmanship for everyday living.
