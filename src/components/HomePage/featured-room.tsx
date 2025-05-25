@@ -1,5 +1,5 @@
 import Image from "next/image"
-import type { FeatureRoom } from "@/app/types/featured-category"
+import type { FeatureRoom } from "@/types/featured-category"
 import Link from "next/link"
 
 export default function FeaturedRoom({ room }: { room: FeatureRoom }) {

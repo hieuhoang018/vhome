@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import "./globals.css"
-import MainHeader from "./components/HomePage/navbar"
-import Footer from "./components/HomePage/footer"
+import MainHeader from "../components/HomePage/navbar"
+import Footer from "../components/HomePage/footer"
 
 export const metadata: Metadata = {
   title: "VHome",

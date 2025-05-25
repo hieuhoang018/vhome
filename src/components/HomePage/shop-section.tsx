@@ -34,7 +34,7 @@ export default function ShopSection() {
 
   return (
     <>
-      <section className="p-10 section-padding">
+      <section className="p-10 section-padding bg-[#FAF9F6]">
         <div className="container mx-auto">
           <h1 className="text-center font-serif font-semibold text-4xl m-5 mt-10">
             Shop By Room
