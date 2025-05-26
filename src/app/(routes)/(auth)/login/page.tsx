@@ -7,7 +7,7 @@ export default function LoginPage() {
     <>
       <div className="flex flex-col justify-center items-center min-h-screen bg-beige-yellow">
         <div className="flex flex-col justify-center items-center mb-6">
-          <Image src={"/images/logo.png"} alt="logo" width={200} height={1}/>
+          <Image src={"/images/logo.png"} alt="logo" width={200} height={1} />
           <h2 className="font-serif text-4xl mb-3">Sign in to your account</h2>
           <h3 className="font-serif text-1xl">
             Or{" "}
@@ -45,10 +45,7 @@ export default function LoginPage() {
                 Remember me
               </label>
               <span>
-                <Link
-                  href={"/forgot"}
-                  className="text-red-500"
-                >
+                <Link href={"/forgot"} className="text-red-500">
                   Forgot your password?
                 </Link>
               </span>

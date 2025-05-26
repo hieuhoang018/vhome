@@ -71,6 +71,7 @@ export default function MainHeader() {
             <button
               type="button"
               className="p-2 rounded hover:bg-gray-100 transition-colors"
+              onClick={() => window.location.href = "/login"}
             >
               <User className="h-5 w-5" />
             </button>

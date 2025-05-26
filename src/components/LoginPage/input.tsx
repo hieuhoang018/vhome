@@ -12,7 +12,6 @@ export default function InputField({
       <label>{label}</label>
       <input
         type={inputType}
-        name={label.toLowerCase()}
         id={label.toLowerCase()}
         placeholder={placeholder}
         className="border p-2 w-full rounded-lg mb-4 mt-2"
