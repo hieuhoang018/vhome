@@ -1,11 +1,11 @@
-import Link from "next/link"
-import { Plus, Minus } from "lucide-react"
-import Image from "next/image"
+"use client"
 
-export default async function IndividualProductListing(props: {
-  params: Promise<{ id: string }>
-}) {
-  const params = await props.params
+import Link from "next/link"
+import Image from "next/image"
+import { Plus, Minus } from "lucide-react"
+import { useState } from "react"
+
+export default function IndividualProductListing() {
   const data = {
     id: 2,
     name: "Woxezu Table",
@@ -17,6 +17,8 @@ export default async function IndividualProductListing(props: {
     imageUrl: "/images/bathroom.png",
     colors: ["Black", "Gray", "Beige", "Yellow", "Navy Blue"],
   }
+  const [amountChosen, setAmountChosen] = useState(1)
+
   return (
     <>
       <div className="min-h-screen bg-white">
@@ -67,16 +69,26 @@ export default async function IndividualProductListing(props: {
                 <div className="mb-5">
                   <h3 className="font-medium mb-2">Quantity</h3>
                   <div className="flex items-center border border-gray-300 rounded-md w-32">
-                    <button className="px-3 py-1 text-furniture-charcoal disabled:text-gray-400">
+                    <button
+                      onClick={() => setAmountChosen(amountChosen - 1)}
+                      disabled={amountChosen === 1}
+                      className="px-3 py-1 text-furniture-charcoal disabled:text-gray-400"
+                    >
                       <Minus className="h-4 w-4" />
                     </button>
-                    <div className="flex-1 text-center font-medium">2</div>
-                    <button className="px-3 py-1 text-furniture-charcoal disabled:text-gray-400">
+                    <div className="flex-1 text-center font-medium">
+                      {amountChosen}
+                    </div>
+                    <button
+                      onClick={() => setAmountChosen(amountChosen + 1)}
+                      disabled={amountChosen === data.stock}
+                      className="px-3 py-1 text-furniture-charcoal disabled:text-gray-400"
+                    >
                       <Plus className="h-4 w-4" />
                     </button>
                   </div>
                   <p className="text-sm text-furniture-charcoal/70 mt-2">
-                    2 in stock
+                    {data.stock} in stock
                   </p>
                 </div>
                 <div className="flex gap-4">
