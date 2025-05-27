@@ -7,15 +7,10 @@ export default function StoreFrontLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-      </head>
-      <body>
-        <MainHeader />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <>
+      <MainHeader />
+      {children}
+      <Footer />
+    </>
   )
 }
