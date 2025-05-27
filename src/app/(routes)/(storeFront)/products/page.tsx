@@ -1,11 +1,10 @@
 import ProductCard from "@/components/ProductsListingPage/product-card"
 import Link from "next/link"
 
-export default function ProductListing({
-  searchParams,
-}: {
-  searchParams?: { page?: string }
+export default async function ProductListing(props: {
+  searchParams?: Promise<{ page?: string }>
 }) {
+  const searchParams = await props.searchParams
   const page = parseInt(searchParams?.page || "1")
 
   const data = [
@@ -259,13 +258,6 @@ export default function ProductListing({
               <option value="price-asc">Price: Low to High</option>
               <option value="price-desc">Price: High to Low</option>
             </select>
-          </div>
-
-          <div className="container mx-auto px-4 mt-6">
-            <p>
-              Showing {startIndex + 1} to {Math.min(endIndex, totalItems)} of{" "}
-              {totalItems} products
-            </p>
           </div>
 
           <div className="container mx-auto px-4 mt-6">
