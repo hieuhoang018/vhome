@@ -29,7 +29,12 @@ export default function MainHeader() {
         <div className="container mx-auto px-4 flex items-center justify-between">
           {/* Logo */}
           <Link href="/">
-            <Image src={"/images/logo.png"} alt="VHome logo" width={80} height={80} />
+            <Image
+              src={"/images/logo.png"}
+              alt="VHome logo"
+              width={80}
+              height={80}
+            />
           </Link>
 
           {/* Navigation */}
@@ -71,7 +76,7 @@ export default function MainHeader() {
             <button
               type="button"
               className="p-2 rounded hover:bg-gray-100 transition-colors"
-              onClick={() => window.location.href = "/login"}
+              onClick={() => (window.location.href = "/login")}
             >
               <User className="h-5 w-5" />
             </button>

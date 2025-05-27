@@ -1,4 +1,4 @@
-import InputField from "@/components/LoginPage/input"
+import InputField from "@/components/AuthenticationPage/input"
 import Image from "next/image"
 import Link from "next/link"
 
