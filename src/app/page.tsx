@@ -1,7 +1,7 @@
-import MainHeader from "@/components/HomePage/navbar"
+import MainHeader from "@/components/navbar"
 import HeroSection from "@/components/HomePage/hero-section"
 import ShopSection from "@/components/HomePage/shop-section"
-import Footer from "@/components/HomePage/footer"
+import Footer from "@/components/footer"
 
 export default function Home() {
   return (

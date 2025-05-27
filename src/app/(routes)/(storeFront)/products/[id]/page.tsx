@@ -51,7 +51,7 @@ export default function IndividualProductListing() {
               />
               <div>
                 <h1 className="text-7xl font-serif mb-5">{data.name}</h1>
-                <h2 className="text-3xl mb-5">€ {data.price}</h2>
+                <h2 className="text-3xl mb-5">€{data.price}</h2>
                 <p className="text-xl mb-5">{data.description}</p>
                 <h2 className="text-2xl font-serif mb-2">Select color</h2>
                 <div className="flex gap-1 mb-5">
