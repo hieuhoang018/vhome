@@ -1,0 +1,1002 @@
+[
+  {
+    "id": 1,
+    "name": "Qokago Rack",
+    "category": "Bathroom",
+    "price": 741.19,
+    "description": "Perfect for small or large bathroom spaces, this towel rack is built to maximize style and usability.",
+    "stock": 46,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Qokago+Rack",
+    "colors": ["Brown", "Red", "Navy Blue", "White", "Green"]
+  },
+  {
+    "id": 2,
+    "name": "Woxezu Table",
+    "category": "Dining Room",
+    "price": 169.98,
+    "description": "Give your dining room a fresh look with this smart and space-saving dining table.",
+    "stock": 32,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Woxezu+Table",
+    "colors": ["Black", "Gray", "Beige", "Yellow", "Navy Blue"]
+  },
+  {
+    "id": 3,
+    "name": "Wuxofi Vanity",
+    "category": "Bathroom",
+    "price": 375.91,
+    "description": "The minimalist design of this vanity makes it an excellent fit for contemporary bathroom interiors.",
+    "stock": 34,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Wuxofi+Vanity",
+    "colors": ["Black", "Red", "Navy Blue", "Green", "Brown"]
+  },
+  {
+    "id": 4,
+    "name": "Seyoki Rack",
+    "category": "Bathroom",
+    "price": 483.43,
+    "description": "Upgrade your bathroom with this modern towel rack, designed to meet both form and function.",
+    "stock": 12,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Seyoki+Rack",
+    "colors": ["Red", "Black", "White", "Beige", "Natural Wood"]
+  },
+  {
+    "id": 5,
+    "name": "Gomuqi Bookshelf",
+    "category": "Office",
+    "price": 269.14,
+    "description": "This stylish bookshelf is perfect for any modern office. Designed for both comfort and function.",
+    "stock": 43,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Gomuqi+Bookshelf",
+    "colors": ["Gray", "Brown", "Yellow", "White", "Navy Blue"]
+  },
+  {
+    "id": 6,
+    "name": "Kujowo Chair",
+    "category": "Dining Room",
+    "price": 866.38,
+    "description": "Perfect for small or large dining room spaces, this dining chair is built to maximize style and usability.",
+    "stock": 14,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Kujowo+Chair",
+    "colors": ["White", "Red", "Brown", "Black", "Green"]
+  },
+  {
+    "id": 7,
+    "name": "Ripuwo Basket",
+    "category": "Bathroom",
+    "price": 521.08,
+    "description": "Transform your bathroom space with this durable and sleek laundry basket.",
+    "stock": 38,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Ripuwo+Basket",
+    "colors": ["Red", "Navy Blue"]
+  },
+  {
+    "id": 8,
+    "name": "Saxige Nightstand",
+    "category": "Bedroom",
+    "price": 753.96,
+    "description": "Give your bedroom a fresh look with this smart and space-saving nightstand.",
+    "stock": 13,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Saxige+Nightstand",
+    "colors": ["Black", "Beige", "Navy Blue", "Natural Wood", "Yellow"]
+  },
+  {
+    "id": 9,
+    "name": "Rujohe Bench",
+    "category": "Outdoor",
+    "price": 862.66,
+    "description": "This versatile garden bench enhances any outdoor, blending practicality with aesthetic charm.",
+    "stock": 44,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Rujohe+Bench",
+    "colors": ["Gray", "Red", "Green"]
+  },
+  {
+    "id": 10,
+    "name": "Bedamu Chair",
+    "category": "Outdoor",
+    "price": 742.71,
+    "description": "With clean lines and a timeless design, this patio chair is a must-have piece for your outdoor.",
+    "stock": 14,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Bedamu+Chair",
+    "colors": ["Green", "White", "Red"]
+  },
+  {
+    "id": 11,
+    "name": "Kiqevo Shelf",
+    "category": "Bathroom",
+    "price": 98.49,
+    "description": "With clean lines and a timeless design, this bathroom shelf is a must-have piece for your bathroom.",
+    "stock": 21,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Kiqevo+Shelf",
+    "colors": ["Red", "Yellow", "Brown", "White"]
+  },
+  {
+    "id": 12,
+    "name": "Busize Chair",
+    "category": "Dining Room",
+    "price": 678.59,
+    "description": "Perfect for small or large dining room spaces, this dining chair is built to maximize style and usability.",
+    "stock": 5,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Busize+Chair",
+    "colors": ["Red", "Natural Wood", "Gray", "White", "Black"]
+  },
+  {
+    "id": 13,
+    "name": "Xugabu Table",
+    "category": "Dining Room",
+    "price": 636.81,
+    "description": "Give your dining room a fresh look with this smart and space-saving buffet table.",
+    "stock": 4,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Xugabu+Table",
+    "colors": ["Gray", "Beige"]
+  },
+  {
+    "id": 14,
+    "name": "Cazoha Stand",
+    "category": "Living Room",
+    "price": 863.32,
+    "description": "Add elegance and utility to your living room with this beautifully crafted tv stand.",
+    "stock": 29,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Cazoha+Stand",
+    "colors": ["Yellow", "White", "Black", "Gray", "Beige"]
+  },
+  {
+    "id": 15,
+    "name": "Quroto Sideboard",
+    "category": "Dining Room",
+    "price": 637.14,
+    "description": "This versatile sideboard enhances any dining room, blending practicality with aesthetic charm.",
+    "stock": 49,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Quroto+Sideboard",
+    "colors": ["Gray", "Green", "Red", "Navy Blue"]
+  },
+  {
+    "id": 16,
+    "name": "Qetadi Sofa",
+    "category": "Living Room",
+    "price": 547.91,
+    "description": "This ergonomic sofa offers lasting support and contemporary flair for your living room.",
+    "stock": 1,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Qetadi+Sofa",
+    "colors": ["Natural Wood", "Beige", "Gray"]
+  },
+  {
+    "id": 17,
+    "name": "Cinuye Box",
+    "category": "Outdoor",
+    "price": 493.52,
+    "description": "The minimalist design of this deck box makes it an excellent fit for contemporary outdoor interiors.",
+    "stock": 44,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Cinuye+Box",
+    "colors": ["White", "Yellow", "Beige"]
+  },
+  {
+    "id": 18,
+    "name": "Ragawa Shelf",
+    "category": "Bathroom",
+    "price": 566.51,
+    "description": "Give your bathroom a fresh look with this smart and space-saving bathroom shelf.",
+    "stock": 28,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Ragawa+Shelf",
+    "colors": ["Beige", "Yellow", "Navy Blue", "Brown"]
+  },
+  {
+    "id": 19,
+    "name": "Luniro Table",
+    "category": "Living Room",
+    "price": 353.65,
+    "description": "Add elegance and utility to your living room with this beautifully crafted coffee table.",
+    "stock": 33,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Luniro+Table",
+    "colors": ["Brown", "Yellow", "Navy Blue", "Black"]
+  },
+  {
+    "id": 20,
+    "name": "Xegude Bed",
+    "category": "Bedroom",
+    "price": 597.06,
+    "description": "Upgrade your bedroom with this modern bed, designed to meet both form and function.",
+    "stock": 43,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Xegude+Bed",
+    "colors": ["Black", "Gray", "Navy Blue"]
+  },
+  {
+    "id": 21,
+    "name": "Xapiri Dresser",
+    "category": "Bedroom",
+    "price": 229.34,
+    "description": "Add elegance and utility to your bedroom with this beautifully crafted dresser.",
+    "stock": 17,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Xapiri+Dresser",
+    "colors": ["Yellow", "Black", "Brown"]
+  },
+  {
+    "id": 22,
+    "name": "Hiruvo Chair",
+    "category": "Dining Room",
+    "price": 397.74,
+    "description": "The minimalist design of this dining chair makes it an excellent fit for contemporary dining room interiors.",
+    "stock": 13,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Hiruvo+Chair",
+    "colors": ["Brown", "Red", "Green", "Gray"]
+  },
+  {
+    "id": 23,
+    "name": "Lareto Box",
+    "category": "Outdoor",
+    "price": 529.54,
+    "description": "This stylish deck box is perfect for any modern outdoor. Designed for both comfort and function.",
+    "stock": 6,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Lareto+Box",
+    "colors": ["White", "Gray"]
+  },
+  {
+    "id": 24,
+    "name": "Sugibi Box",
+    "category": "Outdoor",
+    "price": 737.6,
+    "description": "Perfect for small or large outdoor spaces, this deck box is built to maximize style and usability.",
+    "stock": 3,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Sugibi+Box",
+    "colors": ["Green", "Brown"]
+  },
+  {
+    "id": 25,
+    "name": "Cirawa Chair",
+    "category": "Outdoor",
+    "price": 656.7,
+    "description": "The minimalist design of this patio chair makes it an excellent fit for contemporary outdoor interiors.",
+    "stock": 42,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Cirawa+Chair",
+    "colors": ["Green", "Red", "Beige"]
+  },
+  {
+    "id": 26,
+    "name": "Piroxi Box",
+    "category": "Outdoor",
+    "price": 771.73,
+    "description": "Give your outdoor a fresh look with this smart and space-saving deck box.",
+    "stock": 14,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Piroxi+Box",
+    "colors": ["Black", "White", "Red"]
+  },
+  {
+    "id": 27,
+    "name": "Dovawe Table",
+    "category": "Outdoor",
+    "price": 746.63,
+    "description": "Add elegance and utility to your outdoor with this beautifully crafted outdoor table.",
+    "stock": 12,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Dovawe+Table",
+    "colors": ["White", "Black", "Natural Wood", "Green", "Beige"]
+  },
+  {
+    "id": 28,
+    "name": "Nohapi Desk",
+    "category": "Office",
+    "price": 844.44,
+    "description": "Transform your office space with this durable and sleek office desk.",
+    "stock": 34,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Nohapi+Desk",
+    "colors": ["Black", "Red"]
+  },
+  {
+    "id": 29,
+    "name": "Bivadu Vanity",
+    "category": "Bathroom",
+    "price": 56.5,
+    "description": "Give your bathroom a fresh look with this smart and space-saving vanity.",
+    "stock": 8,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Bivadu+Vanity",
+    "colors": ["Gray", "Navy Blue"]
+  },
+  {
+    "id": 30,
+    "name": "Vutaqu Table",
+    "category": "Living Room",
+    "price": 757.9,
+    "description": "This stylish coffee table is perfect for any modern living room. Designed for both comfort and function.",
+    "stock": 36,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Vutaqu+Table",
+    "colors": ["White", "Red", "Beige"]
+  },
+  {
+    "id": 31,
+    "name": "Geveqi Table",
+    "category": "Living Room",
+    "price": 359.19,
+    "description": "Give your living room a fresh look with this smart and space-saving coffee table.",
+    "stock": 44,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Geveqi+Table",
+    "colors": ["Yellow", "Black", "Gray"]
+  },
+  {
+    "id": 32,
+    "name": "Rosowa Bookshelf",
+    "category": "Living Room",
+    "price": 227.49,
+    "description": "Give your living room a fresh look with this smart and space-saving bookshelf.",
+    "stock": 38,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Rosowa+Bookshelf",
+    "colors": ["Natural Wood", "Gray"]
+  },
+  {
+    "id": 33,
+    "name": "Tumuxe Chair",
+    "category": "Dining Room",
+    "price": 757.6,
+    "description": "This stylish dining chair is perfect for any modern dining room. Designed for both comfort and function.",
+    "stock": 9,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Tumuxe+Chair",
+    "colors": ["Yellow", "Black", "Red", "Green", "Gray"]
+  },
+  {
+    "id": 34,
+    "name": "Jinuje Stand",
+    "category": "Living Room",
+    "price": 734.03,
+    "description": "Add elegance and utility to your living room with this beautifully crafted tv stand.",
+    "stock": 16,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Jinuje+Stand",
+    "colors": ["Beige", "Navy Blue", "Brown", "Black", "Gray"]
+  },
+  {
+    "id": 35,
+    "name": "Yasixo Wardrobe",
+    "category": "Bedroom",
+    "price": 817.83,
+    "description": "Add elegance and utility to your bedroom with this beautifully crafted wardrobe.",
+    "stock": 17,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Yasixo+Wardrobe",
+    "colors": ["Red", "Green", "Black", "Beige"]
+  },
+  {
+    "id": 36,
+    "name": "Larigu Chair",
+    "category": "Outdoor",
+    "price": 100.2,
+    "description": "Transform your outdoor space with this durable and sleek patio chair.",
+    "stock": 43,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Larigu+Chair",
+    "colors": ["Natural Wood", "Green", "Navy Blue", "Red"]
+  },
+  {
+    "id": 37,
+    "name": "Fomozi Basket",
+    "category": "Bathroom",
+    "price": 714.89,
+    "description": "Perfect for small or large bathroom spaces, this laundry basket is built to maximize style and usability.",
+    "stock": 17,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Fomozi+Basket",
+    "colors": ["Navy Blue", "White", "Red", "Beige"]
+  },
+  {
+    "id": 38,
+    "name": "Karani Sofa",
+    "category": "Living Room",
+    "price": 421.01,
+    "description": "Add elegance and utility to your living room with this beautifully crafted sofa.",
+    "stock": 23,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Karani+Sofa",
+    "colors": ["Gray", "White"]
+  },
+  {
+    "id": 39,
+    "name": "Notuku Table",
+    "category": "Dining Room",
+    "price": 129.77,
+    "description": "This stylish buffet table is perfect for any modern dining room. Designed for both comfort and function.",
+    "stock": 49,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Notuku+Table",
+    "colors": ["Beige", "Navy Blue"]
+  },
+  {
+    "id": 40,
+    "name": "Bagefu Bookshelf",
+    "category": "Office",
+    "price": 593.22,
+    "description": "Add elegance and utility to your office with this beautifully crafted bookshelf.",
+    "stock": 28,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Bagefu+Bookshelf",
+    "colors": ["Natural Wood", "White", "Navy Blue"]
+  },
+  {
+    "id": 41,
+    "name": "Cinayu Cabinet",
+    "category": "Bathroom",
+    "price": 868.04,
+    "description": "This stylish mirror cabinet is perfect for any modern bathroom. Designed for both comfort and function.",
+    "stock": 35,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Cinayu+Cabinet",
+    "colors": ["Navy Blue", "Yellow", "Black", "White"]
+  },
+  {
+    "id": 42,
+    "name": "Gotaka Table",
+    "category": "Living Room",
+    "price": 408.1,
+    "description": "Upgrade your living room with this modern coffee table, designed to meet both form and function.",
+    "stock": 21,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Gotaka+Table",
+    "colors": ["Brown", "Red", "White"]
+  },
+  {
+    "id": 43,
+    "name": "Ritefa Table",
+    "category": "Dining Room",
+    "price": 788.38,
+    "description": "This ergonomic dining table offers lasting support and contemporary flair for your dining room.",
+    "stock": 46,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Ritefa+Table",
+    "colors": ["White", "Brown", "Gray"]
+  },
+  {
+    "id": 44,
+    "name": "Zihuwa Bookshelf",
+    "category": "Office",
+    "price": 190.42,
+    "description": "This stylish bookshelf is perfect for any modern office. Designed for both comfort and function.",
+    "stock": 9,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Zihuwa+Bookshelf",
+    "colors": ["Natural Wood", "Gray", "Green", "Brown", "Yellow"]
+  },
+  {
+    "id": 45,
+    "name": "Nolabi Box",
+    "category": "Outdoor",
+    "price": 421.96,
+    "description": "Add elegance and utility to your outdoor with this beautifully crafted deck box.",
+    "stock": 5,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Nolabi+Box",
+    "colors": ["White", "Beige", "Brown", "Green"]
+  },
+  {
+    "id": 46,
+    "name": "Gajika Rack",
+    "category": "Bathroom",
+    "price": 815.92,
+    "description": "Transform your bathroom space with this durable and sleek towel rack.",
+    "stock": 41,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Gajika+Rack",
+    "colors": ["Gray", "Navy Blue", "Green", "Natural Wood"]
+  },
+  {
+    "id": 47,
+    "name": "Wonavu Box",
+    "category": "Outdoor",
+    "price": 50.98,
+    "description": "Perfect for small or large outdoor spaces, this deck box is built to maximize style and usability.",
+    "stock": 50,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Wonavu+Box",
+    "colors": ["Natural Wood", "Navy Blue", "Brown", "White"]
+  },
+  {
+    "id": 48,
+    "name": "Juhoce Desk",
+    "category": "Office",
+    "price": 136.62,
+    "description": "Add elegance and utility to your office with this beautifully crafted office desk.",
+    "stock": 42,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Juhoce+Desk",
+    "colors": ["Green", "Brown", "Black", "Red", "White"]
+  },
+  {
+    "id": 49,
+    "name": "Xarojo Bed",
+    "category": "Bedroom",
+    "price": 817.43,
+    "description": "Give your bedroom a fresh look with this smart and space-saving bed.",
+    "stock": 23,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Xarojo+Bed",
+    "colors": ["Black", "Green", "Yellow", "Beige", "Gray"]
+  },
+  {
+    "id": 50,
+    "name": "Royuva Table",
+    "category": "Outdoor",
+    "price": 331.68,
+    "description": "This stylish outdoor table is perfect for any modern outdoor. Designed for both comfort and function.",
+    "stock": 16,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Royuva+Table",
+    "colors": ["Gray", "Beige", "Green", "Red", "Brown"]
+  },
+  {
+    "id": 51,
+    "name": "Gagisi Bookshelf",
+    "category": "Living Room",
+    "price": 190.21,
+    "description": "This ergonomic bookshelf offers lasting support and contemporary flair for your living room.",
+    "stock": 43,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Gagisi+Bookshelf",
+    "colors": ["Green", "Brown", "Natural Wood", "Gray"]
+  },
+  {
+    "id": 52,
+    "name": "Kevuxe Table",
+    "category": "Dining Room",
+    "price": 842.93,
+    "description": "Give your dining room a fresh look with this smart and space-saving buffet table.",
+    "stock": 27,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Kevuxe+Table",
+    "colors": ["Natural Wood", "Beige", "Brown"]
+  },
+  {
+    "id": 53,
+    "name": "Viluru Table",
+    "category": "Living Room",
+    "price": 714.89,
+    "description": "Add elegance and utility to your living room with this beautifully crafted coffee table.",
+    "stock": 30,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Viluru+Table",
+    "colors": ["Yellow", "Brown", "White"]
+  },
+  {
+    "id": 54,
+    "name": "Jojequ Chair",
+    "category": "Office",
+    "price": 315.95,
+    "description": "Perfect for small or large office spaces, this office chair is built to maximize style and usability.",
+    "stock": 17,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Jojequ+Chair",
+    "colors": ["Navy Blue", "White", "Black", "Green", "Yellow"]
+  },
+  {
+    "id": 55,
+    "name": "Xuzite Wardrobe",
+    "category": "Bedroom",
+    "price": 485.33,
+    "description": "Add elegance and utility to your bedroom with this beautifully crafted wardrobe.",
+    "stock": 41,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Xuzite+Wardrobe",
+    "colors": ["Red", "Natural Wood", "Beige"]
+  },
+  {
+    "id": 56,
+    "name": "Sufiqi Wardrobe",
+    "category": "Bedroom",
+    "price": 701.59,
+    "description": "This versatile wardrobe enhances any bedroom, blending practicality with aesthetic charm.",
+    "stock": 35,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Sufiqi+Wardrobe",
+    "colors": ["Black", "Navy Blue"]
+  },
+  {
+    "id": 57,
+    "name": "Zoduru Chair",
+    "category": "Outdoor",
+    "price": 812.67,
+    "description": "This versatile patio chair enhances any outdoor, blending practicality with aesthetic charm.",
+    "stock": 14,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Zoduru+Chair",
+    "colors": ["Brown", "Yellow"]
+  },
+  {
+    "id": 58,
+    "name": "Zowadu Rack",
+    "category": "Bathroom",
+    "price": 261.25,
+    "description": "This stylish towel rack is perfect for any modern bathroom. Designed for both comfort and function.",
+    "stock": 11,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Zowadu+Rack",
+    "colors": ["Brown", "Black"]
+  },
+  {
+    "id": 59,
+    "name": "Malujo Sideboard",
+    "category": "Dining Room",
+    "price": 859.39,
+    "description": "Perfect for small or large dining room spaces, this sideboard is built to maximize style and usability.",
+    "stock": 11,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Malujo+Sideboard",
+    "colors": ["Green", "Red", "Gray"]
+  },
+  {
+    "id": 60,
+    "name": "Gidezu Bench",
+    "category": "Outdoor",
+    "price": 241.11,
+    "description": "The minimalist design of this garden bench makes it an excellent fit for contemporary outdoor interiors.",
+    "stock": 13,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Gidezu+Bench",
+    "colors": ["Black", "Brown"]
+  },
+  {
+    "id": 61,
+    "name": "Ropini Sofa",
+    "category": "Living Room",
+    "price": 173.28,
+    "description": "The minimalist design of this sofa makes it an excellent fit for contemporary living room interiors.",
+    "stock": 13,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Ropini+Sofa",
+    "colors": ["Natural Wood", "Red", "Navy Blue", "Green", "White"]
+  },
+  {
+    "id": 62,
+    "name": "Kojoge Box",
+    "category": "Outdoor",
+    "price": 490.44,
+    "description": "Upgrade your outdoor with this modern deck box, designed to meet both form and function.",
+    "stock": 28,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Kojoge+Box",
+    "colors": ["Yellow", "Gray", "Red"]
+  },
+  {
+    "id": 63,
+    "name": "Vobema Chair",
+    "category": "Dining Room",
+    "price": 63.85,
+    "description": "With clean lines and a timeless design, this dining chair is a must-have piece for your dining room.",
+    "stock": 30,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Vobema+Chair",
+    "colors": ["Natural Wood", "Brown"]
+  },
+  {
+    "id": 64,
+    "name": "Rinihu Bookshelf",
+    "category": "Living Room",
+    "price": 735.12,
+    "description": "With clean lines and a timeless design, this bookshelf is a must-have piece for your living room.",
+    "stock": 50,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Rinihu+Bookshelf",
+    "colors": ["Navy Blue", "Brown"]
+  },
+  {
+    "id": 65,
+    "name": "Pirido Wardrobe",
+    "category": "Bedroom",
+    "price": 779.44,
+    "description": "Perfect for small or large bedroom spaces, this wardrobe is built to maximize style and usability.",
+    "stock": 28,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Pirido+Wardrobe",
+    "colors": ["Brown", "Black", "Red", "Navy Blue"]
+  },
+  {
+    "id": 66,
+    "name": "Fiqewi Table",
+    "category": "Living Room",
+    "price": 298.51,
+    "description": "This versatile coffee table enhances any living room, blending practicality with aesthetic charm.",
+    "stock": 41,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Fiqewi+Table",
+    "colors": ["Beige", "Black", "White", "Green", "Red"]
+  },
+  {
+    "id": 67,
+    "name": "Lufixo Bed",
+    "category": "Bedroom",
+    "price": 274.13,
+    "description": "Upgrade your bedroom with this modern bed, designed to meet both form and function.",
+    "stock": 16,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Lufixo+Bed",
+    "colors": ["Brown", "Yellow", "Navy Blue", "Beige", "Black"]
+  },
+  {
+    "id": 68,
+    "name": "Nepote Nightstand",
+    "category": "Bedroom",
+    "price": 69.36,
+    "description": "Transform your bedroom space with this durable and sleek nightstand.",
+    "stock": 41,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Nepote+Nightstand",
+    "colors": ["Yellow", "Natural Wood", "Gray"]
+  },
+  {
+    "id": 69,
+    "name": "Zivaxi Sideboard",
+    "category": "Dining Room",
+    "price": 789.76,
+    "description": "This ergonomic sideboard offers lasting support and contemporary flair for your dining room.",
+    "stock": 1,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Zivaxi+Sideboard",
+    "colors": ["Red", "Gray", "Black"]
+  },
+  {
+    "id": 70,
+    "name": "Qaviwe Sideboard",
+    "category": "Dining Room",
+    "price": 717.42,
+    "description": "With clean lines and a timeless design, this sideboard is a must-have piece for your dining room.",
+    "stock": 44,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Qaviwe+Sideboard",
+    "colors": ["Natural Wood", "White", "Yellow", "Gray", "Black"]
+  },
+  {
+    "id": 71,
+    "name": "Jupuja Dresser",
+    "category": "Bedroom",
+    "price": 508.77,
+    "description": "Transform your bedroom space with this durable and sleek dresser.",
+    "stock": 8,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Jupuja+Dresser",
+    "colors": ["Gray", "Brown", "Red", "White"]
+  },
+  {
+    "id": 72,
+    "name": "Tuluro Table",
+    "category": "Living Room",
+    "price": 208.88,
+    "description": "Transform your living room space with this durable and sleek coffee table.",
+    "stock": 33,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Tuluro+Table",
+    "colors": ["White", "Natural Wood", "Red", "Yellow"]
+  },
+  {
+    "id": 73,
+    "name": "Xowoge Desk",
+    "category": "Office",
+    "price": 698.07,
+    "description": "The minimalist design of this office desk makes it an excellent fit for contemporary office interiors.",
+    "stock": 21,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Xowoge+Desk",
+    "colors": ["White", "Green"]
+  },
+  {
+    "id": 74,
+    "name": "Leliqo Vanity",
+    "category": "Bathroom",
+    "price": 375.29,
+    "description": "Upgrade your bathroom with this modern vanity, designed to meet both form and function.",
+    "stock": 25,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Leliqo+Vanity",
+    "colors": ["Natural Wood", "Red", "Beige", "Yellow", "Gray"]
+  },
+  {
+    "id": 75,
+    "name": "Picivu Chair",
+    "category": "Dining Room",
+    "price": 655.48,
+    "description": "Give your dining room a fresh look with this smart and space-saving dining chair.",
+    "stock": 50,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Picivu+Chair",
+    "colors": ["Beige", "White", "Natural Wood"]
+  },
+  {
+    "id": 76,
+    "name": "Domine Bookshelf",
+    "category": "Office",
+    "price": 439.5,
+    "description": "Transform your office space with this durable and sleek bookshelf.",
+    "stock": 41,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Domine+Bookshelf",
+    "colors": ["Green", "Navy Blue", "White", "Red"]
+  },
+  {
+    "id": 77,
+    "name": "Xijiqi Wardrobe",
+    "category": "Bedroom",
+    "price": 617.92,
+    "description": "This stylish wardrobe is perfect for any modern bedroom. Designed for both comfort and function.",
+    "stock": 6,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Xijiqi+Wardrobe",
+    "colors": ["Red", "White", "Beige", "Yellow"]
+  },
+  {
+    "id": 78,
+    "name": "Wuvemo Shelf",
+    "category": "Bathroom",
+    "price": 864.96,
+    "description": "This versatile bathroom shelf enhances any bathroom, blending practicality with aesthetic charm.",
+    "stock": 3,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Wuvemo+Shelf",
+    "colors": ["White", "Beige", "Gray", "Red"]
+  },
+  {
+    "id": 79,
+    "name": "Lasuga Stand",
+    "category": "Living Room",
+    "price": 593.36,
+    "description": "Perfect for small or large living room spaces, this tv stand is built to maximize style and usability.",
+    "stock": 33,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Lasuga+Stand",
+    "colors": ["Natural Wood", "Red", "White", "Gray"]
+  },
+  {
+    "id": 80,
+    "name": "Cudiki Wardrobe",
+    "category": "Bedroom",
+    "price": 717.96,
+    "description": "This stylish wardrobe is perfect for any modern bedroom. Designed for both comfort and function.",
+    "stock": 33,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Cudiki+Wardrobe",
+    "colors": ["White", "Red", "Gray", "Brown"]
+  },
+  {
+    "id": 81,
+    "name": "Suvade Chair",
+    "category": "Outdoor",
+    "price": 732.49,
+    "description": "Give your outdoor a fresh look with this smart and space-saving patio chair.",
+    "stock": 10,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Suvade+Chair",
+    "colors": ["Green", "Natural Wood", "Red", "Beige"]
+  },
+  {
+    "id": 82,
+    "name": "Gupeqi Table",
+    "category": "Dining Room",
+    "price": 483.36,
+    "description": "With clean lines and a timeless design, this dining table is a must-have piece for your dining room.",
+    "stock": 44,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Gupeqi+Table",
+    "colors": ["Natural Wood", "Navy Blue", "White", "Gray", "Yellow"]
+  },
+  {
+    "id": 83,
+    "name": "Voboxe Cabinet",
+    "category": "Bathroom",
+    "price": 593.66,
+    "description": "This versatile mirror cabinet enhances any bathroom, blending practicality with aesthetic charm.",
+    "stock": 1,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Voboxe+Cabinet",
+    "colors": ["White", "Green"]
+  },
+  {
+    "id": 84,
+    "name": "Calave Vanity",
+    "category": "Bathroom",
+    "price": 288.92,
+    "description": "This ergonomic vanity offers lasting support and contemporary flair for your bathroom.",
+    "stock": 30,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Calave+Vanity",
+    "colors": ["Red", "Yellow", "Brown", "Green"]
+  },
+  {
+    "id": 85,
+    "name": "Sayaxo Bench",
+    "category": "Outdoor",
+    "price": 817.2,
+    "description": "Give your outdoor a fresh look with this smart and space-saving garden bench.",
+    "stock": 28,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Sayaxo+Bench",
+    "colors": ["Natural Wood", "Brown", "Red", "White"]
+  },
+  {
+    "id": 86,
+    "name": "Kotefa Box",
+    "category": "Outdoor",
+    "price": 779.29,
+    "description": "This stylish deck box is perfect for any modern outdoor. Designed for both comfort and function.",
+    "stock": 26,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Kotefa+Box",
+    "colors": ["Brown", "Yellow", "Green"]
+  },
+  {
+    "id": 87,
+    "name": "Kivola Bench",
+    "category": "Outdoor",
+    "price": 499.42,
+    "description": "Perfect for small or large outdoor spaces, this garden bench is built to maximize style and usability.",
+    "stock": 20,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Kivola+Bench",
+    "colors": ["White", "Yellow", "Navy Blue", "Gray"]
+  },
+  {
+    "id": 88,
+    "name": "Zagata Sofa",
+    "category": "Living Room",
+    "price": 271.8,
+    "description": "This ergonomic sofa offers lasting support and contemporary flair for your living room.",
+    "stock": 12,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Zagata+Sofa",
+    "colors": ["Navy Blue", "Natural Wood", "Black"]
+  },
+  {
+    "id": 89,
+    "name": "Dayotu Table",
+    "category": "Dining Room",
+    "price": 347.97,
+    "description": "Upgrade your dining room with this modern dining table, designed to meet both form and function.",
+    "stock": 49,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Dayotu+Table",
+    "colors": ["Red", "Yellow", "Navy Blue"]
+  },
+  {
+    "id": 90,
+    "name": "Peciqa Table",
+    "category": "Dining Room",
+    "price": 430.04,
+    "description": "This stylish buffet table is perfect for any modern dining room. Designed for both comfort and function.",
+    "stock": 30,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Peciqa+Table",
+    "colors": ["Navy Blue", "Natural Wood", "Red"]
+  },
+  {
+    "id": 91,
+    "name": "Guwifo Table",
+    "category": "Dining Room",
+    "price": 740.19,
+    "description": "Give your dining room a fresh look with this smart and space-saving dining table.",
+    "stock": 21,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Guwifo+Table",
+    "colors": ["Gray", "Yellow"]
+  },
+  {
+    "id": 92,
+    "name": "Cafuha Box",
+    "category": "Outdoor",
+    "price": 877.68,
+    "description": "With clean lines and a timeless design, this deck box is a must-have piece for your outdoor.",
+    "stock": 49,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Cafuha+Box",
+    "colors": ["Gray", "Green", "Navy Blue", "Brown"]
+  },
+  {
+    "id": 93,
+    "name": "Nagiqu Desk",
+    "category": "Office",
+    "price": 457.15,
+    "description": "Perfect for small or large office spaces, this office desk is built to maximize style and usability.",
+    "stock": 18,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Nagiqu+Desk",
+    "colors": ["Gray", "Beige", "Red"]
+  },
+  {
+    "id": 94,
+    "name": "Tugoja Desk",
+    "category": "Office",
+    "price": 350.46,
+    "description": "Upgrade your office with this modern office desk, designed to meet both form and function.",
+    "stock": 28,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Tugoja+Desk",
+    "colors": ["Black", "Red", "Gray"]
+  },
+  {
+    "id": 95,
+    "name": "Qewixe Table",
+    "category": "Outdoor",
+    "price": 870.65,
+    "description": "Upgrade your outdoor with this modern outdoor table, designed to meet both form and function.",
+    "stock": 21,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Qewixe+Table",
+    "colors": ["Yellow", "White"]
+  },
+  {
+    "id": 96,
+    "name": "Rakena Vanity",
+    "category": "Bathroom",
+    "price": 180.07,
+    "description": "Add elegance and utility to your bathroom with this beautifully crafted vanity.",
+    "stock": 30,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Rakena+Vanity",
+    "colors": ["Gray", "Yellow", "Brown", "Beige", "Natural Wood"]
+  },
+  {
+    "id": 97,
+    "name": "Sezaqu Table",
+    "category": "Dining Room",
+    "price": 377.12,
+    "description": "Give your dining room a fresh look with this smart and space-saving dining table.",
+    "stock": 47,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Sezaqu+Table",
+    "colors": ["Red", "White", "Beige", "Green"]
+  },
+  {
+    "id": 98,
+    "name": "Cuxuwu Bed",
+    "category": "Bedroom",
+    "price": 196.57,
+    "description": "This ergonomic bed offers lasting support and contemporary flair for your bedroom.",
+    "stock": 3,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Cuxuwu+Bed",
+    "colors": ["Gray", "Green", "Brown"]
+  },
+  {
+    "id": 99,
+    "name": "Beniva Basket",
+    "category": "Bathroom",
+    "price": 329.97,
+    "description": "The minimalist design of this laundry basket makes it an excellent fit for contemporary bathroom interiors.",
+    "stock": 16,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Beniva+Basket",
+    "colors": ["White", "Green", "Red", "Brown"]
+  },
+  {
+    "id": 100,
+    "name": "Xomehi Cabinet",
+    "category": "Office",
+    "price": 551.45,
+    "description": "With clean lines and a timeless design, this filing cabinet is a must-have piece for your office.",
+    "stock": 49,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Xomehi+Cabinet",
+    "colors": ["Natural Wood", "Green", "White", "Red"]
+  }
+]
