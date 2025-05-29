@@ -1,10 +1,11 @@
-const fs = require("fs")
+import * as fs from "fs"
+import { Request, Response } from "express"
 
 const products = JSON.parse(
   fs.readFileSync(`${__dirname}/../data/products-data.json`, "utf-8")
 )
 
-exports.getAllProducts = (req, res) => {
+export const getAllProducts = (req: Request, res: Response) => {
   res.status(200).json({
     status: "success",
     results: products.length,
@@ -14,11 +15,11 @@ exports.getAllProducts = (req, res) => {
   })
 }
 
-exports.getProductsById = (req, res) => {
+export const getProductsById = (req: Request, res: Response) => {
   console.log(req.params)
 }
 
-exports.createProduct = (req, res) => {
+export const createProduct = (req: Request, res: Response) => {
   const newId = products[products.length - 1].id + 1
   const newProduct = Object.assign(
     {
@@ -43,10 +44,10 @@ exports.createProduct = (req, res) => {
   )
 }
 
-exports.updateProduct = (req, res) => {
+export const updateProduct = (req: Request, res: Response) => {
   console.log("patched")
 }
 
-exports.deleteProduct = (req, res) => {
+export const deleteProduct = (req: Request, res: Response) => {
   console.log("deleted")
 }
