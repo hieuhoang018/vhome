@@ -1,53 +1,94 @@
-import * as fs from "fs"
 import { Request, Response } from "express"
+import Product from "../models/productModel"
 
-const products = JSON.parse(
-  fs.readFileSync(`${__dirname}/../data/products-data.json`, "utf-8")
-)
+export const getAllProducts = async (req: Request, res: Response) => {
+  try {
+    const products = await Product.find()
 
-export const getAllProducts = (req: Request, res: Response) => {
-  res.status(200).json({
-    status: "success",
-    results: products.length,
-    data: {
-      products,
-    },
-  })
+    res.status(200).json({
+      status: "success",
+      results: products.length,
+      data: {
+        products,
+      },
+    })
+  } catch (err) {
+    res.status(404).json({
+      status: "fail",
+      message: "cant find products",
+    })
+  }
 }
 
-export const getProductsById = (req: Request, res: Response) => {
-  console.log(req.params)
+export const getProductsById = async (req: Request, res: Response) => {
+  try {
+    const product = await Product.findById(req.params.id)
+
+    res.status(200).json({
+      status: "success",
+      data: {
+        product,
+      },
+    })
+  } catch (err) {
+    res.status(404).json({
+      status: "fail",
+      message: "cant find product",
+    })
+  }
 }
 
-export const createProduct = (req: Request, res: Response) => {
-  const newId = products[products.length - 1].id + 1
-  const newProduct = Object.assign(
-    {
-      id: newId,
-    },
-    req.body
-  )
+export const createProduct = async (req: Request, res: Response) => {
+  try {
+    const newProduct = await Product.create(req.body)
 
-  products.push(newProduct)
-
-  fs.writeFile(
-    `${__dirname}/data/products-data.json`,
-    JSON.stringify(products),
-    (err) => {
-      res.status(201).json({
-        status: "success",
-        data: {
-          product: newProduct,
-        },
-      })
-    }
-  )
+    res.status(201).json({
+      status: "success",
+      data: {
+        product: newProduct,
+      },
+    })
+  } catch (err) {
+    res.status(404).json({
+      status: "fail",
+      message: "cant find",
+    })
+  }
 }
 
-export const updateProduct = (req: Request, res: Response) => {
-  console.log("patched")
+export const updateProduct = async (req: Request, res: Response) => {
+  try {
+    const product = await Product.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+      runValidators: true,
+    })
+
+    res.status(200).json({
+      status: "success",
+      data: {
+        product,
+      },
+    })
+  } catch (err) {
+    res.status(400).json({
+      status: "fail",
+      message: "invalid data",
+    })
+  }
 }
 
-export const deleteProduct = (req: Request, res: Response) => {
-  console.log("deleted")
+export const deleteProduct = async (req: Request, res: Response) => {
+  try {
+    await Product.findByIdAndDelete(req.params.id)
+
+    res.status(204).json({
+      status: "success",
+      data: null,
+    })
+  } catch (err) {
+    res.status(404).json({
+      status: "fail",
+      message: "cant find product",
+    })
+  }
 }
