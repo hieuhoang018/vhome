@@ -97,3 +97,42 @@ export const deleteProduct = async (req: Request, res: Response) => {
     })
   }
 }
+
+export const getProductStats = async (req: Request, res: Response) => {
+  try {
+    const stats = await Product.aggregate([
+      {
+        $match: { price: { $gte: 100 } },
+      },
+      {
+        $group: {
+          _id: { $toUpper: "$category" },
+          numProducts: { $sum: 1 },
+          avgPrice: { $avg: "$price" },
+          minPrice: { $min: "$price" },
+          maxPrice: { $max: "$price" },
+        },
+      },
+      {
+        $sort: {
+          avgPrice: 1,
+        },
+      },
+      // {
+      //   $match: { _id: { $ne: "OUTDOOR" } },
+      // },
+    ])
+
+    res.status(200).json({
+      status: "success",
+      data: {
+        stats,
+      },
+    })
+  } catch (err) {
+    res.status(404).json({
+      status: "fail",
+      message: err,
+    })
+  }
+}
