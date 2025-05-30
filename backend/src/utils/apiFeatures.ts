@@ -28,12 +28,12 @@ export class APIFeatures {
     return this
   }
 
-  sort() {
+  sort(sortValue: string) {
     if (this.queryString.sort) {
       const sortBy = this.queryString.sort.split(",").join(" ")
       this.query = this.query.sort(sortBy)
     } else {
-      this.query = this.query.sort("name")
+      this.query = this.query.sort(sortValue)
     }
     return this
   }

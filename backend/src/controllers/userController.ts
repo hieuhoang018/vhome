@@ -1,53 +1,98 @@
-import * as fs from "fs"
-import { NextFunction, Request, Response } from "express"
+import { Request, Response } from "express"
+import User from "../models/userModel"
+import { APIFeatures } from "../utils/apiFeatures"
 
-const users = JSON.parse(
-  fs.readFileSync(`${__dirname}/../data/users-data.json`, "utf-8")
-)
+export const getAllUsers = async (req: Request, res: Response) => {
+  try {
+    const features = new APIFeatures(User.find(), req.query)
+      .filter()
+      .sort("firstName")
+      .limitFields()
+      .paginate()
+    const users = await features.query
 
-export const getAllUsers = (req: Request, res: Response) => {
-  res.status(200).json({
-    status: "success",
-    results: users.length,
-    data: {
-      users,
-    },
-  })
+    res.status(200).json({
+      status: "success",
+      results: users.length,
+      data: { users },
+    })
+  } catch (err) {
+    console.error(err)
+    res.status(500).json({
+      status: "fail",
+      message: "Something went wrong.",
+    })
+  }
 }
 
-export const getUsersById = (req: Request, res: Response) => {
-  console.log(req.params)
+export const getUserById = async (req: Request, res: Response) => {
+  try {
+    const user = await User.findById(req.params.id)
+
+    res.status(200).json({
+      status: "success",
+      data: {
+        user,
+      },
+    })
+  } catch (err) {
+    res.status(404).json({
+      status: "fail",
+      message: "Can't find user",
+    })
+  }
 }
 
-export const createUser = (req: Request, res: Response) => {
-  const newId = users[users.length - 1].id + 1
-  const newUser = Object.assign(
-    {
-      id: newId,
-    },
-    req.body
-  )
+export const createUser = async (req: Request, res: Response) => {
+  try {
+    const newUser = await User.create(req.body)
 
-  users.push(newUser)
-
-  fs.writeFile(
-    `${__dirname}/../data/users-data.json`,
-    JSON.stringify(users),
-    (err) => {
-      res.status(201).json({
-        status: "success",
-        data: {
-          user: newUser,
-        },
-      })
-    }
-  )
+    res.status(201).json({
+      status: "success",
+      data: {
+        newUser,
+      },
+    })
+  } catch (err) {
+    res.status(404).json({
+      status: "fail",
+      message: "cant create",
+    })
+  }
 }
 
-export const updateUser = (req: Request, res: Response) => {
-  console.log("patched")
+export const updateUser = async (req: Request, res: Response) => {
+  try {
+    const user = await User.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+      runValidators: true,
+    })
+
+    res.status(200).json({
+      status: "success",
+      data: {
+        user,
+      },
+    })
+  } catch (err) {
+    res.status(404).json({
+      status: "fail",
+      message: "cant find user",
+    })
+  }
 }
 
-export const deleteUser = (req: Request, res: Response) => {
-  console.log("deleted")
+export const deleteUser = async (req: Request, res: Response) => {
+  try {
+    const user = await User.findByIdAndDelete(req.params.id)
+    res.status(200).json({
+      status: "success",
+      data: null,
+    })
+  } catch (err) {
+    res.status(404).json({
+      status: "fail",
+      message: "cant find user",
+    })
+  }
 }

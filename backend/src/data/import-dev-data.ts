@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import fs from "fs";
 import path from "path";
 import Product from "../models/productModel";
+import User from "../models/userModel";
 
 dotenv.config({ path: path.join(__dirname, "../../.env") })
 
@@ -16,13 +17,13 @@ mongoose.connect(db).then(() => {
   console.log("db connected")
 })
 
-const products = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "products-data.json"), "utf-8")
+const users = JSON.parse(
+  fs.readFileSync(path.join(__dirname, "users-data.json"), "utf-8")
 )
 
 const importData = async () => {
   try {
-    await Product.create(products)
+    await User.create(users)
     console.log("imported")
     process.exit()
   } catch (err) {
@@ -32,7 +33,7 @@ const importData = async () => {
 
 const deleteData = async () => {
   try {
-    await Product.deleteMany()
+    await User.deleteMany()
     console.log("deleted")
     process.exit()
   } catch (err) {

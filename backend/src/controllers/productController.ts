@@ -6,7 +6,7 @@ export const getAllProducts = async (req: Request, res: Response) => {
   try {
     const features = new APIFeatures(Product.find(), req.query)
       .filter()
-      .sort()
+      .sort("name")
       .limitFields()
       .paginate()
     const products = await features.query

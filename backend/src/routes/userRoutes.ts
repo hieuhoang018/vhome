@@ -2,7 +2,7 @@ import { Router } from "express"
 import {
   getAllUsers,
   createUser,
-  getUsersById,
+  getUserById,
   updateUser,
   deleteUser,
 } from "./../controllers/userController"
@@ -10,6 +10,6 @@ import {
 const router = Router()
 
 router.route("/").get(getAllUsers).post(createUser)
-router.route("/:id").get(getUsersById).patch(updateUser).delete(deleteUser)
+router.route("/:id").get(getUserById).patch(updateUser).delete(deleteUser)
 
 export default router
