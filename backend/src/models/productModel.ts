@@ -17,6 +17,7 @@ const productSchema = new mongoose.Schema({
   description: {
     type: String,
     required: [true, "Product must have a description"],
+    trim: true,
   },
   stock: {
     type: Number,
@@ -24,7 +25,7 @@ const productSchema = new mongoose.Schema({
   },
   imageUrl: {
     type: String,
-    default: "link.com",
+    required: [true, "Product must have an image"],
   },
   colors: {
     type: [String],

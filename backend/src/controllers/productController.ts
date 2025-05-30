@@ -1,21 +1,26 @@
 import { Request, Response } from "express"
 import Product from "../models/productModel"
+import { APIFeatures } from "../utils/apiFeatures"
 
 export const getAllProducts = async (req: Request, res: Response) => {
   try {
-    const products = await Product.find()
+    const features = new APIFeatures(Product.find(), req.query)
+      .filter()
+      .sort()
+      .limitFields()
+      .paginate()
+    const products = await features.query
 
     res.status(200).json({
       status: "success",
       results: products.length,
-      data: {
-        products,
-      },
+      data: { products },
     })
   } catch (err) {
-    res.status(404).json({
+    console.error(err)
+    res.status(500).json({
       status: "fail",
-      message: "cant find products",
+      message: "Something went wrong.",
     })
   }
 }
