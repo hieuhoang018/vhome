@@ -1,10 +1,20 @@
+
+export interface ProductsResponse {
+  status: string
+  results: number
+  data: {
+    products: Product[]
+  }
+}
+
+
 export interface Product {
-  id: number,
-  name: string,
-  category: string,
-  price: number,
-  description: string,
-  stock: number,
-  imageUrl: string,
+  _id: number
+  name: string
+  category: string
+  price: number
+  description: string
+  stock: number
+  imageUrl: string
   colors: string[]
 }

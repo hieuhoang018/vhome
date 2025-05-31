@@ -1,3 +1,5 @@
+"use client"
+
 import InputField from "@/components/AuthenticationPage/input"
 import Image from "next/image"
 import Link from "next/link"
@@ -51,6 +53,13 @@ export default function LoginPage() {
               </span>
             </div>
           </form>
+          <button
+            type="button"
+            onClick={() => window.history.back()}
+            className="fixed bottom-6 left-6 bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded shadow transition"
+          >
+            ← Back
+          </button>
         </div>
       </div>
     </>

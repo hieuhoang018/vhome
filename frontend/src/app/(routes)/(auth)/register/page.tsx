@@ -73,6 +73,12 @@ export default function RegisterPage() {
               Create Account
             </button>
           </form>
+          <Link
+            href="/"
+            className="fixed bottom-6 left-6 bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded shadow transition"
+          >
+            ← Back
+          </Link>
         </div>
       </div>
     </>

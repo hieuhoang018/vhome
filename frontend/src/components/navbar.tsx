@@ -38,7 +38,7 @@ export default function MainHeader() {
           </Link>
 
           {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-20">
             <Link
               href="/"
               className="text-furniture-charcoal hover:text-furniture-navy font-medium transition-colors"
@@ -50,12 +50,6 @@ export default function MainHeader() {
               className="text-furniture-charcoal hover:red font-medium transition-colors"
             >
               Shop
-            </Link>
-            <Link
-              href="#collections"
-              className="text-furniture-charcoal hover:text-furniture-navy font-medium transition-colors"
-            >
-              Collections
             </Link>
             <Link
               href="/about"
