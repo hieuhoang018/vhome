@@ -1,6 +1,6 @@
 "use client"
 
-import { Heart, Search, ShoppingCart, User } from "lucide-react"
+import { Heart, ShoppingCart, User } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect } from "react"
@@ -60,26 +60,16 @@ export default function MainHeader() {
           </nav>
 
           {/* Action buttons */}
-          <div className="hidden md:flex items-center space-x-4">
-            <button
-              type="button"
-              className="p-2 rounded hover:bg-gray-100 transition-colors"
-              onClick={() => (window.location.href = "/login")}
-            >
+          <div className="hidden md:flex items-center space-x-8">
+            <Link href={"/login"}>
               <User className="h-5 w-5" />
-            </button>
-            <button
-              type="button"
-              className="p-2 rounded hover:bg-gray-100 transition-colors"
-            >
+            </Link>
+            <Link href={"/wishlist"}>
               <Heart className="h-5 w-5" />
-            </button>
-            <button
-              type="button"
-              className="p-2 rounded hover:bg-gray-100 transition-colors"
-            >
-              <ShoppingCart className="h-5 w-5 mr-2" />
-            </button>
+            </Link>
+            <Link href={"/cart"}>
+              <ShoppingCart className="h-5 w-5" />
+            </Link>
           </div>
         </div>
       </header>

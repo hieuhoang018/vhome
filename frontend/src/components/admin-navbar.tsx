@@ -1,6 +1,6 @@
 "use client"
 
-import { Heart, LogOut, Search, ShoppingCart, User } from "lucide-react"
+import { LogOut } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect } from "react"
@@ -28,7 +28,7 @@ export default function AdminHeader() {
       >
         <div className="container mx-auto px-4 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2">
             <Image
               src={"/images/logo.png"}
               alt="VHome logo"
@@ -38,7 +38,7 @@ export default function AdminHeader() {
             <span className="text-xl font-semibold text-furniture-charcoal">
               Admin
             </span>
-          </Link>
+          </div>
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-20">
