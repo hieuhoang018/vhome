@@ -1,11 +1,11 @@
 "use client"
 
-import { Heart, Search, ShoppingCart, User } from "lucide-react"
+import { Heart, LogOut, Search, ShoppingCart, User } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 
-export default function MainHeader() {
+export default function AdminHeader() {
   const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
@@ -28,58 +28,44 @@ export default function MainHeader() {
       >
         <div className="container mx-auto px-4 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/">
+          <Link href="/" className="flex items-center space-x-2">
             <Image
               src={"/images/logo.png"}
               alt="VHome logo"
               width={80}
               height={80}
             />
+            <span className="text-xl font-semibold text-furniture-charcoal">
+              Admin
+            </span>
           </Link>
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-20">
             <Link
-              href="/"
+              href="/dashboard"
               className="text-furniture-charcoal hover:text-furniture-navy font-medium transition-colors"
             >
-              Home
+              Dashboard
             </Link>
             <Link
-              href="/products"
+              href="/create-product"
               className="text-furniture-charcoal hover:red font-medium transition-colors"
             >
-              Shop
-            </Link>
-            <Link
-              href="/about"
-              className="text-furniture-charcoal hover:text-furniture-navy font-medium transition-colors"
-            >
-              About
+              Create Product
             </Link>
           </nav>
 
           {/* Action buttons */}
-          <div className="hidden md:flex items-center space-x-4">
-            <button
-              type="button"
-              className="p-2 rounded hover:bg-gray-100 transition-colors"
-              onClick={() => (window.location.href = "/login")}
-            >
-              <User className="h-5 w-5" />
-            </button>
-            <button
-              type="button"
-              className="p-2 rounded hover:bg-gray-100 transition-colors"
-            >
-              <Heart className="h-5 w-5" />
-            </button>
-            <button
-              type="button"
-              className="p-2 rounded hover:bg-gray-100 transition-colors"
-            >
-              <ShoppingCart className="h-5 w-5 mr-2" />
-            </button>
+          <div className="hidden md:flex items-center space-x-6">
+            <Link href={"/"}>
+              <button className="border cursor-pointer px-4 py-2 rounded-sm">
+                View Store
+              </button>
+            </Link>
+            <Link href={"/login"}>
+              <LogOut />
+            </Link>
           </div>
         </div>
       </header>
