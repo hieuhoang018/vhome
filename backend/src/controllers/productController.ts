@@ -1,9 +1,11 @@
-import { Request, Response } from "express"
+import { NextFunction, Request, Response } from "express"
 import Product from "../models/productModel"
 import { APIFeatures } from "../utils/apiFeatures"
+import catchAsync from "../utils/catchAsync"
+import { AppError } from "../utils/appError"
 
-export const getAllProducts = async (req: Request, res: Response) => {
-  try {
+export const getAllProducts = catchAsync(
+  async (req: Request, res: Response) => {
     const features = new APIFeatures(Product.find(), req.query)
       .filter()
       .sort("name")
@@ -16,18 +18,16 @@ export const getAllProducts = async (req: Request, res: Response) => {
       results: products.length,
       data: { products },
     })
-  } catch (err) {
-    console.error(err)
-    res.status(500).json({
-      status: "fail",
-      message: "Something went wrong.",
-    })
   }
-}
+)
 
-export const getProductsById = async (req: Request, res: Response) => {
-  try {
+export const getProductsById = catchAsync(
+  async (req: Request, res: Response, next: NextFunction) => {
     const product = await Product.findById(req.params.id)
+
+    if (!product) {
+      return next(new AppError("No tour found with that ID", 404))
+    }
 
     res.status(200).json({
       status: "success",
@@ -35,71 +35,57 @@ export const getProductsById = async (req: Request, res: Response) => {
         product,
       },
     })
-  } catch (err) {
-    res.status(404).json({
-      status: "fail",
-      message: "cant find product",
-    })
   }
-}
+)
 
-export const createProduct = async (req: Request, res: Response) => {
-  try {
-    const newProduct = await Product.create(req.body)
+export const createProduct = catchAsync(async (req: Request, res: Response) => {
+  const newProduct = await Product.create(req.body)
 
-    res.status(201).json({
-      status: "success",
-      data: {
-        product: newProduct,
-      },
-    })
-  } catch (err) {
-    res.status(404).json({
-      status: "fail",
-      message: "cant find",
-    })
-  }
-}
+  res.status(201).json({
+    status: "success",
+    data: {
+      product: newProduct,
+    },
+  })
+})
 
-export const updateProduct = async (req: Request, res: Response) => {
-  try {
+export const updateProduct = catchAsync(
+  async (req: Request, res: Response, next: NextFunction) => {
     const product = await Product.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
       runValidators: true,
     })
 
+    if (!product) {
+      return next(new AppError("No tour found with that ID", 404))
+    }
+
     res.status(200).json({
       status: "success",
       data: {
         product,
       },
     })
-  } catch (err) {
-    res.status(400).json({
-      status: "fail",
-      message: "invalid data",
-    })
   }
-}
+)
 
-export const deleteProduct = async (req: Request, res: Response) => {
-  try {
-    await Product.findByIdAndDelete(req.params.id)
+export const deleteProduct = catchAsync(
+  async (req: Request, res: Response, next: NextFunction) => {
+    const product = await Product.findByIdAndDelete(req.params.id)
+
+    if (!product) {
+      return next(new AppError("No tour found with that ID", 404))
+    }
 
     res.status(204).json({
       status: "success",
       data: null,
     })
-  } catch (err) {
-    res.status(404).json({
-      status: "fail",
-      message: "cant find product",
-    })
   }
-}
+)
 
-export const getProductStats = async (req: Request, res: Response) => {
-  try {
+export const getProductStats = catchAsync(
+  async (req: Request, res: Response) => {
     const stats = await Product.aggregate([
       {
         $match: { price: { $gte: 100 } },
@@ -129,10 +115,5 @@ export const getProductStats = async (req: Request, res: Response) => {
         stats,
       },
     })
-  } catch (err) {
-    res.status(404).json({
-      status: "fail",
-      message: err,
-    })
   }
-}
+)
