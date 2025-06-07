@@ -13,7 +13,7 @@ export default function CartItem({ product }: { product: mockData }) {
       <div className="flex-5 flex flex-col justify-center">
         <h1 className="text-2xl font-semibold mb-1">{product.name}</h1>
         <h2 className="mb-4">€{product.price}</h2>
-        <h2>{product.category}</h2>
+        <h2>Color: {product.colors[0]}</h2>
       </div>
       <div className="flex flex-col justify-center items-center">
         <div className="flex items-center border border-gray-300 rounded-md w-32 mb-3">
@@ -38,7 +38,9 @@ export default function CartItem({ product }: { product: mockData }) {
         </button>
       </div>
       <div className="flex-1 flex flex-col items-center justify-center">
-        <p className="font-bold">€{Math.round(product.price * amountChosen * 100) / 100}</p>
+        <p className="font-bold">
+          €{Math.round(product.price * amountChosen * 100) / 100}
+        </p>
       </div>
     </div>
   )
