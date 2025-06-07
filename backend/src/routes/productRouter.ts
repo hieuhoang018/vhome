@@ -7,9 +7,7 @@ import {
   deleteProduct,
   getProductStats,
 } from "../controllers/productController"
-import {
-  protect
-} from "../controllers/authController"
+import { protect, restrictTo } from "../controllers/authController"
 
 const router = Router()
 
@@ -19,6 +17,6 @@ router
   .route("/:id")
   .get(getProductsById)
   .patch(updateProduct)
-  .delete(deleteProduct)
+  .delete(protect, restrictTo("admin"), deleteProduct)
 
 export default router

@@ -1,6 +1,7 @@
 import mongoose, { Document, Model, Types } from "mongoose"
 import validator from "validator"
 import bcrypt from "bcryptjs"
+import crypto from "crypto"
 
 export interface IUser extends Document {
   _id: Types.ObjectId
@@ -8,6 +9,9 @@ export interface IUser extends Document {
   password: string
   confirmPassword?: string
   passwordChangedAt: Date
+  passwordResetToken?: string
+  passwordResetExpires?: Date
+  role: string
   phone?: string
   cart: number[]
   firstName: string
@@ -17,6 +21,7 @@ export interface IUser extends Document {
     userPassword: string
   ): Promise<boolean>
   changedPasswordAfter(JWTTimeStamp: number): Promise<boolean>
+  createPasswordResetToken(): string
 }
 
 const userSchema = new mongoose.Schema<IUser>(
@@ -44,6 +49,18 @@ const userSchema = new mongoose.Schema<IUser>(
       },
     },
     passwordChangedAt: Date,
+    passwordResetToken: {
+      type: String,
+    },
+
+    passwordResetExpires: {
+      type: Date,
+    },
+    role: {
+      type: String,
+      enum: ["user", "admin"],
+      default: "user",
+    },
     phone: String,
     cart: {
       type: [Number],
@@ -99,6 +116,19 @@ userSchema.methods.changedPasswordAfter = async function (
   }
 
   return false
+}
+
+userSchema.methods.createPasswordResetToken = function (): string {
+  const resetToken = crypto.randomBytes(32).toString("hex")
+
+  this.passwordResetToken = crypto
+    .createHash("sha256")
+    .update(resetToken)
+    .digest("hex")
+
+  this.passwordResetExpires = Date.now() + 10 * 60 * 1000
+
+  return resetToken
 }
 
 const User: Model<IUser> = mongoose.model<IUser>("User", userSchema)
