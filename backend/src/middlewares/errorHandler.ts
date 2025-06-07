@@ -45,6 +45,14 @@ const handleValidationErrorDB = (err: MongooseValidationError) => {
   return new AppError(message, 400)
 }
 
+const handleJWTError = () => {
+  return new AppError("Invalid token. Please log in again", 401)
+}
+
+const handleJWTExpiredError = () => {
+  return new AppError("Expired token. Please log in again", 401)
+}
+
 const sendErrorDev = (err: AppError, res: Response) => {
   res.status(err.statusCode || 500).json({
     status: err.status || "error",
@@ -87,6 +95,8 @@ export const errorHandler = (
     if (error.name === "CastError") error = handleCastErrorDB(error)
     if (error.code === 11000) error = handleDuplicateFieldsDB(error)
     if (error.name === "ValidationError") error = handleValidationErrorDB(error)
+    if (error.name === "JsonWebTokenError") error = handleJWTError()
+    if (error.name === "TokenExpiredError") error = handleJWTExpiredError()
     sendErrorProd(error, res)
   }
 }

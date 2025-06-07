@@ -1,21 +1,24 @@
-import mongoose, { Document, Model, Types } from "mongoose";
-import validator from "validator";
-import bcrypt from "bcryptjs";
+import mongoose, { Document, Model, Types } from "mongoose"
+import validator from "validator"
+import bcrypt from "bcryptjs"
 
-// 1. Define a User interface extending mongoose.Document
 export interface IUser extends Document {
   _id: Types.ObjectId
-  email: string;
-  password: string;
-  confirmPassword?: string;
-  phone?: string;
-  cart: number[];
-  firstName: string;
-  lastName: string;
-  correctPassword(candidatePassword: string, userPassword: string): Promise<boolean>;
+  email: string
+  password: string
+  confirmPassword?: string
+  passwordChangedAt: Date
+  phone?: string
+  cart: number[]
+  firstName: string
+  lastName: string
+  correctPassword(
+    candidatePassword: string,
+    userPassword: string
+  ): Promise<boolean>
+  changedPasswordAfter(JWTTimeStamp: number): Promise<boolean>
 }
 
-// 2. Define the schema
 const userSchema = new mongoose.Schema<IUser>(
   {
     email: {
@@ -35,11 +38,12 @@ const userSchema = new mongoose.Schema<IUser>(
       required: [true, "Please confirm the password"],
       validate: {
         validator: function (this: IUser, el: string) {
-          return el === this.password;
+          return el === this.password
         },
         message: "Passwords do not match",
       },
     },
+    passwordChangedAt: Date,
     phone: String,
     cart: {
       type: [Number],
@@ -55,33 +59,48 @@ const userSchema = new mongoose.Schema<IUser>(
     },
   },
   {
+    strict: true,
     toJSON: { virtuals: true },
     toObject: { virtuals: true },
   }
-);
+)
 
-// 3. Add virtual
 userSchema.virtual("fullName").get(function (this: IUser) {
-  return this.firstName + " " + this.lastName;
-});
+  return this.firstName + " " + this.lastName
+})
 
-// 4. Pre-save hook to hash password
 userSchema.pre<IUser>("save", async function (next) {
-  if (!this.isModified("password")) return next();
-  this.password = await bcrypt.hash(this.password, 14);
-  this.confirmPassword = undefined;
-  next();
-});
+  if (!this.isModified("password")) return next()
+  this.password = await bcrypt.hash(this.password, 14)
+  this.confirmPassword = undefined
+  next()
+})
 
-// 5. Instance method
+userSchema.pre<IUser>("save", function (next) {
+  if (!this.isModified("password")) return next()
+
+  this.passwordChangedAt = new Date(Date.now() - 1000)
+  next()
+})
+
 userSchema.methods.correctPassword = async function (
   candidatePassword: string,
   userPassword: string
 ): Promise<boolean> {
-  return await bcrypt.compare(candidatePassword, userPassword);
-};
+  return await bcrypt.compare(candidatePassword, userPassword)
+}
 
-// 6. Create and export the model
-const User: Model<IUser> = mongoose.model<IUser>("User", userSchema);
+userSchema.methods.changedPasswordAfter = async function (
+  JWTTimeStamp: number
+): Promise<boolean> {
+  if (this.passwordChangedAt) {
+    const changedTimestamp = this.passwordChangedAt.getTime() / 1000
+    return JWTTimeStamp < changedTimestamp
+  }
 
-export default User;
+  return false
+}
+
+const User: Model<IUser> = mongoose.model<IUser>("User", userSchema)
+
+export default User
