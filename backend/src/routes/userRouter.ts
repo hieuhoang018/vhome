@@ -11,6 +11,8 @@ import {
   logIn,
   forgotPassword,
   resetPassword,
+  protect,
+  updatePassword,
 } from "../controllers/authController"
 
 const router = Router()
@@ -20,6 +22,8 @@ router.post("/login", logIn)
 
 router.post("/forgotpassword", forgotPassword)
 router.patch("/resetpassword/:token", resetPassword)
+
+router.patch("/updateMyPassword", protect, updatePassword)
 
 router.route("/").get(getAllUsers).post(createUser)
 router.route("/:id").get(getUserById).patch(updateUser).delete(deleteUser)

@@ -16,12 +16,21 @@ const signToken = ({ id }: { id: string }): string => {
   return jwt.sign({ id }, jwtSecret, { expiresIn: "1d" })
 }
 
-function verifyToken(token: string, secret: string): Promise<JwtPayload> {
+const verifyToken = (token: string, secret: string): Promise<JwtPayload> => {
   return new Promise((resolve, reject) => {
     jwt.verify(token, secret, (err, decoded) => {
       if (err) return reject(err)
       resolve(decoded as JwtPayload)
     })
+  })
+}
+
+const createSendToken = (user: IUser, statusCode: number, res: Response) => {
+  const token = signToken({ id: user._id.toString() })
+  res.status(statusCode).json({
+    status: "success",
+    token,
+    data: user,
   })
 }
 
@@ -36,21 +45,7 @@ export const signUp = catchAsync(
       role: req.body.role,
     })
 
-    let token: string
-    try {
-      token = signToken({ id: newUser._id.toString() })
-    } catch (err) {
-      console.error("JWT signing error:", err)
-      return next(new AppError("Token generation failed", 500))
-    }
-
-    res.status(201).json({
-      status: "success",
-      token,
-      data: {
-        user: newUser,
-      },
-    })
+    createSendToken(newUser, 201, res)
   }
 )
 
@@ -68,11 +63,7 @@ export const logIn = catchAsync(
       return next(new AppError("Incorrect email or password", 401))
     }
 
-    const token = signToken({ id: user._id.toString() })
-    res.status(200).json({
-      status: "success",
-      token,
-    })
+    createSendToken(user, 200, res)
   }
 )
 
@@ -201,10 +192,28 @@ export const resetPassword = catchAsync(
     user.passwordResetExpires = undefined
     await user.save()
 
-    const token = signToken({ id: user._id.toString() })
-    res.status(200).json({
-      status: "success",
-      token,
-    })
+    createSendToken(user, 200, res)
+  }
+)
+
+export const updatePassword = catchAsync(
+  async (req: Request, res: Response, next: NextFunction) => {
+    const user = await User.findById(req.user.id).select("+password")
+
+    if (!user) {
+      return next(new AppError("The user no longer exists", 401))
+    }
+
+    if (
+      !(await user.correctPassword(req.body.passwordCurrent, user.password))
+    ) {
+      return next(new AppError("Your current password is wrong", 401))
+    }
+
+    user.password = req.body.password
+    user.confirmPassword = req.body.confirmPassword
+    await user.save()
+
+    createSendToken(user, 200, res)
   }
 )
