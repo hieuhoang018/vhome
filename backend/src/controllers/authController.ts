@@ -4,6 +4,7 @@ import catchAsync from "../utils/catchAsync"
 import { AppError } from "../utils/appError"
 import User, { IUser } from "../models/userModel"
 import { sendEmail } from "../utils/email"
+import crypto from "crypto"
 
 const signToken = ({ id }: { id: string }): string => {
   const jwtSecret = process.env.JWT_SECRET
@@ -178,8 +179,32 @@ export const forgotPassword = catchAsync(
   }
 )
 
-export const resetPassword = (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {}
+export const resetPassword = catchAsync(
+  async (req: Request, res: Response, next: NextFunction) => {
+    const hashedToken = crypto
+      .createHash("sha256")
+      .update(req.params.token)
+      .digest("hex")
+
+    const user = await User.findOne({
+      passwordResetToken: hashedToken,
+      passwordResetExpires: { $gt: Date.now() },
+    })
+
+    if (!user) {
+      return next(new AppError("Token is invalid or has expired", 400))
+    }
+
+    user.password = req.body.password
+    user.confirmPassword = req.body.confirmPassword
+    user.passwordResetToken = undefined
+    user.passwordResetExpires = undefined
+    await user.save()
+
+    const token = signToken({ id: user._id.toString() })
+    res.status(200).json({
+      status: "success",
+      token,
+    })
+  }
+)

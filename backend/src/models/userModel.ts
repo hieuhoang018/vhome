@@ -94,7 +94,7 @@ userSchema.pre<IUser>("save", async function (next) {
 })
 
 userSchema.pre<IUser>("save", function (next) {
-  if (!this.isModified("password")) return next()
+  if (!this.isModified("password") || this.isNew) return next()
 
   this.passwordChangedAt = new Date(Date.now() - 1000)
   next()
