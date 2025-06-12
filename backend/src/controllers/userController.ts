@@ -3,6 +3,19 @@ import User from "../models/userModel"
 import catchAsync from "../utils/catchAsync"
 import { AppError } from "../utils/appError"
 
+const filterObj = <T extends Record<string, any>>(
+  obj: T,
+  ...allowedFields: string[]
+): Record<string, any> => {
+  const newObj: Record<string, any> = {}
+  Object.keys(obj).forEach((el) => {
+    if (allowedFields.includes(el)) {
+      newObj[el] = obj[el]
+    }
+  })
+  return newObj
+}
+
 export const getAllUsers = catchAsync(async (req: Request, res: Response) => {
   const users = await User.find()
 
@@ -12,6 +25,46 @@ export const getAllUsers = catchAsync(async (req: Request, res: Response) => {
     data: { users },
   })
 })
+
+export const updateMe = catchAsync(
+  async (req: Request, res: Response, next: NextFunction) => {
+    if (req.body.password || req.body.confirmPassword) {
+      return next(
+        new AppError(
+          "This route is not for password update. Please use /update-password",
+          400
+        )
+      )
+    }
+
+    const filteredBody = filterObj(
+      req.body,
+      "firstName",
+      "lastName",
+      "email",
+      "phone"
+    )
+
+    const updatedUser = await User.findByIdAndUpdate(
+      req.user.id,
+      filteredBody,
+      {
+        new: true,
+        runValidators: true,
+      }
+    )
+    if (!updatedUser) {
+      return next(new AppError("Cant find user", 404))
+    }
+
+    res.status(200).json({
+      status: "success",
+      data: {
+        user: updatedUser,
+      },
+    })
+  }
+)
 
 export const getUserById = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
@@ -70,6 +123,17 @@ export const deleteUser = catchAsync(
     }
 
     res.status(200).json({
+      status: "success",
+      data: null,
+    })
+  }
+)
+
+export const deleteMe = catchAsync(
+  async (req: Request, res: Response, next: NextFunction) => {
+    await User.findByIdAndUpdate(req.user.id, { active: false })
+
+    res.status(204).json({
       status: "success",
       data: null,
     })

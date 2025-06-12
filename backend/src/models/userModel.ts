@@ -16,6 +16,7 @@ export interface IUser extends Document {
   cart: number[]
   firstName: string
   lastName: string
+  active: boolean
   correctPassword(
     candidatePassword: string,
     userPassword: string
@@ -74,6 +75,11 @@ const userSchema = new mongoose.Schema<IUser>(
       type: String,
       required: [true, "User must have a last name"],
     },
+    active: {
+      type: Boolean,
+      default: true,
+      select: false,
+    },
   },
   {
     strict: true,
@@ -97,6 +103,11 @@ userSchema.pre<IUser>("save", function (next) {
   if (!this.isModified("password") || this.isNew) return next()
 
   this.passwordChangedAt = new Date(Date.now() - 1000)
+  next()
+})
+
+userSchema.pre(/^find/, function (this: mongoose.Query<any, IUser>, next) {
+  this.find({ active: { $ne: false } })
   next()
 })
 
