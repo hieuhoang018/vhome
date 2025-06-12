@@ -25,8 +25,28 @@ const verifyToken = (token: string, secret: string): Promise<JwtPayload> => {
   })
 }
 
-const createSendToken = (user: IUser, statusCode: number, res: Response) => {
+const createSendToken = (
+  user: IUser,
+  statusCode: number,
+  res: Response,
+  next: NextFunction
+) => {
   const token = signToken({ id: user._id.toString() })
+  const jwtCookieExpires = process.env.JWT_COOKIE_EXPIRES_IN
+
+  if (!jwtCookieExpires) {
+    return next(new AppError("JWT cookie expiration error", 500))
+  }
+
+  const expiresInDays = parseInt(jwtCookieExpires)
+  const cookieOptions = {
+    expires: new Date(Date.now() + expiresInDays * 24 * 60 * 60 * 1000),
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+  }
+
+  res.cookie("jwt", token, cookieOptions)
+
   res.status(statusCode).json({
     status: "success",
     token,
@@ -45,7 +65,7 @@ export const signUp = catchAsync(
       role: req.body.role,
     })
 
-    createSendToken(newUser, 201, res)
+    createSendToken(newUser, 201, res, next)
   }
 )
 
@@ -63,7 +83,7 @@ export const logIn = catchAsync(
       return next(new AppError("Incorrect email or password", 401))
     }
 
-    createSendToken(user, 200, res)
+    createSendToken(user, 200, res, next)
   }
 )
 
@@ -192,7 +212,7 @@ export const resetPassword = catchAsync(
     user.passwordResetExpires = undefined
     await user.save()
 
-    createSendToken(user, 200, res)
+    createSendToken(user, 200, res, next)
   }
 )
 
@@ -214,6 +234,6 @@ export const updatePassword = catchAsync(
     user.confirmPassword = req.body.confirmPassword
     await user.save()
 
-    createSendToken(user, 200, res)
+    createSendToken(user, 200, res, next)
   }
 )
