@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 import api from "@/lib/axios"
-import InputField from "./input"
+import InputField from "../input"
 import Link from "next/link"
 
 export default function SignupForm() {
@@ -48,7 +48,7 @@ export default function SignupForm() {
       }
     }
   }
-  
+
   return (
     <form onSubmit={handleSubmit}>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">

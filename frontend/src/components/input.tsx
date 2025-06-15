@@ -25,7 +25,9 @@ export default function InputField({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="border p-2 w-full rounded-lg mb-4 mt-2"
+        className={`border p-2 w-full rounded-lg mb-4 mt-2${
+          name === "description" ? " min-h-[120px]" : ""
+        }`}
       />
     </p>
   )

@@ -1,6 +1,6 @@
 "use client"
 
-import InputField from "@/components/AuthenticationPage/input"
+import InputField from "@/components/input"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 import api from "@/lib/axios"
