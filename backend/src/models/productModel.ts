@@ -1,6 +1,26 @@
-import mongoose from "mongoose"
+import mongoose, { Types } from "mongoose"
 
-const productSchema = new mongoose.Schema({
+export enum Category {
+  LivingRoom = "Living Room",
+  Bedroom = "Bedroom",
+  Bathroom = "Bathroom",
+  Office = "Office",
+  Outdoor = "Outdoor",
+  DiningRoom = "Dining Room",
+}
+
+export interface IProduct extends Document {
+  _id: Types.ObjectId
+  name: string
+  category: Category
+  price: number
+  description: string
+  stock: number
+  imageUrl: string
+  colors: string[]
+}
+
+const productSchema = new mongoose.Schema<IProduct>({
   name: {
     type: String,
     required: [true, "Product must have a name"],
@@ -8,6 +28,7 @@ const productSchema = new mongoose.Schema({
   },
   category: {
     type: String,
+    enum: Object.values(Category),
     required: [true, "Product must have a category"],
   },
   price: {
@@ -33,6 +54,6 @@ const productSchema = new mongoose.Schema({
   },
 })
 
-const Product = mongoose.model("Product", productSchema)
+const Product = mongoose.model<IProduct>("Product", productSchema)
 
 export default Product
