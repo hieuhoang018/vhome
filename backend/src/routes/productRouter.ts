@@ -12,7 +12,7 @@ import { protect, restrictTo } from "../controllers/authController"
 const router = Router()
 
 router.route("/product-stats").get(getProductStats)
-router.route("/").get(protect, getAllProducts).post(createProduct)
+router.route("/").get(getAllProducts).post(createProduct)
 router
   .route("/:id")
   .get(getProductsById)
