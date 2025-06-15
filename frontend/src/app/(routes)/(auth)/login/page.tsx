@@ -1,8 +1,6 @@
-"use client"
-
-import InputField from "@/components/AuthenticationPage/input"
 import Image from "next/image"
 import Link from "next/link"
+import LoginForm from "@/components/AuthenticationPage/login-form"
 
 export default function LoginPage() {
   return (
@@ -22,45 +20,30 @@ export default function LoginPage() {
           </h3>
         </div>
         <div className="bg-white rounded-lg shadow-md p-8 w-full max-w-md">
-          <form>
-            <InputField
-              label="Email"
-              placeholder="example@email.com"
-              inputType="text"
-            />
-            <InputField
-              label="Password"
-              placeholder="••••••••"
-              inputType="password"
-            />
-            <button className="mt-2 w-full bg-blue-500 text-white py-2 rounded">
-              Sign in
-            </button>
-            <div className="flex items-center justify-between mt-4">
-              <label htmlFor="remember" className="flex items-center">
-                <input
-                  type="checkbox"
-                  id="remember"
-                  name="remember"
-                  className="mr-2"
-                />
-                Remember me
-              </label>
-              <span>
-                <Link href={"/forgot"} className="text-red-500">
-                  Forgot your password?
-                </Link>
-              </span>
-            </div>
-          </form>
-          <button
-            type="button"
-            onClick={() => window.history.back()}
-            className="fixed bottom-6 left-6 bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded shadow transition"
-          >
-            ← Back
-          </button>
+          <LoginForm />
+          <div className="flex items-center justify-between mt-4">
+            <label htmlFor="remember" className="flex items-center">
+              <input
+                type="checkbox"
+                id="remember"
+                name="remember"
+                className="mr-2"
+              />
+              Remember me
+            </label>
+            <span>
+              <Link href={"/forgot"} className="text-red-500">
+                Forgot your password?
+              </Link>
+            </span>
+          </div>
         </div>
+        <Link
+          href="/"
+          className="fixed bottom-6 left-6 bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded shadow transition"
+        >
+          ← Back
+        </Link>
       </div>
     </>
   )
