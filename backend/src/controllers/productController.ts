@@ -3,6 +3,7 @@ import Product from "../models/productModel"
 import { APIFeatures } from "../utils/apiFeatures"
 import catchAsync from "../utils/catchAsync"
 import { AppError } from "../utils/appError"
+import { deleteOne } from "./handlerFactory"
 
 export const getAllProducts = catchAsync(
   async (req: Request, res: Response) => {
@@ -23,7 +24,7 @@ export const getAllProducts = catchAsync(
 
 export const getProductsById = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
-    const product = await Product.findById(req.params.id)
+    const product = await Product.findById(req.params.id).populate("reviews")
 
     if (!product) {
       return next(new AppError("No product found with that ID", 404))
@@ -69,20 +70,7 @@ export const updateProduct = catchAsync(
   }
 )
 
-export const deleteProduct = catchAsync(
-  async (req: Request, res: Response, next: NextFunction) => {
-    const product = await Product.findByIdAndDelete(req.params.id)
-
-    if (!product) {
-      return next(new AppError("No tour found with that ID", 404))
-    }
-
-    res.status(204).json({
-      status: "success",
-      data: null,
-    })
-  }
-)
+export const deleteProduct = deleteOne(Product)
 
 export const getProductStats = catchAsync(
   async (req: Request, res: Response) => {

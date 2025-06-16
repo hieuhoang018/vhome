@@ -88,10 +88,6 @@ const userSchema = new mongoose.Schema<IUser>(
   }
 )
 
-userSchema.virtual("fullName").get(function (this: IUser) {
-  return this.firstName + " " + this.lastName
-})
-
 userSchema.pre<IUser>("save", async function (next) {
   if (!this.isModified("password")) return next()
   this.password = await bcrypt.hash(this.password, 14)

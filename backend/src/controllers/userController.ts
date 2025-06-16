@@ -2,6 +2,7 @@ import { NextFunction, Request, Response } from "express"
 import User from "../models/userModel"
 import catchAsync from "../utils/catchAsync"
 import { AppError } from "../utils/appError"
+import { deleteOne } from "./handlerFactory"
 
 const filterObj = <T extends Record<string, any>>(
   obj: T,
@@ -102,7 +103,7 @@ export const updateUser = catchAsync(
     })
 
     if (!user) {
-      return next(new AppError("No product found with that ID", 404))
+      return next(new AppError("No user found with that ID", 404))
     }
 
     res.status(200).json({
@@ -114,20 +115,7 @@ export const updateUser = catchAsync(
   }
 )
 
-export const deleteUser = catchAsync(
-  async (req: Request, res: Response, next: NextFunction) => {
-    const user = await User.findByIdAndDelete(req.params.id)
-
-    if (!user) {
-      return next(new AppError("No product found with that ID", 404))
-    }
-
-    res.status(200).json({
-      status: "success",
-      data: null,
-    })
-  }
-)
+export const deleteUser = deleteOne(User)
 
 export const deleteMe = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {

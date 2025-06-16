@@ -9,7 +9,7 @@ export enum Category {
   DiningRoom = "Dining Room",
 }
 
-export interface IProduct extends Document {
+export interface IProduct {
   _id: Types.ObjectId
   name: string
   category: Category
@@ -20,38 +20,50 @@ export interface IProduct extends Document {
   colors: string[]
 }
 
-const productSchema = new mongoose.Schema<IProduct>({
-  name: {
-    type: String,
-    required: [true, "Product must have a name"],
-    unique: true,
+const productSchema = new mongoose.Schema<IProduct>(
+  {
+    name: {
+      type: String,
+      required: [true, "Product must have a name"],
+      unique: true,
+    },
+    category: {
+      type: String,
+      enum: Object.values(Category),
+      required: [true, "Product must have a category"],
+    },
+    price: {
+      type: Number,
+      required: [true, "Product must have a price"],
+    },
+    description: {
+      type: String,
+      required: [true, "Product must have a description"],
+      trim: true,
+    },
+    stock: {
+      type: Number,
+      default: 0,
+    },
+    imageUrl: {
+      type: String,
+      required: [true, "Product must have an image"],
+    },
+    colors: {
+      type: [String],
+      default: [],
+    },
   },
-  category: {
-    type: String,
-    enum: Object.values(Category),
-    required: [true, "Product must have a category"],
-  },
-  price: {
-    type: Number,
-    required: [true, "Product must have a price"],
-  },
-  description: {
-    type: String,
-    required: [true, "Product must have a description"],
-    trim: true,
-  },
-  stock: {
-    type: Number,
-    default: 0,
-  },
-  imageUrl: {
-    type: String,
-    required: [true, "Product must have an image"],
-  },
-  colors: {
-    type: [String],
-    default: [],
-  },
+  {
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true },
+  }
+)
+
+productSchema.virtual("reviews", {
+  ref: "Review",
+  foreignField: "product",
+  localField: "_id",
 })
 
 const Product = mongoose.model<IProduct>("Product", productSchema)
