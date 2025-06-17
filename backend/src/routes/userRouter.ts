@@ -7,6 +7,7 @@ import {
   deleteUser,
   updateMe,
   deleteMe,
+  getMe,
 } from "../controllers/userController"
 import {
   signUp,
@@ -15,6 +16,7 @@ import {
   resetPassword,
   protect,
   updatePassword,
+  restrictTo,
 } from "../controllers/authController"
 
 const router = Router()
@@ -25,9 +27,16 @@ router.post("/login", logIn)
 router.post("/forgot-password", forgotPassword)
 router.patch("/reset-password/:token", resetPassword)
 
-router.patch("/update-password", protect, updatePassword)
-router.patch("/update-information", protect, updateMe)
-router.delete("/delete-account", protect, deleteMe)
+// Protect all route after this middleware
+router.use(protect)
+
+router.get("/me", getMe, getUserById)
+router.patch("/update-password", updatePassword)
+router.patch("/update-information", updateMe)
+router.delete("/delete-account", deleteMe)
+
+// Routes available only for admins
+router.use(restrictTo("admin"))
 
 router.route("/").get(getAllUsers).post(createUser)
 router.route("/:id").get(getUserById).patch(updateUser).delete(deleteUser)

@@ -2,7 +2,7 @@ import { NextFunction, Request, Response } from "express"
 import User from "../models/userModel"
 import catchAsync from "../utils/catchAsync"
 import { AppError } from "../utils/appError"
-import { deleteOne } from "./handlerFactory"
+import { createOne, deleteOne, getAll, updateOne } from "./handlerFactory"
 
 const filterObj = <T extends Record<string, any>>(
   obj: T,
@@ -17,15 +17,12 @@ const filterObj = <T extends Record<string, any>>(
   return newObj
 }
 
-export const getAllUsers = catchAsync(async (req: Request, res: Response) => {
-  const users = await User.find()
+export const getAllUsers = getAll(User)
 
-  res.status(200).json({
-    status: "success",
-    results: users.length,
-    data: { users },
-  })
-})
+export const getMe = (req: Request, res: Response, next: NextFunction) => {
+  req.params.id = req.user.id
+  next()
+}
 
 export const updateMe = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
@@ -84,36 +81,9 @@ export const getUserById = catchAsync(
   }
 )
 
-export const createUser = catchAsync(async (req: Request, res: Response) => {
-  const newUser = await User.create(req.body)
+export const createUser = createOne(User)
 
-  res.status(201).json({
-    status: "success",
-    data: {
-      newUser,
-    },
-  })
-})
-
-export const updateUser = catchAsync(
-  async (req: Request, res: Response, next: NextFunction) => {
-    const user = await User.findByIdAndUpdate(req.params.id, req.body, {
-      new: true,
-      runValidators: true,
-    })
-
-    if (!user) {
-      return next(new AppError("No user found with that ID", 404))
-    }
-
-    res.status(200).json({
-      status: "success",
-      data: {
-        user,
-      },
-    })
-  }
-)
+export const updateUser = updateOne(User)
 
 export const deleteUser = deleteOne(User)
 

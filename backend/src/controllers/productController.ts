@@ -1,26 +1,10 @@
 import { NextFunction, Request, Response } from "express"
 import Product from "../models/productModel"
-import { APIFeatures } from "../utils/apiFeatures"
 import catchAsync from "../utils/catchAsync"
 import { AppError } from "../utils/appError"
-import { deleteOne } from "./handlerFactory"
+import { createOne, deleteOne, getAll, updateOne } from "./handlerFactory"
 
-export const getAllProducts = catchAsync(
-  async (req: Request, res: Response) => {
-    const features = new APIFeatures(Product.find(), req.query)
-      .filter()
-      .sort("name")
-      .limitFields()
-      .paginate()
-    const products = await features.query
-
-    res.status(200).json({
-      status: "success",
-      results: products.length,
-      data: { products },
-    })
-  }
-)
+export const getAllProducts = getAll(Product)
 
 export const getProductsById = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
@@ -39,36 +23,9 @@ export const getProductsById = catchAsync(
   }
 )
 
-export const createProduct = catchAsync(async (req: Request, res: Response) => {
-  const newProduct = await Product.create(req.body)
+export const createProduct = createOne(Product)
 
-  res.status(201).json({
-    status: "success",
-    data: {
-      product: newProduct,
-    },
-  })
-})
-
-export const updateProduct = catchAsync(
-  async (req: Request, res: Response, next: NextFunction) => {
-    const product = await Product.findByIdAndUpdate(req.params.id, req.body, {
-      new: true,
-      runValidators: true,
-    })
-
-    if (!product) {
-      return next(new AppError("No product found with that ID", 404))
-    }
-
-    res.status(200).json({
-      status: "success",
-      data: {
-        product,
-      },
-    })
-  }
-)
+export const updateProduct = updateOne(Product)
 
 export const deleteProduct = deleteOne(Product)
 
