@@ -18,6 +18,8 @@ export interface IProduct {
   stock: number
   imageUrl: string
   colors: string[]
+  ratingQuantity: number
+  rating: number
 }
 
 const productSchema = new mongoose.Schema<IProduct>(
@@ -53,12 +55,25 @@ const productSchema = new mongoose.Schema<IProduct>(
       type: [String],
       default: [],
     },
+    ratingQuantity: {
+      type: Number,
+      default: 0,
+    },
+    rating: {
+      type: Number,
+      default: 0,
+      min: [1, "Rating must be above 1.0"],
+      max: [5, "Rating must be below 5.0"],
+      set: (val: number) => Math.round(val * 10) / 10,
+    },
   },
   {
     toJSON: { virtuals: true },
     toObject: { virtuals: true },
   }
 )
+
+productSchema.index({ price: 1 })
 
 productSchema.virtual("reviews", {
   ref: "Review",
