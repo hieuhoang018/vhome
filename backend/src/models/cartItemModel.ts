@@ -1,13 +1,17 @@
-import mongoose from "mongoose";
+import mongoose, { Model, Types } from "mongoose";
+
+export interface ICartItem {
+  productId: Types.ObjectId
+  quantity: number
+  chosenColor: string
+}
 
 const cartItemSchema = new mongoose.Schema({
   productId: String,
-  name: String,
-  price: Number,
   quantity: Number,
-  color: String,
+  chosenColor: String,
 })
 
-const cartItem = mongoose.model("CartItem", cartItemSchema)
+const cartItem: Model<ICartItem> = mongoose.model<ICartItem>("CartItem", cartItemSchema)
 
 export default cartItem
