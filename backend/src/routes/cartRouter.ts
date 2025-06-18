@@ -9,7 +9,7 @@ import {
   updateCart,
 } from "../controllers/cartController"
 
-const router = Router()
+const router = Router({ mergeParams: true })
 
 router
   .route("/")
@@ -18,7 +18,7 @@ router
 
 router
   .route("/:id")
-  .get(getCartById)
+  .get(protect, restrictTo("admin"), getCartById)
   .patch(protect, restrictTo("admin"), updateCart)
   .delete(protect, restrictTo("admin"), deleteCart)
 
