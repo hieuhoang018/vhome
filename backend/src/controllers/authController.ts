@@ -5,6 +5,7 @@ import { AppError } from "../utils/appError"
 import User, { IUser } from "../models/userModel"
 import { sendEmail } from "../utils/email"
 import crypto from "crypto"
+import Cart, { CartDocument } from "../models/cartModel"
 
 const signToken = ({ id }: { id: string }): string => {
   const jwtSecret = process.env.JWT_SECRET
@@ -56,6 +57,8 @@ const createSendToken = (
 
 export const signUp = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
+    const cart: CartDocument = await Cart.create({})
+
     const newUser: IUser = await User.create({
       email: req.body.email,
       password: req.body.password,
@@ -63,7 +66,11 @@ export const signUp = catchAsync(
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       role: req.body.role,
+      cart: cart._id,
     })
+
+    cart.user = newUser._id
+    await cart.save()
 
     createSendToken(newUser, 201, res, next)
   }
@@ -96,6 +103,8 @@ export const protect = catchAsync(
       req.headers.authorization.startsWith("Bearer")
     ) {
       token = req.headers.authorization.split(" ")[1]
+    }else if (req.cookies?.jwt) {
+      token = req.cookies.jwt;
     }
 
     if (!token) {

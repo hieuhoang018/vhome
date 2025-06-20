@@ -13,7 +13,7 @@ export interface IUser extends Document {
   passwordResetExpires?: Date
   role: string
   phone?: string
-  cart: number[]
+  cart: Types.ObjectId
   firstName: string
   lastName: string
   active: boolean
@@ -64,8 +64,9 @@ const userSchema = new mongoose.Schema<IUser>(
     },
     phone: String,
     cart: {
-      type: [Number],
-      default: [],
+      type: mongoose.Schema.ObjectId,
+      ref: "Cart",
+      required: [true, "User must have a cart"],
     },
     firstName: {
       type: String,

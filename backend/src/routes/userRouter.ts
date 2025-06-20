@@ -18,6 +18,11 @@ import {
   updatePassword,
   restrictTo,
 } from "../controllers/authController"
+import {
+  addToCart,
+  getMyCart,
+  removeFromCart,
+} from "../controllers/cartController"
 
 const router = Router()
 
@@ -31,6 +36,11 @@ router.patch("/reset-password/:token", resetPassword)
 router.use(protect)
 
 router.get("/me", getMe, getUserById)
+router
+  .route("/me/cart")
+  .get(protect, getMyCart)
+  .post(protect, addToCart)
+  .delete(protect, removeFromCart)
 router.patch("/update-password", updatePassword)
 router.patch("/update-information", updateMe)
 router.delete("/delete-account", deleteMe)

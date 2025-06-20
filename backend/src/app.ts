@@ -2,6 +2,7 @@ import express, { Request, Response, NextFunction } from "express"
 import productRoutes from "./routes/productRouter"
 import userRoutes from "./routes/userRouter"
 import reviewRoutes from "./routes/reviewRouter"
+import cartRoutes from "./routes/cartRouter"
 import cors from "cors"
 import morgan from "morgan"
 import rateLimit from "express-rate-limit"
@@ -9,6 +10,7 @@ import helmet from "helmet"
 import hpp from "hpp"
 import { errorHandler } from "./middlewares/errorHandler"
 import { AppError } from "./utils/appError"
+import cookieParser from "cookie-parser"
 
 const app = express()
 
@@ -36,9 +38,14 @@ app.use(
     whitelist: ["category", "price"],
   })
 )
+
+app.use(cookieParser())
+
 app.use("/api/v1/products", productRoutes)
 app.use("/api/v1/users", userRoutes)
 app.use("/api/v1/reviews", reviewRoutes)
+app.use("/api/v1/carts", cartRoutes)
+
 app.use((req: Request, res: Response, next: NextFunction) => {
   next(new AppError(`Cannot find ${req.originalUrl} on this server!`, 404))
 })

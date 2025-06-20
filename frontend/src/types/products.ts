@@ -1,9 +1,8 @@
-
 export interface ProductsResponse {
   status: string
   results: number
   data: {
-    products: Product[]
+    docs: Product[]
   }
 }
 export interface ProductResponse {
@@ -12,7 +11,6 @@ export interface ProductResponse {
     product: Product
   }
 }
-
 
 export interface Product {
   _id: number
@@ -25,14 +23,12 @@ export interface Product {
   colors: string[]
 }
 
-export interface mockData { 
-  
-     name: string,
-      category: string,
-      price: number,
-      description:
-        string,
-      stock: number,
-      imageUrl: string,
-      colors: string[],
-    }
+export interface mockData {
+  name: string
+  category: string
+  price: number
+  description: string
+  stock: number
+  imageUrl: string
+  colors: string[]
+}
