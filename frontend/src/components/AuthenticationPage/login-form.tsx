@@ -1,5 +1,6 @@
 "use client"
 
+import { useUser } from "@/context/userContext"
 import InputField from "@/components/input"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
@@ -7,6 +8,7 @@ import api from "@/lib/axios"
 
 export default function LoginForm() {
   const router = useRouter()
+  const { refreshUser } = useUser()
 
   const [formData, setFormData] = useState({
     email: "",
@@ -31,7 +33,7 @@ export default function LoginForm() {
         email: formData.email,
         password: formData.password,
       })
-
+      refreshUser()
       router.push("/")
     } catch (err: any) {
       if (err.response?.data?.message) {
@@ -60,6 +62,7 @@ export default function LoginForm() {
         value={formData.password}
         onChange={handleChange}
       />
+      {error && <p className="text-red-500">{error}</p>}
       <button className="mt-2 w-full bg-blue-500 text-white py-2 rounded">
         Sign in
       </button>

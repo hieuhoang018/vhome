@@ -35,10 +35,8 @@ export default function ProductsSection({
             category,
           },
         })
-        setProducts(res.data.data.products)
+        setProducts(res.data.data.docs)
         setTotalItems(res.data.results)
-        console.log("Number of results: ", res.data.results)
-        console.log(totalItems)
       } catch (err) {
         console.error("Fetch error:", err)
         setError("Failed to load products")
