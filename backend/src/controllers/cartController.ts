@@ -2,10 +2,8 @@ import { NextFunction, Request, Response } from "express"
 import catchAsync from "../utils/catchAsync"
 import { AppError } from "../utils/appError"
 import { createOne, deleteOne, getAll, updateOne } from "./handlerFactory"
-import Cart from "../models/cartModel"
+import Cart, { CartItem } from "../models/cartModel"
 import User from "../models/userModel"
-import cartItem from "../models/cartItemModel"
-import { Types } from "mongoose"
 import Product from "../models/productModel"
 
 export const getAllCarts = getAll(Cart)
@@ -38,63 +36,70 @@ export const addToCart = catchAsync(
     const { productId, quantity, chosenColor } = req.body
     const userId = req.user.id
 
-    if (!productId || !chosenColor) {
-      return next(new AppError("Missing productId or chosenColor", 400))
-    }
-
     const product = await Product.findById(productId)
     if (!product) {
-      console.log("cant find product")
-      return next(new AppError("Cant find given product", 404))
+      return next(new AppError("Product not found", 404))
     }
 
-    // 1. Get user and their cart
-    const user = await User.findById(userId).populate("cart")
-    if (!user || !user.cart) {
-      return next(new AppError("User or cart not found", 404))
+    if (!product.colors || !product.colors.includes(chosenColor)) {
+      return next(
+        new AppError("Chosen color is not available for this product", 400)
+      )
     }
 
-    const cart = await Cart.findById(user.cart).populate("items")
+    if (quantity > product.stock)
+      return next(
+        new AppError("Requested quantity exceeds available stock", 400)
+      )
+
+    if (quantity < 1) return next(new AppError("Invalid quantity", 400))
+
+    const name = product.name
+    const price = product.price
+
+    // 2. Find user cart
+    const cart = await Cart.findOne({ user: userId }).populate("items")
     if (!cart) {
       return next(new AppError("Cart not found", 404))
     }
 
-    // 2. Check if item exists in cart
-    let existingItem = null
-    for (const itemId of cart.items as Types.ObjectId[]) {
-      const item = await cartItem.findById(itemId)
-      if (
-        item?.productId.toString() === productId &&
-        item?.chosenColor === chosenColor
-      ) {
-        existingItem = item
-        break
-      }
-    }
+    // Check if there is an existing item with the same name and chosenColor
+    const existingItem = cart.items.find(
+      (item: CartItem) => item.name === name && item.chosenColor === chosenColor
+    )
 
     if (existingItem) {
-      // 3A. Item exists: increment quantity
       existingItem.quantity += quantity
-      await existingItem.save()
     } else {
-      // 3B. Item doesn't exist: create new CartItem
-      const newItem = await cartItem.create({
+      // 4B. Create new CartItem
+      const newItem = {
         productId,
+        name,
+        price,
         quantity,
         chosenColor,
-      })
+      }
 
-      cart.items.push(newItem._id)
+      cart.items.push(newItem)
     }
 
-    // 4. (Optional) Update cart totalPrice here if needed
+    cart.totalPrice = cart.items.reduce(
+      (sum: number, item: CartItem) => sum + item.price * item.quantity,
+      0
+    )
 
     // 5. Save cart
     await cart.save()
 
+    // 6. Re-fetch cart with full item/product data if needed
+    const updatedCart = await Cart.findById(cart._id)
+
     res.status(200).json({
+      status: "success",
       message: "Item added to cart",
-      cart,
+      data: {
+        cart: updatedCart,
+      },
     })
   }
 )
@@ -103,12 +108,50 @@ export const removeFromCart = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
     const { productId } = req.body
     const userId = req.user.id
-
     if (!productId) {
       return next(new AppError("Missing productId", 400))
     }
-
     // 1. Get user and their cart
+    const user = await User.findById(userId).populate("cart")
+    if (!user || !user.cart) {
+      return next(new AppError("User or cart not found", 404))
+    }
+    const cart = await Cart.findById(user.cart).populate("items")
+    if (!cart) {
+      return next(new AppError("Cart not found", 404))
+    }
+
+    console.log("got to here")
+    const itemIndex = cart.items.findIndex(
+      (item: CartItem) => item.productId.toString() === productId.toString()
+    )
+
+    if (itemIndex === -1) {
+      return next(new AppError("Item not found in cart", 404))
+    }
+    // Update the cart totalPrice before removing the item
+    cart.totalPrice -=
+      cart.items[itemIndex].price * cart.items[itemIndex].quantity
+    if (cart.totalPrice < 0) cart.totalPrice = 0
+
+    // Remove the item from the cart
+    cart.items.splice(itemIndex, 1)
+
+    // Save the updated cart
+    await cart.save()
+
+    res.status(200).json({
+      message: "Item removed from cart",
+      cart,
+    })
+  }
+)
+
+export const updateCartItemQuantity = catchAsync(
+  async (req: Request, res: Response, next: NextFunction) => {
+    const userId = req.user.id
+    const { updateItemId, quantity } = req.body
+
     const user = await User.findById(userId).populate("cart")
     if (!user || !user.cart) {
       return next(new AppError("User or cart not found", 404))
@@ -119,36 +162,40 @@ export const removeFromCart = catchAsync(
       return next(new AppError("Cart not found", 404))
     }
 
-    // 2. Find the cart item to remove
-    const itemIndex = (cart.items as Types.ObjectId[]).findIndex(
-      async (itemId) => {
-        const item = await cartItem.findById(itemId)
-        return item && item.productId.toString() === productId
-      }
+    const itemIndex = cart.items.findIndex(
+      (item: CartItem) => item.productId.toString() === updateItemId
     )
 
-    // Remove the item if found
-    let removed = false
-    for (let i = 0; i < (cart.items as Types.ObjectId[]).length; i++) {
-      const item = await cartItem.findById(cart.items[i])
-      if (item && item.productId.toString() === productId) {
-        await cartItem.findByIdAndDelete(item._id)
-        ;(cart.items as Types.ObjectId[]).splice(i, 1)
-        removed = true
-        break
-      }
+    if (itemIndex === -1) {
+      return res.status(404).json({
+        success: false,
+        error: "Item not found in cart",
+      })
     }
 
-    if (!removed) {
-      return next(new AppError("Item not found in cart", 404))
+    if (quantity === 0) {
+      // Remove the item if quantity is 0
+      cart.items.splice(itemIndex, 1)
+    } else {
+      // Update the quantity if greater than 0
+      cart.items[itemIndex].quantity = quantity
     }
 
-    // 3. Save cart
-    await cart.save()
+    cart.totalPrice = cart.items.reduce(
+      (sum: number, item: CartItem) => sum + item.price * item.quantity,
+      0
+    )
 
-    res.status(200).json({
-      message: "Item removed from cart",
-      cart,
+    // Save the updated cart
+    const updatedCart = await cart.save()
+
+    res.json({
+      success: true,
+      data: updatedCart,
+      message:
+        quantity === 0
+          ? "Item removed from cart successfully"
+          : "Cart item quantity updated successfully",
     })
   }
 )

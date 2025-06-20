@@ -22,6 +22,7 @@ import {
   addToCart,
   getMyCart,
   removeFromCart,
+  updateCartItemQuantity,
 } from "../controllers/cartController"
 
 const router = Router()
@@ -40,6 +41,7 @@ router
   .route("/me/cart")
   .get(protect, getMyCart)
   .post(protect, addToCart)
+  .patch(protect, updateCartItemQuantity)
   .delete(protect, removeFromCart)
 router.patch("/update-password", updatePassword)
 router.patch("/update-information", updateMe)
