@@ -1,12 +1,13 @@
 "use client"
-
 import { Heart, ShoppingCart, User } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import NavUserButton from "./NavigationBar/user-button"
 
 export default function MainHeader() {
   const [isScrolled, setIsScrolled] = useState(false)
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,9 +62,7 @@ export default function MainHeader() {
 
           {/* Action buttons */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href={"/login"}>
-              <User className="h-5 w-5" />
-            </Link>
+            <NavUserButton />
             <Link href={"/wishlist"}>
               <Heart className="h-5 w-5" />
             </Link>

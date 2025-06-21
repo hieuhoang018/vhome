@@ -17,6 +17,7 @@ import {
   protect,
   updatePassword,
   restrictTo,
+  logout,
 } from "../controllers/authController"
 import {
   addToCart,
@@ -29,6 +30,7 @@ const router = Router()
 
 router.post("/signup", signUp)
 router.post("/login", logIn)
+router.post("/logout", logout)
 
 router.post("/forgot-password", forgotPassword)
 router.patch("/reset-password/:token", resetPassword)
