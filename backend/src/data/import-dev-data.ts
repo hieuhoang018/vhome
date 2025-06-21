@@ -17,13 +17,13 @@ mongoose.connect(db).then(() => {
   console.log("db connected")
 })
 
-const users = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "users-data.json"), "utf-8")
+const products = JSON.parse(
+  fs.readFileSync(path.join(__dirname, "products-data.json"), "utf-8")
 )
 
 const importData = async () => {
   try {
-    await User.create(users)
+    await Product.create(products)
     console.log("imported")
     process.exit()
   } catch (err) {
@@ -33,7 +33,7 @@ const importData = async () => {
 
 const deleteData = async () => {
   try {
-    await User.deleteMany()
+    await Product.deleteMany()
     console.log("deleted")
     process.exit()
   } catch (err) {
