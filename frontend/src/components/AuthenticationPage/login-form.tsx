@@ -5,6 +5,7 @@ import InputField from "@/components/input"
 import { useRouter } from "next/navigation"
 import api from "@/lib/axios"
 import { useFormSubmit } from "@/hooks/useFormSubmit"
+import { LoginRoleResponse } from "@/types/users"
 
 export default function LoginForm() {
   const router = useRouter()
@@ -17,9 +18,14 @@ export default function LoginForm() {
         password: "",
       },
       onSubmit: async (data) => {
-        await api.post("/users/login", data)
+        const res = await api.post<LoginRoleResponse>("/users/login", data)
+        const role = res.data.data.role
         refreshUser()
-        router.push("/")
+        if (role === "admin") {
+          router.push("/admin/dashboard")
+        } else {
+          router.push("/")
+        }
       },
     })
 
