@@ -1,5 +1,5 @@
 import Link from "next/link"
-import CreateProductForm from "@/components/CreateProductPage/create-product-form"
+import CreateProductForm from "@/components/AdminCreateProductPage/create-product-form"
 
 export default function CreateProductPage() {
 

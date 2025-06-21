@@ -11,15 +11,10 @@ import {
 
 const router = Router({ mergeParams: true })
 
-router
-  .route("/")
-  .get(getAllCarts)
-  .post(protect, restrictTo("admin"), createCart)
+router.use(protect, restrictTo("admin"))
 
-router
-  .route("/:id")
-  .get(protect, restrictTo("admin"), getCartById)
-  .patch(protect, restrictTo("admin"), updateCart)
-  .delete(protect, restrictTo("admin"), deleteCart)
+router.route("/").get(getAllCarts).post(createCart)
+
+router.route("/:id").get(getCartById).patch(updateCart).delete(deleteCart)
 
 export default router

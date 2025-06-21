@@ -17,17 +17,20 @@ import {
   protect,
   updatePassword,
   restrictTo,
+  logout,
 } from "../controllers/authController"
 import {
   addToCart,
   getMyCart,
   removeFromCart,
+  updateCartItemQuantity,
 } from "../controllers/cartController"
 
 const router = Router()
 
 router.post("/signup", signUp)
 router.post("/login", logIn)
+router.post("/logout", logout)
 
 router.post("/forgot-password", forgotPassword)
 router.patch("/reset-password/:token", resetPassword)
@@ -40,6 +43,7 @@ router
   .route("/me/cart")
   .get(protect, getMyCart)
   .post(protect, addToCart)
+  .patch(protect, updateCartItemQuantity)
   .delete(protect, removeFromCart)
 router.patch("/update-password", updatePassword)
 router.patch("/update-information", updateMe)

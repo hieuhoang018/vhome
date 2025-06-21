@@ -34,7 +34,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
     ? "authenticated"
     : "unauthenticated"
 
-  const refreshUser = () => mutate()
+  const refreshUser = () => mutate(undefined, { revalidate: true })
 
   return (
     <UserContext.Provider value={{ user, error, status, refreshUser }}>

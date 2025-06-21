@@ -70,6 +70,7 @@ const productSchema = new mongoose.Schema<IProduct>(
   {
     toJSON: { virtuals: true },
     toObject: { virtuals: true },
+    timestamps: true,
   }
 )
 

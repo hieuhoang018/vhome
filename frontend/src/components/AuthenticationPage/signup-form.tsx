@@ -1,53 +1,31 @@
 "use client"
 
 import { useRouter } from "next/navigation"
-import { useState } from "react"
 import api from "@/lib/axios"
 import InputField from "../input"
 import Link from "next/link"
+import { useFormSubmit } from "@/hooks/useFormSubmit"
+import { useUser } from "@/context/userContext"
 
 export default function SignupForm() {
   const router = useRouter()
+  const { refreshUser } = useUser()
 
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
-  })
-
-  const [error, setError] = useState<string | null>(null)
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
+  const { formData, handleChange, handleSubmit, error, loading } =
+    useFormSubmit({
+      initialData: {
+        firstName: "",
+        lastName: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+      },
+      onSubmit: async (data) => {
+        await api.post("/users/signup", data)
+        refreshUser()
+        router.push("/")
+      },
     })
-  }
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setError(null)
-
-    try {
-      const res = await api.post("/users/signup", {
-        firstName: formData.firstName,
-        lastName: formData.lastName,
-        email: formData.email,
-        password: formData.password,
-        confirmPassword: formData.confirmPassword,
-      })
-
-      router.push("/")
-    } catch (err: any) {
-      if (err.response?.data?.message) {
-        setError(err.response.data.message)
-      } else {
-        setError("Something went wrong")
-      }
-    }
-  }
 
   return (
     <form onSubmit={handleSubmit}>

@@ -1,13 +1,32 @@
-import { Schema, model, Types, HydratedDocument } from "mongoose"
+import { Schema, model, HydratedDocument, Types } from "mongoose"
+
+export type CartDocument = HydratedDocument<ICart>
 
 export interface ICart {
   _id: Types.ObjectId
   user?: Types.ObjectId
-  items: Types.ObjectId[]
+  items: CartItem[]
   totalPrice: number
 }
 
-export type CartDocument = HydratedDocument<ICart>
+export interface CartItem {
+  productId: Types.ObjectId
+  name: string
+  quantity: number
+  price: number
+  chosenColor: string
+}
+
+const cartItemSchema = new Schema<CartItem>(
+  {
+    productId: Types.ObjectId,
+    name: { type: String, required: true },
+    quantity: { type: Number, required: true },
+    price: { type: Number, required: true },
+    chosenColor: { type: String, required: true },
+  },
+  { _id: false }
+)
 
 const cartSchema = new Schema<ICart>({
   user: {
@@ -16,8 +35,7 @@ const cartSchema = new Schema<ICart>({
     required: false,
   },
   items: {
-    type: [Schema.ObjectId],
-    ref: "CartItem",
+    type: [cartItemSchema],
     default: [],
   },
   totalPrice: {

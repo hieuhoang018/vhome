@@ -103,8 +103,8 @@ export const protect = catchAsync(
       req.headers.authorization.startsWith("Bearer")
     ) {
       token = req.headers.authorization.split(" ")[1]
-    }else if (req.cookies?.jwt) {
-      token = req.cookies.jwt;
+    } else if (req.cookies?.jwt) {
+      token = req.cookies.jwt
     }
 
     if (!token) {
@@ -246,3 +246,16 @@ export const updatePassword = catchAsync(
     createSendToken(user, 200, res, next)
   }
 )
+
+export const logout = (req: Request, res: Response) => {
+  res.cookie("jwt", "", {
+    expires: new Date(Date.now() + 10 * 1000), // Expire the cookie shortly
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+  })
+
+  res.status(200).json({
+    status: "success",
+    message: "Logged out successfully",
+  })
+}

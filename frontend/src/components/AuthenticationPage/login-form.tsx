@@ -3,46 +3,31 @@
 import { useUser } from "@/context/userContext"
 import InputField from "@/components/input"
 import { useRouter } from "next/navigation"
-import { useState } from "react"
 import api from "@/lib/axios"
+import { useFormSubmit } from "@/hooks/useFormSubmit"
+import { LoginRoleResponse } from "@/types/users"
 
 export default function LoginForm() {
   const router = useRouter()
   const { refreshUser } = useUser()
 
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  })
-
-  const [error, setError] = useState<string | null>(null)
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
+  const { formData, handleChange, handleSubmit, error, loading } =
+    useFormSubmit({
+      initialData: {
+        email: "",
+        password: "",
+      },
+      onSubmit: async (data) => {
+        const res = await api.post<LoginRoleResponse>("/users/login", data)
+        const role = res.data.data.role
+        refreshUser()
+        if (role === "admin") {
+          router.push("/admin/dashboard")
+        } else {
+          router.push("/")
+        }
+      },
     })
-  }
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setError(null)
-
-    try {
-      const res = await api.post("/users/login", {
-        email: formData.email,
-        password: formData.password,
-      })
-      refreshUser()
-      router.push("/")
-    } catch (err: any) {
-      if (err.response?.data?.message) {
-        setError(err.response.data.message)
-      } else {
-        setError("Something went wrong")
-      }
-    }
-  }
 
   return (
     <form onSubmit={handleSubmit}>
