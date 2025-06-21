@@ -23,7 +23,22 @@ export class APIFeatures {
         delete queryObj[key]
       }
     })
-    // Advanced filtering
+
+    if (queryObj.search) {
+      const searchValue = queryObj.search
+      delete queryObj.search
+
+      this.query = this.query.find({
+        $or: [
+          { name: { $regex: searchValue, $options: "i" } },
+          { email: { $regex: searchValue, $options: "i" } },
+        ],
+        ...queryObj,
+      })
+
+      return this
+    }
+
     const queryStr = JSON.stringify(queryObj).replace(
       /\b(gte|gt|lte|lt)\b/g,
       (match) => `$${match}`

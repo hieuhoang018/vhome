@@ -19,3 +19,11 @@ export interface CartResponse {
     cart: Cart
   }
 }
+
+export interface CartsResponse {
+  status: string
+  results: number
+  data: {
+    docs: Cart[]
+  }
+}

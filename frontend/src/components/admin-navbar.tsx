@@ -54,6 +54,12 @@ export default function AdminHeader() {
             >
               Create Product
             </Link>
+            <Link
+              href="/lookup"
+              className="text-furniture-charcoal hover:red font-medium transition-colors"
+            >
+              Look Up
+            </Link>
           </nav>
 
           {/* Action buttons */}

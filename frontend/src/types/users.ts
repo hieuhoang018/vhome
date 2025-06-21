@@ -5,6 +5,7 @@ export interface User {
   email: string
   role: string
   cart: string
+  active: boolean
 }
 
 export interface UsersResponse {
