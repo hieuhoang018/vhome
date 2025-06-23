@@ -6,6 +6,7 @@ export interface User {
   role: string
   cart: string
   active: boolean
+  phone: string
 }
 
 export interface UsersResponse {
@@ -13,6 +14,13 @@ export interface UsersResponse {
   results: number
   data: {
     docs: User[]
+  }
+}
+
+export interface UserResponse {
+  status: string
+  data: {
+    user: User
   }
 }
 

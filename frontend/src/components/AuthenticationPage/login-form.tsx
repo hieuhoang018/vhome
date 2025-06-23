@@ -22,7 +22,7 @@ export default function LoginForm() {
         const role = res.data.data.role
         refreshUser()
         if (role === "admin") {
-          router.push("/admin/dashboard")
+          router.push("/dashboard")
         } else {
           router.push("/")
         }
