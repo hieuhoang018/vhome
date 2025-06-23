@@ -4,6 +4,7 @@ import { useFormSubmit } from "@/hooks/useFormSubmit"
 import api from "@/lib/axios"
 import { User, UsersResponse } from "@/types/users"
 import { Eye } from "lucide-react"
+import Link from "next/link"
 import { useState } from "react"
 
 export default function UsersTab() {
@@ -82,7 +83,9 @@ export default function UsersTab() {
               <td className="py-3 px-4">
                 <div className="flex items-center space-x-2">
                   <button className="h-8 w-8">
-                    <Eye className="h-4 w-4" />
+                    <Link href={`/details/user/${user._id}`}>
+                      <Eye className="h-4 w-4" />
+                    </Link>
                   </button>
                 </div>
               </td>

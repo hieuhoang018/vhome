@@ -1,6 +1,10 @@
 export interface Cart {
   _id: string
-  user: string
+  user: {
+    _id: string
+    firstName: string
+    lastName: string
+  }
   items: CartItemType[]
   totalPrice: number
 }

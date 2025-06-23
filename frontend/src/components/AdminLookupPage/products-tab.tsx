@@ -4,6 +4,7 @@ import { useFormSubmit } from "@/hooks/useFormSubmit"
 import api from "@/lib/axios"
 import { Product, ProductsResponse } from "@/types/products"
 import { Eye } from "lucide-react"
+import Link from "next/link"
 import { useState } from "react"
 
 export default function ProductsTab() {
@@ -90,7 +91,9 @@ export default function ProductsTab() {
               <td className="py-3 px-4">
                 <div className="flex items-center space-x-2">
                   <button className="h-8 w-8">
-                    <Eye className="h-4 w-4" />
+                    <Link href={`/details/product/${product._id}`}>
+                      <Eye className="h-4 w-4" />
+                    </Link>
                   </button>
                 </div>
               </td>

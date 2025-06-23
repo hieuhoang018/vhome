@@ -7,6 +7,7 @@ export interface User {
   cart: string
   active: boolean
   phone: string
+  createdAt: Date
 }
 
 export interface UsersResponse {

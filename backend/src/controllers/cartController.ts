@@ -10,7 +10,10 @@ export const getAllCarts = getAll(Cart)
 
 export const getCartById = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
-    const cart = await Cart.findById(req.params.id)
+    const cart = await Cart.findById(req.params.id).populate({
+      path: "user",
+      select: "firstName lastName"
+    })
 
     if (!cart) {
       return next(new AppError("No cart found with that ID", 404))

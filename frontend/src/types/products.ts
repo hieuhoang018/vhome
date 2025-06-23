@@ -21,6 +21,7 @@ export interface Product {
   stock: number
   imageUrl: string
   colors: string[]
+  createdAt: Date
 }
 
 export interface mockData {

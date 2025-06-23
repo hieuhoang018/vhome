@@ -5,6 +5,7 @@ import api from "@/lib/axios"
 import { Cart, CartsResponse } from "@/types/carts"
 import { Product, ProductsResponse } from "@/types/products"
 import { Eye } from "lucide-react"
+import Link from "next/link"
 import { useState } from "react"
 
 export default function CartsTab() {
@@ -72,7 +73,7 @@ export default function CartsTab() {
               <td className="py-3 px-4">
                 <div className="flex items-center space-x-3">
                   <span className="font-medium text-furniture-charcoal">
-                    {cart.user}
+                    {cart.user._id ? cart.user._id : ""}
                   </span>
                 </div>
               </td>
@@ -87,7 +88,9 @@ export default function CartsTab() {
               <td className="py-3 px-4">
                 <div className="flex items-center space-x-2">
                   <button className="h-8 w-8">
-                    <Eye className="h-4 w-4" />
+                    <Link href={`/details/cart/${cart._id}`}>
+                      <Eye className="h-4 w-4" />
+                    </Link>
                   </button>
                 </div>
               </td>

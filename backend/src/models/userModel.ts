@@ -86,6 +86,7 @@ const userSchema = new mongoose.Schema<IUser>(
     strict: true,
     toJSON: { virtuals: true },
     toObject: { virtuals: true },
+    timestamps: true,
   }
 )
 
