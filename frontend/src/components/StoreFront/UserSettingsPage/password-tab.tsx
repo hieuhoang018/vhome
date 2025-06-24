@@ -1,6 +1,6 @@
 "use client"
 
-import InputField from "../input"
+import InputField from "../../input"
 import { useFormSubmit } from "@/hooks/useFormSubmit"
 import api from "@/lib/axios"
 

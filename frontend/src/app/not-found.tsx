@@ -1,4 +1,4 @@
-import MainHeader from "@/components/navbar"
+import MainHeader from "@/components/StoreFront/NavigationBar/navbar"
 
 export default function NotFoundPage() {
   return (

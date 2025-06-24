@@ -1,5 +1,5 @@
-import CartSection from "@/components/CartPage/cart-section"
-import { TitleCardWrapper } from "@/components/storefront-wrappers"
+import CartSection from "@/components/StoreFront/CartPage/cart-section"
+import { TitleCardWrapper } from "@/components/StoreFront/storefront-wrappers"
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
 

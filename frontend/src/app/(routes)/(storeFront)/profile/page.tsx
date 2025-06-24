@@ -1,4 +1,4 @@
-import InformationSettingsTab from "@/components/UserSettingsPage/information-setting-tab"
+import InformationSettingsTab from "@/components/StoreFront/UserSettingsPage/information-setting-tab"
 
 export default function UserSettingsPage() {
   return (

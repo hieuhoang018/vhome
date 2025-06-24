@@ -1,5 +1,5 @@
-import ProductsSection from "@/components/ProductsListingPage/products-section"
-import { TitleCardWrapper } from "@/components/storefront-wrappers"
+import ProductsSection from "@/components/StoreFront/ProductsListingPage/products-section"
+import { TitleCardWrapper } from "@/components/StoreFront/storefront-wrappers"
 
 const itemsPerPage = 8
 

@@ -1,5 +1,5 @@
 import { ProtectedRoute } from "@/components/ProtectedRoute/ProtectedRoute"
-import AdminHeader from "@/components/admin-navbar"
+import AdminHeader from "@/components/StoreFront/NavigationBar/admin-navbar"
 
 export default function AdminLayout({
   children,
@@ -9,7 +9,11 @@ export default function AdminLayout({
   return (
     <ProtectedRoute allowedRoles={["admin"]}>
       <AdminHeader />
-      <div>{children}</div>
+      <div className="min-h-screen bg-white">
+        <main className="pt-30 pb-16">
+          <div className="container mx-auto px-4">{children}</div>
+        </main>
+      </div>
     </ProtectedRoute>
   )
 }

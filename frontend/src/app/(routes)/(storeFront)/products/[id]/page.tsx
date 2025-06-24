@@ -1,4 +1,4 @@
-import ProductListingSection from "@/components/SingleProductPage/product-listing"
+import ProductListingSection from "@/components/StoreFront/SingleProductPage/product-listing"
 
 export default function IndividualProductListing() {
   return (

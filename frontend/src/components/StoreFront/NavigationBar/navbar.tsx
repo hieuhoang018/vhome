@@ -3,11 +3,10 @@ import { Heart, ShoppingCart, User } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect } from "react"
-import NavUserButton from "./NavigationBar/user-button"
+import NavUserButton from "./user-button"
 
 export default function MainHeader() {
   const [isScrolled, setIsScrolled] = useState(false)
-  
 
   useEffect(() => {
     const handleScroll = () => {

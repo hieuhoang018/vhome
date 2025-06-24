@@ -3,7 +3,7 @@
 import { Plus, X } from "lucide-react"
 import { useFormSubmit } from "@/hooks/useFormSubmit"
 import api from "@/lib/axios"
-import InputField from "../input"
+import InputField from "../../input"
 
 export default function CreateProductForm() {
   const { formData, handleChange, handleSubmit, error, loading } =

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import TabButton from "../UserSettingsPage/tab-button"
+import TabButton from "../../StoreFront/UserSettingsPage/tab-button"
 import UsersTab from "./users-tab"
 import ProductsTab from "./products-tab"
 import OrdersTab from "./orders-tabs"
