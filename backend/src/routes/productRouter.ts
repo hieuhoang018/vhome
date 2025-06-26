@@ -6,6 +6,8 @@ import {
   updateProduct,
   deleteProduct,
   getProductStats,
+  uploadProductImages,
+  resizeProductPhoto,
 } from "../controllers/productController"
 import { protect, restrictTo } from "../controllers/authController"
 import reviewRouter from "../routes/reviewRouter"
@@ -22,7 +24,7 @@ router
 router
   .route("/:id")
   .get(getProductsById)
-  .patch(protect, restrictTo("admin"), updateProduct)
+  .patch(protect, restrictTo("admin"), uploadProductImages, resizeProductPhoto, updateProduct)
   .delete(protect, restrictTo("admin"), deleteProduct)
 
 export default router

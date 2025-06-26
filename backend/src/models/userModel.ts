@@ -11,6 +11,7 @@ export interface IUser extends Document {
   passwordChangedAt: Date
   passwordResetToken?: string
   passwordResetExpires?: Date
+  photo: string
   role: string
   phone?: string
   cart: Types.ObjectId
@@ -56,6 +57,10 @@ const userSchema = new mongoose.Schema<IUser>(
 
     passwordResetExpires: {
       type: Date,
+    },
+    photo: {
+      type: String,
+      default: "default.jpg",
     },
     role: {
       type: String,

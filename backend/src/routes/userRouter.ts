@@ -8,6 +8,8 @@ import {
   updateMe,
   deleteMe,
   getMe,
+  uploadUserPhoto,
+  resizeUserPhoto,
 } from "../controllers/userController"
 import {
   signUp,
@@ -46,7 +48,7 @@ router
   .patch(updateCartItemQuantity)
   .delete(removeFromCart)
 router.patch("/update-password", updatePassword)
-router.patch("/update-information", updateMe)
+router.patch("/update-information", uploadUserPhoto, resizeUserPhoto, updateMe)
 router.delete("/delete-account", deleteMe)
 
 // Routes available only for admins

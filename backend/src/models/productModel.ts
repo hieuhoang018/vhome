@@ -16,7 +16,8 @@ export interface IProduct {
   price: number
   description: string
   stock: number
-  imageUrl: string
+  imageCoverUrl: string
+  imagesUrl: string[]
   colors: string[]
   ratingQuantity: number
   rating: number
@@ -47,9 +48,12 @@ const productSchema = new mongoose.Schema<IProduct>(
       type: Number,
       default: 0,
     },
-    imageUrl: {
+    imageCoverUrl: {
       type: String,
-      required: [true, "Product must have an image"],
+      required: [true, "Product must have a cover"],
+    },
+    imagesUrl: {
+      type: [String],
     },
     colors: {
       type: [String],
