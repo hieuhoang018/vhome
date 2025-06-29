@@ -2,7 +2,7 @@
 
 import { useUser } from "@/context/userContext"
 import api from "@/lib/axios"
-import { CartResponse, Cart, CartItemType } from "@/types/carts"
+import { CartResponse, Cart } from "@/types/carts"
 import { useEffect, useState } from "react"
 import CartItem from "./cart-item"
 import Link from "next/link"
@@ -13,14 +13,14 @@ export default function CartSection() {
   const [cart, setCart] = useState<Cart>()
   const { user } = useUser()
 
-   useEffect(() => {
+  useEffect(() => {
     if (!user) return // Don't fetch cart if not logged in
 
     const fetchCart = async () => {
       setLoading(true)
       try {
         const res = await api.get<CartResponse>("/users/me/cart")
-        setCart(res.data.data.cart)
+        setCart(res.data.data.doc)
       } catch (err) {
         console.error("Fetch error:", err)
         setError("Failed to load cart")
