@@ -27,6 +27,11 @@ import {
   removeFromCart,
   updateCartItemQuantity,
 } from "../controllers/cartController"
+import {
+  addToWishlist,
+  getMyWishlist,
+  removeFromWishlist,
+} from "../controllers/wishlistController"
 
 const router = Router()
 
@@ -50,6 +55,7 @@ router
 router.patch("/update-password", updatePassword)
 router.patch("/update-information", uploadUserPhoto, resizeUserPhoto, updateMe)
 router.delete("/delete-account", deleteMe)
+router.route("/me/wishlist").get(getMyWishlist).post(addToWishlist).delete(removeFromWishlist)
 
 // Routes available only for admins
 router.use(restrictTo("admin"))

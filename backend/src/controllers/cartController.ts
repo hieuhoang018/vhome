@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from "express"
 import catchAsync from "../utils/catchAsync"
 import { AppError } from "../utils/appError"
-import { createOne, deleteOne, getAll, updateOne } from "./handlerFactory"
+import { createOne, deleteOne, getAll, getMyOne, updateOne } from "./handlerFactory"
 import Cart, { CartItem } from "../models/cartModel"
 import User from "../models/userModel"
 import Product from "../models/productModel"
@@ -12,7 +12,7 @@ export const getCartById = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
     const cart = await Cart.findById(req.params.id).populate({
       path: "user",
-      select: "firstName lastName"
+      select: "firstName lastName",
     })
 
     if (!cart) {
@@ -114,17 +114,12 @@ export const removeFromCart = catchAsync(
     if (!productId) {
       return next(new AppError("Missing productId", 400))
     }
-    // 1. Get user and their cart
-    const user = await User.findById(userId).populate("cart")
-    if (!user || !user.cart) {
-      return next(new AppError("User or cart not found", 404))
-    }
-    const cart = await Cart.findById(user.cart).populate("items")
+
+    const cart = await Cart.findOne({ user: userId }).populate("items")
     if (!cart) {
       return next(new AppError("Cart not found", 404))
     }
 
-    console.log("got to here")
     const itemIndex = cart.items.findIndex(
       (item: CartItem) => item.productId.toString() === productId.toString()
     )
@@ -203,24 +198,4 @@ export const updateCartItemQuantity = catchAsync(
   }
 )
 
-export const getMyCart = catchAsync(
-  async (req: Request, res: Response, next: NextFunction) => {
-    const userId = req.user.id
-
-    const cart = await Cart.findOne({ user: userId }).populate("items")
-
-    if (!cart) {
-      return res.status(404).json({
-        status: "fail",
-        message: "Cart not found",
-      })
-    }
-
-    res.status(200).json({
-      status: "success",
-      data: {
-        cart,
-      },
-    })
-  }
-)
+export const getMyCart = getMyOne(Cart)

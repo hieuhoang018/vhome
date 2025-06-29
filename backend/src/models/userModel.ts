@@ -12,6 +12,7 @@ export interface IUser extends Document {
   passwordResetToken?: string
   passwordResetExpires?: Date
   photo: string
+  wishlist: Types.ObjectId
   role: string
   phone?: string
   cart: Types.ObjectId
@@ -61,6 +62,11 @@ const userSchema = new mongoose.Schema<IUser>(
     photo: {
       type: String,
       default: "default.jpg",
+    },
+    wishlist: {
+      type: mongoose.Schema.ObjectId,
+      ref: "Wishlist",
+      required: [true, "User must have a wishlist"],
     },
     role: {
       type: String,

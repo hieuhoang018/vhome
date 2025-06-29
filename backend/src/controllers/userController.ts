@@ -5,6 +5,7 @@ import { AppError } from "../utils/appError"
 import { createOne, deleteOne, getAll, updateOne } from "./handlerFactory"
 import multer, { FileFilterCallback } from "multer"
 import sharp from "sharp"
+import Product from "../models/productModel"
 
 // const multerStorage = multer.diskStorage({
 //   destination: (req, file, cb) => {

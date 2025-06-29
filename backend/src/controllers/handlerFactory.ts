@@ -93,3 +93,24 @@ export const getOneById = <T extends Document>(
       },
     })
   })
+
+export const getMyOne = <T>(Model: Model<T>) =>
+  catchAsync(async (req: Request, res: Response) => {
+    const userId = req.user.id
+
+    const doc = await Model.findOne({ user: userId }).populate("items")
+
+    if (!doc) {
+      return res.status(404).json({
+        status: "fail",
+        message: "List not found",
+      })
+    }
+
+    res.status(200).json({
+      status: "success",
+      data: {
+        doc,
+      },
+    })
+  })

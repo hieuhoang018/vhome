@@ -6,6 +6,7 @@ import User, { IUser } from "../models/userModel"
 import { sendEmail } from "../utils/email"
 import crypto from "crypto"
 import Cart, { CartDocument } from "../models/cartModel"
+import Wishlist, { WishlistDocument } from "../models/wishlistModel"
 
 const signToken = ({ id }: { id: string }): string => {
   const jwtSecret = process.env.JWT_SECRET
@@ -58,6 +59,7 @@ const createSendToken = (
 export const signUp = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
     const cart: CartDocument = await Cart.create({})
+    const wishlist: WishlistDocument = await Wishlist.create({})
 
     const newUser: IUser = await User.create({
       email: req.body.email,
@@ -67,10 +69,14 @@ export const signUp = catchAsync(
       lastName: req.body.lastName,
       role: req.body.role,
       cart: cart._id,
+      wishlist: wishlist._id,
     })
 
     cart.user = newUser._id
     await cart.save()
+
+    wishlist.user = newUser._id
+    await wishlist.save()
 
     createSendToken(newUser, 201, res, next)
   }
