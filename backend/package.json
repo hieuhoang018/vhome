@@ -26,6 +26,7 @@
     "multer": "^2.0.1",
     "nodemailer": "^7.0.3",
     "sharp": "^0.34.2",
+    "stripe": "^18.2.1",
     "validator": "^13.15.15"
   },
   "devDependencies": {
