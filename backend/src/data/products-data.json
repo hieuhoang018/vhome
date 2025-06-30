@@ -5,11 +5,22 @@
     "price": 741.99,
     "description": "Perfect for small or large bathroom spaces, this towel rack is built to maximize style and usability.",
     "stock": 46,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Qokago+Rack",
-    "colors": ["Brown", "Red", "Navy Blue", "White", "Green"],
+    "colors": [
+      "Brown",
+      "Red",
+      "Navy Blue",
+      "White",
+      "Green"
+    ],
     "createdAt": "2025-03-01T12:53:17.393155Z",
     "updatedAt": "2025-03-01T12:53:17.393155Z",
-    "rating": 3.9
+    "rating": 3.9,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Woxezu Table",
@@ -17,11 +28,22 @@
     "price": 170.99,
     "description": "Give your dining room a fresh look with this smart and space-saving dining table.",
     "stock": 32,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Woxezu+Table",
-    "colors": ["Black", "Gray", "Beige", "Yellow", "Navy Blue"],
+    "colors": [
+      "Black",
+      "Gray",
+      "Beige",
+      "Yellow",
+      "Navy Blue"
+    ],
     "createdAt": "2024-12-23T08:58:17.393177Z",
     "updatedAt": "2024-12-23T08:58:17.393177Z",
-    "rating": 3.6
+    "rating": 3.6,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Wuxofi Vanity",
@@ -29,11 +51,22 @@
     "price": 376.99,
     "description": "The minimalist design of this vanity makes it an excellent fit for contemporary bathroom interiors.",
     "stock": 34,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Wuxofi+Vanity",
-    "colors": ["Black", "Red", "Navy Blue", "Green", "Brown"],
+    "colors": [
+      "Black",
+      "Red",
+      "Navy Blue",
+      "Green",
+      "Brown"
+    ],
     "createdAt": "2025-05-03T10:29:17.393193Z",
     "updatedAt": "2025-05-03T10:29:17.393193Z",
-    "rating": 4.0
+    "rating": 4.0,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Seyoki Rack",
@@ -41,11 +74,22 @@
     "price": 483.99,
     "description": "Upgrade your bathroom with this modern towel rack, designed to meet both form and function.",
     "stock": 12,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Seyoki+Rack",
-    "colors": ["Red", "Black", "White", "Beige", "Natural Wood"],
+    "colors": [
+      "Red",
+      "Black",
+      "White",
+      "Beige",
+      "Natural Wood"
+    ],
     "createdAt": "2025-03-25T11:20:17.393205Z",
     "updatedAt": "2025-03-25T11:20:17.393205Z",
-    "rating": 1.6
+    "rating": 1.6,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Gomuqi Bookshelf",
@@ -53,11 +97,22 @@
     "price": 269.99,
     "description": "This stylish bookshelf is perfect for any modern office. Designed for both comfort and function.",
     "stock": 43,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Gomuqi+Bookshelf",
-    "colors": ["Gray", "Brown", "Yellow", "White", "Navy Blue"],
+    "colors": [
+      "Gray",
+      "Brown",
+      "Yellow",
+      "White",
+      "Navy Blue"
+    ],
     "createdAt": "2025-02-11T11:22:17.393216Z",
     "updatedAt": "2025-02-11T11:22:17.393216Z",
-    "rating": 2.7
+    "rating": 2.7,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Kujowo Chair",
@@ -65,11 +120,22 @@
     "price": 866.99,
     "description": "Perfect for small or large dining room spaces, this dining chair is built to maximize style and usability.",
     "stock": 14,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Kujowo+Chair",
-    "colors": ["White", "Red", "Brown", "Black", "Green"],
+    "colors": [
+      "White",
+      "Red",
+      "Brown",
+      "Black",
+      "Green"
+    ],
     "createdAt": "2025-06-17T15:06:17.393227Z",
     "updatedAt": "2025-06-17T15:06:17.393227Z",
-    "rating": 3.3
+    "rating": 3.3,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Ripuwo Basket",
@@ -77,11 +143,19 @@
     "price": 521.99,
     "description": "Transform your bathroom space with this durable and sleek laundry basket.",
     "stock": 38,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Ripuwo+Basket",
-    "colors": ["Red", "Navy Blue"],
+    "colors": [
+      "Red",
+      "Navy Blue"
+    ],
     "createdAt": "2025-04-07T08:46:17.393236Z",
     "updatedAt": "2025-04-07T08:46:17.393236Z",
-    "rating": 4.7
+    "rating": 4.7,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Saxige Nightstand",
@@ -89,11 +163,22 @@
     "price": 754.99,
     "description": "Give your bedroom a fresh look with this smart and space-saving nightstand.",
     "stock": 13,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Saxige+Nightstand",
-    "colors": ["Black", "Beige", "Navy Blue", "Natural Wood", "Yellow"],
+    "colors": [
+      "Black",
+      "Beige",
+      "Navy Blue",
+      "Natural Wood",
+      "Yellow"
+    ],
     "createdAt": "2025-04-02T10:06:17.393248Z",
     "updatedAt": "2025-04-02T10:06:17.393248Z",
-    "rating": 3.6
+    "rating": 3.6,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Rujohe Bench",
@@ -101,11 +186,20 @@
     "price": 863.99,
     "description": "This versatile garden bench enhances any outdoor, blending practicality with aesthetic charm.",
     "stock": 44,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Rujohe+Bench",
-    "colors": ["Gray", "Red", "Green"],
+    "colors": [
+      "Gray",
+      "Red",
+      "Green"
+    ],
     "createdAt": "2025-05-11T21:42:17.393257Z",
     "updatedAt": "2025-05-11T21:42:17.393257Z",
-    "rating": 2.5
+    "rating": 2.5,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Bedamu Chair",
@@ -113,11 +207,20 @@
     "price": 743.99,
     "description": "With clean lines and a timeless design, this patio chair is a must-have piece for your outdoor.",
     "stock": 14,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Bedamu+Chair",
-    "colors": ["Green", "White", "Red"],
+    "colors": [
+      "Green",
+      "White",
+      "Red"
+    ],
     "createdAt": "2025-01-17T17:44:17.393264Z",
     "updatedAt": "2025-01-17T17:44:17.393264Z",
-    "rating": 4.8
+    "rating": 4.8,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Kiqevo Shelf",
@@ -125,11 +228,21 @@
     "price": 98.99,
     "description": "With clean lines and a timeless design, this bathroom shelf is a must-have piece for your bathroom.",
     "stock": 21,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Kiqevo+Shelf",
-    "colors": ["Red", "Yellow", "Brown", "White"],
+    "colors": [
+      "Red",
+      "Yellow",
+      "Brown",
+      "White"
+    ],
     "createdAt": "2025-04-26T23:25:17.393271Z",
     "updatedAt": "2025-04-26T23:25:17.393271Z",
-    "rating": 3.9
+    "rating": 3.9,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Busize Chair",
@@ -137,11 +250,22 @@
     "price": 679.99,
     "description": "Perfect for small or large dining room spaces, this dining chair is built to maximize style and usability.",
     "stock": 5,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Busize+Chair",
-    "colors": ["Red", "Natural Wood", "Gray", "White", "Black"],
+    "colors": [
+      "Red",
+      "Natural Wood",
+      "Gray",
+      "White",
+      "Black"
+    ],
     "createdAt": "2025-05-07T14:59:17.393277Z",
     "updatedAt": "2025-05-07T14:59:17.393277Z",
-    "rating": 2.5
+    "rating": 2.5,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Xugabu Table",
@@ -149,11 +273,19 @@
     "price": 637.99,
     "description": "Give your dining room a fresh look with this smart and space-saving buffet table.",
     "stock": 4,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Xugabu+Table",
-    "colors": ["Gray", "Beige"],
+    "colors": [
+      "Gray",
+      "Beige"
+    ],
     "createdAt": "2025-03-06T04:11:17.393284Z",
     "updatedAt": "2025-03-06T04:11:17.393284Z",
-    "rating": 2.1
+    "rating": 2.1,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Cazoha Stand",
@@ -161,11 +293,22 @@
     "price": 863.99,
     "description": "Add elegance and utility to your living room with this beautifully crafted tv stand.",
     "stock": 29,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Cazoha+Stand",
-    "colors": ["Yellow", "White", "Black", "Gray", "Beige"],
+    "colors": [
+      "Yellow",
+      "White",
+      "Black",
+      "Gray",
+      "Beige"
+    ],
     "createdAt": "2025-01-05T18:24:17.393290Z",
     "updatedAt": "2025-01-05T18:24:17.393290Z",
-    "rating": 4.8
+    "rating": 4.8,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Quroto Sideboard",
@@ -173,11 +316,21 @@
     "price": 637.99,
     "description": "This versatile sideboard enhances any dining room, blending practicality with aesthetic charm.",
     "stock": 49,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Quroto+Sideboard",
-    "colors": ["Gray", "Green", "Red", "Navy Blue"],
+    "colors": [
+      "Gray",
+      "Green",
+      "Red",
+      "Navy Blue"
+    ],
     "createdAt": "2025-03-10T13:16:17.393297Z",
     "updatedAt": "2025-03-10T13:16:17.393297Z",
-    "rating": 1.8
+    "rating": 1.8,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Qetadi Sofa",
@@ -185,11 +338,20 @@
     "price": 548.99,
     "description": "This ergonomic sofa offers lasting support and contemporary flair for your living room.",
     "stock": 1,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Qetadi+Sofa",
-    "colors": ["Natural Wood", "Beige", "Gray"],
+    "colors": [
+      "Natural Wood",
+      "Beige",
+      "Gray"
+    ],
     "createdAt": "2025-01-11T11:50:17.393303Z",
     "updatedAt": "2025-01-11T11:50:17.393303Z",
-    "rating": 1.4
+    "rating": 1.4,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Cinuye Box",
@@ -197,11 +359,20 @@
     "price": 494.99,
     "description": "The minimalist design of this deck box makes it an excellent fit for contemporary outdoor interiors.",
     "stock": 44,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Cinuye+Box",
-    "colors": ["White", "Yellow", "Beige"],
+    "colors": [
+      "White",
+      "Yellow",
+      "Beige"
+    ],
     "createdAt": "2025-03-08T11:17:17.393310Z",
     "updatedAt": "2025-03-08T11:17:17.393310Z",
-    "rating": 4.1
+    "rating": 4.1,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Ragawa Shelf",
@@ -209,11 +380,21 @@
     "price": 567.99,
     "description": "Give your bathroom a fresh look with this smart and space-saving bathroom shelf.",
     "stock": 28,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Ragawa+Shelf",
-    "colors": ["Beige", "Yellow", "Navy Blue", "Brown"],
+    "colors": [
+      "Beige",
+      "Yellow",
+      "Navy Blue",
+      "Brown"
+    ],
     "createdAt": "2025-06-18T12:07:17.393326Z",
     "updatedAt": "2025-06-18T12:07:17.393326Z",
-    "rating": 2.9
+    "rating": 2.9,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Luniro Table",
@@ -221,11 +402,21 @@
     "price": 354.99,
     "description": "Add elegance and utility to your living room with this beautifully crafted coffee table.",
     "stock": 33,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Luniro+Table",
-    "colors": ["Brown", "Yellow", "Navy Blue", "Black"],
+    "colors": [
+      "Brown",
+      "Yellow",
+      "Navy Blue",
+      "Black"
+    ],
     "createdAt": "2025-06-14T07:52:17.393332Z",
     "updatedAt": "2025-06-14T07:52:17.393332Z",
-    "rating": 3.4
+    "rating": 3.4,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Xegude Bed",
@@ -233,11 +424,20 @@
     "price": 597.99,
     "description": "Upgrade your bedroom with this modern bed, designed to meet both form and function.",
     "stock": 43,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Xegude+Bed",
-    "colors": ["Black", "Gray", "Navy Blue"],
+    "colors": [
+      "Black",
+      "Gray",
+      "Navy Blue"
+    ],
     "createdAt": "2025-05-07T10:38:17.393339Z",
     "updatedAt": "2025-05-07T10:38:17.393339Z",
-    "rating": 5.0
+    "rating": 5.0,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Xapiri Dresser",
@@ -245,11 +445,20 @@
     "price": 229.99,
     "description": "Add elegance and utility to your bedroom with this beautifully crafted dresser.",
     "stock": 17,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Xapiri+Dresser",
-    "colors": ["Yellow", "Black", "Brown"],
+    "colors": [
+      "Yellow",
+      "Black",
+      "Brown"
+    ],
     "createdAt": "2025-03-02T17:56:17.393345Z",
     "updatedAt": "2025-03-02T17:56:17.393345Z",
-    "rating": 3.6
+    "rating": 3.6,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Hiruvo Chair",
@@ -257,11 +466,21 @@
     "price": 398.99,
     "description": "The minimalist design of this dining chair makes it an excellent fit for contemporary dining room interiors.",
     "stock": 13,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Hiruvo+Chair",
-    "colors": ["Brown", "Red", "Green", "Gray"],
+    "colors": [
+      "Brown",
+      "Red",
+      "Green",
+      "Gray"
+    ],
     "createdAt": "2025-06-14T06:30:17.393351Z",
     "updatedAt": "2025-06-14T06:30:17.393351Z",
-    "rating": 1.0
+    "rating": 1.0,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Lareto Box",
@@ -269,11 +488,19 @@
     "price": 530.99,
     "description": "This stylish deck box is perfect for any modern outdoor. Designed for both comfort and function.",
     "stock": 6,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Lareto+Box",
-    "colors": ["White", "Gray"],
+    "colors": [
+      "White",
+      "Gray"
+    ],
     "createdAt": "2025-05-23T01:18:17.393358Z",
     "updatedAt": "2025-05-23T01:18:17.393358Z",
-    "rating": 3.7
+    "rating": 3.7,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Sugibi Box",
@@ -281,11 +508,19 @@
     "price": 738.99,
     "description": "Perfect for small or large outdoor spaces, this deck box is built to maximize style and usability.",
     "stock": 3,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Sugibi+Box",
-    "colors": ["Green", "Brown"],
+    "colors": [
+      "Green",
+      "Brown"
+    ],
     "createdAt": "2025-05-08T09:40:17.393364Z",
     "updatedAt": "2025-05-08T09:40:17.393364Z",
-    "rating": 2.4
+    "rating": 2.4,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Cirawa Chair",
@@ -293,11 +528,20 @@
     "price": 657.99,
     "description": "The minimalist design of this patio chair makes it an excellent fit for contemporary outdoor interiors.",
     "stock": 42,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Cirawa+Chair",
-    "colors": ["Green", "Red", "Beige"],
+    "colors": [
+      "Green",
+      "Red",
+      "Beige"
+    ],
     "createdAt": "2025-05-20T20:26:17.393370Z",
     "updatedAt": "2025-05-20T20:26:17.393370Z",
-    "rating": 2.5
+    "rating": 2.5,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Piroxi Box",
@@ -305,11 +549,20 @@
     "price": 772.99,
     "description": "Give your outdoor a fresh look with this smart and space-saving deck box.",
     "stock": 14,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Piroxi+Box",
-    "colors": ["Black", "White", "Red"],
+    "colors": [
+      "Black",
+      "White",
+      "Red"
+    ],
     "createdAt": "2025-03-09T13:46:17.393377Z",
     "updatedAt": "2025-03-09T13:46:17.393377Z",
-    "rating": 1.7
+    "rating": 1.7,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Dovawe Table",
@@ -317,11 +570,22 @@
     "price": 747.99,
     "description": "Add elegance and utility to your outdoor with this beautifully crafted outdoor table.",
     "stock": 12,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Dovawe+Table",
-    "colors": ["White", "Black", "Natural Wood", "Green", "Beige"],
+    "colors": [
+      "White",
+      "Black",
+      "Natural Wood",
+      "Green",
+      "Beige"
+    ],
     "createdAt": "2025-01-23T19:42:17.393383Z",
     "updatedAt": "2025-01-23T19:42:17.393383Z",
-    "rating": 1.6
+    "rating": 1.6,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Nohapi Desk",
@@ -329,11 +593,19 @@
     "price": 844.99,
     "description": "Transform your office space with this durable and sleek office desk.",
     "stock": 34,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Nohapi+Desk",
-    "colors": ["Black", "Red"],
+    "colors": [
+      "Black",
+      "Red"
+    ],
     "createdAt": "2025-02-01T19:09:17.393389Z",
     "updatedAt": "2025-02-01T19:09:17.393389Z",
-    "rating": 4.6
+    "rating": 4.6,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Bivadu Vanity",
@@ -341,11 +613,19 @@
     "price": 56.99,
     "description": "Give your bathroom a fresh look with this smart and space-saving vanity.",
     "stock": 8,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Bivadu+Vanity",
-    "colors": ["Gray", "Navy Blue"],
+    "colors": [
+      "Gray",
+      "Navy Blue"
+    ],
     "createdAt": "2025-03-05T04:02:17.393397Z",
     "updatedAt": "2025-03-05T04:02:17.393397Z",
-    "rating": 2.7
+    "rating": 2.7,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Vutaqu Table",
@@ -353,11 +633,20 @@
     "price": 758.99,
     "description": "This stylish coffee table is perfect for any modern living room. Designed for both comfort and function.",
     "stock": 36,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Vutaqu+Table",
-    "colors": ["White", "Red", "Beige"],
+    "colors": [
+      "White",
+      "Red",
+      "Beige"
+    ],
     "createdAt": "2025-03-03T00:44:17.393403Z",
     "updatedAt": "2025-03-03T00:44:17.393403Z",
-    "rating": 4.8
+    "rating": 4.8,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Geveqi Table",
@@ -365,11 +654,20 @@
     "price": 359.99,
     "description": "Give your living room a fresh look with this smart and space-saving coffee table.",
     "stock": 44,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Geveqi+Table",
-    "colors": ["Yellow", "Black", "Gray"],
+    "colors": [
+      "Yellow",
+      "Black",
+      "Gray"
+    ],
     "createdAt": "2025-05-17T16:25:17.393410Z",
     "updatedAt": "2025-05-17T16:25:17.393410Z",
-    "rating": 4.9
+    "rating": 4.9,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Rosowa Bookshelf",
@@ -377,11 +675,19 @@
     "price": 227.99,
     "description": "Give your living room a fresh look with this smart and space-saving bookshelf.",
     "stock": 38,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Rosowa+Bookshelf",
-    "colors": ["Natural Wood", "Gray"],
+    "colors": [
+      "Natural Wood",
+      "Gray"
+    ],
     "createdAt": "2025-03-30T10:47:17.393416Z",
     "updatedAt": "2025-03-30T10:47:17.393416Z",
-    "rating": 3.4
+    "rating": 3.4,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Tumuxe Chair",
@@ -389,11 +695,22 @@
     "price": 758.99,
     "description": "This stylish dining chair is perfect for any modern dining room. Designed for both comfort and function.",
     "stock": 9,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Tumuxe+Chair",
-    "colors": ["Yellow", "Black", "Red", "Green", "Gray"],
+    "colors": [
+      "Yellow",
+      "Black",
+      "Red",
+      "Green",
+      "Gray"
+    ],
     "createdAt": "2025-02-07T12:41:17.393422Z",
     "updatedAt": "2025-02-07T12:41:17.393422Z",
-    "rating": 1.2
+    "rating": 1.2,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Jinuje Stand",
@@ -401,11 +718,22 @@
     "price": 734.99,
     "description": "Add elegance and utility to your living room with this beautifully crafted tv stand.",
     "stock": 16,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Jinuje+Stand",
-    "colors": ["Beige", "Navy Blue", "Brown", "Black", "Gray"],
+    "colors": [
+      "Beige",
+      "Navy Blue",
+      "Brown",
+      "Black",
+      "Gray"
+    ],
     "createdAt": "2025-03-18T15:28:17.393429Z",
     "updatedAt": "2025-03-18T15:28:17.393429Z",
-    "rating": 1.7
+    "rating": 1.7,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Yasixo Wardrobe",
@@ -413,11 +741,21 @@
     "price": 818.99,
     "description": "Add elegance and utility to your bedroom with this beautifully crafted wardrobe.",
     "stock": 17,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Yasixo+Wardrobe",
-    "colors": ["Red", "Green", "Black", "Beige"],
+    "colors": [
+      "Red",
+      "Green",
+      "Black",
+      "Beige"
+    ],
     "createdAt": "2024-12-25T03:57:17.393442Z",
     "updatedAt": "2024-12-25T03:57:17.393442Z",
-    "rating": 3.4
+    "rating": 3.4,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Larigu Chair",
@@ -425,11 +763,21 @@
     "price": 100.99,
     "description": "Transform your outdoor space with this durable and sleek patio chair.",
     "stock": 43,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Larigu+Chair",
-    "colors": ["Natural Wood", "Green", "Navy Blue", "Red"],
+    "colors": [
+      "Natural Wood",
+      "Green",
+      "Navy Blue",
+      "Red"
+    ],
     "createdAt": "2025-05-03T15:28:17.393451Z",
     "updatedAt": "2025-05-03T15:28:17.393451Z",
-    "rating": 4.4
+    "rating": 4.4,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Fomozi Basket",
@@ -437,11 +785,21 @@
     "price": 715.99,
     "description": "Perfect for small or large bathroom spaces, this laundry basket is built to maximize style and usability.",
     "stock": 17,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Fomozi+Basket",
-    "colors": ["Navy Blue", "White", "Red", "Beige"],
+    "colors": [
+      "Navy Blue",
+      "White",
+      "Red",
+      "Beige"
+    ],
     "createdAt": "2025-06-01T04:19:17.393461Z",
     "updatedAt": "2025-06-01T04:19:17.393461Z",
-    "rating": 1.8
+    "rating": 1.8,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Karani Sofa",
@@ -449,11 +807,19 @@
     "price": 421.99,
     "description": "Add elegance and utility to your living room with this beautifully crafted sofa.",
     "stock": 23,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Karani+Sofa",
-    "colors": ["Gray", "White"],
+    "colors": [
+      "Gray",
+      "White"
+    ],
     "createdAt": "2025-03-03T04:37:17.393471Z",
     "updatedAt": "2025-03-03T04:37:17.393471Z",
-    "rating": 1.9
+    "rating": 1.9,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Notuku Table",
@@ -461,11 +827,19 @@
     "price": 130.99,
     "description": "This stylish buffet table is perfect for any modern dining room. Designed for both comfort and function.",
     "stock": 49,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Notuku+Table",
-    "colors": ["Beige", "Navy Blue"],
+    "colors": [
+      "Beige",
+      "Navy Blue"
+    ],
     "createdAt": "2025-03-27T02:39:17.393482Z",
     "updatedAt": "2025-03-27T02:39:17.393482Z",
-    "rating": 2.2
+    "rating": 2.2,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Bagefu Bookshelf",
@@ -473,11 +847,20 @@
     "price": 593.99,
     "description": "Add elegance and utility to your office with this beautifully crafted bookshelf.",
     "stock": 28,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Bagefu+Bookshelf",
-    "colors": ["Natural Wood", "White", "Navy Blue"],
+    "colors": [
+      "Natural Wood",
+      "White",
+      "Navy Blue"
+    ],
     "createdAt": "2025-03-19T09:59:17.393491Z",
     "updatedAt": "2025-03-19T09:59:17.393491Z",
-    "rating": 4.9
+    "rating": 4.9,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Cinayu Cabinet",
@@ -485,11 +868,21 @@
     "price": 868.99,
     "description": "This stylish mirror cabinet is perfect for any modern bathroom. Designed for both comfort and function.",
     "stock": 35,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Cinayu+Cabinet",
-    "colors": ["Navy Blue", "Yellow", "Black", "White"],
+    "colors": [
+      "Navy Blue",
+      "Yellow",
+      "Black",
+      "White"
+    ],
     "createdAt": "2025-04-13T15:50:17.393501Z",
     "updatedAt": "2025-04-13T15:50:17.393501Z",
-    "rating": 2.8
+    "rating": 2.8,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Gotaka Table",
@@ -497,11 +890,20 @@
     "price": 408.99,
     "description": "Upgrade your living room with this modern coffee table, designed to meet both form and function.",
     "stock": 21,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Gotaka+Table",
-    "colors": ["Brown", "Red", "White"],
+    "colors": [
+      "Brown",
+      "Red",
+      "White"
+    ],
     "createdAt": "2025-05-13T07:54:17.393512Z",
     "updatedAt": "2025-05-13T07:54:17.393512Z",
-    "rating": 4.1
+    "rating": 4.1,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Ritefa Table",
@@ -509,11 +911,20 @@
     "price": 788.99,
     "description": "This ergonomic dining table offers lasting support and contemporary flair for your dining room.",
     "stock": 46,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Ritefa+Table",
-    "colors": ["White", "Brown", "Gray"],
+    "colors": [
+      "White",
+      "Brown",
+      "Gray"
+    ],
     "createdAt": "2025-04-26T03:33:17.393521Z",
     "updatedAt": "2025-04-26T03:33:17.393521Z",
-    "rating": 3.7
+    "rating": 3.7,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Zihuwa Bookshelf",
@@ -521,11 +932,22 @@
     "price": 190.99,
     "description": "This stylish bookshelf is perfect for any modern office. Designed for both comfort and function.",
     "stock": 9,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Zihuwa+Bookshelf",
-    "colors": ["Natural Wood", "Gray", "Green", "Brown", "Yellow"],
+    "colors": [
+      "Natural Wood",
+      "Gray",
+      "Green",
+      "Brown",
+      "Yellow"
+    ],
     "createdAt": "2025-05-18T04:26:17.393528Z",
     "updatedAt": "2025-05-18T04:26:17.393528Z",
-    "rating": 4.1
+    "rating": 4.1,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Nolabi Box",
@@ -533,11 +955,21 @@
     "price": 422.99,
     "description": "Add elegance and utility to your outdoor with this beautifully crafted deck box.",
     "stock": 5,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Nolabi+Box",
-    "colors": ["White", "Beige", "Brown", "Green"],
+    "colors": [
+      "White",
+      "Beige",
+      "Brown",
+      "Green"
+    ],
     "createdAt": "2025-01-28T02:42:17.393596Z",
     "updatedAt": "2025-01-28T02:42:17.393596Z",
-    "rating": 1.3
+    "rating": 1.3,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Gajika Rack",
@@ -545,11 +977,21 @@
     "price": 816.99,
     "description": "Transform your bathroom space with this durable and sleek towel rack.",
     "stock": 41,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Gajika+Rack",
-    "colors": ["Gray", "Navy Blue", "Green", "Natural Wood"],
+    "colors": [
+      "Gray",
+      "Navy Blue",
+      "Green",
+      "Natural Wood"
+    ],
     "createdAt": "2025-03-11T16:00:17.393605Z",
     "updatedAt": "2025-03-11T16:00:17.393605Z",
-    "rating": 5.0
+    "rating": 5.0,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Wonavu Box",
@@ -557,11 +999,21 @@
     "price": 51.99,
     "description": "Perfect for small or large outdoor spaces, this deck box is built to maximize style and usability.",
     "stock": 50,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Wonavu+Box",
-    "colors": ["Natural Wood", "Navy Blue", "Brown", "White"],
+    "colors": [
+      "Natural Wood",
+      "Navy Blue",
+      "Brown",
+      "White"
+    ],
     "createdAt": "2025-06-08T18:35:17.393614Z",
     "updatedAt": "2025-06-08T18:35:17.393614Z",
-    "rating": 3.8
+    "rating": 3.8,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Juhoce Desk",
@@ -569,11 +1021,22 @@
     "price": 137.99,
     "description": "Add elegance and utility to your office with this beautifully crafted office desk.",
     "stock": 42,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Juhoce+Desk",
-    "colors": ["Green", "Brown", "Black", "Red", "White"],
+    "colors": [
+      "Green",
+      "Brown",
+      "Black",
+      "Red",
+      "White"
+    ],
     "createdAt": "2025-03-30T00:19:17.393622Z",
     "updatedAt": "2025-03-30T00:19:17.393622Z",
-    "rating": 2.9
+    "rating": 2.9,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Xarojo Bed",
@@ -581,11 +1044,22 @@
     "price": 817.99,
     "description": "Give your bedroom a fresh look with this smart and space-saving bed.",
     "stock": 23,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Xarojo+Bed",
-    "colors": ["Black", "Green", "Yellow", "Beige", "Gray"],
+    "colors": [
+      "Black",
+      "Green",
+      "Yellow",
+      "Beige",
+      "Gray"
+    ],
     "createdAt": "2025-05-12T04:16:17.393632Z",
     "updatedAt": "2025-05-12T04:16:17.393632Z",
-    "rating": 1.9
+    "rating": 1.9,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Royuva Table",
@@ -593,11 +1067,22 @@
     "price": 332.99,
     "description": "This stylish outdoor table is perfect for any modern outdoor. Designed for both comfort and function.",
     "stock": 16,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Royuva+Table",
-    "colors": ["Gray", "Beige", "Green", "Red", "Brown"],
+    "colors": [
+      "Gray",
+      "Beige",
+      "Green",
+      "Red",
+      "Brown"
+    ],
     "createdAt": "2025-02-21T08:55:17.393642Z",
     "updatedAt": "2025-02-21T08:55:17.393642Z",
-    "rating": 1.2
+    "rating": 1.2,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Gagisi Bookshelf",
@@ -605,11 +1090,21 @@
     "price": 190.99,
     "description": "This ergonomic bookshelf offers lasting support and contemporary flair for your living room.",
     "stock": 43,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Gagisi+Bookshelf",
-    "colors": ["Green", "Brown", "Natural Wood", "Gray"],
+    "colors": [
+      "Green",
+      "Brown",
+      "Natural Wood",
+      "Gray"
+    ],
     "createdAt": "2025-03-08T09:08:17.393653Z",
     "updatedAt": "2025-03-08T09:08:17.393653Z",
-    "rating": 2.8
+    "rating": 2.8,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Kevuxe Table",
@@ -617,11 +1112,20 @@
     "price": 843.99,
     "description": "Give your dining room a fresh look with this smart and space-saving buffet table.",
     "stock": 27,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Kevuxe+Table",
-    "colors": ["Natural Wood", "Beige", "Brown"],
+    "colors": [
+      "Natural Wood",
+      "Beige",
+      "Brown"
+    ],
     "createdAt": "2025-05-13T16:50:17.393673Z",
     "updatedAt": "2025-05-13T16:50:17.393673Z",
-    "rating": 2.8
+    "rating": 2.8,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Viluru Table",
@@ -629,11 +1133,20 @@
     "price": 715.99,
     "description": "Add elegance and utility to your living room with this beautifully crafted coffee table.",
     "stock": 30,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Viluru+Table",
-    "colors": ["Yellow", "Brown", "White"],
+    "colors": [
+      "Yellow",
+      "Brown",
+      "White"
+    ],
     "createdAt": "2025-03-18T16:13:17.393684Z",
     "updatedAt": "2025-03-18T16:13:17.393684Z",
-    "rating": 1.9
+    "rating": 1.9,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Jojequ Chair",
@@ -641,11 +1154,22 @@
     "price": 316.99,
     "description": "Perfect for small or large office spaces, this office chair is built to maximize style and usability.",
     "stock": 17,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Jojequ+Chair",
-    "colors": ["Navy Blue", "White", "Black", "Green", "Yellow"],
+    "colors": [
+      "Navy Blue",
+      "White",
+      "Black",
+      "Green",
+      "Yellow"
+    ],
     "createdAt": "2025-02-18T19:12:17.393694Z",
     "updatedAt": "2025-02-18T19:12:17.393694Z",
-    "rating": 3.0
+    "rating": 3.0,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Xuzite Wardrobe",
@@ -653,11 +1177,20 @@
     "price": 485.99,
     "description": "Add elegance and utility to your bedroom with this beautifully crafted wardrobe.",
     "stock": 41,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Xuzite+Wardrobe",
-    "colors": ["Red", "Natural Wood", "Beige"],
+    "colors": [
+      "Red",
+      "Natural Wood",
+      "Beige"
+    ],
     "createdAt": "2025-02-12T13:45:17.393705Z",
     "updatedAt": "2025-02-12T13:45:17.393705Z",
-    "rating": 3.2
+    "rating": 3.2,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Sufiqi Wardrobe",
@@ -665,11 +1198,19 @@
     "price": 702.99,
     "description": "This versatile wardrobe enhances any bedroom, blending practicality with aesthetic charm.",
     "stock": 35,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Sufiqi+Wardrobe",
-    "colors": ["Black", "Navy Blue"],
+    "colors": [
+      "Black",
+      "Navy Blue"
+    ],
     "createdAt": "2025-02-11T14:32:17.393715Z",
     "updatedAt": "2025-02-11T14:32:17.393715Z",
-    "rating": 3.0
+    "rating": 3.0,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Zoduru Chair",
@@ -677,11 +1218,19 @@
     "price": 813.99,
     "description": "This versatile patio chair enhances any outdoor, blending practicality with aesthetic charm.",
     "stock": 14,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Zoduru+Chair",
-    "colors": ["Brown", "Yellow"],
+    "colors": [
+      "Brown",
+      "Yellow"
+    ],
     "createdAt": "2025-01-12T09:57:17.393725Z",
     "updatedAt": "2025-01-12T09:57:17.393725Z",
-    "rating": 1.2
+    "rating": 1.2,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Zowadu Rack",
@@ -689,11 +1238,19 @@
     "price": 261.99,
     "description": "This stylish towel rack is perfect for any modern bathroom. Designed for both comfort and function.",
     "stock": 11,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Zowadu+Rack",
-    "colors": ["Brown", "Black"],
+    "colors": [
+      "Brown",
+      "Black"
+    ],
     "createdAt": "2025-01-06T14:24:17.393736Z",
     "updatedAt": "2025-01-06T14:24:17.393736Z",
-    "rating": 2.4
+    "rating": 2.4,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Malujo Sideboard",
@@ -701,11 +1258,20 @@
     "price": 859.99,
     "description": "Perfect for small or large dining room spaces, this sideboard is built to maximize style and usability.",
     "stock": 11,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Malujo+Sideboard",
-    "colors": ["Green", "Red", "Gray"],
+    "colors": [
+      "Green",
+      "Red",
+      "Gray"
+    ],
     "createdAt": "2025-05-26T15:23:17.393752Z",
     "updatedAt": "2025-05-26T15:23:17.393752Z",
-    "rating": 2.4
+    "rating": 2.4,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Gidezu Bench",
@@ -713,11 +1279,19 @@
     "price": 241.99,
     "description": "The minimalist design of this garden bench makes it an excellent fit for contemporary outdoor interiors.",
     "stock": 13,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Gidezu+Bench",
-    "colors": ["Black", "Brown"],
+    "colors": [
+      "Black",
+      "Brown"
+    ],
     "createdAt": "2025-03-09T00:27:17.393762Z",
     "updatedAt": "2025-03-09T00:27:17.393762Z",
-    "rating": 4.5
+    "rating": 4.5,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Ropini Sofa",
@@ -725,11 +1299,22 @@
     "price": 173.99,
     "description": "The minimalist design of this sofa makes it an excellent fit for contemporary living room interiors.",
     "stock": 13,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Ropini+Sofa",
-    "colors": ["Natural Wood", "Red", "Navy Blue", "Green", "White"],
+    "colors": [
+      "Natural Wood",
+      "Red",
+      "Navy Blue",
+      "Green",
+      "White"
+    ],
     "createdAt": "2025-06-19T22:03:17.393773Z",
     "updatedAt": "2025-06-19T22:03:17.393773Z",
-    "rating": 1.9
+    "rating": 1.9,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Kojoge Box",
@@ -737,11 +1322,20 @@
     "price": 490.99,
     "description": "Upgrade your outdoor with this modern deck box, designed to meet both form and function.",
     "stock": 28,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Kojoge+Box",
-    "colors": ["Yellow", "Gray", "Red"],
+    "colors": [
+      "Yellow",
+      "Gray",
+      "Red"
+    ],
     "createdAt": "2025-06-09T01:46:17.393783Z",
     "updatedAt": "2025-06-09T01:46:17.393783Z",
-    "rating": 4.6
+    "rating": 4.6,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Vobema Chair",
@@ -749,11 +1343,19 @@
     "price": 64.99,
     "description": "With clean lines and a timeless design, this dining chair is a must-have piece for your dining room.",
     "stock": 30,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Vobema+Chair",
-    "colors": ["Natural Wood", "Brown"],
+    "colors": [
+      "Natural Wood",
+      "Brown"
+    ],
     "createdAt": "2025-04-16T14:24:17.393792Z",
     "updatedAt": "2025-04-16T14:24:17.393792Z",
-    "rating": 4.0
+    "rating": 4.0,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Rinihu Bookshelf",
@@ -761,11 +1363,19 @@
     "price": 735.99,
     "description": "With clean lines and a timeless design, this bookshelf is a must-have piece for your living room.",
     "stock": 50,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Rinihu+Bookshelf",
-    "colors": ["Navy Blue", "Brown"],
+    "colors": [
+      "Navy Blue",
+      "Brown"
+    ],
     "createdAt": "2025-06-01T15:45:17.393800Z",
     "updatedAt": "2025-06-01T15:45:17.393800Z",
-    "rating": 3.8
+    "rating": 3.8,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Pirido Wardrobe",
@@ -773,11 +1383,21 @@
     "price": 779.99,
     "description": "Perfect for small or large bedroom spaces, this wardrobe is built to maximize style and usability.",
     "stock": 28,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Pirido+Wardrobe",
-    "colors": ["Brown", "Black", "Red", "Navy Blue"],
+    "colors": [
+      "Brown",
+      "Black",
+      "Red",
+      "Navy Blue"
+    ],
     "createdAt": "2025-04-23T01:12:17.393811Z",
     "updatedAt": "2025-04-23T01:12:17.393811Z",
-    "rating": 3.0
+    "rating": 3.0,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Fiqewi Table",
@@ -785,11 +1405,22 @@
     "price": 299.99,
     "description": "This versatile coffee table enhances any living room, blending practicality with aesthetic charm.",
     "stock": 41,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Fiqewi+Table",
-    "colors": ["Beige", "Black", "White", "Green", "Red"],
+    "colors": [
+      "Beige",
+      "Black",
+      "White",
+      "Green",
+      "Red"
+    ],
     "createdAt": "2025-05-01T18:08:17.393821Z",
     "updatedAt": "2025-05-01T18:08:17.393821Z",
-    "rating": 3.4
+    "rating": 3.4,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Lufixo Bed",
@@ -797,11 +1428,22 @@
     "price": 274.99,
     "description": "Upgrade your bedroom with this modern bed, designed to meet both form and function.",
     "stock": 16,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Lufixo+Bed",
-    "colors": ["Brown", "Yellow", "Navy Blue", "Beige", "Black"],
+    "colors": [
+      "Brown",
+      "Yellow",
+      "Navy Blue",
+      "Beige",
+      "Black"
+    ],
     "createdAt": "2025-04-06T17:49:17.393830Z",
     "updatedAt": "2025-04-06T17:49:17.393830Z",
-    "rating": 3.3
+    "rating": 3.3,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Nepote Nightstand",
@@ -809,11 +1451,20 @@
     "price": 69.99,
     "description": "Transform your bedroom space with this durable and sleek nightstand.",
     "stock": 41,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Nepote+Nightstand",
-    "colors": ["Yellow", "Natural Wood", "Gray"],
+    "colors": [
+      "Yellow",
+      "Natural Wood",
+      "Gray"
+    ],
     "createdAt": "2025-06-14T18:32:17.393836Z",
     "updatedAt": "2025-06-14T18:32:17.393836Z",
-    "rating": 4.6
+    "rating": 4.6,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Zivaxi Sideboard",
@@ -821,11 +1472,20 @@
     "price": 790.99,
     "description": "This ergonomic sideboard offers lasting support and contemporary flair for your dining room.",
     "stock": 1,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Zivaxi+Sideboard",
-    "colors": ["Red", "Gray", "Black"],
+    "colors": [
+      "Red",
+      "Gray",
+      "Black"
+    ],
     "createdAt": "2025-04-30T05:23:17.393843Z",
     "updatedAt": "2025-04-30T05:23:17.393843Z",
-    "rating": 1.3
+    "rating": 1.3,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Qaviwe Sideboard",
@@ -833,11 +1493,22 @@
     "price": 717.99,
     "description": "With clean lines and a timeless design, this sideboard is a must-have piece for your dining room.",
     "stock": 44,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Qaviwe+Sideboard",
-    "colors": ["Natural Wood", "White", "Yellow", "Gray", "Black"],
+    "colors": [
+      "Natural Wood",
+      "White",
+      "Yellow",
+      "Gray",
+      "Black"
+    ],
     "createdAt": "2025-03-05T19:22:17.393849Z",
     "updatedAt": "2025-03-05T19:22:17.393849Z",
-    "rating": 3.8
+    "rating": 3.8,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Jupuja Dresser",
@@ -845,11 +1516,21 @@
     "price": 509.99,
     "description": "Transform your bedroom space with this durable and sleek dresser.",
     "stock": 8,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Jupuja+Dresser",
-    "colors": ["Gray", "Brown", "Red", "White"],
+    "colors": [
+      "Gray",
+      "Brown",
+      "Red",
+      "White"
+    ],
     "createdAt": "2025-01-12T15:49:17.393855Z",
     "updatedAt": "2025-01-12T15:49:17.393855Z",
-    "rating": 1.1
+    "rating": 1.1,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Tuluro Table",
@@ -857,11 +1538,21 @@
     "price": 209.99,
     "description": "Transform your living room space with this durable and sleek coffee table.",
     "stock": 33,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Tuluro+Table",
-    "colors": ["White", "Natural Wood", "Red", "Yellow"],
+    "colors": [
+      "White",
+      "Natural Wood",
+      "Red",
+      "Yellow"
+    ],
     "createdAt": "2025-03-21T05:17:17.393862Z",
     "updatedAt": "2025-03-21T05:17:17.393862Z",
-    "rating": 3.0
+    "rating": 3.0,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Xowoge Desk",
@@ -869,11 +1560,19 @@
     "price": 698.99,
     "description": "The minimalist design of this office desk makes it an excellent fit for contemporary office interiors.",
     "stock": 21,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Xowoge+Desk",
-    "colors": ["White", "Green"],
+    "colors": [
+      "White",
+      "Green"
+    ],
     "createdAt": "2025-04-09T15:50:17.393869Z",
     "updatedAt": "2025-04-09T15:50:17.393869Z",
-    "rating": 1.2
+    "rating": 1.2,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Leliqo Vanity",
@@ -881,11 +1580,22 @@
     "price": 375.99,
     "description": "Upgrade your bathroom with this modern vanity, designed to meet both form and function.",
     "stock": 25,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Leliqo+Vanity",
-    "colors": ["Natural Wood", "Red", "Beige", "Yellow", "Gray"],
+    "colors": [
+      "Natural Wood",
+      "Red",
+      "Beige",
+      "Yellow",
+      "Gray"
+    ],
     "createdAt": "2025-05-18T02:04:17.393875Z",
     "updatedAt": "2025-05-18T02:04:17.393875Z",
-    "rating": 1.3
+    "rating": 1.3,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Picivu Chair",
@@ -893,11 +1603,20 @@
     "price": 655.99,
     "description": "Give your dining room a fresh look with this smart and space-saving dining chair.",
     "stock": 50,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Picivu+Chair",
-    "colors": ["Beige", "White", "Natural Wood"],
+    "colors": [
+      "Beige",
+      "White",
+      "Natural Wood"
+    ],
     "createdAt": "2025-03-14T08:13:17.393881Z",
     "updatedAt": "2025-03-14T08:13:17.393881Z",
-    "rating": 4.2
+    "rating": 4.2,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Domine Bookshelf",
@@ -905,11 +1624,21 @@
     "price": 440.99,
     "description": "Transform your office space with this durable and sleek bookshelf.",
     "stock": 41,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Domine+Bookshelf",
-    "colors": ["Green", "Navy Blue", "White", "Red"],
+    "colors": [
+      "Green",
+      "Navy Blue",
+      "White",
+      "Red"
+    ],
     "createdAt": "2025-05-31T19:48:17.393887Z",
     "updatedAt": "2025-05-31T19:48:17.393887Z",
-    "rating": 4.9
+    "rating": 4.9,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Xijiqi Wardrobe",
@@ -917,11 +1646,21 @@
     "price": 618.99,
     "description": "This stylish wardrobe is perfect for any modern bedroom. Designed for both comfort and function.",
     "stock": 6,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Xijiqi+Wardrobe",
-    "colors": ["Red", "White", "Beige", "Yellow"],
+    "colors": [
+      "Red",
+      "White",
+      "Beige",
+      "Yellow"
+    ],
     "createdAt": "2025-02-08T15:24:17.393893Z",
     "updatedAt": "2025-02-08T15:24:17.393893Z",
-    "rating": 4.8
+    "rating": 4.8,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Wuvemo Shelf",
@@ -929,11 +1668,21 @@
     "price": 865.99,
     "description": "This versatile bathroom shelf enhances any bathroom, blending practicality with aesthetic charm.",
     "stock": 3,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Wuvemo+Shelf",
-    "colors": ["White", "Beige", "Gray", "Red"],
+    "colors": [
+      "White",
+      "Beige",
+      "Gray",
+      "Red"
+    ],
     "createdAt": "2025-03-06T18:15:17.393899Z",
     "updatedAt": "2025-03-06T18:15:17.393899Z",
-    "rating": 3.4
+    "rating": 3.4,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Lasuga Stand",
@@ -941,11 +1690,21 @@
     "price": 593.99,
     "description": "Perfect for small or large living room spaces, this tv stand is built to maximize style and usability.",
     "stock": 33,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Lasuga+Stand",
-    "colors": ["Natural Wood", "Red", "White", "Gray"],
+    "colors": [
+      "Natural Wood",
+      "Red",
+      "White",
+      "Gray"
+    ],
     "createdAt": "2025-02-27T04:57:17.393906Z",
     "updatedAt": "2025-02-27T04:57:17.393906Z",
-    "rating": 1.3
+    "rating": 1.3,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Cudiki Wardrobe",
@@ -953,11 +1712,21 @@
     "price": 718.99,
     "description": "This stylish wardrobe is perfect for any modern bedroom. Designed for both comfort and function.",
     "stock": 33,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Cudiki+Wardrobe",
-    "colors": ["White", "Red", "Gray", "Brown"],
+    "colors": [
+      "White",
+      "Red",
+      "Gray",
+      "Brown"
+    ],
     "createdAt": "2025-02-15T23:11:17.393912Z",
     "updatedAt": "2025-02-15T23:11:17.393912Z",
-    "rating": 1.2
+    "rating": 1.2,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Suvade Chair",
@@ -965,11 +1734,21 @@
     "price": 732.99,
     "description": "Give your outdoor a fresh look with this smart and space-saving patio chair.",
     "stock": 10,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Suvade+Chair",
-    "colors": ["Green", "Natural Wood", "Red", "Beige"],
+    "colors": [
+      "Green",
+      "Natural Wood",
+      "Red",
+      "Beige"
+    ],
     "createdAt": "2025-01-02T01:38:17.393919Z",
     "updatedAt": "2025-01-02T01:38:17.393919Z",
-    "rating": 4.6
+    "rating": 4.6,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Gupeqi Table",
@@ -977,11 +1756,22 @@
     "price": 483.99,
     "description": "With clean lines and a timeless design, this dining table is a must-have piece for your dining room.",
     "stock": 44,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Gupeqi+Table",
-    "colors": ["Natural Wood", "Navy Blue", "White", "Gray", "Yellow"],
+    "colors": [
+      "Natural Wood",
+      "Navy Blue",
+      "White",
+      "Gray",
+      "Yellow"
+    ],
     "createdAt": "2024-12-29T01:56:17.393925Z",
     "updatedAt": "2024-12-29T01:56:17.393925Z",
-    "rating": 4.7
+    "rating": 4.7,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Voboxe Cabinet",
@@ -989,11 +1779,19 @@
     "price": 594.99,
     "description": "This versatile mirror cabinet enhances any bathroom, blending practicality with aesthetic charm.",
     "stock": 1,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Voboxe+Cabinet",
-    "colors": ["White", "Green"],
+    "colors": [
+      "White",
+      "Green"
+    ],
     "createdAt": "2024-12-25T08:10:17.393932Z",
     "updatedAt": "2024-12-25T08:10:17.393932Z",
-    "rating": 4.2
+    "rating": 4.2,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Calave Vanity",
@@ -1001,11 +1799,21 @@
     "price": 289.99,
     "description": "This ergonomic vanity offers lasting support and contemporary flair for your bathroom.",
     "stock": 30,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Calave+Vanity",
-    "colors": ["Red", "Yellow", "Brown", "Green"],
+    "colors": [
+      "Red",
+      "Yellow",
+      "Brown",
+      "Green"
+    ],
     "createdAt": "2025-05-26T21:16:17.393938Z",
     "updatedAt": "2025-05-26T21:16:17.393938Z",
-    "rating": 1.8
+    "rating": 1.8,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Sayaxo Bench",
@@ -1013,11 +1821,21 @@
     "price": 817.99,
     "description": "Give your outdoor a fresh look with this smart and space-saving garden bench.",
     "stock": 28,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Sayaxo+Bench",
-    "colors": ["Natural Wood", "Brown", "Red", "White"],
+    "colors": [
+      "Natural Wood",
+      "Brown",
+      "Red",
+      "White"
+    ],
     "createdAt": "2025-03-27T05:03:17.393944Z",
     "updatedAt": "2025-03-27T05:03:17.393944Z",
-    "rating": 2.1
+    "rating": 2.1,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Kotefa Box",
@@ -1025,11 +1843,20 @@
     "price": 779.99,
     "description": "This stylish deck box is perfect for any modern outdoor. Designed for both comfort and function.",
     "stock": 26,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Kotefa+Box",
-    "colors": ["Brown", "Yellow", "Green"],
+    "colors": [
+      "Brown",
+      "Yellow",
+      "Green"
+    ],
     "createdAt": "2025-01-10T15:29:17.393950Z",
     "updatedAt": "2025-01-10T15:29:17.393950Z",
-    "rating": 2.7
+    "rating": 2.7,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Kivola Bench",
@@ -1037,11 +1864,21 @@
     "price": 499.99,
     "description": "Perfect for small or large outdoor spaces, this garden bench is built to maximize style and usability.",
     "stock": 20,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Kivola+Bench",
-    "colors": ["White", "Yellow", "Navy Blue", "Gray"],
+    "colors": [
+      "White",
+      "Yellow",
+      "Navy Blue",
+      "Gray"
+    ],
     "createdAt": "2025-02-14T03:37:17.393956Z",
     "updatedAt": "2025-02-14T03:37:17.393956Z",
-    "rating": 1.4
+    "rating": 1.4,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Zagata Sofa",
@@ -1049,11 +1886,20 @@
     "price": 272.99,
     "description": "This ergonomic sofa offers lasting support and contemporary flair for your living room.",
     "stock": 12,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Zagata+Sofa",
-    "colors": ["Navy Blue", "Natural Wood", "Black"],
+    "colors": [
+      "Navy Blue",
+      "Natural Wood",
+      "Black"
+    ],
     "createdAt": "2025-05-10T05:33:17.393964Z",
     "updatedAt": "2025-05-10T05:33:17.393964Z",
-    "rating": 1.3
+    "rating": 1.3,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Dayotu Table",
@@ -1061,11 +1907,20 @@
     "price": 348.99,
     "description": "Upgrade your dining room with this modern dining table, designed to meet both form and function.",
     "stock": 49,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Dayotu+Table",
-    "colors": ["Red", "Yellow", "Navy Blue"],
+    "colors": [
+      "Red",
+      "Yellow",
+      "Navy Blue"
+    ],
     "createdAt": "2025-01-03T11:23:17.393974Z",
     "updatedAt": "2025-01-03T11:23:17.393974Z",
-    "rating": 3.4
+    "rating": 3.4,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Peciqa Table",
@@ -1073,11 +1928,20 @@
     "price": 430.99,
     "description": "This stylish buffet table is perfect for any modern dining room. Designed for both comfort and function.",
     "stock": 30,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Peciqa+Table",
-    "colors": ["Navy Blue", "Natural Wood", "Red"],
+    "colors": [
+      "Navy Blue",
+      "Natural Wood",
+      "Red"
+    ],
     "createdAt": "2025-02-09T21:14:17.393984Z",
     "updatedAt": "2025-02-09T21:14:17.393984Z",
-    "rating": 3.6
+    "rating": 3.6,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Guwifo Table",
@@ -1085,11 +1949,19 @@
     "price": 740.99,
     "description": "Give your dining room a fresh look with this smart and space-saving dining table.",
     "stock": 21,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Guwifo+Table",
-    "colors": ["Gray", "Yellow"],
+    "colors": [
+      "Gray",
+      "Yellow"
+    ],
     "createdAt": "2025-04-04T20:23:17.393996Z",
     "updatedAt": "2025-04-04T20:23:17.393996Z",
-    "rating": 2.2
+    "rating": 2.2,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Cafuha Box",
@@ -1097,11 +1969,21 @@
     "price": 878.99,
     "description": "With clean lines and a timeless design, this deck box is a must-have piece for your outdoor.",
     "stock": 49,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Cafuha+Box",
-    "colors": ["Gray", "Green", "Navy Blue", "Brown"],
+    "colors": [
+      "Gray",
+      "Green",
+      "Navy Blue",
+      "Brown"
+    ],
     "createdAt": "2025-05-09T12:43:17.394014Z",
     "updatedAt": "2025-05-09T12:43:17.394014Z",
-    "rating": 1.9
+    "rating": 1.9,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Nagiqu Desk",
@@ -1109,11 +1991,20 @@
     "price": 457.99,
     "description": "Perfect for small or large office spaces, this office desk is built to maximize style and usability.",
     "stock": 18,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Nagiqu+Desk",
-    "colors": ["Gray", "Beige", "Red"],
+    "colors": [
+      "Gray",
+      "Beige",
+      "Red"
+    ],
     "createdAt": "2025-01-12T22:56:17.394022Z",
     "updatedAt": "2025-01-12T22:56:17.394022Z",
-    "rating": 3.9
+    "rating": 3.9,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Tugoja Desk",
@@ -1121,11 +2012,20 @@
     "price": 350.99,
     "description": "Upgrade your office with this modern office desk, designed to meet both form and function.",
     "stock": 28,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Tugoja+Desk",
-    "colors": ["Black", "Red", "Gray"],
+    "colors": [
+      "Black",
+      "Red",
+      "Gray"
+    ],
     "createdAt": "2025-05-20T08:59:17.394028Z",
     "updatedAt": "2025-05-20T08:59:17.394028Z",
-    "rating": 4.0
+    "rating": 4.0,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Qewixe Table",
@@ -1133,11 +2033,19 @@
     "price": 871.99,
     "description": "Upgrade your outdoor with this modern outdoor table, designed to meet both form and function.",
     "stock": 21,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Qewixe+Table",
-    "colors": ["Yellow", "White"],
+    "colors": [
+      "Yellow",
+      "White"
+    ],
     "createdAt": "2025-06-03T15:19:17.394034Z",
     "updatedAt": "2025-06-03T15:19:17.394034Z",
-    "rating": 3.1
+    "rating": 3.1,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Rakena Vanity",
@@ -1145,11 +2053,22 @@
     "price": 180.99,
     "description": "Add elegance and utility to your bathroom with this beautifully crafted vanity.",
     "stock": 30,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Rakena+Vanity",
-    "colors": ["Gray", "Yellow", "Brown", "Beige", "Natural Wood"],
+    "colors": [
+      "Gray",
+      "Yellow",
+      "Brown",
+      "Beige",
+      "Natural Wood"
+    ],
     "createdAt": "2025-05-05T14:08:17.394040Z",
     "updatedAt": "2025-05-05T14:08:17.394040Z",
-    "rating": 4.8
+    "rating": 4.8,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Sezaqu Table",
@@ -1157,11 +2076,21 @@
     "price": 377.99,
     "description": "Give your dining room a fresh look with this smart and space-saving dining table.",
     "stock": 47,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Sezaqu+Table",
-    "colors": ["Red", "White", "Beige", "Green"],
+    "colors": [
+      "Red",
+      "White",
+      "Beige",
+      "Green"
+    ],
     "createdAt": "2025-01-02T09:29:17.394046Z",
     "updatedAt": "2025-01-02T09:29:17.394046Z",
-    "rating": 3.2
+    "rating": 3.2,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Cuxuwu Bed",
@@ -1169,11 +2098,20 @@
     "price": 197.99,
     "description": "This ergonomic bed offers lasting support and contemporary flair for your bedroom.",
     "stock": 3,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Cuxuwu+Bed",
-    "colors": ["Gray", "Green", "Brown"],
+    "colors": [
+      "Gray",
+      "Green",
+      "Brown"
+    ],
     "createdAt": "2025-02-27T22:48:17.394053Z",
     "updatedAt": "2025-02-27T22:48:17.394053Z",
-    "rating": 2.8
+    "rating": 2.8,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Beniva Basket",
@@ -1181,11 +2119,21 @@
     "price": 330.99,
     "description": "The minimalist design of this laundry basket makes it an excellent fit for contemporary bathroom interiors.",
     "stock": 16,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Beniva+Basket",
-    "colors": ["White", "Green", "Red", "Brown"],
+    "colors": [
+      "White",
+      "Green",
+      "Red",
+      "Brown"
+    ],
     "createdAt": "2025-02-04T15:57:17.394060Z",
     "updatedAt": "2025-02-04T15:57:17.394060Z",
-    "rating": 4.9
+    "rating": 4.9,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   },
   {
     "name": "Xomehi Cabinet",
@@ -1193,10 +2141,20 @@
     "price": 551.99,
     "description": "With clean lines and a timeless design, this filing cabinet is a must-have piece for your office.",
     "stock": 49,
-    "imageUrl": "https://via.placeholder.com/300x200?text=Xomehi+Cabinet",
-    "colors": ["Natural Wood", "Green", "White", "Red"],
+    "colors": [
+      "Natural Wood",
+      "Green",
+      "White",
+      "Red"
+    ],
     "createdAt": "2025-03-30T23:58:17.394066Z",
     "updatedAt": "2025-03-30T23:58:17.394066Z",
-    "rating": 3.3
+    "rating": 3.3,
+    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "imagesUrl": [
+      "https://via.placeholder.com/300x200?text=Image+1",
+      "https://via.placeholder.com/300x200?text=Image+2",
+      "https://via.placeholder.com/300x200?text=Image+3"
+    ]
   }
 ]

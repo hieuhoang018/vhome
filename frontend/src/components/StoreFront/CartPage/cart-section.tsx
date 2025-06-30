@@ -88,9 +88,11 @@ export default function CartSection() {
                   <span>€{cart.totalPrice}</span>
                 </div>
               </div>
-              <button className="w-full py-2 border rounded-md mb-4">
-                Proceed to Checkout
-              </button>
+              <Link href={"/checkout"}>
+                <button className="w-full py-2 border rounded-md mb-4">
+                  Proceed to Checkout
+                </button>
+              </Link>
 
               {/* Continue Shopping */}
               <Link href="/products">

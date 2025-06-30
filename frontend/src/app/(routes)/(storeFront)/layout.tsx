@@ -10,7 +10,7 @@ export default function StoreFrontLayout({
     <>
       <MainHeader />
       <div className="min-h-screen bg-white">
-        <main className="pt-30 pb-16 px-4 md:px-8">{children}</main>
+        <main className="pt-30 pb-16">{children}</main>
       </div>
       <Footer />
     </>
