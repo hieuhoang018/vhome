@@ -32,10 +32,8 @@ export const getCheckoutSession = catchAsync(
       payment_method_types: ["card"],
       mode: "payment",
       line_items,
-      success_url: `${req.protocol}://${req.get(
-        "host"
-      )}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${req.protocol}://${req.get("host")}/cancel`,
+      success_url: `${process.env.FRONTEND_URL}/orders/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${process.env.FRONTEND_URL}/orders/cancel`,
       customer_email: req.user.email,
       client_reference_id: req.params.cartId,
     })
@@ -47,36 +45,38 @@ export const getCheckoutSession = catchAsync(
   }
 )
 
-export const createOrderCheckout = catchAsync( async (req: Request, res: Response, next: NextFunction) => {
-  const { session_id } = req.query;
+export const createOrderCheckout = catchAsync(
+  async (req: Request, res: Response, next: NextFunction) => {
+    const { session_id } = req.query
 
-  if (!session_id) {
-    return next(new AppError("Session ID is required", 400));
+    if (!session_id) {
+      return next(new AppError("Session ID is required", 400))
+    }
+
+    const stripeInstance = new Stripe(process.env.STRIPE_SECRET_KEY as string)
+
+    stripeInstance.checkout.sessions
+      .retrieve(session_id as string)
+      .then(async (session) => {
+        if (!session || session.payment_status !== "paid") {
+          return next(new AppError("Payment not completed", 400))
+        }
+
+        // Here you would create the order in your database.
+        // Example:
+        const order = await Order.create({
+          user: req.user._id,
+          cart: req.user.cart,
+          totalPrice: session.amount_total,
+          paymentIntentId: session.payment_intent,
+        })
+
+        res.status(201).json({
+          status: "success",
+          message: "Order created successfully",
+          order,
+        })
+      })
+      .catch((err) => next(new AppError("Invalid session", 400)))
   }
-
-  const stripeInstance = new Stripe(process.env.STRIPE_SECRET_KEY as string);
-
-  stripeInstance.checkout.sessions
-    .retrieve(session_id as string)
-    .then(async (session) => {
-      if (!session || session.payment_status !== "paid") {
-        return next(new AppError("Payment not completed", 400));
-      }
-
-      // Here you would create the order in your database.
-      // Example:
-      const order = await Order.create({
-        user: req.user._id,
-        cart: req.user.cart,
-        totalPrice: session.amount_total,
-        paymentIntentId: session.payment_intent,
-      });
-
-      res.status(201).json({
-        status: "success",
-        message: "Order created successfully",
-        order,
-      });
-    })
-    .catch((err) => next(new AppError("Invalid session", 400)));
-})
+)

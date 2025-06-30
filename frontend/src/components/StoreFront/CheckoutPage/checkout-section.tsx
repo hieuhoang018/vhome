@@ -1,8 +1,30 @@
 "use client"
 
 import InputField from "@/components/input"
+import api from "@/lib/axios"
+import { CheckoutSessionResponse } from "@/types/stripe"
+import { loadStripe } from "@stripe/stripe-js"
 
 export default function CheckoutSection() {
+  const handleCheckout = async () => {
+    try {
+      const response = await api.get<CheckoutSessionResponse>(
+        "/orders/checkout",
+        { withCredentials: true }
+      )
+      const session = response.data.session
+
+      // Redirect to Stripe
+      const stripe = await loadStripe(
+        process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!
+      )
+      await stripe?.redirectToCheckout({ sessionId: session.id })
+    } catch (err) {
+      console.error(err)
+      alert("Something went wrong with checkout")
+    }
+  }
+
   return (
     <div className="container mx-auto px-4 mt-6">
       <div className="flex gap-6">
@@ -92,6 +114,7 @@ export default function CheckoutSection() {
           <button
             className="w-full mt-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 transition-colors"
             type="button"
+            onClick={handleCheckout}
           >
             Continue to Payment
           </button>
