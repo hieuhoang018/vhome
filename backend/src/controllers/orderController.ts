@@ -2,7 +2,7 @@ import Stripe from "stripe"
 import catchAsync from "../utils/catchAsync"
 import { NextFunction, Request, Response } from "express"
 import { AppError } from "../utils/appError"
-import Cart from "../models/cartModel"
+import Cart, { CartItem } from "../models/cartModel"
 import Order from "../models/orderModel"
 
 export const getCheckoutSession = catchAsync(
@@ -34,8 +34,8 @@ export const getCheckoutSession = catchAsync(
       line_items,
       success_url: `${process.env.FRONTEND_URL}/orders/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${process.env.FRONTEND_URL}/orders/cancel`,
-      customer_email: req.user.email,
-      client_reference_id: req.params.cartId,
+      customer_email: user.email,
+      client_reference_id: user.cart.toString(),
     })
 
     res.status(200).json({
@@ -55,28 +55,46 @@ export const createOrderCheckout = catchAsync(
 
     const stripeInstance = new Stripe(process.env.STRIPE_SECRET_KEY as string)
 
-    stripeInstance.checkout.sessions
-      .retrieve(session_id as string)
-      .then(async (session) => {
-        if (!session || session.payment_status !== "paid") {
-          return next(new AppError("Payment not completed", 400))
-        }
+    const session = await stripeInstance.checkout.sessions.retrieve(
+      session_id as string
+    )
 
-        // Here you would create the order in your database.
-        // Example:
-        const order = await Order.create({
-          user: req.user._id,
-          cart: req.user.cart,
-          totalPrice: session.amount_total,
-          paymentIntentId: session.payment_intent,
-        })
+    if (!session || session.payment_status !== "paid") {
+      return next(new AppError("Payment not completed", 400))
+    }
 
-        res.status(201).json({
-          status: "success",
-          message: "Order created successfully",
-          order,
-        })
-      })
-      .catch((err) => next(new AppError("Invalid session", 400)))
+    // retrieve cart using client_reference_id
+    const cartId = session.client_reference_id
+    const cart = await Cart.findById(cartId).populate("items")
+
+    if (!cart) {
+      return next(new AppError("Cart not found", 404))
+    }
+
+    // create order with cart items embedded
+    const order = await Order.create({
+      user: req.user._id,
+      items: cart.items.map((item: CartItem) => ({
+        productId: item.productId,
+        quantity: item.quantity,
+        price: item.price,
+        name: item.name,
+        chosenColor: item.chosenColor,
+      })),
+      totalPrice: session.amount_total! / 100, // Stripe returns in cents
+      paid: true,
+      paymentIntentId: session.payment_intent as string,
+    })
+
+    // clear the cart
+    cart.items = []
+    cart.totalPrice = 0
+    await cart.save()
+
+    res.status(201).json({
+      status: "success",
+      message: "Order created successfully",
+      order,
+    })
   }
 )
