@@ -1,11 +1,29 @@
 import mongoose from "mongoose"
 
+export interface orderItem {
+  productId: mongoose.Types.ObjectId
+  name: string
+  quantity: number
+  price: number
+  chosenColor: string
+}
+
+const orderItemSchema = new mongoose.Schema<orderItem>(
+  {
+    productId: mongoose.Types.ObjectId,
+    name: { type: String, required: true },
+    quantity: { type: Number, required: true },
+    price: { type: Number, required: true },
+    chosenColor: { type: String, required: true },
+  },
+  { _id: false }
+)
+
 const orderSchema = new mongoose.Schema(
   {
-    cart: {
-      type: mongoose.Schema.ObjectId,
-      ref: "Cart",
-      required: [true, "Orders must belong to a cart"],
+    items: {
+      type: [orderItemSchema],
+      default: [],
     },
     user: {
       type: mongoose.Schema.ObjectId,
@@ -22,8 +40,8 @@ const orderSchema = new mongoose.Schema(
     },
     paymentIntentId: {
       type: String,
-      default: undefined
-    }
+      default: undefined,
+    },
   },
   {
     timestamps: true,
