@@ -1,9 +1,13 @@
-import mongoose from "mongoose";
+import mongoose, { model, Model } from "mongoose";
 import dotenv from "dotenv";
 import fs from "fs";
 import path from "path";
 import Product from "../models/productModel";
 import User from "../models/userModel";
+import Cart from "../models/cartModel";
+import Order from "../models/orderModel";
+import Review from "../models/reviewModel";
+import Wishlist from "../models/wishlistModel";
 
 dotenv.config({ path: path.join(__dirname, "../../.env") })
 
@@ -21,9 +25,13 @@ const products = JSON.parse(
   fs.readFileSync(path.join(__dirname, "products-data.json"), "utf-8")
 )
 
-const importData = async () => {
+const users = JSON.parse(
+  fs.readFileSync(path.join(__dirname, "users-data.json"), "utf-8")
+)
+
+const importData = async <T>(Model: Model<T>, data: JSON)  => {
   try {
-    await Product.create(products)
+    await Model.create(data)
     console.log("imported")
     process.exit()
   } catch (err) {
@@ -31,9 +39,9 @@ const importData = async () => {
   }
 }
 
-const deleteData = async () => {
+const deleteData = async <T>(Model: Model<T>) => {
   try {
-    await Product.deleteMany()
+    await Model.deleteMany()
     console.log("deleted")
     process.exit()
   } catch (err) {
@@ -41,8 +49,21 @@ const deleteData = async () => {
   }
 }
 
-if (process.argv[2] === "--import") {
-  importData()
-} else if (process.argv[2] === "--delete") {
-  deleteData()
+if (process.argv[2] === "--import-product") {
+  importData(Product, products)
+} else if (process.argv[2] === "--import-user") {
+  importData(User, users)
+} else if (process.argv[2] === "--delete-product") {
+  deleteData(Product)
+} else if (process.argv[2] === "--delete-user") {
+  deleteData(User)
+} else if (process.argv[2] === "--delete-cart") {
+  deleteData(Cart)
+} else if (process.argv[2] === "--delete-order") {
+  deleteData(Order)
+} else if (process.argv[2] === "--delete-review") {
+  deleteData(Review)
+} else if (process.argv[2] === "--delete-wishlist") {
+  deleteData(Wishlist)
 }
+  
