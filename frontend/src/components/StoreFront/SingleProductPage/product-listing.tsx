@@ -7,6 +7,7 @@ import { Plus, Minus, ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import { useParams } from "next/navigation"
 import api from "@/lib/axios"
+import ColorSelection from "./color-selection"
 
 export default function ProductListingSection() {
   const [product, setProduct] = useState<Product>()
@@ -14,6 +15,7 @@ export default function ProductListingSection() {
   const [error, setError] = useState("")
   const [amountChosen, setAmountChosen] = useState(1)
   const { id: _id } = useParams<{ id: string }>()
+  const [chosenColor, setChosenColor] = useState<string | null>(null)
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -30,12 +32,38 @@ export default function ProductListingSection() {
     fetchProducts()
   }, [])
 
+  const handleAddToCart = async () => {
+    try {
+      const res = await api.post("/users/me/cart", {
+        productId: product?._id,
+        quantity: amountChosen,
+        chosenColor,
+      })
+      console.log(res.status)
+    } catch (error) {
+      console.log(error)
+      setError("Failed to add to cart")
+    }
+  }
+
+  const handleAddToWishlist = async () => {
+    try {
+      const res = await api.post("/users/me/wishlist", {
+        productId: product?._id,
+      })
+      console.log(res.status)
+    } catch (error) {
+      console.log(error)
+      setError("Failed to add to wishlist")
+    }
+  }
+
   if (loading) {
     return <p>Loading...</p>
   }
 
   if (error || !product) {
-    return <p className="text-red-600">Failed to load product...</p>
+    return <p className="text-red-600">{error}</p>
   }
   return (
     <>
@@ -57,28 +85,25 @@ export default function ProductListingSection() {
         <ArrowLeft className="h-4" />
         Back to shopping
       </Link>
-      <div className="grid grid-cols-2 mt-5">
-        <Image
-          src={product.imageUrl}
+      <div className="grid grid-cols-2 gap-8 mt-5">
+        {/* <Image
+          src={product.imageCoverUrl}
           alt="image"
           width={610}
           height={1}
           className="rounded-lg"
-        />
+        /> */}
+        <div className="bg-red-500"></div>
         <div>
           <h1 className="text-7xl font-serif mb-10">{product.name}</h1>
           <h2 className="text-3xl mb-9">€{product.price}</h2>
           <p className="text-xl mb-9">{product.description}</p>
           <h2 className="text-2xl font-serif mb-2">Select color</h2>
-          <div className="flex gap-1 mb-9">
-            {product.colors.map((color) => {
-              return (
-                <button className="border rounded-lg px-3.5 py-1" key={color}>
-                  <p className="text-2xl font-serif">{color}</p>
-                </button>
-              )
-            })}
-          </div>
+          <ColorSelection
+            colorList={product.colors}
+            chosenColor={chosenColor}
+            setChosenColor={setChosenColor}
+          />
           <div className="mb-5">
             <h3 className="font-medium mb-2">Quantity</h3>
             <div className="flex items-center border border-gray-300 rounded-md w-32">
@@ -105,10 +130,16 @@ export default function ProductListingSection() {
             </p>
           </div>
           <div className="flex gap-4">
-            <button className="flex-[2] rounded-lg px-4 py-2 w-full bg-navi-blue text-white">
+            <button
+              onClick={handleAddToCart}
+              className="flex-[2] rounded-lg px-4 py-2 w-full bg-navi-blue text-white hover:cursor-pointer"
+            >
               Add to cart
             </button>
-            <button className="flex-1 border rounded-lg px-4 py-2 w-full">
+            <button
+              onClick={handleAddToWishlist}
+              className="flex-1 border rounded-lg px-4 py-2 w-full hover:cursor-pointer"
+            >
               Add to wishlist
             </button>
           </div>

@@ -19,17 +19,8 @@ export interface Product {
   price: number
   description: string
   stock: number
-  imageUrl: string
+  imagesUrl: string[]
+  imageCoverUrl: string
   colors: string[]
   createdAt: Date
-}
-
-export interface mockData {
-  name: string
-  category: string
-  price: number
-  description: string
-  stock: number
-  imageUrl: string
-  colors: string[]
 }
