@@ -4,6 +4,7 @@ import { NextFunction, Request, Response } from "express"
 import { AppError } from "../utils/appError"
 import Cart, { CartItem } from "../models/cartModel"
 import Order from "../models/orderModel"
+import { createOne, deleteOne, getAll, updateOne } from "./handlerFactory"
 
 export const getCheckoutSession = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
@@ -95,6 +96,28 @@ export const createOrderCheckout = catchAsync(
       status: "success",
       message: "Order created successfully",
       order,
+    })
+  }
+)
+
+export const getAllOrders = getAll(Order)
+export const createOrder = createOne(Order)
+export const deleteOrder = deleteOne(Order)
+export const updateOrder = updateOne(Order)
+
+export const getOrderById = catchAsync(
+  async (req: Request, res: Response, next: NextFunction) => {
+    const order = await Order.findById(req.params.id)
+
+    if (!order) {
+      return next(new AppError("No order found with that ID", 404))
+    }
+
+    res.status(200).json({
+      status: "success",
+      data: {
+        order,
+      },
     })
   }
 )
