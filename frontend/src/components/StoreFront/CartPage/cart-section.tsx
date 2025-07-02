@@ -20,7 +20,7 @@ export default function CartSection() {
       setLoading(true)
       try {
         const res = await api.get<CartResponse>("/users/me/cart")
-        setCart(res.data.data.doc)
+        setCart(res.data.data.cart)
       } catch (err) {
         console.error("Fetch error:", err)
         setError("Failed to load cart")
@@ -44,7 +44,12 @@ export default function CartSection() {
         <div className="flex">
           <div className="flex-[2] flex flex-col gap-6">
             {cart.items.map((item) => {
-              return <CartItem key={`${item.name} ${item.chosenColor}`} product={item} />
+              return (
+                <CartItem
+                  key={`${item.name} ${item.chosenColor}`}
+                  product={item}
+                />
+              )
             })}
           </div>
           <div className="flex-1 border rounded-md p-4 max-h-[500px] overflow-y-auto self-start">

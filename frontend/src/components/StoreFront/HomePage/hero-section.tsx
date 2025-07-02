@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function HeroSection() {
   return (
     <section className="relative w-full h-screen flex items-center">
@@ -23,8 +25,16 @@ export default function HeroSection() {
             longevity. Curated collections to make your house feel like home.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <p>Shop New Arrivals</p>
-            <p>Explore Collections</p>
+            <Link href={"/products"}>
+              <button className="border rounded-lg p-3 bg-white text-black font-semibold hover:bg-gray-200 cursor-pointer">
+                Shop New Arrivals
+              </button>
+            </Link>
+            <Link href={"/products"}>
+              <button className="border rounded-lg p-3 bg-white text-black font-semibold hover:bg-gray-200 cursor-pointer">
+                Explore Collections
+              </button>
+            </Link>
           </div>
         </div>
       </div>

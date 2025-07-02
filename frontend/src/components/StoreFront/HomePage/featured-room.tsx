@@ -21,7 +21,7 @@ export default function FeaturedRoom({ room }: { room: FeatureRoom }) {
             </p>
             <p className=" text-white/80 mb-4 text-sm">{room.description}</p>
             <Link
-              href={room.link}
+              href={"/products"}
               className="inline-flex items-center text-white hover:text-furniture-terracotta transition-colors"
             >
               Shop now

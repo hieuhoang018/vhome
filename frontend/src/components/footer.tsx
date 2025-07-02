@@ -1,4 +1,6 @@
+import { Mail, MapPin, Phone } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Footer() {
   return (
@@ -24,29 +26,48 @@ export default function Footer() {
             </div>
 
             {/* Column 2 */}
-            <div>
+            <div className="flex flex-col gap-3">
               <h2 className="font-semibold text-2xl mb-5 font-serif">Shop</h2>
-              <p>Room 1</p>
-              <p>Room 2</p>
-              <p>Room 3</p>
-              <p>Room 4</p>
-              <p>Room 5</p>
+              <Link className="hover:text-white" href={"/products"}>
+                Living Room
+              </Link>
+              <Link className="hover:text-white" href={"/products"}>
+                Dining Room
+              </Link>
+              <Link className="hover:text-white" href={"/products"}>
+                Bathroom
+              </Link>
+              <Link className="hover:text-white" href={"/products"}>
+                Bedroom
+              </Link>
+              <Link className="hover:text-white" href={"/products"}>
+                Kitchen
+              </Link>
             </div>
 
             {/* Column 3 */}
-            <div>
+            <div className="flex flex-col gap-3">
               <h2 className="font-semibold text-2xl mb-5">Company</h2>
-              <p>Row</p>
-              <p>Row</p>
-              <p>Row</p>
+              <Link className="hover:text-white" href={"/about"}>
+                About us
+              </Link>
             </div>
 
             {/* Column 4 */}
-            <div>
-              <h2 className="font-semibold text-2xl mb-5"> Contact</h2>
-              <p>Row</p>
-              <p>Row</p>
-              <p>Row</p>
+            <div className="flex flex-col gap-3">
+              <h2 className="font-semibold text-2xl mb-5">Contact</h2>
+              <div className="flex items-center gap-2">
+                <MapPin />
+                <span>Opiskelijankatu 123, Tampere</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone />
+                <span>(+358) 46 123 4567</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail />
+                <span>vhome@gmail.com</span>
+              </div>
             </div>
           </div>
         </div>
@@ -60,8 +81,8 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center text-sm">
             <h2>VHome</h2>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <h1>test</h1>
-              <h1>test 2</h1>
+              <Link href={"/terms"}>Terms of Service</Link>
+              <Link href={"/policy"}>Privacy Policy</Link>
             </div>
           </div>
         </div>
