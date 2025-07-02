@@ -75,7 +75,7 @@ export default function UsersTab() {
               </td>
               <td className="py-3 px-4 text-gray-600">{user.email}</td>
               <td className="py-3 px-4 font-semibold text-furniture-charcoal">
-                today
+                {new Date(user.createdAt).toLocaleDateString()}
               </td>
               <td className="py-3 px-4 text-gray-600">
                 {user.active ? "Inactive" : "Active"}

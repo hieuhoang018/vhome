@@ -1,6 +1,7 @@
 "use client"
 
 import api from "@/lib/axios"
+import { OrdersResponse } from "@/types/orders"
 import { ProductsResponse } from "@/types/products"
 import { UsersResponse } from "@/types/users"
 import { useEffect, useState } from "react"
@@ -16,9 +17,9 @@ export default function StatisticsBlock({
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await api.get<ProductsResponse | UsersResponse>(
-        `${apiEndpoint}`
-      )
+      const res = await api.get<
+        ProductsResponse | UsersResponse | OrdersResponse
+      >(`${apiEndpoint}`)
       setData(res.data.results)
     }
 

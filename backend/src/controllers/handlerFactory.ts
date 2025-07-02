@@ -9,9 +9,10 @@ export const getAll = <T>(Model: Model<T>) =>
     let filter = {}
     if (req.params.productId) filter = { product: req.params.productId }
 
+    const sortBy = req.query.sort === "name" ? "name" : "_id"
     const features = new APIFeatures(Model.find(filter), req.query)
       .filter()
-      .sort("name")
+      .sort(sortBy)
       .limitFields()
       .paginate()
     const docs = await features.query

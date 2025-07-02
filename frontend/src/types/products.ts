@@ -13,7 +13,7 @@ export interface ProductResponse {
 }
 
 export interface Product {
-  _id: number
+  _id: string
   name: string
   category: string
   price: number

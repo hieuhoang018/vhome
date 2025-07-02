@@ -5,9 +5,7 @@ export default function StatisticsPanel() {
     <div className="grid grid-cols-4 gap-4 mb-6">
       <StatisticsBlock title="Total Products" apiEndpoint="/products" />
       <StatisticsBlock title="Total Users" apiEndpoint="/users" />
-      <div>
-        <h1>col</h1>
-      </div>
+      <StatisticsBlock title="Total Orders" apiEndpoint="/orders" />
       <div>
         <h1>col</h1>
       </div>
