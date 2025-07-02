@@ -4,6 +4,7 @@ import { User } from "lucide-react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useEffect, useRef, useState } from "react"
+import { toast } from "sonner"
 
 export default function NavUserButton() {
   const { user, refreshUser } = useUser()
@@ -15,6 +16,7 @@ export default function NavUserButton() {
     try {
       await api.post("/users/logout")
       refreshUser()
+      toast.success("Logged out succesfully")
       router.push("/")
     } catch (err) {
       console.error("Logout failed", err)

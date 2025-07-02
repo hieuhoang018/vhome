@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation"
 import api from "@/lib/axios"
 import { useFormSubmit } from "@/hooks/useFormSubmit"
 import { LoginRoleResponse } from "@/types/users"
+import { toast } from "sonner"
 
 export default function LoginForm() {
   const router = useRouter()
@@ -21,6 +22,8 @@ export default function LoginForm() {
         const res = await api.post<LoginRoleResponse>("/users/login", data)
         const role = res.data.data.role
         refreshUser()
+
+        toast.success("Login successful!")
         if (role === "admin") {
           router.push("/dashboard")
         } else {

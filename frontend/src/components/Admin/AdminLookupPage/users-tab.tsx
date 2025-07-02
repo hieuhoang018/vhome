@@ -6,6 +6,7 @@ import { User, UsersResponse } from "@/types/users"
 import { Eye } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
+import { toast } from "sonner"
 
 export default function UsersTab() {
   const [users, setUsers] = useState<User[]>()
@@ -16,6 +17,9 @@ export default function UsersTab() {
       },
       onSubmit: async (data) => {
         const res = await api.get<UsersResponse>(`/users?search=${data.prompt}`)
+        if(res.data.data.docs.length === 0) {
+          toast.info("No users found")
+        }
         setUsers(res.data.data.docs)
       },
     })

@@ -13,7 +13,7 @@ export default function RecentProductsListing() {
       const res = await api.get<ProductsResponse>("/products", {
         params: {
           limit: 5,
-          sort: "-createAt",
+          sort: "-createdAt",
           fields: "name,price,category,stock",
         },
       })

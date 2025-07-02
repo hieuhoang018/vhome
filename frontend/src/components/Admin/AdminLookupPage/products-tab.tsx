@@ -6,6 +6,7 @@ import { Product, ProductsResponse } from "@/types/products"
 import { Eye } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
+import { toast } from "sonner"
 
 export default function ProductsTab() {
   const [products, setProducts] = useState<Product[]>()
@@ -18,6 +19,9 @@ export default function ProductsTab() {
         const res = await api.get<ProductsResponse>(
           `/products?search=${data.prompt}`
         )
+        if(res.data.data.docs.length === 0) {
+          toast.info("No products found")
+        }
         setProducts(res.data.data.docs)
       },
     })

@@ -6,6 +6,7 @@ import { Order, OrdersResponse } from "@/types/orders"
 import { Eye } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
+import { toast } from "sonner"
 
 export default function OrdersTab() {
   const [orders, setOrders] = useState<Order[]>()
@@ -18,6 +19,9 @@ export default function OrdersTab() {
         const res = await api.get<OrdersResponse>(
           `/orders?search=${data.prompt}`
         )
+        if(res.data.data.docs.length === 0) {
+          toast.info("No orders found")
+        }
         setOrders(res.data.data.docs)
       },
     })

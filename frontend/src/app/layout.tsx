@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import "./globals.css"
 import { UserProvider } from "@/context/userContext"
+import { Toaster } from "sonner"
 
 export const metadata: Metadata = {
   title: "VHome",
@@ -18,7 +19,10 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body>
-        <UserProvider>{children}</UserProvider>
+        <UserProvider>
+          {children}
+          <Toaster />  
+        </UserProvider>
       </body>
     </html>
   )

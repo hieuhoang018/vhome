@@ -69,9 +69,9 @@ export default function AdminHeader() {
                 View Store
               </button>
             </Link>
-            <Link href={"/login"}>
+            <button className="cursor-pointer">
               <LogOut />
-            </Link>
+            </button>
           </div>
         </div>
       </header>

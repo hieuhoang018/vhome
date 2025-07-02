@@ -8,6 +8,7 @@ import Link from "next/link"
 import { useParams } from "next/navigation"
 import api from "@/lib/axios"
 import ColorSelection from "./color-selection"
+import { toast } from "sonner"
 
 export default function ProductListingSection() {
   const [product, setProduct] = useState<Product>()
@@ -39,7 +40,7 @@ export default function ProductListingSection() {
         quantity: amountChosen,
         chosenColor,
       })
-      console.log(res.status)
+      toast.success("Item added to cart")
     } catch (error) {
       console.log(error)
       setError("Failed to add to cart")
@@ -51,7 +52,7 @@ export default function ProductListingSection() {
       const res = await api.post("/users/me/wishlist", {
         productId: product?._id,
       })
-      console.log(res.status)
+      toast.success("Item added to wishlist")
     } catch (error) {
       console.log(error)
       setError("Failed to add to wishlist")

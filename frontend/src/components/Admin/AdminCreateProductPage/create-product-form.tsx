@@ -1,11 +1,14 @@
 "use client"
 
-import { Plus, X } from "lucide-react"
+import { Plus } from "lucide-react"
 import { useFormSubmit } from "@/hooks/useFormSubmit"
 import api from "@/lib/axios"
 import InputField from "../../input"
+import { toast } from "sonner"
+import { useRouter } from "next/navigation"
 
 export default function CreateProductForm() {
+  const router = useRouter()
   const { formData, handleChange, handleSubmit, error, loading } =
     useFormSubmit({
       initialData: {
@@ -14,11 +17,13 @@ export default function CreateProductForm() {
         category: "",
         price: "",
         stock: "",
-        colors: [],
-        imageUrl: "",
+        colors: "",
+        imageCoverUrl: "",
       },
       onSubmit: async (data) => {
         await api.post("/products", data)
+        toast.success("Product created")
+        router.push("/dashboard")
       },
     })
 
@@ -88,13 +93,16 @@ export default function CreateProductForm() {
       </div>
 
       <div className="rounded-lg bg-amber-100 border shadow-sm px-4 py-7 mt-4">
-        <h2 className="font-bold text-2xl mb-4">Product Image</h2>
+        <div className="mb-4">
+          <h2 className="font-bold text-2xl ">Product Image</h2>
+          <h3 className="text-gray-500">Please enter URL or upload file</h3>
+        </div>
         <InputField
-          label="Image URL or Upload File"
+          label="Cover Image"
           placeholder="https://example.com"
           inputType="text"
-          name="imageUrl"
-          value={formData.imageUrl}
+          name="imageCoverUrl"
+          value={formData.imageCoverUrl}
           onChange={handleChange}
         />
       </div>
