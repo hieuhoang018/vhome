@@ -49,7 +49,7 @@ const orderSchema = new mongoose.Schema(
 )
 
 orderSchema.pre(/^find/, function (this: mongoose.Query<any, any>, next) {
-  this.populate("user")
+  this.populate({ path: "user", select: "firstName lastName" })
   next()
 })
 

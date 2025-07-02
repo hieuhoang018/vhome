@@ -62,7 +62,10 @@ export default function OrderDetailsSection() {
       <div className="border rounded-lg bg-gray-100 p-5">
         <h1 className="text-2xl font-bold mb-8">Order Items</h1>
         {order.items.map((item) => (
-          <ItemDetailsCard key={item.name} item={item} />
+          <ItemDetailsCard
+            key={`${item.name} ${item.chosenColor}`}
+            item={item}
+          />
         ))}
       </div>
       <div>

@@ -16,7 +16,7 @@ export default function CartDetailsSection() {
     const fetchProduct = async () => {
       try {
         const res = await api.get<CartResponse>(`/carts/${_id}`)
-        setCart(res.data.data.doc)
+        setCart(res.data.data.cart)
       } catch (err) {
         setError("Failed to load cart")
       } finally {
@@ -27,7 +27,7 @@ export default function CartDetailsSection() {
     fetchProduct()
   }, [])
 
-  if (error) {
+  if (error || !cart) {
     return <p>Error while loading cart</p>
   }
 
@@ -37,31 +37,33 @@ export default function CartDetailsSection() {
         <div className="flex-1 border rounded-lg bg-gray-100 p-5">
           <h1 className="text-2xl font-bold mb-8">Cart Information</h1>
           <h2>Cart ID</h2>
-          <h2 className="mb-4">{cart?._id}</h2>
+          <h2 className="mb-4">{cart._id}</h2>
           <h2>User</h2>
           <h2 className="mb-4">
-            {cart?.user.firstName} {cart?.user.lastName} (ID: {cart?.user._id})
+            {cart.user.firstName} {cart.user.lastName} (ID: {cart.user._id})
           </h2>
           <h2>Total Items</h2>
-          <h2 className="mb-4">{cart?.items.length}</h2>
+          <h2 className="mb-4">{cart.items.length}</h2>
           <h2>Total Amount</h2>
-          <h2 className="mb-4">{cart?.totalPrice}</h2>
+          <h2 className="mb-4">{cart.totalPrice}</h2>
         </div>
         <div className="flex-1 border rounded-lg bg-gray-100 p-5">
           <h1 className="text-2xl font-bold mb-8">Cart Details</h1>
           <h2>Last Updated</h2>
           <h2 className="mb-4">
-            {/* {cart?.createdAt
-              ? new Date(cart.createdAt).toLocaleDateString()
-              : "undefine"} */}
-            today
+            {cart.createdAt
+              ? new Date(cart.updatedAt).toLocaleDateString()
+              : "undefine"}
           </h2>
         </div>
       </div>
       <div className="border rounded-lg bg-gray-100 p-5">
         <h1 className="text-2xl font-bold mb-5">Cart Items</h1>
-        {cart?.items.map((item) => (
-          <ItemDetailsCard key={item.name} item={item} />
+        {cart.items.map((item) => (
+          <ItemDetailsCard
+            key={`${item.name} ${item.chosenColor}`}
+            item={item}
+          />
         ))}
       </div>
       <div>

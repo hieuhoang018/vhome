@@ -26,7 +26,7 @@ export default function ProductDetailsSection() {
     fetchProduct()
   }, [])
 
-  if (error) {
+  if (error || !product) {
     return <p>Error while loading product</p>
   }
 
@@ -36,31 +36,31 @@ export default function ProductDetailsSection() {
         <div className="flex-1 border rounded-lg bg-gray-100 p-5">
           <h1 className="text-2xl font-bold mb-8">Personal Information</h1>
           <h2>Name</h2>
-          <h2 className="mb-4">{product?.name}</h2>
+          <h2 className="mb-4">{product.name}</h2>
           <h2>Category</h2>
-          <h2 className="mb-4">{product?.category}</h2>
+          <h2 className="mb-4">{product.category}</h2>
           <h2>Price</h2>
-          <h2 className="mb-4">{product?.price}</h2>
+          <h2 className="mb-4">{product.price}</h2>
         </div>
         <div className="flex-1 border rounded-lg bg-gray-100 p-5">
           <h1 className="text-2xl font-bold mb-8">Inventory & Status</h1>
           <h2>Created At</h2>
           <h2 className="mb-4">
-            {product?.createdAt
+            {product.createdAt
               ? new Date(product.createdAt).toLocaleDateString()
               : "undefine"}
           </h2>
           <h2>Stock</h2>
-          <h2 className="mb-4">{product?.stock}</h2>
+          <h2 className="mb-4">{product.stock}</h2>
           <h2>Status</h2>
           <h2 className="mb-4">
-            {product?.stock === 0 ? "Out of Stock" : "In Stock"}
+            {product.stock === 0 ? "Out of Stock" : "In Stock"}
           </h2>
         </div>
       </div>
       <div className="border rounded-lg bg-gray-100 p-5">
         <h1 className="text-2xl font-bold mb-8">Description</h1>
-        <h2 className="mb-4">{product?.description}</h2>
+        <h2 className="mb-4">{product.description}</h2>
       </div>
       <div>
         <div className="flex gap-4 mt-6">

@@ -7,6 +7,8 @@ export interface Cart {
   }
   items: CartItemType[]
   totalPrice: number
+  createdAt: Date
+  updatedAt: Date
 }
 
 export interface CartItemType {
@@ -20,7 +22,7 @@ export interface CartItemType {
 export interface CartResponse {
   status: string
   data: {
-    doc: Cart
+    cart: Cart
   }
 }
 

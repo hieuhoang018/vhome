@@ -26,7 +26,7 @@ export default function UserDetailsSection() {
     fetchUser()
   }, [])
 
-  if (error) {
+  if (error || !user) {
     return <p>Error while loading user</p>
   }
 
@@ -37,20 +37,20 @@ export default function UserDetailsSection() {
           <h1 className="text-2xl font-bold mb-8">Personal Information</h1>
           <h2>Name</h2>
           <h2 className="mb-4">
-            {user?.firstName} {user?.lastName}
+            {user.firstName} {user.lastName}
           </h2>
           <h2>Email</h2>
-          <h2 className="mb-4">{user?.email}</h2>
+          <h2 className="mb-4">{user.email}</h2>
           <h2>Phone</h2>
-          <h2 className="mb-4">{user?.phone}</h2>
+          <h2 className="mb-4">{user.phone}</h2>
           <h2>Status</h2>
-          <h2 className="mb-4">{user?.active ? "Active" : "Inactive"}</h2>
+          <h2 className="mb-4">{user.active ? "Active" : "Inactive"}</h2>
         </div>
         <div className="flex-1 border rounded-lg bg-gray-100 p-5">
           <h1 className="text-2xl font-bold mb-8">Account Details</h1>
           <h2>Join Date</h2>
           <h2 className="mb-4">
-            {user?.createdAt
+            {user.createdAt
               ? new Date(user.createdAt).toLocaleDateString()
               : "undefine"}
           </h2>

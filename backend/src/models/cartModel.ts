@@ -1,4 +1,4 @@
-import { Schema, model, HydratedDocument, Types } from "mongoose"
+import { Schema, model, HydratedDocument, Types, Query } from "mongoose"
 
 export type CartDocument = HydratedDocument<ICart>
 
@@ -28,20 +28,30 @@ const cartItemSchema = new Schema<CartItem>(
   { _id: false }
 )
 
-const cartSchema = new Schema<ICart>({
-  user: {
-    type: Schema.ObjectId,
-    ref: "User",
-    required: false,
+const cartSchema = new Schema<ICart>(
+  {
+    user: {
+      type: Schema.ObjectId,
+      ref: "User",
+      required: false,
+    },
+    items: {
+      type: [cartItemSchema],
+      default: [],
+    },
+    totalPrice: {
+      type: Number,
+      default: 0,
+    },
   },
-  items: {
-    type: [cartItemSchema],
-    default: [],
-  },
-  totalPrice: {
-    type: Number,
-    default: 0,
-  },
+  {
+    timestamps: true,
+  }
+)
+
+cartSchema.pre(/^find/, function (this: Query<any, any>, next) {
+  this.populate({ path: "user", select: "firstName lastName" })
+  next()
 })
 
 const Cart = model<ICart>("Cart", cartSchema)

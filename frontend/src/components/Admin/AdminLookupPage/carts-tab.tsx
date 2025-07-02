@@ -81,14 +81,18 @@ export default function CartsTab() {
                   </span>
                 </div>
               </td>
-              <td className="py-3 px-4 text-gray-600">name</td>
+              <td className="py-3 px-4 text-gray-600">
+                {cart.user.firstName} {cart.user.lastName}
+              </td>
               <td className="py-3 px-4 font-semibold text-furniture-charcoal">
                 {cart.items.length}
               </td>
               <td className="py-3 px-4 font-semibold text-furniture-charcoal">
                 {cart.totalPrice}
               </td>
-              <td className="py-3 px-4 text-gray-600">today</td>
+              <td className="py-3 px-4 text-gray-600">
+                {new Date(cart.updatedAt).toLocaleDateString()}
+              </td>
               <td className="py-3 px-4">
                 <div className="flex items-center space-x-2">
                   <button className="h-8 w-8">
