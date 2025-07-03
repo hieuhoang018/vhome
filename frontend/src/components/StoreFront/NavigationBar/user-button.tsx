@@ -49,6 +49,11 @@ export default function NavUserButton() {
               Settings
             </button>
           </Link>
+          <Link href={"/orders"}>
+            <button className="block w-full text-left px-4 py-2 text-furniture-charcoal hover:bg-gray-100">
+              My Orders
+            </button>
+          </Link>
           <button
             onClick={handleLogOut}
             className="block w-full text-left px-4 py-2 text-furniture-charcoal hover:bg-gray-100"

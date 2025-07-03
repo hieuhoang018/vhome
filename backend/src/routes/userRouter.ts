@@ -32,6 +32,7 @@ import {
   getMyWishlist,
   removeFromWishlist,
 } from "../controllers/wishlistController"
+import { getMyOrders } from "../controllers/orderController"
 
 const router = Router()
 
@@ -60,6 +61,8 @@ router
   .get(getMyWishlist)
   .post(addToWishlist)
   .delete(removeFromWishlist)
+
+router.get("/me/orders", getMyOrders)
 
 // Routes available only for admins
 router.use(restrictTo("admin"))

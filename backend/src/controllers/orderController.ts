@@ -121,3 +121,25 @@ export const getOrderById = catchAsync(
     })
   }
 )
+
+export const getMyOrders = catchAsync(
+  async (req: Request, res: Response, next: NextFunction) => {
+    const user = req.user
+    console.log(user)
+    if (!user) {
+      return next(new AppError("Cant find User", 404))
+    }
+
+    const orders = await Order.find({ user: user.id })
+    if (!orders) {
+      return next(new AppError("Errors while fetching orders", 500))
+    }
+
+    res.status(200).json({
+      status: "success",
+      data: {
+        docs: orders,
+      },
+    })
+  }
+)
