@@ -18,7 +18,10 @@ export default function OrderCard({ order }: { order: Order }) {
       <div className="flex flex-col gap-3 p-4">
         {order.items.map((item: OrderItem) => {
           return (
-            <div className="flex flex-row gap-3">
+            <div
+              key={`${item.name} ${item.chosenColor}`}
+              className="flex flex-row gap-3"
+            >
               <div className="w-20 h-20 border"></div>
               <div>
                 <h1 className="text-xl mb-1 font-semibold">{item.name}</h1>

@@ -27,6 +27,10 @@ export default function OrdersSection() {
     return <p>Error</p>
   }
 
+  if (orders.length === 0) {
+    return <p>No orders yet</p>
+  }
+
   return (
     <>
       {orders.map((order) => {

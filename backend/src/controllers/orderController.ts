@@ -5,6 +5,7 @@ import { AppError } from "../utils/appError"
 import Cart, { CartItem } from "../models/cartModel"
 import Order from "../models/orderModel"
 import { createOne, deleteOne, getAll, updateOne } from "./handlerFactory"
+import Product from "../models/productModel"
 
 export const getCheckoutSession = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
@@ -72,6 +73,23 @@ export const createOrderCheckout = catchAsync(
       return next(new AppError("Cart not found", 404))
     }
 
+    // Update product stock for each item in the cart
+    for (const item of cart.items) {
+      const product = await Product.findById(item.productId)
+
+      if (!product) {
+        return next(new AppError(`Product not found: ${item.productId}`, 404))
+      }
+
+      if (product.stock < item.quantity) {
+        return next(
+          new AppError(`Insufficient stock for product: ${product.name}`, 400)
+        )
+      }
+      product.stock -= item.quantity
+      await product.save()
+    }
+
     // create order with cart items embedded
     const order = await Order.create({
       user: req.user._id,
@@ -125,7 +143,6 @@ export const getOrderById = catchAsync(
 export const getMyOrders = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
     const user = req.user
-    console.log(user)
     if (!user) {
       return next(new AppError("Cant find User", 404))
     }
