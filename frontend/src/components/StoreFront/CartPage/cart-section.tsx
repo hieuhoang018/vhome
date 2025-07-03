@@ -13,6 +13,29 @@ export default function CartSection() {
   const [cart, setCart] = useState<Cart>()
   const { user } = useUser()
 
+  const refreshCart = async () => {
+    if (!user) return
+    try {
+      const res = await api.get<CartResponse>("/users/me/cart")
+      setCart(res.data.data.doc)
+    } catch (err) {
+      console.error("Fetch error:", err)
+      setError("Failed to refresh cart")
+    }
+  }
+
+  const handleRemoveItem = (productId: string, chosenColor: string) => {
+    if (!cart) return
+    setCart({
+      ...cart,
+      items: cart.items.filter(
+        (item) =>
+          !(item.productId === productId && item.chosenColor === chosenColor)
+      ),
+    })
+    refreshCart()
+  }
+
   useEffect(() => {
     if (!user) return // Don't fetch cart if not logged in
 
@@ -20,7 +43,7 @@ export default function CartSection() {
       setLoading(true)
       try {
         const res = await api.get<CartResponse>("/users/me/cart")
-        setCart(res.data.data.cart)
+        setCart(res.data.data.doc)
       } catch (err) {
         console.error("Fetch error:", err)
         setError("Failed to load cart")
@@ -48,6 +71,8 @@ export default function CartSection() {
                 <CartItem
                   key={`${item.name} ${item.chosenColor}`}
                   product={item}
+                  onRemove={handleRemoveItem}
+                  onQuantityChange={refreshCart}
                 />
               )
             })}

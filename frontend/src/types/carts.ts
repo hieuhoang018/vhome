@@ -22,7 +22,7 @@ export interface CartItemType {
 export interface CartResponse {
   status: string
   data: {
-    cart: Cart
+    doc: Cart
   }
 }
 

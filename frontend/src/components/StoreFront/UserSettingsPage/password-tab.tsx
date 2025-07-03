@@ -3,6 +3,7 @@
 import InputField from "../../input"
 import { useFormSubmit } from "@/hooks/useFormSubmit"
 import api from "@/lib/axios"
+import { toast } from "sonner"
 
 export default function PasswordTab() {
   const { formData, handleChange, handleSubmit, error, loading } =
@@ -14,6 +15,7 @@ export default function PasswordTab() {
       },
       onSubmit: async (data) => {
         await api.patch("/users/update-password", data)
+        toast.success("Password updated succesfully")
       },
     })
 

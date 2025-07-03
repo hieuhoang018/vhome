@@ -81,8 +81,12 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center text-sm">
             <h2>VHome</h2>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href={"/terms"}>Terms of Service</Link>
-              <Link href={"/policy"}>Privacy Policy</Link>
+              <Link className="hover:text-white" href={"/terms"}>
+                Terms of Service
+              </Link>
+              <Link className="hover:text-white" href={"/policy"}>
+                Privacy Policy
+              </Link>
             </div>
           </div>
         </div>

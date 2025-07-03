@@ -1,4 +1,5 @@
 import InformationSettingsTab from "@/components/StoreFront/UserSettingsPage/information-setting-tab"
+import UserInformationSection from "@/components/StoreFront/UserSettingsPage/user-information-section"
 
 export default function UserSettingsPage() {
   return (
@@ -14,8 +15,7 @@ export default function UserSettingsPage() {
 
       <div className="grid grid-cols-3 gap-4">
         <div className="col-span-1 bg-white rounded-lg shadow p-6">
-          <h2 className="text-xl font-semibold mb-4">Profile</h2>
-          <p className="text-muted-foreground">User details go here.</p>
+          <UserInformationSection />
         </div>
         <InformationSettingsTab />
       </div>

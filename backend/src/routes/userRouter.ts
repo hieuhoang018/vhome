@@ -51,11 +51,15 @@ router
   .get(getMyCart)
   .post(addToCart)
   .patch(updateCartItemQuantity)
-  .delete(removeFromCart)
+router.delete("/me/cart/:id", removeFromCart)
 router.patch("/update-password", updatePassword)
 router.patch("/update-information", uploadUserPhoto, resizeUserPhoto, updateMe)
 router.delete("/delete-account", deleteMe)
-router.route("/me/wishlist").get(getMyWishlist).post(addToWishlist).delete(removeFromWishlist)
+router
+  .route("/me/wishlist")
+  .get(getMyWishlist)
+  .post(addToWishlist)
+  .delete(removeFromWishlist)
 
 // Routes available only for admins
 router.use(restrictTo("admin"))

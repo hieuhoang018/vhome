@@ -35,12 +35,17 @@ export default function ProductListingSection() {
 
   const handleAddToCart = async () => {
     try {
-      const res = await api.post("/users/me/cart", {
+      const chosenProduct = {
         productId: product?._id,
         quantity: amountChosen,
         chosenColor,
-      })
-      toast.success("Item added to cart")
+      }
+      if (chosenColor === null) {
+        toast.error("Please choose a color")
+      } else {
+        await api.post("/users/me/cart", chosenProduct)
+        toast.success("Item added to cart")
+      }
     } catch (error) {
       console.log(error)
       setError("Failed to add to cart")
@@ -49,7 +54,7 @@ export default function ProductListingSection() {
 
   const handleAddToWishlist = async () => {
     try {
-      const res = await api.post("/users/me/wishlist", {
+      await api.post("/users/me/wishlist", {
         productId: product?._id,
       })
       toast.success("Item added to wishlist")

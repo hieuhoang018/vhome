@@ -1,7 +1,13 @@
 import { NextFunction, Request, Response } from "express"
 import catchAsync from "../utils/catchAsync"
 import { AppError } from "../utils/appError"
-import { createOne, deleteOne, getAll, getMyOne, updateOne } from "./handlerFactory"
+import {
+  createOne,
+  deleteOne,
+  getAll,
+  getMyOne,
+  updateOne,
+} from "./handlerFactory"
 import Cart, { CartItem } from "../models/cartModel"
 import User from "../models/userModel"
 import Product from "../models/productModel"
@@ -109,7 +115,7 @@ export const addToCart = catchAsync(
 
 export const removeFromCart = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
-    const { productId } = req.body
+    const productId = req.params.id
     const userId = req.user.id
     if (!productId) {
       return next(new AppError("Missing productId", 400))
@@ -148,8 +154,7 @@ export const removeFromCart = catchAsync(
 export const updateCartItemQuantity = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
     const userId = req.user.id
-    const { updateItemId, quantity } = req.body
-
+    const { updateItemId, chosenColor, quantity } = req.body
     const user = await User.findById(userId).populate("cart")
     if (!user || !user.cart) {
       return next(new AppError("User or cart not found", 404))
@@ -161,7 +166,9 @@ export const updateCartItemQuantity = catchAsync(
     }
 
     const itemIndex = cart.items.findIndex(
-      (item: CartItem) => item.productId.toString() === updateItemId
+      (item: CartItem) =>
+        item.productId.toString() === updateItemId &&
+        item.chosenColor === chosenColor
     )
 
     if (itemIndex === -1) {

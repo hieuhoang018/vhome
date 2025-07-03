@@ -3,6 +3,7 @@
 import InputField from "../../input"
 import api from "@/lib/axios"
 import { useFormSubmit } from "@/hooks/useFormSubmit"
+import { toast } from "sonner"
 
 export default function ProfileTab() {
   const { formData, handleChange, handleSubmit, error, loading } =
@@ -19,6 +20,8 @@ export default function ProfileTab() {
       },
       onSubmit: async (data) => {
         await api.patch("/users/update-information", data)
+        toast.success("Information changed successfully")
+        window.location.reload()
       },
     })
 
