@@ -25,6 +25,13 @@ export interface UserResponse {
   }
 }
 
+export interface UpdatedUserResponse {
+  status: string
+  data: {
+    data: User
+  }
+}
+
 export interface MeResponse {
   data: {
     user: User
