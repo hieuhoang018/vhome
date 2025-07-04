@@ -110,7 +110,7 @@ export default function UserDetailsSection() {
                 onChange={handleChange}
               />
               <InputField
-                label="phone"
+                label="Phone Number"
                 placeholder="+358 46 123 4567"
                 name="phone"
                 inputType="tel"

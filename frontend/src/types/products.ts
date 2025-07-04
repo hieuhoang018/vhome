@@ -12,6 +12,13 @@ export interface ProductResponse {
   }
 }
 
+export interface UpdatedProductResponse {
+  status: string
+  data: {
+    data: Product
+  }
+}
+
 export interface Product {
   _id: string
   name: string

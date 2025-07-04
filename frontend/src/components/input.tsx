@@ -3,7 +3,7 @@ interface InputFieldProps {
   placeholder: string
   inputType: string
   name: string
-  value: string
+  value: string | number
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 

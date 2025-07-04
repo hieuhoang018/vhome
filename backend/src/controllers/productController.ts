@@ -38,6 +38,7 @@ export const uploadProductImages = upload.fields([
 export const resizeProductPhoto = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
     const files = req.files as MulterFiles
+    if (!files) return next()
     if (!files.imageCoverUrl || !files.imagesUrl) return next()
 
     req.body.imageCoverUrl = `product-${req.params.id}-${Date.now()}-cover.jpeg`
@@ -63,7 +64,7 @@ export const resizeProductPhoto = catchAsync(
       })
     )
 
-    console.log(req.body);
+    console.log(req.body)
     next()
   }
 )
