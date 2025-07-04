@@ -56,11 +56,8 @@ router.delete("/me/cart/:id", removeFromCart)
 router.patch("/update-password", updatePassword)
 router.patch("/update-information", uploadUserPhoto, resizeUserPhoto, updateMe)
 router.delete("/delete-account", deleteMe)
-router
-  .route("/me/wishlist")
-  .get(getMyWishlist)
-  .post(addToWishlist)
-  .delete(removeFromWishlist)
+router.route("/me/wishlist").get(getMyWishlist).post(addToWishlist)
+router.delete("/me/wishlist/:id", removeFromWishlist)
 
 router.get("/me/orders", getMyOrders)
 

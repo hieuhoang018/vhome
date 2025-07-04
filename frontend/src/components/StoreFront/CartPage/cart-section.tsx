@@ -2,7 +2,7 @@
 
 import { useUser } from "@/context/userContext"
 import api from "@/lib/axios"
-import { CartResponse, Cart } from "@/types/carts"
+import { Cart, CurrentCartResponse } from "@/types/carts"
 import { useEffect, useState } from "react"
 import CartItem from "./cart-item"
 import Link from "next/link"
@@ -14,45 +14,22 @@ export default function CartSection() {
   const { user } = useUser()
 
   const refreshCart = async () => {
-    if (!user) return
+    setLoading(true)
     try {
-      const res = await api.get<CartResponse>("/users/me/cart")
+      const res = await api.get<CurrentCartResponse>("/users/me/cart")
       setCart(res.data.data.doc)
     } catch (err) {
       console.error("Fetch error:", err)
       setError("Failed to refresh cart")
+    } finally {
+      setLoading(false)
     }
-  }
-
-  const handleRemoveItem = (productId: string, chosenColor: string) => {
-    if (!cart) return
-    setCart({
-      ...cart,
-      items: cart.items.filter(
-        (item) =>
-          !(item.productId === productId && item.chosenColor === chosenColor)
-      ),
-    })
-    refreshCart()
   }
 
   useEffect(() => {
     if (!user) return // Don't fetch cart if not logged in
 
-    const fetchCart = async () => {
-      setLoading(true)
-      try {
-        const res = await api.get<CartResponse>("/users/me/cart")
-        setCart(res.data.data.doc)
-      } catch (err) {
-        console.error("Fetch error:", err)
-        setError("Failed to load cart")
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    fetchCart()
+    refreshCart()
   }, [user])
 
   if (!user) return <p>Not logged in. Please sign in.</p>
@@ -71,7 +48,7 @@ export default function CartSection() {
                 <CartItem
                   key={`${item.name} ${item.chosenColor}`}
                   product={item}
-                  onRemove={handleRemoveItem}
+                  onRemove={refreshCart}
                   onQuantityChange={refreshCart}
                 />
               )

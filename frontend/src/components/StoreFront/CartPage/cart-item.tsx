@@ -13,7 +13,7 @@ export default function CartItem({
   onQuantityChange,
 }: {
   product: CartItemType
-  onRemove: (productId: string, chosenColor: string) => void
+  onRemove: () => void
   onQuantityChange: () => void
 }) {
   const { quantity: amountChosen, setQuantity: setAmountChosen } =
@@ -28,7 +28,7 @@ export default function CartItem({
     try {
       await api.delete(`/users/me/cart/${product.productId}`)
       toast.success("Item removed from cart")
-      onRemove(product.productId, product.chosenColor)
+      onRemove()
     } catch (error) {
       toast.error("Failed to remove item from cart")
     }

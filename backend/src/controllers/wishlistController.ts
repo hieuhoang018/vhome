@@ -50,7 +50,7 @@ export const addToWishlist = catchAsync(
 
 export const removeFromWishlist = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
-    const { productId } = req.body
+    const productId  = req.params.id
     const userId = req.user.id
     if (!productId) {
       return next(new AppError("Missing productId", 400))

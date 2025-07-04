@@ -13,23 +13,23 @@ export default function WishlistItemSection() {
   const { user } = useUser()
 
   useEffect(() => {
-    if (!user) return // Don't fetch cart if not logged in
+    if (!user) return
 
-    const fetchWishlist = async () => {
-      setLoading(true)
-      try {
-        const res = await api.get<WishlistResponse>("/users/me/wishlist")
-        setWishlist(res.data.data.doc)
-      } catch (err) {
-        console.error("Fetch error:", err)
-        setError("Failed to load wishlist")
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    fetchWishlist()
+    refreshWishlist()
   }, [user])
+
+  const refreshWishlist = async () => {
+    setLoading(true)
+    try {
+      const res = await api.get<WishlistResponse>("/users/me/wishlist")
+      setWishlist(res.data.data.doc)
+    } catch (err) {
+      console.error("Fetch error:", err)
+      setError("Failed to load wishlist")
+    } finally {
+      setLoading(false)
+    }
+  }
 
   if (!user) return <p>Not logged in. Please sign in.</p>
   if (error) return <p className="text-red-500">{error}</p>
@@ -42,7 +42,13 @@ export default function WishlistItemSection() {
       ) : (
         <div className="grid grid-cols-3 gap-3">
           {wishlist.items.map((item) => {
-            return <WishlistItemCard key={item.name} product={item}/>
+            return (
+              <WishlistItemCard
+                key={item.name}
+                product={item}
+                onRemove={refreshWishlist}
+              />
+            )
           })}
         </div>
       )}

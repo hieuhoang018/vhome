@@ -26,6 +26,13 @@ export interface CartResponse {
   }
 }
 
+export interface CurrentCartResponse {
+  status: string
+  data: {
+    doc: Cart
+  }
+}
+
 export interface CartsResponse {
   status: string
   results: number
