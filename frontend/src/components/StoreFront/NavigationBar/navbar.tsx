@@ -4,8 +4,10 @@ import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 import NavUserButton from "./user-button"
+import { useUser } from "@/context/userContext"
 
 export default function MainHeader() {
+  const { user } = useUser()
   const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
@@ -68,6 +70,13 @@ export default function MainHeader() {
             <Link href={"/cart"}>
               <ShoppingCart className="h-5 w-5" />
             </Link>
+            {user?.role === "admin" && (
+              <Link href={"/dashboard"}>
+                <button className="border cursor-pointer px-4 py-2 rounded-sm">
+                  Back to Admin
+                </button>
+              </Link>
+            )}
           </div>
         </div>
       </header>

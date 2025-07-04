@@ -4,6 +4,7 @@ import { LogOut } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import NavUserButton from "./user-button"
 
 export default function AdminHeader() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -64,14 +65,12 @@ export default function AdminHeader() {
 
           {/* Action buttons */}
           <div className="hidden md:flex items-center space-x-6">
+            <NavUserButton />
             <Link href={"/"}>
               <button className="border cursor-pointer px-4 py-2 rounded-sm">
                 View Store
               </button>
             </Link>
-            <button className="cursor-pointer">
-              <LogOut />
-            </button>
           </div>
         </div>
       </header>
