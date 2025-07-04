@@ -2,9 +2,10 @@
 
 import api from "@/lib/axios"
 import { Cart, CartResponse } from "@/types/carts"
-import { useParams } from "next/navigation"
+import { useParams, useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 import ItemDetailsCard from "./item-details-card"
+import { toast } from "sonner"
 
 export default function CartDetailsSection() {
   const [cart, setCart] = useState<Cart>()
@@ -12,12 +13,16 @@ export default function CartDetailsSection() {
   const [error, setError] = useState("")
   const { id: _id } = useParams<{ id: string }>()
 
+  const router = useRouter()
+
   useEffect(() => {
     const fetchProduct = async () => {
       try {
         const res = await api.get<CartResponse>(`/carts/${_id}`)
+        console.log(res)
         setCart(res.data.data.cart)
       } catch (err) {
+        console.log(err)
         setError("Failed to load cart")
       } finally {
         setLoading(false)
@@ -26,6 +31,16 @@ export default function CartDetailsSection() {
 
     fetchProduct()
   }, [])
+
+  const handleDeleteCart = async () => {
+    try {
+      await api.delete(`/carts/${_id}`)
+      toast.success("Cart deleted")
+      router.push("/lookup")
+    } catch (error) {
+      toast.error("Error while deleting cart")
+    }
+  }
 
   if (error || !cart) {
     return <p>Error while loading cart</p>
@@ -40,7 +55,7 @@ export default function CartDetailsSection() {
           <h2 className="mb-4">{cart._id}</h2>
           <h2>User</h2>
           <h2 className="mb-4">
-            {cart.user.firstName} {cart.user.lastName} (ID: {cart.user._id})
+            {cart.user.firstName} {cart.user.lastName} (ID: {cart.user.id})
           </h2>
           <h2>Total Items</h2>
           <h2 className="mb-4">{cart.items.length}</h2>
@@ -79,6 +94,7 @@ export default function CartDetailsSection() {
             className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition"
             type="button"
             disabled={loading}
+            onClick={handleDeleteCart}
           >
             Delete Cart
           </button>

@@ -2,15 +2,17 @@
 
 import api from "@/lib/axios"
 import { Order, OrderResponse } from "@/types/orders"
-import { useParams } from "next/navigation"
+import { useParams, useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 import ItemDetailsCard from "./item-details-card"
+import { toast } from "sonner"
 
 export default function OrderDetailsSection() {
   const [order, setOrders] = useState<Order>()
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState("")
   const { id: _id } = useParams<{ id: string }>()
+  const router = useRouter()
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -26,6 +28,16 @@ export default function OrderDetailsSection() {
 
     fetchProduct()
   }, [])
+
+  const handleDeleteOrder = async () => {
+    try {
+      await api.delete(`/orders/${_id}`)
+      toast.success("Order deleted")
+      router.push("/lookup")
+    } catch (error) {
+      toast.error("Error while deleting order")
+    }
+  }
 
   if (error || !order) {
     return <p>Error while loading order</p>
@@ -81,6 +93,7 @@ export default function OrderDetailsSection() {
             className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition"
             type="button"
             disabled={loading}
+            onClick={handleDeleteOrder}
           >
             Delete Order
           </button>

@@ -1,7 +1,7 @@
 export interface Cart {
   _id: string
   user: {
-    _id: string
+    id: string
     firstName: string
     lastName: string
   }
@@ -22,7 +22,7 @@ export interface CartItemType {
 export interface CartResponse {
   status: string
   data: {
-    doc: Cart
+    cart: Cart
   }
 }
 

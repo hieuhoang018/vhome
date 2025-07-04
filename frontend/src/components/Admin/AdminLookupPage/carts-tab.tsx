@@ -18,6 +18,7 @@ export default function CartsTab() {
       },
       onSubmit: async (data) => {
         const res = await api.get<CartsResponse>(`/carts?search=${data.prompt}`)
+        console.log(res)
         if (res.data.data.docs.length === 0) {
           toast.info("No carts found")
         }
@@ -77,7 +78,7 @@ export default function CartsTab() {
               <td className="py-3 px-4">
                 <div className="flex items-center space-x-3">
                   <span className="font-medium text-furniture-charcoal">
-                    {cart.user._id ? cart.user._id : ""}
+                    {cart.user.id ? cart.user.id : ""}
                   </span>
                 </div>
               </td>

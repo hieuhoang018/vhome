@@ -81,7 +81,7 @@ export default function OrdersTab() {
               <td className="py-3 px-4">
                 <div className="flex items-center space-x-3">
                   <span className="font-medium text-furniture-charcoal">
-                    {order.user._id}
+                    {order.user._id ? order.user._id : "undefined"}
                   </span>
                 </div>
               </td>
