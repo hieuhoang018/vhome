@@ -6,117 +6,147 @@ import Cart, { CartItem } from "../models/cartModel"
 import Order from "../models/orderModel"
 import { createOne, deleteOne, getAll, updateOne } from "./handlerFactory"
 import Product from "../models/productModel"
+import CheckoutSession from "../models/checkoutSessionModel"
 
-export const getCheckoutSession = catchAsync(
-  async (req: Request, res: Response, next: NextFunction) => {
-    const stripeInstance = new Stripe(process.env.STRIPE_SECRET_KEY as string)
+export const createCheckoutSession = catchAsync(async (req, res, next) => {
+  const {
+    email,
+    firstName,
+    lastName,
+    phone,
+    streetAddress,
+    city,
+    zip,
+    deliveryNotes,
+  } = req.body
 
-    const user = req.user
-    if (!user) return next(new AppError("Cant find user", 404))
+  const user = req.user
+  if (!user) return next(new AppError("User not found", 404))
 
-    const cart = await Cart.findById(user.cart)
-    if (!cart || !cart.items.length)
-      return next(new AppError("Cart is empty or not found", 404))
+  const cart = await Cart.findById(user.cart)
+  if (!cart || !cart.items.length)
+    return next(new AppError("Cart is empty", 400))
 
-    const line_items = cart.items.map((item: any) => ({
-      price_data: {
-        currency: "eur",
-        product_data: {
-          name: item.name,
-          // images: [item.product.image], // Uncomment if you have image URLs
-        },
-        unit_amount: Math.round(item.price * 100), // price in cents
-      },
+  // create CheckoutSession in DB
+  const checkoutSession = await CheckoutSession.create({
+    user: user._id,
+    email,
+    firstName,
+    lastName,
+    phone,
+    address: { streetAddress, city, zip },
+    deliveryNotes,
+  })
+
+  // Create Stripe session
+  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string)
+
+  const line_items = cart.items.map((item) => ({
+    price_data: {
+      currency: "eur",
+      product_data: { name: item.name },
+      unit_amount: Math.round(item.price * 100),
+    },
+    quantity: item.quantity,
+  }))
+
+  const session = await stripe.checkout.sessions.create({
+    payment_method_types: ["card"],
+    mode: "payment",
+    line_items,
+    success_url: `${process.env.FRONTEND_URL}/orders/success?session_id={CHECKOUT_SESSION_ID}`,
+    cancel_url: `${process.env.FRONTEND_URL}/orders/cancel`,
+    customer_email: email,
+    client_reference_id: user.cart.toString(),
+  })
+
+  // store Stripe session id
+  checkoutSession.stripeSessionId = session.id
+  await checkoutSession.save()
+
+  res.status(200).json({
+    status: "success",
+    session,
+  })
+})
+
+export const createOrderCheckout = catchAsync(async (req, res, next) => {
+  const { session_id } = req.query
+
+  if (!session_id) {
+    return next(new AppError("Session ID is required", 400))
+  }
+
+  const stripeInstance = new Stripe(process.env.STRIPE_SECRET_KEY as string)
+
+  const session = await stripeInstance.checkout.sessions.retrieve(
+    session_id as string
+  )
+
+  if (!session || session.payment_status !== "paid") {
+    return next(new AppError("Payment not completed", 400))
+  }
+
+  const cartId = session.client_reference_id
+  const cart = await Cart.findById(cartId).populate("items")
+
+  if (!cart) {
+    return next(new AppError("Cart not found", 404))
+  }
+
+  // find CheckoutSession
+  const checkoutSession = await CheckoutSession.findOne({
+    stripeSessionId: session.id,
+  })
+  if (!checkoutSession) {
+    return next(new AppError("Checkout session data not found", 404))
+  }
+
+  // update stock
+  for (const item of cart.items) {
+    const product = await Product.findById(item.productId)
+    if (!product) {
+      return next(new AppError(`Product not found: ${item.productId}`, 404))
+    }
+    if (product.stock < item.quantity) {
+      return next(new AppError(`Insufficient stock for ${product.name}`, 400))
+    }
+    product.stock -= item.quantity
+    await product.save()
+  }
+
+  // create the Order
+  const order = await Order.create({
+    user: req.user._id,
+    items: cart.items.map((item) => ({
+      productId: item.productId,
       quantity: item.quantity,
-    }))
+      price: item.price,
+      name: item.name,
+      chosenColor: item.chosenColor,
+    })),
+    totalPrice: session.amount_total! / 100,
+    paid: true,
+    paymentIntentId: session.payment_intent as string,
+    phone: checkoutSession.phone,
+    address: checkoutSession.address,
+    deliveryNotes: checkoutSession.deliveryNotes,
+  })
 
-    const session = await stripeInstance.checkout.sessions.create({
-      payment_method_types: ["card"],
-      mode: "payment",
-      line_items,
-      success_url: `${process.env.FRONTEND_URL}/orders/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.FRONTEND_URL}/orders/cancel`,
-      customer_email: user.email,
-      client_reference_id: user.cart.toString(),
-    })
+  // clear the cart
+  cart.items = []
+  cart.totalPrice = 0
+  await cart.save()
 
-    res.status(200).json({
-      status: "success",
-      session,
-    })
-  }
-)
+  // optionally remove the checkout session to clean up
+  await CheckoutSession.deleteOne({ _id: checkoutSession._id })
 
-export const createOrderCheckout = catchAsync(
-  async (req: Request, res: Response, next: NextFunction) => {
-    const { session_id } = req.query
-
-    if (!session_id) {
-      return next(new AppError("Session ID is required", 400))
-    }
-
-    const stripeInstance = new Stripe(process.env.STRIPE_SECRET_KEY as string)
-
-    const session = await stripeInstance.checkout.sessions.retrieve(
-      session_id as string
-    )
-
-    if (!session || session.payment_status !== "paid") {
-      return next(new AppError("Payment not completed", 400))
-    }
-
-    // retrieve cart using client_reference_id
-    const cartId = session.client_reference_id
-    const cart = await Cart.findById(cartId).populate("items")
-
-    if (!cart) {
-      return next(new AppError("Cart not found", 404))
-    }
-
-    // Update product stock for each item in the cart
-    for (const item of cart.items) {
-      const product = await Product.findById(item.productId)
-
-      if (!product) {
-        return next(new AppError(`Product not found: ${item.productId}`, 404))
-      }
-
-      if (product.stock < item.quantity) {
-        return next(
-          new AppError(`Insufficient stock for product: ${product.name}`, 400)
-        )
-      }
-      product.stock -= item.quantity
-      await product.save()
-    }
-
-    // create order with cart items embedded
-    const order = await Order.create({
-      user: req.user._id,
-      items: cart.items.map((item: CartItem) => ({
-        productId: item.productId,
-        quantity: item.quantity,
-        price: item.price,
-        name: item.name,
-        chosenColor: item.chosenColor,
-      })),
-      totalPrice: session.amount_total! / 100, // Stripe returns in cents
-      paid: true,
-      paymentIntentId: session.payment_intent as string,
-    })
-
-    // clear the cart
-    cart.items = []
-    cart.totalPrice = 0
-    await cart.save()
-
-    res.status(201).json({
-      status: "success",
-      message: "Order created successfully",
-      order,
-    })
-  }
-)
+  res.status(201).json({
+    status: "success",
+    message: "Order created successfully",
+    order,
+  })
+})
 
 export const getAllOrders = getAll(Order)
 export const createOrder = createOne(Order)

@@ -38,6 +38,19 @@ const orderSchema = new mongoose.Schema(
       type: Boolean,
       default: true,
     },
+    address: {
+      streetAddress: { type: String, required: true },
+      city: { type: String, required: true },
+      zip: { type: Number, required: true },
+    },
+    phone: {
+      type: String,
+      required: true,
+    },
+    deliveryNotes: {
+      type: String,
+      default: "",
+    },
     paymentIntentId: {
       type: String,
       default: undefined,

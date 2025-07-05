@@ -26,7 +26,7 @@ export default function InputField({
         value={value}
         onChange={onChange}
         className={`border p-2 w-full rounded-lg mb-4 mt-2${
-          name === "description" ? " min-h-[120px]" : ""
+          name === "description" || name === "deliveryNotes" ? " min-h-[120px]" : ""
         }`}
       />
     </p>
