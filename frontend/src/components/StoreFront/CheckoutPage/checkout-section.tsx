@@ -1,34 +1,45 @@
 "use client"
 
 import InputField from "@/components/input"
+import { useFormSubmit } from "@/hooks/useFormSubmit"
 import api from "@/lib/axios"
 import { CheckoutSessionResponse } from "@/types/stripe"
 import { loadStripe } from "@stripe/stripe-js"
 
 export default function CheckoutSection() {
-  const handleCheckout = async () => {
-    try {
-      const response = await api.get<CheckoutSessionResponse>(
-        "/orders/checkout",
-        { withCredentials: true }
-      )
-      const session = response.data.session
-
-      // Redirect to Stripe
-      const stripe = await loadStripe(
-        process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!
-      )
-      await stripe?.redirectToCheckout({ sessionId: session.id })
-    } catch (err) {
-      console.error(err)
-      alert("Something went wrong with checkout")
-    }
-  }
+  const { formData, handleChange, handleSubmit, error, loading } =
+    useFormSubmit({
+      initialData: {
+        email: "",
+        firstName: "",
+        lastName: "",
+        phone: "",
+        streetAddress: "",
+        city: "",
+        zip: "",
+        deliveryNotes: "",
+      },
+      onSubmit: async (data) => {
+        const response = await api.post<CheckoutSessionResponse>(
+          "/orders/checkout-session",
+          data,
+          {
+            withCredentials: true,
+          }
+        )
+        const stripe = await loadStripe(
+          process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!
+        )
+        await stripe?.redirectToCheckout({
+          sessionId: response.data.session.id,
+        })
+      },
+    })
 
   return (
     <div className="container mx-auto px-4 mt-6">
       <div className="flex gap-6">
-        <div className="flex-1">
+        <form onSubmit={handleSubmit} className="flex-1">
           <div className="border rounded-lg bg-gray-100 p-6 mb-6">
             <h1 className="text-3xl font-bold mb-6">Contact Information</h1>
             <InputField
@@ -36,8 +47,8 @@ export default function CheckoutSection() {
               placeholder="your@email.com"
               inputType="text"
               name="email"
-              value=""
-              onChange={() => console.log("test")}
+              value={formData.email}
+              onChange={handleChange}
             />
             <div className="grid grid-cols-2 gap-4">
               <div className="col-span-1">
@@ -46,8 +57,8 @@ export default function CheckoutSection() {
                   placeholder="John"
                   inputType="text"
                   name="firstName"
-                  value=""
-                  onChange={() => console.log("test")}
+                  value={formData.firstName}
+                  onChange={handleChange}
                 />
               </div>
               <div className="col-span-1">
@@ -56,8 +67,8 @@ export default function CheckoutSection() {
                   placeholder="Doe"
                   inputType="text"
                   name="lastName"
-                  value=""
-                  onChange={() => console.log("test")}
+                  value={formData.lastName}
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -66,8 +77,8 @@ export default function CheckoutSection() {
               placeholder="+358 12 345 6789"
               inputType="tel"
               name="phone"
-              value=""
-              onChange={() => console.log("test")}
+              value={formData.phone}
+              onChange={handleChange}
             />
           </div>
           <div className="border rounded-lg bg-gray-100 p-6">
@@ -76,9 +87,9 @@ export default function CheckoutSection() {
               label="Street Address"
               placeholder="Opiskelijankatu 123"
               inputType="text"
-              name="address"
-              value=""
-              onChange={() => console.log("test")}
+              name="streetAddress"
+              value={formData.streetAddress}
+              onChange={handleChange}
             />
             <div className="grid grid-cols-2 gap-4">
               <div className="col-span-1">
@@ -87,8 +98,8 @@ export default function CheckoutSection() {
                   placeholder="Tampere"
                   inputType="text"
                   name="city"
-                  value=""
-                  onChange={() => console.log("test")}
+                  value={formData.city}
+                  onChange={handleChange}
                 />
               </div>
               <div className="col-span-1">
@@ -97,8 +108,8 @@ export default function CheckoutSection() {
                   placeholder="10000"
                   inputType="text"
                   name="zip"
-                  value=""
-                  onChange={() => console.log("test")}
+                  value={formData.zip}
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -106,19 +117,19 @@ export default function CheckoutSection() {
               label="Delivery Notes (Optional)"
               placeholder="Special delivery instructions..."
               inputType="text"
-              name="description"
-              value=""
-              onChange={() => console.log("test")}
+              name="deliveryNotes"
+              value={formData.deliveryNotes}
+              onChange={handleChange}
             />
           </div>
+          {error && <p>{error}</p>}
           <button
             className="w-full mt-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-            type="button"
-            onClick={handleCheckout}
+            type="submit"
           >
             Continue to Payment
           </button>
-        </div>
+        </form>
         <div className="flex-1">
           <div className="border rounded-lg bg-gray-100 p-6 mb-6">
             <h1 className="text-3xl font-bold mb-6">Order Summary</h1>

@@ -1,11 +1,11 @@
 import { Router } from "express"
 import { protect, restrictTo } from "../controllers/authController"
 import {
+  createCheckoutSession,
   createOrder,
   createOrderCheckout,
   deleteOrder,
   getAllOrders,
-  getCheckoutSession,
   getOrderById,
   updateOrder,
 } from "../controllers/orderController"
@@ -14,7 +14,8 @@ const router = Router()
 
 router.use(protect)
 
-router.get("/checkout", getCheckoutSession)
+// router.get("/checkout", getCheckoutSession)
+router.post("/checkout-session", createCheckoutSession)
 router.get("/checkout/success", createOrderCheckout)
 
 router.use(restrictTo("admin"))

@@ -30,4 +30,11 @@ export interface Order {
   paid: boolean
   paymentIntentId: string
   createdAt: Date
+  address: {
+    streetAddress: string
+    city: string
+    zip: number
+  }
+  phone: string
+  deliveryNotes: string
 }

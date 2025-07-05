@@ -38,8 +38,8 @@ export default function OrderCard({ order }: { order: Order }) {
       <hr className="border-t mx-4" />
       <div className="p-4">
         <h1>Shipping Information</h1>
-        <h2>Street Address</h2>
-        <h2>Phone Num</h2>
+        <h2>{order.address.streetAddress}, {order.address.city} {order.address.zip}</h2>
+        <h2>{order.phone ? `${order.phone}` : "No phone number"}</h2>
       </div>
     </div>
   )
