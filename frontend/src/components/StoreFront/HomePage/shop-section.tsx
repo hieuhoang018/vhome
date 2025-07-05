@@ -7,28 +7,28 @@ export default function ShopSection() {
       description:
         "Create a welcoming space with our stylish sofas, coffee tables, and accent pieces.",
       imageSrc: "/images/living-room.png",
-      link: "/living-room",
+      link: "/products?page=1&sort=&limit=16&category=Living+Room",
     },
     {
       name: "Bedroom",
       description:
         "Transform your bedroom into a sanctuary with our elegant beds and storage solutions.",
       imageSrc: "/images/bedroom.png",
-      link: "/bedroom",
+      link: "/products?page=1&sort=&limit=16&category=Bedroom",
     },
     {
       name: "Bathroom",
       description:
         "Transform your bathroom with elegant and practical furniture solutions.",
       imageSrc: "/images/bathroom.png",
-      link: "/bathroom",
+      link: "/products?page=1&sort=&limit=16&category=Bathroom",
     },
     {
-      name: "Kitchen",
+      name: "Dining Room",
       description:
-        "Discover stylish and functional kitchen furniture designed to elevate your space.",
+        "Discover stylish and functional dining room furniture designed to elevate your space.",
       imageSrc: "/images/kitchen.png",
-      link: "/kitchen",
+      link: "/products?page=1&sort=&limit=16&category=Dining+Room",
     },
   ]
 

@@ -72,8 +72,12 @@ export default function ProductsSection() {
           }
         >
           <option value="">All</option>
-          <option value="bedroom">Bedroom</option>
-          <option value="living-room">Living Room</option>
+          <option value="Bedroom">Bedroom</option>
+          <option value="Living Room">Living Room</option>
+          <option value="Bathroom">Bathroom</option>
+          <option value="Office">Office</option>
+          <option value="Outdoor">Outdoor</option>
+          <option value="Dining Room">Dining Room</option>
         </select>
 
         <select
