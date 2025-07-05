@@ -16,10 +16,12 @@ export const getAll = <T>(Model: Model<T>) =>
       .limitFields()
       .paginate()
     const docs = await features.query
+    const total = await Model.countDocuments(filter);
 
     res.status(200).json({
       status: "success",
       results: docs.length,
+      total,
       data: { docs },
     })
   })

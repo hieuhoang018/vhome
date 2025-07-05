@@ -6,12 +6,10 @@ import { useState, useEffect } from "react"
 import api from "@/lib/axios"
 import ProductCard from "./product-card"
 import { useUpdateQueryParams } from "@/hooks/useUpdateQueryParams"
+import PaginationControl from "./pagination-control"
 
-export default function ProductsSection({
-  itemsPerPage,
-}: {
-  itemsPerPage: number
-}) {
+export default function ProductsSection() {
+  const itemsPerPage = 16
   const [products, setProducts] = useState<Product[]>([])
   const [totalItems, setTotalItems] = useState(0)
   const [loading, setLoading] = useState(true)
@@ -32,11 +30,12 @@ export default function ProductsSection({
           params: {
             page,
             sort,
+            limit: itemsPerPage,
             category,
           },
         })
         setProducts(res.data.data.docs)
-        setTotalItems(res.data.results)
+        setTotalItems(res.data.total)
       } catch (err) {
         console.error("Fetch error:", err)
         setError("Failed to load products")
@@ -94,11 +93,18 @@ export default function ProductsSection({
         ) : error ? (
           <p>{error}</p>
         ) : (
-          <div className="grid grid-cols-4 gap-6">
-            {products.map((product) => (
-              <ProductCard key={product._id} product={product} />
-            ))}
-          </div>
+          <>
+            <div className="grid grid-cols-4 gap-6">
+              {products.map((product) => (
+                <ProductCard key={product._id} product={product} />
+              ))}
+            </div>
+            <PaginationControl
+              currentPage={page}
+              totalItems={totalItems}
+              itemsPerPage={itemsPerPage}
+            />
+          </>
         )}
       </div>
     </>

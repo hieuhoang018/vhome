@@ -1,8 +1,6 @@
 import ProductsSection from "@/components/StoreFront/ProductsListingPage/products-section"
 import { TitleCardWrapper } from "@/components/StoreFront/storefront-wrappers"
 
-const itemsPerPage = 8
-
 export default function ProductListing() {
   return (
     <>
@@ -16,7 +14,7 @@ export default function ProductListing() {
         </p>
       </TitleCardWrapper>
 
-      <ProductsSection itemsPerPage={itemsPerPage} />
+      <ProductsSection />
     </>
   )
 }

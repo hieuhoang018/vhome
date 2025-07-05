@@ -1,6 +1,7 @@
 export interface ProductsResponse {
   status: string
   results: number
+  total: number
   data: {
     docs: Product[]
   }
