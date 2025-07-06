@@ -9,6 +9,7 @@ import { useParams } from "next/navigation"
 import api from "@/lib/axios"
 import ColorSelection from "./color-selection"
 import { toast } from "sonner"
+import ReviewForm from "./review-form"
 
 export default function ProductListingSection() {
   const [product, setProduct] = useState<Product>()
@@ -91,7 +92,7 @@ export default function ProductListingSection() {
         <ArrowLeft className="h-4" />
         Back to shopping
       </Link>
-      <div className="grid grid-cols-2 gap-8 mt-5">
+      <div className="flex flex-row gap-8 mt-5 mb-6">
         {/* <Image
           src={product.imageCoverUrl}
           alt="image"
@@ -99,8 +100,15 @@ export default function ProductListingSection() {
           height={1}
           className="rounded-lg"
         /> */}
-        <div className="bg-red-500"></div>
-        <div>
+        <div className="flex-1 flex flex-col gap-2">
+          <div className="w-full h-130 bg-red-500"></div>
+          <div className="flex flex-row gap-2">
+            <div className="w-30 h-30 bg-green-500"></div>
+            <div className="w-30 h-30 bg-green-500"></div>
+            <div className="w-30 h-30 bg-green-500"></div>
+          </div>
+        </div>
+        <div className="flex-1">
           <h1 className="text-7xl font-serif mb-10">{product.name}</h1>
           <h2 className="text-3xl mb-9">€{product.price}</h2>
           <p className="text-xl mb-9">{product.description}</p>
@@ -151,6 +159,7 @@ export default function ProductListingSection() {
           </div>
         </div>
       </div>
+      <ReviewForm productId={_id}/>
     </>
   )
 }
