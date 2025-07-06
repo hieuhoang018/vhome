@@ -1,4 +1,4 @@
-# MyApp
+# VHome
 
 A fullstack application built with a **Next.js (TypeScript)** frontend and an **Express.js (TypeScript)** backend for managing an E-Commerce furniture store.
 
@@ -206,7 +206,7 @@ DEL /api/v1/orders/:id : Delete Order
 
 ### Wishlist Routes
 
-``` 
+```
 GET /api/v1/users/me/wishlist : Get Current User's Wishlist
 POST /api/v1/users/me/wishlist : Add To Wishlist
 DEL /api/v1/users/me/wishlist/:id : Remove From Wishlist
