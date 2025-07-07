@@ -8,7 +8,7 @@ export default function ReviewForm({ productId }: { productId: string }) {
   const [rating, setRating] = useState(0)
   const [hover, setHover] = useState(0)
 
-  const { formData, handleChange, handleSubmit, error, loading } =
+  const { formData, handleChange, handleSubmit, error, setField } =
     useFormSubmit({
       initialData: {
         rating: rating,
@@ -16,7 +16,7 @@ export default function ReviewForm({ productId }: { productId: string }) {
       },
       onSubmit: async (data) => {
         console.log("request: ", data)
-        console.log(productId);
+        console.log(productId)
         await api.post(`/products/${productId}/reviews`, data)
         toast.success("Review submitted")
       },
@@ -47,12 +47,7 @@ export default function ReviewForm({ productId }: { productId: string }) {
                 }`}
                 onClick={() => {
                   setRating(star)
-                  handleChange({
-                    target: {
-                      name: "rating",
-                      value: star,
-                    },
-                  } as any)
+                  setField("rating", star)
                 }}
                 onMouseEnter={() => setHover(star)}
               >

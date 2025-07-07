@@ -20,6 +20,7 @@ export default function OrderDetailsSection() {
         const res = await api.get<OrderResponse>(`/orders/${_id}`)
         setOrders(res.data.data.order)
       } catch (err) {
+        console.log(err)
         setError("Failed to load order")
       } finally {
         setLoading(false)
@@ -27,7 +28,7 @@ export default function OrderDetailsSection() {
     }
 
     fetchProduct()
-  }, [])
+  }, [_id])
 
   const handleDeleteOrder = async () => {
     try {
@@ -35,6 +36,7 @@ export default function OrderDetailsSection() {
       toast.success("Order deleted")
       router.push("/lookup")
     } catch (error) {
+      console.log(error)
       toast.error("Error while deleting order")
     }
   }

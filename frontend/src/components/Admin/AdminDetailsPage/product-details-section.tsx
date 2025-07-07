@@ -65,7 +65,7 @@ export default function ProductDetailsSection() {
     }
 
     fetchProduct()
-  }, [_id])
+  }, [_id, setFormData])
 
   const handleDeleteProduct = async () => {
     try {
@@ -73,6 +73,7 @@ export default function ProductDetailsSection() {
       toast.success("Product deleted")
       router.push("/lookup")
     } catch (error) {
+      console.log(error)
       toast.error("Error while deleting product")
     }
   }

@@ -3,7 +3,6 @@
 import { useFormSubmit } from "@/hooks/useFormSubmit"
 import api from "@/lib/axios"
 import { Cart, CartsResponse } from "@/types/carts"
-import { Product, ProductsResponse } from "@/types/products"
 import { Eye } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
@@ -11,20 +10,19 @@ import { toast } from "sonner"
 
 export default function CartsTab() {
   const [carts, setCarts] = useState<Cart[]>()
-  const { formData, handleChange, handleSubmit, error, loading } =
-    useFormSubmit({
-      initialData: {
-        prompt: "",
-      },
-      onSubmit: async (data) => {
-        const res = await api.get<CartsResponse>(`/carts?search=${data.prompt}`)
-        console.log(res)
-        if (res.data.data.docs.length === 0) {
-          toast.info("No carts found")
-        }
-        setCarts(res.data.data.docs)
-      },
-    })
+  const { formData, handleChange, handleSubmit, loading } = useFormSubmit({
+    initialData: {
+      prompt: "",
+    },
+    onSubmit: async (data) => {
+      const res = await api.get<CartsResponse>(`/carts?search=${data.prompt}`)
+      console.log(res)
+      if (res.data.data.docs.length === 0) {
+        toast.info("No carts found")
+      }
+      setCarts(res.data.data.docs)
+    },
+  })
 
   return (
     <>

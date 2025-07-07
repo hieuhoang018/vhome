@@ -1,7 +1,7 @@
 "use client"
 
 import type { Product, ProductResponse } from "@/types/products"
-import Image from "next/image"
+// import Image from "next/image"
 import { useState, useEffect } from "react"
 import { Plus, Minus, ArrowLeft } from "lucide-react"
 import Link from "next/link"
@@ -26,6 +26,7 @@ export default function ProductListingSection() {
         const res = await api.get<ProductResponse>(`/products/${_id}`)
         setProduct(res.data.data.product)
       } catch (err) {
+        console.log(err)
         setError("Failed to load product")
       } finally {
         setLoading(false)
@@ -33,7 +34,7 @@ export default function ProductListingSection() {
     }
 
     fetchProducts()
-  }, [])
+  }, [_id])
 
   const handleAddToCart = async () => {
     try {
@@ -161,7 +162,7 @@ export default function ProductListingSection() {
         </div>
       </div>
       <ReviewForm productId={_id} />
-      <ReviewListing  product={product}/>
+      <ReviewListing product={product} />
     </>
   )
 }

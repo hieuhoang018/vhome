@@ -10,7 +10,7 @@ import { toast } from "sonner"
 
 export default function OrdersTab() {
   const [orders, setOrders] = useState<Order[]>()
-  const { formData, handleChange, handleSubmit, error, loading } =
+  const { formData, handleChange, handleSubmit, loading } =
     useFormSubmit({
       initialData: {
         prompt: "",

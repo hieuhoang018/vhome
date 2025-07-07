@@ -16,6 +16,7 @@ export default function OrdersSection() {
         console.log(res)
         setOrders(res.data.data.docs)
       } catch (error) {
+        console.log(error)
         setError("Failed to fetch orders")
       }
     }
@@ -29,6 +30,10 @@ export default function OrdersSection() {
 
   if (orders.length === 0) {
     return <p>No orders yet</p>
+  }
+
+  if (error) {
+    return <p>{error}</p>
   }
 
   return (

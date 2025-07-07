@@ -30,6 +30,7 @@ export function useDebouncedPatchQuantity({
         toast.success("Cart updated")
         onSuccess?.()
       } catch (error) {
+        console.log(error);
         toast.error("Failed to update quantity")
         setQuantity(initialQuantity)
       }

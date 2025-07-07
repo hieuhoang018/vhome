@@ -72,7 +72,7 @@ export default function CartSection() {
                 </button>
               </div>
               <p className="text-xs text-furniture-charcoal/60 mt-1">
-                Try "WELCOME10" for 10% off
+                Try &quot;WELCOME10&quot; for 10% off
               </p>
             </div>
 

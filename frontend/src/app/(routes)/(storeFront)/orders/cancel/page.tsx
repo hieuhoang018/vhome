@@ -10,14 +10,21 @@ export default function CancelPage() {
       <div className="flex flex-col items-center justify-center gap-4 mb-10">
         <h1 className="text-5xl font-bold">Checkout Cancelled</h1>
         <p className="text-2xl">
-          Your payment was not processed and no charges were made to your account.
+          Your payment was not processed and no charges were made to your
+          account.
         </p>
       </div>
       <div className="flex flex-col gap-4 items-center justify-center border rounded-lg min-w-150 p-5">
         <h1 className="text-3xl font-semibold">Your Cart is Saved</h1>
         <div className="flex flex-col items-center justify-center rounded-lg min-w-135 p-5 bg-gray-300">
-          <h2 className="text-xl mb-2">Don't worry! All your selected items are still in your shopping cart.</h2>
-          <h3 className="text-1/2xl">You can continue shopping or try checking out again whenever you're ready.</h3>
+          <h2 className="text-xl mb-2">
+            Don&apos;t worry! All your selected items are still in your shopping
+            cart.
+          </h2>
+          <h3 className="text-1/2xl">
+            You can continue shopping or try checking out again whenever you&apos;re
+            ready.
+          </h3>
         </div>
       </div>
       <div className="flex gap-4 mt-6">

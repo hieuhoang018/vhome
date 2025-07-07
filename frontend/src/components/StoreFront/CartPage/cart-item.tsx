@@ -30,6 +30,7 @@ export default function CartItem({
       toast.success("Item removed from cart")
       onRemove()
     } catch (error) {
+      console.log(error)
       toast.error("Failed to remove item from cart")
     }
   }

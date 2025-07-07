@@ -17,7 +17,7 @@ const fetcher = async (): Promise<User> => {
 type UserContextType = {
   user: User | undefined
   status: "loading" | "authenticated" | "unauthenticated"
-  error: any
+  error: Error | undefined
   refreshUser: () => void
 }
 

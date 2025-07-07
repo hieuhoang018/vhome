@@ -60,7 +60,7 @@ export default function UserDetailsSection() {
     }
 
     fetchUser()
-  }, [_id])
+  }, [_id, setFormData])
 
   const handleDeleteUser = async () => {
     try {
@@ -68,6 +68,7 @@ export default function UserDetailsSection() {
       toast.success("User deleted")
       router.push("/lookup")
     } catch (error) {
+      console.log(error)
       toast.error("Error while deleting user")
     }
   }

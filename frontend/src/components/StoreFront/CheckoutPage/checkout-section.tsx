@@ -7,7 +7,7 @@ import { CheckoutSessionResponse } from "@/types/stripe"
 import { loadStripe } from "@stripe/stripe-js"
 
 export default function CheckoutSection() {
-  const { formData, handleChange, handleSubmit, error, loading } =
+  const { formData, handleChange, handleSubmit, error } =
     useFormSubmit({
       initialData: {
         email: "",

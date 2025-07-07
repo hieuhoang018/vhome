@@ -25,15 +25,35 @@ export function useFormSubmit<T>({
     }))
   }
 
+  const setField = (name: string, value: string | number) => {
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }))
+  }
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setError(null)
     setLoading(true)
     try {
       await onSubmit(formData)
-    } catch (err: any) {
-      const msg =
-        err?.response?.data?.message || err?.message || "Something went wrong"
+    } catch (err: unknown) {
+      let msg = "Something went wrong"
+
+      if (err instanceof Error && err.message) {
+        msg = err.message
+      } else if (
+        typeof err === "object" &&
+        err !== null &&
+        "response" in err &&
+        typeof (err as { response?: { data?: { message?: string } } }).response
+          ?.data?.message === "string"
+      ) {
+        msg = (err as { response: { data: { message: string } } }).response.data
+          .message
+      }
+
       setError(msg)
     } finally {
       setLoading(false)
@@ -45,6 +65,7 @@ export function useFormSubmit<T>({
     setFormData,
     error,
     loading,
+    setField,
     handleChange,
     handleSubmit,
   }

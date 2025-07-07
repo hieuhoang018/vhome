@@ -30,7 +30,7 @@ export default function CartDetailsSection() {
     }
 
     fetchProduct()
-  }, [])
+  }, [_id])
 
   const handleDeleteCart = async () => {
     try {
@@ -38,6 +38,7 @@ export default function CartDetailsSection() {
       toast.success("Cart deleted")
       router.push("/lookup")
     } catch (error) {
+      console.log(error)
       toast.error("Error while deleting cart")
     }
   }

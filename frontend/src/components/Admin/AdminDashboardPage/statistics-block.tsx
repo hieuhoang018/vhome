@@ -24,7 +24,7 @@ export default function StatisticsBlock({
     }
 
     fetchData()
-  }, [])
+  }, [apiEndpoint])
 
   return (
     <div className="border rounded-lg bg-gray-100 p-4">

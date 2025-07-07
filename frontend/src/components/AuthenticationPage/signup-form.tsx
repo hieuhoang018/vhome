@@ -11,7 +11,7 @@ export default function SignupForm() {
   const router = useRouter()
   const { refreshUser } = useUser()
 
-  const { formData, handleChange, handleSubmit, error, loading } =
+  const { formData, handleChange, handleSubmit, error } =
     useFormSubmit({
       initialData: {
         firstName: "",

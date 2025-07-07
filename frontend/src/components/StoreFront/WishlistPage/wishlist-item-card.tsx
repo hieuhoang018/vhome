@@ -17,6 +17,7 @@ export default function WishlistItemCard({
       toast.success("Item removed from wishlist")
       onRemove()
     } catch (error) {
+      console.log(error)
       toast.error("Error while removing item")
     }
   }
@@ -34,9 +35,9 @@ export default function WishlistItemCard({
       <div className="p-4 flex flex-col gap-2">
         <h1>{product.name}</h1>
         <h1>{product.price}</h1>
-          <Link href={`/products/${product.productId}`}>
-            <button className="w-full border py-3 rounded-lg">Details</button>
-          </Link>
+        <Link href={`/products/${product.productId}`}>
+          <button className="w-full border py-3 rounded-lg">Details</button>
+        </Link>
       </div>
     </div>
   )
