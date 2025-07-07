@@ -1,5 +1,6 @@
 import ProductsSection from "@/components/StoreFront/ProductsListingPage/products-section"
 import { TitleCardWrapper } from "@/components/StoreFront/storefront-wrappers"
+import { Suspense } from "react"
 
 export default function ProductListing() {
   return (
@@ -14,7 +15,9 @@ export default function ProductListing() {
         </p>
       </TitleCardWrapper>
 
-      <ProductsSection />
+      <Suspense fallback={<div>Loading products...</div>}>
+        <ProductsSection />
+      </Suspense>
     </>
   )
 }
