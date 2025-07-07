@@ -10,6 +10,7 @@ import api from "@/lib/axios"
 import ColorSelection from "./color-selection"
 import { toast } from "sonner"
 import ReviewForm from "./review-form"
+import ReviewListing from "./reviews-listing"
 
 export default function ProductListingSection() {
   const [product, setProduct] = useState<Product>()
@@ -92,7 +93,7 @@ export default function ProductListingSection() {
         <ArrowLeft className="h-4" />
         Back to shopping
       </Link>
-      <div className="flex flex-row gap-8 mt-5 mb-6">
+      <div className="flex flex-row gap-8 mt-5 mb-20">
         {/* <Image
           src={product.imageCoverUrl}
           alt="image"
@@ -159,7 +160,8 @@ export default function ProductListingSection() {
           </div>
         </div>
       </div>
-      <ReviewForm productId={_id}/>
+      <ReviewForm productId={_id} />
+      <ReviewListing  product={product}/>
     </>
   )
 }

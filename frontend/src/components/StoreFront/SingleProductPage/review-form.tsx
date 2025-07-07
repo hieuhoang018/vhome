@@ -23,7 +23,7 @@ export default function ReviewForm({ productId }: { productId: string }) {
     })
 
   return (
-    <div>
+    <div className="mb-20">
       <h1 className="mb-3 text-3xl">Write a Review</h1>
       <form onSubmit={handleSubmit} className="border rounded-lg p-6">
         <div className="mb-4">

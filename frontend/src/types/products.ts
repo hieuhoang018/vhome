@@ -1,3 +1,5 @@
+import { Review } from "./reviews"
+
 export interface ProductsResponse {
   status: string
   results: number
@@ -27,6 +29,9 @@ export interface Product {
   price: number
   description: string
   stock: number
+  rating: number
+  ratingQuantity: number
+  reviews: Review[]
   imagesUrl: string[]
   imageCoverUrl: string
   colors: string[]
