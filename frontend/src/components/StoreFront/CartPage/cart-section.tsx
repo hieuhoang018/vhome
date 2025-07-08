@@ -41,7 +41,7 @@ export default function CartSection() {
       {!cart?.items || cart?.items.length === 0 ? (
         <p>no products yet</p>
       ) : (
-        <div className="flex">
+        <div className="flex flex-col lg:flex-row flex-wrap gap-3">
           <div className="flex-[2] flex flex-col gap-6">
             {cart.items.map((item) => {
               return (
@@ -54,7 +54,7 @@ export default function CartSection() {
               )
             })}
           </div>
-          <div className="flex-1 border rounded-md p-4 max-h-[500px] overflow-y-auto self-start">
+            <div className="flex-1 border rounded-md p-4 max-h-[500px] overflow-y-auto self-start w-full lg:w-auto">
             <h1 className="font-bold text-2xl mb-6">Order Summary</h1>
 
             <div className="mb-6">

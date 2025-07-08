@@ -94,7 +94,7 @@ export default function ProductListingSection() {
         <ArrowLeft className="h-4" />
         Back to shopping
       </Link>
-      <div className="flex flex-row gap-8 mt-5 mb-20">
+      <div className="flex flex-col md:flex-row gap-8 mt-5 mb-20">
         {/* <Image
           src={product.imageCoverUrl}
           alt="image"

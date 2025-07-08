@@ -10,9 +10,9 @@ export default function Footer() {
         className="text-white/80 pt-16 pb-8"
       >
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-5 gap-15">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
             {/* Column 1 */}
-            <div className="col-span-2">
+            <div className="col-span-1 md:col-span-2">
               <Image
                 src={"/images/logo.png"}
                 alt="VHome logo"

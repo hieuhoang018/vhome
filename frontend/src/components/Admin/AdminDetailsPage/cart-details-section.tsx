@@ -49,7 +49,7 @@ export default function CartDetailsSection() {
 
   return (
     <>
-      <div className="flex gap-4 mb-4">
+      <div className="flex flex-col md:flex-row gap-4 mb-4">
         <div className="flex-1 border rounded-lg bg-gray-100 p-5">
           <h1 className="text-2xl font-bold mb-8">Cart Information</h1>
           <h2>Cart ID</h2>

@@ -13,7 +13,7 @@ export default function UserSettingsPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="col-span-1 bg-white rounded-lg shadow p-6">
           <UserInformationSection />
         </div>

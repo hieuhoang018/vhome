@@ -38,7 +38,7 @@ export default function CheckoutSection() {
 
   return (
     <div className="container mx-auto px-4 mt-6">
-      <div className="flex gap-6">
+      <div className="flex flex-col md:flex-row gap-6">
         <form onSubmit={handleSubmit} className="flex-1">
           <div className="border rounded-lg bg-gray-100 p-6 mb-6">
             <h1 className="text-3xl font-bold mb-6">Contact Information</h1>

@@ -36,20 +36,25 @@ export default function CartItem({
   }
 
   return (
-    <div className="w-[95%] h-40 border rounded-md flex p-2 space-x-3">
-      <div className="bg-red-500 flex-1"></div>
-      <div className="flex-5 flex flex-col justify-center">
+    <div className="h-auto md:h-40 border rounded-md flex flex-col md:flex-row p-2 space-y-3 md:space-y-0 md:space-x-3 w-auto">
+      {/* Image placeholder */}
+      <div className="bg-red-500 w-full md:w-1/5 h-32 md:h-auto rounded"></div>
+
+      {/* Product Info */}
+      <div className="flex-1 flex flex-col justify-center">
         <Link
           href={`/products/${product.productId}`}
-          className="text-2xl font-semibold mb-1"
+          className="text-xl md:text-2xl font-semibold mb-1"
         >
           {product.name}
         </Link>
-        <h2 className="mb-4">€{product.price}</h2>
-        <h2>Color: {product.chosenColor}</h2>
+        <h2 className="mb-2 md:mb-4 text-sm md:text-base">€{product.price}</h2>
+        <h2 className="text-sm md:text-base">Color: {product.chosenColor}</h2>
       </div>
-      <div className="flex flex-col justify-center items-center">
-        <div className="flex items-center border border-gray-300 rounded-md w-32 mb-3">
+
+      {/* Quantity & Remove */}
+      <div className="flex items-center md:flex-col justify-between md:justify-center md:space-y-2">
+        <div className="flex items-center border border-gray-300 rounded-md w-32">
           <button
             onClick={() => setAmountChosen(amountChosen - 1)}
             disabled={amountChosen === 1}
@@ -65,12 +70,14 @@ export default function CartItem({
             <Plus className="h-4 w-4" />
           </button>
         </div>
-        <button onClick={handleRemoveFromCart}>
+        <button onClick={handleRemoveFromCart} className="mt-2 md:mt-0">
           <Trash2 />
         </button>
       </div>
-      <div className="flex-1 flex flex-col items-center justify-center">
-        <p className="font-bold">
+
+      {/* Total Price */}
+      <div className="flex items-center justify-center md:justify-end">
+        <p className="font-bold text-lg">
           €{Math.round(product.price * amountChosen * 100) / 100}
         </p>
       </div>

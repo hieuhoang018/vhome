@@ -29,13 +29,13 @@ export default function RecentProductsListing() {
           <th className="text-left py-3 px-4 font-medium text-gray-600">
             Product
           </th>
-          <th className="text-left py-3 px-4 font-medium text-gray-600">
+          <th className="text-left py-3 px-4 font-medium text-gray-600 hidden xl:table-cell">
             Category
           </th>
           <th className="text-left py-3 px-4 font-medium text-gray-600">
             Price
           </th>
-          <th className="text-left py-3 px-4 font-medium text-gray-600">
+          <th className="text-left py-3 px-4 font-medium text-gray-600 hidden xl:table-cell">
             Stock
           </th>
           <th className="text-left py-3 px-4 font-medium text-gray-600">
@@ -53,11 +53,15 @@ export default function RecentProductsListing() {
                 </span>
               </div>
             </td>
-            <td className="py-3 px-4 text-gray-600">{product.category}</td>
+            <td className="py-3 px-4 text-gray-600 hidden xl:table-cell">
+              {product.category}
+            </td>
             <td className="py-3 px-4 font-semibold text-furniture-charcoal">
               {product.price}
             </td>
-            <td className="py-3 px-4 text-gray-600">{product.stock}</td>
+            <td className="py-3 px-4 text-gray-600 hidden xl:table-cell">
+              {product.stock}
+            </td>
             <td className="py-3 px-4">
               <div className="flex items-center space-x-2">
                 <button className="h-8 w-8">

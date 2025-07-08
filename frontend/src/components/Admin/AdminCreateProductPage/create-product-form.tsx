@@ -29,7 +29,7 @@ export default function CreateProductForm() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="grid grid-cols-2 gap-4 mt-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
         <div className="rounded-lg bg-amber-100 border shadow-sm px-4 py-7">
           <h2 className="font-bold text-2xl mb-4">Product Information</h2>
           <InputField

@@ -8,7 +8,7 @@ import {
 
 export default function RegisterPage() {
   return (
-    <>
+    <div className="p-3">
       <TitleWrapper>
         <Image src={"/images/logo.png"} alt="logo" width={200} height={1} />
         <h2 className="font-serif text-4xl mb-3">Create a new account</h2>
@@ -32,6 +32,6 @@ export default function RegisterPage() {
       >
         ← Back
       </Link>
-    </>
+    </div>
   )
 }

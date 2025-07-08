@@ -1,5 +1,5 @@
 "use client"
-import { Heart, ShoppingCart } from "lucide-react"
+import { Heart, ShoppingCart, Menu, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect } from "react"
@@ -9,12 +9,12 @@ import { useUser } from "@/context/userContext"
 export default function MainHeader() {
   const { user } = useUser()
   const [isScrolled, setIsScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10)
     }
-
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
@@ -22,11 +22,11 @@ export default function MainHeader() {
   return (
     <>
       <header
-        className={
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm py-3"
-            : "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-5"
-        }
+            ? "bg-white/90 backdrop-blur-md shadow-sm py-3"
+            : "bg-transparent py-5"
+        }`}
       >
         <div className="container mx-auto px-4 flex items-center justify-between">
           {/* Logo */}
@@ -39,7 +39,7 @@ export default function MainHeader() {
             />
           </Link>
 
-          {/* Navigation */}
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-20">
             <Link
               href="/"
@@ -49,7 +49,7 @@ export default function MainHeader() {
             </Link>
             <Link
               href="/products"
-              className="text-furniture-charcoal hover:red font-medium transition-colors"
+              className="text-furniture-charcoal hover:text-furniture-navy font-medium transition-colors"
             >
               Shop
             </Link>
@@ -61,24 +61,67 @@ export default function MainHeader() {
             </Link>
           </nav>
 
-          {/* Action buttons */}
+          {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-8">
-            <NavUserButton />
-            <Link href={"/wishlist"}>
+            <NavUserButton isMobile={false} />
+            <Link href="/wishlist">
               <Heart className="h-5 w-5" />
             </Link>
-            <Link href={"/cart"}>
+            <Link href="/cart">
               <ShoppingCart className="h-5 w-5" />
             </Link>
             {user?.role === "admin" && (
-              <Link href={"/dashboard"}>
+              <Link href="/dashboard">
                 <button className="border cursor-pointer px-4 py-2 rounded-sm">
                   Back to Admin
                 </button>
               </Link>
             )}
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden text-furniture-charcoal"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            {menuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
+          </button>
         </div>
+
+        {/* Mobile Dropdown Menu */}
+        {menuOpen && (
+          <div className="md:hidden bg-white border-t shadow-sm">
+            <nav className="flex flex-col p-4 space-y-4">
+              <Link className="font-medium" href="/" onClick={() => setMenuOpen(false)}>
+                Home
+              </Link>
+              <Link className="font-medium" href="/products" onClick={() => setMenuOpen(false)}>
+                Shop
+              </Link>
+              <Link className="font-medium" href="/about" onClick={() => setMenuOpen(false)}>
+                About
+              </Link>
+              <Link className="font-medium" href="/wishlist" onClick={() => setMenuOpen(false)}>
+                Wishlist
+              </Link>
+              <Link className="font-medium" href="/cart" onClick={() => setMenuOpen(false)}>
+                My Cart
+              </Link>
+              <NavUserButton isMobile={true} />
+              {user?.role === "admin" && (
+                <Link href="/dashboard" onClick={() => setMenuOpen(false)}>
+                  <button className="border px-4 py-2 rounded-sm w-full text-left">
+                    Back to Admin
+                  </button>
+                </Link>
+              )}
+            </nav>
+          </div>
+        )}
       </header>
     </>
   )
