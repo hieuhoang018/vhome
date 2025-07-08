@@ -46,22 +46,22 @@ export default function CartsTab() {
       <table className="w-full">
         <thead>
           <tr className="border-b">
-            <th className="text-left py-3 px-4 font-medium text-gray-600">
+            <th className="hidden md:table-cell text-left py-3 px-4 font-medium text-gray-600">
               Cart ID
             </th>
-            <th className="text-left py-3 px-4 font-medium text-gray-600">
+            <th className="hidden xl:table-cell text-left py-3 px-4 font-medium text-gray-600">
               User ID
             </th>
             <th className="text-left py-3 px-4 font-medium text-gray-600">
               User Name
             </th>
-            <th className="text-left py-3 px-4 font-medium text-gray-600">
+            <th className="hidden xl:table-cell text-left py-3 px-4 font-medium text-gray-600">
               Items
             </th>
-            <th className="text-left py-3 px-4 font-medium text-gray-600">
+            <th className="hidden md:table-cell text-left py-3 px-4 font-medium text-gray-600">
               Total
             </th>
-            <th className="text-left py-3 px-4 font-medium text-gray-600">
+            <th className="hidden xl:table-cell text-left py-3 px-4 font-medium text-gray-600">
               Last Updated
             </th>
             <th className="text-left py-3 px-4 font-medium text-gray-600">
@@ -72,8 +72,8 @@ export default function CartsTab() {
         <tbody>
           {carts?.map((cart) => (
             <tr key={cart._id} className="border-b hover:bg-gray-50">
-              <td className="py-3 px-4 text-gray-600">{cart._id}</td>
-              <td className="py-3 px-4">
+              <td className="hidden md:table-cell py-3 px-4 text-gray-600">{cart._id}</td>
+              <td className="hidden xl:table-cell py-3 px-4">
                 <div className="flex items-center space-x-3">
                   <span className="font-medium text-furniture-charcoal">
                     {cart.user.id ? cart.user.id : ""}
@@ -83,13 +83,13 @@ export default function CartsTab() {
               <td className="py-3 px-4 text-gray-600">
                 {cart.user.firstName} {cart.user.lastName}
               </td>
-              <td className="py-3 px-4 font-semibold text-furniture-charcoal">
+              <td className="hidden xl:table-cell py-3 px-4 font-semibold text-furniture-charcoal">
                 {cart.items.length}
               </td>
-              <td className="py-3 px-4 font-semibold text-furniture-charcoal">
+              <td className="hidden md:table-cell py-3 px-4 font-semibold text-furniture-charcoal">
                 {cart.totalPrice}
               </td>
-              <td className="py-3 px-4 text-gray-600">
+              <td className="hidden xl:table-cell py-3 px-4 text-gray-600">
                 {new Date(cart.updatedAt).toLocaleDateString()}
               </td>
               <td className="py-3 px-4">

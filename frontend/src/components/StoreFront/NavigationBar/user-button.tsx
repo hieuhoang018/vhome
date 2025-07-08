@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation"
 import { useEffect, useRef, useState } from "react"
 import { toast } from "sonner"
 
-export default function NavUserButton() {
+export default function NavUserButton({ isMobile }: { isMobile: boolean }) {
   const { user, refreshUser } = useUser()
   const [open, setOpen] = useState(false)
   const router = useRouter()
@@ -33,6 +33,25 @@ export default function NavUserButton() {
     document.addEventListener("mousedown", handleClickOutside)
     return () => document.removeEventListener("mousedown", handleClickOutside)
   }, [])
+
+  if (isMobile) {
+    return user ? (
+      <>
+        {user?.role === "user" && <Link className="font-medium" href={"/orders"}>My Orders</Link>}
+        <Link className="font-medium" href={"/profile"}>Settings</Link>
+        <button
+          onClick={handleLogOut}
+          className="font-medium block w-full text-left text-furniture-charcoal hover:bg-gray-100"
+        >
+          Logout
+        </button>
+      </>
+    ) : (
+      <Link href={"/login"}>
+        Log In
+      </Link>
+    )
+  }
 
   return user ? (
     <div className="relative" ref={menuRef}>

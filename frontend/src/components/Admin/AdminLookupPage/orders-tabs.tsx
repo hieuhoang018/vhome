@@ -48,25 +48,25 @@ export default function OrdersTab() {
       <table className="w-full">
         <thead>
           <tr className="border-b">
-            <th className="text-left py-3 px-4 font-medium text-gray-600">
+            <th className="hidden md:table-cell text-left py-3 px-4 font-medium text-gray-600">
               ID
             </th>
-            <th className="text-left py-3 px-4 font-medium text-gray-600">
+            <th className="hidden xl:table-cell text-left py-3 px-4 font-medium text-gray-600">
               User ID
             </th>
             <th className="text-left py-3 px-4 font-medium text-gray-600">
               User Name
             </th>
-            <th className="text-left py-3 px-4 font-medium text-gray-600">
+            <th className="hidden xl:table-cell text-left py-3 px-4 font-medium text-gray-600">
               Date
             </th>
-            <th className="text-left py-3 px-4 font-medium text-gray-600">
+            <th className="hidden xl:table-cell text-left py-3 px-4 font-medium text-gray-600">
               Status
             </th>
-            <th className="text-left py-3 px-4 font-medium text-gray-600">
+            <th className="hidden md:table-cell text-left py-3 px-4 font-medium text-gray-600">
               Total
             </th>
-            <th className="text-left py-3 px-4 font-medium text-gray-600">
+            <th className="hidden xl:table-cell text-left py-3 px-4 font-medium text-gray-600">
               Items
             </th>
             <th className="text-left py-3 px-4 font-medium text-gray-600">
@@ -77,25 +77,25 @@ export default function OrdersTab() {
         <tbody>
           {orders?.map((order) => (
             <tr key={order._id} className="border-b hover:bg-gray-50">
-              <td className="py-3 px-4 text-gray-600">{order._id}</td>
-              <td className="py-3 px-4">
+              <td className="hidden md:table-cell py-3 px-4 text-gray-600">{order._id}</td>
+              <td className="hidden xl:table-cell py-3 px-4">
                 <div className="flex items-center space-x-3">
                   <span className="font-medium text-furniture-charcoal">
                     {order.user._id ? order.user._id : "undefined"}
                   </span>
                 </div>
               </td>
-              <td className="py-3 px-4 text-gray-600">
+              <td className=" py-3 px-4 text-gray-600">
                 {order.user.firstName} {order.user.lastName}
               </td>
-              <td className="py-3 px-4 font-semibold text-furniture-charcoal">
+              <td className="hidden xl:table-cell py-3 px-4 font-semibold text-furniture-charcoal">
                 {new Date(order.createdAt).toLocaleDateString()}
               </td>
-              <td className="py-3 px-4 font-semibold text-furniture-charcoal">
+              <td className="hidden xl:table-cell py-3 px-4 font-semibold text-furniture-charcoal">
                 Delivered
               </td>
-              <td className="py-3 px-4 text-gray-600">{order.totalPrice}</td>
-              <td className="py-3 px-4 text-gray-600">{order.items.length}</td>
+              <td className="hidden md:table-cell py-3 px-4 text-gray-600">{order.totalPrice}</td>
+              <td className="hidden xl:table-cell py-3 px-4 text-gray-600">{order.items.length}</td>
               <td className="py-3 px-4">
                 <div className="flex items-center space-x-2">
                   <button className="h-8 w-8">

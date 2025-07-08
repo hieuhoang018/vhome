@@ -79,7 +79,7 @@ export default function UserDetailsSection() {
 
   return (
     <>
-      <div className="flex gap-4">
+      <div className="flex flex-col md:flex-row gap-4">
         <div className="flex-1 border rounded-lg bg-gray-100 p-5">
           <h1 className="text-2xl font-bold mb-8">Personal Information</h1>
           {editMode ? (

@@ -8,7 +8,7 @@ import {
 
 export default function LoginPage() {
   return (
-    <>
+    <div>
       <TitleWrapper>
         <Image src={"/images/logo.png"} alt="logo" width={200} height={1} />
         <h2 className="font-serif text-4xl mb-3">Sign in to your account</h2>
@@ -47,6 +47,6 @@ export default function LoginPage() {
       >
         ← Back
       </Link>
-    </>
+    </div>
   )
 }

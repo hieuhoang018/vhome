@@ -3,7 +3,7 @@ import { Order, OrderItem } from "@/types/orders"
 export default function OrderCard({ order }: { order: Order }) {
   return (
     <div className="border rounded-lg overflow-hidden">
-      <div className="flex justify-between p-4 bg-beige-yellow">
+      <div className="flex flex-col md:flex-row justify-between p-4 bg-beige-yellow">
         <div>
           <h1 className="text-2xl">Order {order._id}</h1>
           <h2 className="text-gray-400">

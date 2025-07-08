@@ -40,7 +40,7 @@ export default function WishlistItemSection() {
       {!wishlist?.items || wishlist?.items.length === 0 ? (
         <p>No items yet</p>
       ) : (
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           {wishlist.items.map((item) => {
             return (
               <WishlistItemCard

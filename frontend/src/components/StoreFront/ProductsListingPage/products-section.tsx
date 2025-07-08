@@ -49,7 +49,7 @@ export default function ProductsSection() {
 
   return (
     <>
-      <div className="container flex mx-auto px-4 gap-3 mt-6">
+      <div className="container flex flex-col sm:flex-row mx-auto px-4 gap-3 mt-6">
         <input
           className="flex-[3] border border-gray-300 rounded-md px-3.5 py-1 bg-beige-yellow"
           type="text"
@@ -98,7 +98,7 @@ export default function ProductsSection() {
           <p>{error}</p>
         ) : (
           <>
-            <div className="grid grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {products.map((product) => (
                 <ProductCard key={product._id} product={product} />
               ))}

@@ -2,7 +2,7 @@ import ProductListingSection from "@/components/StoreFront/SingleProductPage/pro
 
 export default function IndividualProductListing() {
   return (
-    <div className="max-w-7xl mx-auto mb-6">
+    <div className="max-w-7xl mx-auto mb-6 p-4">
       <ProductListingSection />
     </div>
   )

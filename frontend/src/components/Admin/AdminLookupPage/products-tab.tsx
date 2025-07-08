@@ -10,21 +10,20 @@ import { toast } from "sonner"
 
 export default function ProductsTab() {
   const [products, setProducts] = useState<Product[]>()
-  const { formData, handleChange, handleSubmit, loading } =
-    useFormSubmit({
-      initialData: {
-        prompt: "",
-      },
-      onSubmit: async (data) => {
-        const res = await api.get<ProductsResponse>(
-          `/products?search=${data.prompt}`
-        )
-        if(res.data.data.docs.length === 0) {
-          toast.info("No products found")
-        }
-        setProducts(res.data.data.docs)
-      },
-    })
+  const { formData, handleChange, handleSubmit, loading } = useFormSubmit({
+    initialData: {
+      prompt: "",
+    },
+    onSubmit: async (data) => {
+      const res = await api.get<ProductsResponse>(
+        `/products?search=${data.prompt}`
+      )
+      if (res.data.data.docs.length === 0) {
+        toast.info("No products found")
+      }
+      setProducts(res.data.data.docs)
+    },
+  })
 
   return (
     <>
@@ -48,22 +47,22 @@ export default function ProductsTab() {
       <table className="w-full">
         <thead>
           <tr className="border-b">
-            <th className="text-left py-3 px-4 font-medium text-gray-600">
+            <th className="hidden md:table-cell text-left py-3 px-4 font-medium text-gray-600">
               ID
             </th>
             <th className="text-left py-3 px-4 font-medium text-gray-600">
               Name
             </th>
-            <th className="text-left py-3 px-4 font-medium text-gray-600">
+            <th className="hidden xl:table-cell text-left py-3 px-4 font-medium text-gray-600">
               Category
             </th>
-            <th className="text-left py-3 px-4 font-medium text-gray-600">
+            <th className="hidden md:table-cell text-left py-3 px-4 font-medium text-gray-600">
               Price
             </th>
-            <th className="text-left py-3 px-4 font-medium text-gray-600">
+            <th className="hidden xl:table-cell text-left py-3 px-4 font-medium text-gray-600">
               Stock
             </th>
-            <th className="text-left py-3 px-4 font-medium text-gray-600">
+            <th className="hidden xl:table-cell text-left py-3 px-4 font-medium text-gray-600">
               Status
             </th>
             <th className="text-left py-3 px-4 font-medium text-gray-600">
@@ -74,7 +73,9 @@ export default function ProductsTab() {
         <tbody>
           {products?.map((product) => (
             <tr key={product._id} className="border-b hover:bg-gray-50">
-              <td className="py-3 px-4 text-gray-600">{product._id}</td>
+              <td className="hidden md:table-cell py-3 px-4 text-gray-600">
+                {product._id}
+              </td>
               <td className="py-3 px-4">
                 <div className="flex items-center space-x-3">
                   <span className="font-medium text-furniture-charcoal">
@@ -82,14 +83,16 @@ export default function ProductsTab() {
                   </span>
                 </div>
               </td>
-              <td className="py-3 px-4 text-gray-600">{product.category}</td>
-              <td className="py-3 px-4 font-semibold text-furniture-charcoal">
+              <td className="hidden xl:table-cell py-3 px-4 text-gray-600">
+                {product.category}
+              </td>
+              <td className="hidden md:table-cell py-3 px-4 font-semibold text-furniture-charcoal">
                 {product.price}
               </td>
-              <td className="py-3 px-4 font-semibold text-furniture-charcoal">
+              <td className="hidden xl:table-cell py-3 px-4 font-semibold text-furniture-charcoal">
                 {product.stock}
               </td>
-              <td className="py-3 px-4 text-gray-600">
+              <td className="hidden xl:table-cell py-3 px-4 text-gray-600">
                 {product.stock === 0 ? "Out of Stock" : "In Stock"}
               </td>
               <td className="py-3 px-4">
