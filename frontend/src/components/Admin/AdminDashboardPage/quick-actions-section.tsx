@@ -1,4 +1,4 @@
-import { Package, Plus, Users } from "lucide-react"
+import { Plus, Users } from "lucide-react"
 import Link from "next/link"
 
 export default function QuickActionsSection() {

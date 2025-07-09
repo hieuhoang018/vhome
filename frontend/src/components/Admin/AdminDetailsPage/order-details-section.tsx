@@ -50,26 +50,26 @@ export default function OrderDetailsSection() {
       <div className="flex flex-col md:flex-row gap-4 mb-4">
         <div className="flex-1 border rounded-lg bg-gray-100 p-5">
           <h1 className="text-2xl font-bold mb-8">Order Information</h1>
-          <h2>Order ID</h2>
+          <h2 className="font-medium">Order ID</h2>
           <h2 className="mb-4">{order._id}</h2>
-          <h2>Customer</h2>
+          <h2 className="font-medium">Customer</h2>
           <h2 className="mb-4">
             {order.user.firstName} {order.user.lastName} (ID: {order.user._id})
           </h2>
-          <h2>Order Date</h2>
+          <h2 className="font-medium">Order Date</h2>
           <h2 className="mb-4">
             {new Date(order.createdAt).toLocaleDateString()}
           </h2>
-          <h2>Status</h2>
+          <h2 className="font-medium">Status</h2>
           <h2 className="mb-4">Delivered</h2>
-          <h2>Total Amount</h2>
+          <h2 className="font-medium">Total Amount</h2>
           <h2 className="mb-4">€{order.totalPrice}</h2>
         </div>
         <div className="flex-1 border rounded-lg bg-gray-100 p-5">
           <h1 className="text-2xl font-bold mb-8">Shipping & Payment</h1>
-          <h2>Shipping Address</h2>
+          <h2 className="font-medium">Shipping Address</h2>
           <h2 className="mb-4">Opiskelijankatu 4</h2>
-          <h2>Payment Method</h2>
+          <h2 className="font-medium">Payment Method</h2>
           <h2 className="mb-4">Card</h2>
         </div>
       </div>

@@ -10,19 +10,18 @@ import { toast } from "sonner"
 
 export default function UsersTab() {
   const [users, setUsers] = useState<User[]>()
-  const { formData, handleChange, handleSubmit, loading } =
-    useFormSubmit({
-      initialData: {
-        prompt: "",
-      },
-      onSubmit: async (data) => {
-        const res = await api.get<UsersResponse>(`/users?search=${data.prompt}`)
-        if(res.data.data.docs.length === 0) {
-          toast.info("No users found")
-        }
-        setUsers(res.data.data.docs)
-      },
-    })
+  const { formData, handleChange, handleSubmit, loading } = useFormSubmit({
+    initialData: {
+      prompt: "",
+    },
+    onSubmit: async (data) => {
+      const res = await api.get<UsersResponse>(`/users?search=${data.prompt}`)
+      if (res.data.data.docs.length === 0) {
+        toast.info("No users found")
+      }
+      setUsers(res.data.data.docs)
+    },
+  })
 
   return (
     <>
@@ -36,7 +35,7 @@ export default function UsersTab() {
           className="flex-9 mr-2 p-2 border rounded-lg"
         />
         <button
-          className="flex-1 border rounded-lg"
+          className="flex-1 border rounded-lg hover:bg-gray-200 hover:cursor-pointer"
           type="submit"
           disabled={loading}
         >
@@ -46,54 +45,58 @@ export default function UsersTab() {
       <table className="w-full">
         <thead>
           <tr className="border-b">
-        <th className="hidden md:table-cell text-left py-3 px-4 font-medium text-gray-600">
-          ID
-        </th>
-        <th className="text-left py-3 px-4 font-medium text-gray-600">
-          Name
-        </th>
-        <th className="hidden md:table-cell text-left py-3 px-4 font-medium text-gray-600">
-          Email
-        </th>
-        <th className="hidden xl:table-cell text-left py-3 px-4 font-medium text-gray-600">
-          Join Date
-        </th>
-        <th className="hidden xl:table-cell text-left py-3 px-4 font-medium text-gray-600">
-          Status
-        </th>
-        <th className="text-left py-3 px-4 font-medium text-gray-600">
-          Actions
-        </th>
+            <th className="hidden md:table-cell text-left py-3 px-4 font-medium text-gray-600">
+              ID
+            </th>
+            <th className="text-left py-3 px-4 font-medium text-gray-600">
+              Name
+            </th>
+            <th className="hidden md:table-cell text-left py-3 px-4 font-medium text-gray-600">
+              Email
+            </th>
+            <th className="hidden xl:table-cell text-left py-3 px-4 font-medium text-gray-600">
+              Join Date
+            </th>
+            <th className="hidden xl:table-cell text-left py-3 px-4 font-medium text-gray-600">
+              Status
+            </th>
+            <th className="text-left py-3 px-4 font-medium text-gray-600">
+              Actions
+            </th>
           </tr>
         </thead>
         <tbody>
           {users?.map((user) => (
-        <tr key={user._id} className="border-b hover:bg-gray-50">
-          <td className="hidden md:table-cell py-3 px-4 text-gray-600">{user._id}</td>
-          <td className="py-3 px-4">
-            <div className="flex items-center space-x-3">
-          <span className="font-medium text-furniture-charcoal">
-            {user.firstName} {user.lastName}
-          </span>
-            </div>
-          </td>
-          <td className="hidden md:table-cell py-3 px-4 text-gray-600">{user.email}</td>
-          <td className="hidden xl:table-cell py-3 px-4 font-semibold text-furniture-charcoal">
-            {new Date(user.createdAt).toLocaleDateString()}
-          </td>
-          <td className="hidden xl:table-cell py-3 px-4 text-gray-600">
-            {user.active ? "Inactive" : "Active"}
-          </td>
-          <td className="py-3 px-4">
-            <div className="flex items-center space-x-2">
-          <button className="h-8 w-8">
-            <Link href={`/details/user/${user._id}`}>
-              <Eye className="h-4 w-4" />
-            </Link>
-          </button>
-            </div>
-          </td>
-        </tr>
+            <tr key={user._id} className="border-b hover:bg-gray-50">
+              <td className="hidden md:table-cell py-3 px-4 text-gray-600">
+                {user._id}
+              </td>
+              <td className="py-3 px-4">
+                <div className="flex items-center space-x-3">
+                  <span className="font-medium text-furniture-charcoal">
+                    {user.firstName} {user.lastName}
+                  </span>
+                </div>
+              </td>
+              <td className="hidden md:table-cell py-3 px-4 text-gray-600">
+                {user.email}
+              </td>
+              <td className="hidden xl:table-cell py-3 px-4 font-semibold text-furniture-charcoal">
+                {new Date(user.createdAt).toLocaleDateString()}
+              </td>
+              <td className="hidden xl:table-cell py-3 px-4 text-gray-600">
+                {user.active ? "Inactive" : "Active"}
+              </td>
+              <td className="py-3 px-4">
+                <div className="flex items-center space-x-2">
+                  <button className="h-8 w-8 flex items-center rounded-lg justify-center hover:cursor-pointer hover:bg-gray-200">
+                    <Link href={`/details/user/${user._id}`}>
+                      <Eye className="h-4 w-4" />
+                    </Link>
+                  </button>
+                </div>
+              </td>
+            </tr>
           ))}
         </tbody>
       </table>

@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react"
 import api from "@/lib/axios"
 import { Product, ProductsResponse } from "@/types/products"
-import { Edit, Eye, Trash2 } from "lucide-react"
+import { Eye } from "lucide-react"
+import Link from "next/link"
 
 export default function RecentProductsListing() {
   const [products, setProducts] = useState<Product[]>()
@@ -63,17 +64,11 @@ export default function RecentProductsListing() {
               {product.stock}
             </td>
             <td className="py-3 px-4">
-              <div className="flex items-center space-x-2">
-                <button className="h-8 w-8">
+              <Link href={`/details/product/${product._id}`}>
+                <button className="h-8 w-8 flex items-center rounded-lg justify-center hover:cursor-pointer hover:bg-gray-200">
                   <Eye className="h-4 w-4" />
                 </button>
-                <button className="h-8 w-8">
-                  <Edit className="h-4 w-4" />
-                </button>
-                <button className="h-8 w-8 text-red-600 hover:text-red-700">
-                  <Trash2 className="h-4 w-4" />
-                </button>
-              </div>
+              </Link>
             </td>
           </tr>
         ))}

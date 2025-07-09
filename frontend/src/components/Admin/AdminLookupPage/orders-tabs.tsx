@@ -35,7 +35,7 @@ export default function OrdersTab() {
           className="flex-9 mr-2 p-2 border rounded-lg"
         />
         <button
-          className="flex-1 border rounded-lg"
+          className="flex-1 border rounded-lg hover:bg-gray-200 hover:cursor-pointer"
           type="submit"
           disabled={loading}
         >
@@ -101,7 +101,7 @@ export default function OrdersTab() {
               </td>
               <td className="py-3 px-4">
                 <div className="flex items-center space-x-2">
-                  <button className="h-8 w-8">
+                  <button className="h-8 w-8 flex items-center rounded-lg justify-center hover:cursor-pointer hover:bg-gray-200">
                     <Link href={`/details/order/${order._id}`}>
                       <Eye className="h-4 w-4" />
                     </Link>

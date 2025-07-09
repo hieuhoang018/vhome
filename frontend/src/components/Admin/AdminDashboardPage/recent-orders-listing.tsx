@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react"
 import api from "@/lib/axios"
-import { Edit, Eye, Trash2 } from "lucide-react"
+import { Eye } from "lucide-react"
 import { Order, OrdersResponse } from "@/types/orders"
+import Link from "next/link"
 
 export default function RecentOrdersListing() {
   const [orders, setOrders] = useState<Order[]>()
@@ -64,15 +65,11 @@ export default function RecentOrdersListing() {
             </td>
             <td className="py-3 px-4">
               <div className="flex items-center space-x-2">
-                <button className="h-8 w-8">
-                  <Eye className="h-4 w-4" />
-                </button>
-                <button className="h-8 w-8">
-                  <Edit className="h-4 w-4" />
-                </button>
-                <button className="h-8 w-8 text-red-600 hover:text-red-700">
-                  <Trash2 className="h-4 w-4" />
-                </button>
+                <Link href={`/details/order/${order._id}`}>
+                  <button className="h-8 w-8 flex items-center rounded-lg justify-center hover:cursor-pointer hover:bg-gray-200">
+                    <Eye className="h-4 w-4" />
+                  </button>
+                </Link>
               </div>
             </td>
           </tr>

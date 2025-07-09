@@ -37,11 +37,17 @@ export default function NavUserButton({ isMobile }: { isMobile: boolean }) {
   if (isMobile) {
     return user ? (
       <>
-        {user?.role === "user" && <Link className="font-medium" href={"/orders"}>My Orders</Link>}
-        <Link className="font-medium" href={"/profile"}>Settings</Link>
+        {user?.role === "user" && (
+          <Link className="font-medium" href={"/orders"}>
+            My Orders
+          </Link>
+        )}
+        <Link className="font-medium" href={"/profile"}>
+          Settings
+        </Link>
         <button
           onClick={handleLogOut}
-          className="font-medium block w-full text-left text-furniture-charcoal hover:bg-gray-100"
+          className="font-medium block w-full text-left hover:bg-gray-100"
         >
           Logout
         </button>
@@ -56,7 +62,7 @@ export default function NavUserButton({ isMobile }: { isMobile: boolean }) {
   return user ? (
     <div className="relative" ref={menuRef}>
       <button
-        className="flex items-center gap-2 text-furniture-charcoal hover:text-furniture-navy font-medium transition-colors focus:outline-none"
+        className="flex items-center gap-2 hover:bg-gray-200 hover:cursor-pointer font-medium transition-colors focus:outline-none p-2 rounded-sm"
         onClick={() => setOpen((v) => !v)}
       >
         <User className="h-5 w-5" />
@@ -64,20 +70,20 @@ export default function NavUserButton({ isMobile }: { isMobile: boolean }) {
       {open && (
         <div className="absolute right-0 mt-2 w-32 bg-white border border-gray-200 rounded shadow-lg z-10">
           <Link href={"/profile"}>
-            <button className="block w-full text-left px-4 py-2 text-furniture-charcoal hover:bg-gray-100">
+            <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
               Settings
             </button>
           </Link>
           {user.role === "user" && (
             <Link href={"/orders"}>
-              <button className="block w-full text-left px-4 py-2 text-furniture-charcoal hover:bg-gray-100">
+              <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
                 My Orders
               </button>
             </Link>
           )}
           <button
             onClick={handleLogOut}
-            className="block w-full text-left px-4 py-2 text-furniture-charcoal hover:bg-gray-100"
+            className="block w-full text-left px-4 py-2 hover:bg-gray-100"
           >
             Logout
           </button>
@@ -85,8 +91,10 @@ export default function NavUserButton({ isMobile }: { isMobile: boolean }) {
       )}
     </div>
   ) : (
-    <Link href={"/login"}>
-      <User className="h-5 w-5" />
-    </Link>
+    <button className="flex items-center gap-2 hover:bg-gray-200 hover:cursor-pointer font-medium transition-colors focus:outline-none p-2 rounded-sm">
+      <Link href={"/login"}>
+        <User className="h-5 w-5" />
+      </Link>
+    </button>
   )
 }

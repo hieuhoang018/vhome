@@ -116,18 +116,18 @@ export default function ProductDetailsSection() {
             </>
           ) : (
             <>
-              <h2>Name</h2>
+              <h2 className="font-medium">Name</h2>
               <h2 className="mb-4">{product.name}</h2>
-              <h2>Category</h2>
+              <h2 className="font-medium">Category</h2>
               <h2 className="mb-4">{product.category}</h2>
-              <h2>Price</h2>
+              <h2 className="font-medium">Price</h2>
               <h2 className="mb-4">€{product.price}</h2>
             </>
           )}
         </div>
         <div className="flex-1 border rounded-lg bg-gray-100 p-5">
           <h1 className="text-2xl font-bold mb-8">Inventory & Status</h1>
-          <h2>Created At</h2>
+          <h2 className="font-medium">Created At</h2>
           <h2 className="mb-4">
             {product.createdAt
               ? new Date(product.createdAt).toLocaleDateString()
@@ -146,11 +146,11 @@ export default function ProductDetailsSection() {
             </>
           ) : (
             <>
-              <h2>Stock</h2>
+              <h2 className="font-medium">Stock</h2>
               <h2 className="mb-4">{product.stock}</h2>
             </>
           )}
-          <h2>Status</h2>
+          <h2 className="font-medium">Status</h2>
           <h2 className="mb-4">
             {product.stock === 0 ? "Out of Stock" : "In Stock"}
           </h2>

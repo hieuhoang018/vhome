@@ -121,24 +121,25 @@ export default function ProductListingSection() {
                 <Minus className="h-4 w-4" />
               </button>
               <div className="flex-1 text-center font-medium">
-                {amountChosen}
+                {product.stock === 0 ? 0 : amountChosen}
               </div>
               <button
                 onClick={() => setAmountChosen(amountChosen + 1)}
-                disabled={amountChosen === product.stock}
+                disabled={amountChosen === product.stock || product.stock === 0}
                 className="px-3 py-1 text-furniture-charcoal disabled:text-gray-400"
               >
                 <Plus className="h-4 w-4" />
               </button>
             </div>
             <p className="text-sm text-furniture-charcoal/70 mt-2">
-              {product.stock} in stock
+              {product.stock > 0 ? `${product.stock} in stock` : "Out of stock"}
             </p>
           </div>
           <div className="flex gap-4">
             <button
               onClick={handleAddToCart}
-              className="flex-[2] rounded-lg px-4 py-2 w-full bg-navi-blue text-white hover:cursor-pointer"
+              disabled={product.stock === 0}
+              className="flex-[2] rounded-lg px-4 py-2 w-full bg-navi-blue disabled:bg-gray-400 text-white hover:cursor-pointer"
             >
               Add to cart
             </button>

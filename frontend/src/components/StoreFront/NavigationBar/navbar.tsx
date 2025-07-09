@@ -41,38 +41,48 @@ export default function MainHeader() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-20">
-            <Link
-              href="/"
-              className="text-furniture-charcoal hover:text-furniture-navy font-medium transition-colors"
-            >
-              Home
-            </Link>
-            <Link
-              href="/products"
-              className="text-furniture-charcoal hover:text-furniture-navy font-medium transition-colors"
-            >
-              Shop
-            </Link>
-            <Link
-              href="/about"
-              className="text-furniture-charcoal hover:text-furniture-navy font-medium transition-colors"
-            >
-              About
-            </Link>
+            <button className="flex items-center gap-2 hover:bg-gray-200 hover:cursor-pointer font-medium transition-colors focus:outline-none p-2 rounded-sm">
+              <Link
+                href="/"
+                className="text-furniture-charcoal hover:text-furniture-navy font-medium transition-colors"
+              >
+                Home
+              </Link>
+            </button>
+            <button className="flex items-center gap-2 hover:bg-gray-200 hover:cursor-pointer font-medium transition-colors focus:outline-none p-2 rounded-sm">
+              <Link
+                href="/products"
+                className="text-furniture-charcoal hover:text-furniture-navy font-medium transition-colors"
+              >
+                Shop
+              </Link>
+            </button>
+            <button className="flex items-center gap-2 hover:bg-gray-200 hover:cursor-pointer font-medium transition-colors focus:outline-none p-2 rounded-sm">
+              <Link
+                href="/about"
+                className="text-furniture-charcoal hover:text-furniture-navy font-medium transition-colors"
+              >
+                About
+              </Link>
+            </button>
           </nav>
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-8">
             <NavUserButton isMobile={false} />
-            <Link href="/wishlist">
-              <Heart className="h-5 w-5" />
-            </Link>
-            <Link href="/cart">
-              <ShoppingCart className="h-5 w-5" />
-            </Link>
+            <button className="flex items-center gap-2 hover:bg-gray-200 hover:cursor-pointer font-medium transition-colors focus:outline-none p-2 rounded-sm">
+              <Link href="/wishlist">
+                <Heart className="h-5 w-5" />
+              </Link>
+            </button>
+            <button className="flex items-center gap-2 hover:bg-gray-200 hover:cursor-pointer font-medium transition-colors focus:outline-none p-2 rounded-sm">
+              <Link href="/cart">
+                <ShoppingCart className="h-5 w-5" />
+              </Link>
+            </button>
             {user?.role === "admin" && (
               <Link href="/dashboard">
-                <button className="border cursor-pointer px-4 py-2 rounded-sm">
+                <button className="border cursor-pointer hover:bg-gray-200 px-4 py-2 rounded-sm">
                   Back to Admin
                 </button>
               </Link>
@@ -96,19 +106,39 @@ export default function MainHeader() {
         {menuOpen && (
           <div className="md:hidden bg-white border-t shadow-sm">
             <nav className="flex flex-col p-4 space-y-4">
-              <Link className="font-medium" href="/" onClick={() => setMenuOpen(false)}>
+              <Link
+                className="font-medium"
+                href="/"
+                onClick={() => setMenuOpen(false)}
+              >
                 Home
               </Link>
-              <Link className="font-medium" href="/products" onClick={() => setMenuOpen(false)}>
+              <Link
+                className="font-medium"
+                href="/products"
+                onClick={() => setMenuOpen(false)}
+              >
                 Shop
               </Link>
-              <Link className="font-medium" href="/about" onClick={() => setMenuOpen(false)}>
+              <Link
+                className="font-medium"
+                href="/about"
+                onClick={() => setMenuOpen(false)}
+              >
                 About
               </Link>
-              <Link className="font-medium" href="/wishlist" onClick={() => setMenuOpen(false)}>
+              <Link
+                className="font-medium"
+                href="/wishlist"
+                onClick={() => setMenuOpen(false)}
+              >
                 Wishlist
               </Link>
-              <Link className="font-medium" href="/cart" onClick={() => setMenuOpen(false)}>
+              <Link
+                className="font-medium"
+                href="/cart"
+                onClick={() => setMenuOpen(false)}
+              >
                 My Cart
               </Link>
               <NavUserButton isMobile={true} />

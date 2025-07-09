@@ -57,31 +57,37 @@ export default function AdminHeader() {
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-20">
-            <Link
-              href="/dashboard"
-              className="text-furniture-charcoal hover:text-furniture-navy font-medium transition-colors"
-            >
-              Dashboard
-            </Link>
-            <Link
-              href="/create-product"
-              className="text-furniture-charcoal hover:red font-medium transition-colors"
-            >
-              Create Product
-            </Link>
-            <Link
-              href="/lookup"
-              className="text-furniture-charcoal hover:red font-medium transition-colors"
-            >
-              Look Up
-            </Link>
+            <button className="flex items-center gap-2 hover:bg-gray-200 hover:cursor-pointer font-medium transition-colors focus:outline-none p-2 rounded-sm">
+              <Link
+                href="/dashboard"
+                className="text-furniture-charcoal hover:text-furniture-navy font-medium transition-colors"
+              >
+                Dashboard
+              </Link>
+            </button>
+            <button className="flex items-center gap-2 hover:bg-gray-200 hover:cursor-pointer font-medium transition-colors focus:outline-none p-2 rounded-sm">
+              <Link
+                href="/create-product"
+                className="text-furniture-charcoal hover:red font-medium transition-colors"
+              >
+                Create Product
+              </Link>
+            </button>
+            <button className="flex items-center gap-2 hover:bg-gray-200 hover:cursor-pointer font-medium transition-colors focus:outline-none p-2 rounded-sm">
+              <Link
+                href="/lookup"
+                className="text-furniture-charcoal hover:red font-medium transition-colors"
+              >
+                Look Up
+              </Link>
+            </button>
           </nav>
 
           {/* Action buttons */}
           <div className="hidden md:flex items-center space-x-6">
             <NavUserButton isMobile={false} />
             <Link href={"/"}>
-              <button className="border cursor-pointer px-4 py-2 rounded-sm">
+              <button className="border cursor-pointer hover:bg-gray-200 px-4 py-2 rounded-sm">
                 View Store
               </button>
             </Link>
@@ -115,12 +121,7 @@ export default function AdminHeader() {
               </Link>
               <NavUserButton isMobile={true} />
               <Link href={"/"}>
-                <button
-                  className="border cursor-pointer px-4 py-2 rounded-sm"
-                  onClick={() => setMenuOpen(false)}
-                >
                   View Store
-                </button>
               </Link>
             </nav>
           </div>

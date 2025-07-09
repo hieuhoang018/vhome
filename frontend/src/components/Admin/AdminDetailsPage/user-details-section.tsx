@@ -4,6 +4,7 @@ import InputField from "@/components/input"
 import { useFormSubmit } from "@/hooks/useFormSubmit"
 import api from "@/lib/axios"
 import { UpdatedUserResponse, User, UserResponse } from "@/types/users"
+import axios from "axios"
 import { useParams, useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 import { toast } from "sonner"
@@ -36,9 +37,9 @@ export default function UserDetailsSection() {
           data
         )
         const updatedUser = res.data.data.data
-        setUser(updatedUser) // update local user
+        setUser(updatedUser)
         toast.success("Successfully edited user")
-        setEditMode(false) // exit edit mode
+        setEditMode(false)
       },
     })
 
@@ -54,8 +55,9 @@ export default function UserDetailsSection() {
           phone: res.data.data.user.phone,
         })
       } catch (err) {
-        console.log(err)
-        toast.error("Error while fetching user")
+        if (axios.isAxiosError(err)) {
+          toast.error(err.response?.data.message)
+        }
       }
     }
 
@@ -121,32 +123,32 @@ export default function UserDetailsSection() {
             </form>
           ) : (
             <>
-              <h2>Name</h2>
+              <h2 className="font-medium">Name</h2>
               <h2 className="mb-4">
                 {user.firstName} {user.lastName}
               </h2>
-              <h2>Email</h2>
+              <h2 className="font-medium">Email</h2>
               <h2 className="mb-4">{user.email}</h2>
-              <h2>Phone</h2>
+              <h2 className="font-medium">Phone</h2>
               <h2 className="mb-4">{user.phone}</h2>
             </>
           )}
-          <h2>Status</h2>
+          <h2 className="font-medium">Status</h2>
           <h2 className="mb-4">{user.active ? "Active" : "Inactive"}</h2>
         </div>
         <div className="flex-1 border rounded-lg bg-gray-100 p-5">
           <h1 className="text-2xl font-bold mb-8">Account Details</h1>
-          <h2>Join Date</h2>
+          <h2 className="font-medium">Join Date</h2>
           <h2 className="mb-4">
             {user.createdAt
               ? new Date(user.createdAt).toLocaleDateString()
               : "undefine"}
           </h2>
-          <h2>Total Orders</h2>
+          <h2 className="font-medium">Total Orders</h2>
           <h2 className="mb-4">15</h2>
-          <h2>Total Spent</h2>
+          <h2 className="font-medium">Total Spent</h2>
           <h2 className="mb-4">2000 eur</h2>
-          <h2>Address</h2>
+          <h2 className="font-medium">Address</h2>
           <h2 className="mb-4">123 street</h2>
         </div>
       </div>
