@@ -1,5 +1,6 @@
 import api from "@/lib/axios"
 import { WishlistItemType } from "@/types/wishlist"
+import axios from "axios"
 import { Trash2 } from "lucide-react"
 import Link from "next/link"
 import { toast } from "sonner"
@@ -17,8 +18,9 @@ export default function WishlistItemCard({
       toast.success("Item removed from wishlist")
       onRemove()
     } catch (error) {
-      console.log(error)
-      toast.error("Error while removing item")
+      if (axios.isAxiosError(error)) {
+        toast.error(error.response?.data.message)
+      }
     }
   }
 

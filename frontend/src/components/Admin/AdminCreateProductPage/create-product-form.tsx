@@ -30,7 +30,7 @@ export default function CreateProductForm() {
   return (
     <form onSubmit={handleSubmit}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-        <div className="rounded-lg bg-amber-100 border shadow-sm px-4 py-7">
+        <div className="rounded-lg bg-gray-100 border shadow-sm px-4 py-7">
           <h2 className="font-bold text-2xl mb-4">Product Information</h2>
           <InputField
             label="Product Name"
@@ -57,7 +57,7 @@ export default function CreateProductForm() {
             onChange={handleChange}
           />
         </div>
-        <div className="rounded-lg bg-amber-100 border shadow-sm px-4 py-7">
+        <div className="rounded-lg bg-gray-100 border shadow-sm px-4 py-7">
           <h2 className="font-bold text-2xl mb-4">Pricing & Stock</h2>
           <InputField
             label="Price"
@@ -92,7 +92,7 @@ export default function CreateProductForm() {
         </div>
       </div>
 
-      <div className="rounded-lg bg-amber-100 border shadow-sm px-4 py-7 mt-4">
+      <div className="rounded-lg bg-gray-100 border shadow-sm px-4 py-7 mt-4">
         <div className="mb-4">
           <h2 className="font-bold text-2xl ">Product Image</h2>
           <h3 className="text-gray-500">Please enter URL or upload file</h3>
@@ -108,7 +108,11 @@ export default function CreateProductForm() {
       </div>
       {error && <p className="text-red-500 mt-2">{error}</p>}
       <div className="flex justify-end gap-2 mt-6">
-        <button type="submit" disabled={loading} className="px-4 py-2 rounded ">
+        <button
+          type="submit"
+          disabled={loading}
+          className="border px-4 bg-blue-500 text-white py-2 rounded disabled:bg-gray-400 "
+        >
           Create Product
         </button>
       </div>

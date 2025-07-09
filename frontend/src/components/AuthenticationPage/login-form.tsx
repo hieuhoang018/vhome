@@ -12,7 +12,7 @@ export default function LoginForm() {
   const router = useRouter()
   const { refreshUser } = useUser()
 
-  const { formData, handleChange, handleSubmit, error } =
+  const { formData, handleChange, handleSubmit, error, loading } =
     useFormSubmit({
       initialData: {
         email: "",
@@ -51,7 +51,10 @@ export default function LoginForm() {
         onChange={handleChange}
       />
       {error && <p className="text-red-500">{error}</p>}
-      <button className="mt-2 w-full bg-blue-500 text-white py-2 rounded">
+      <button
+        disabled={loading}
+        className="mt-2 w-full bg-blue-500 text-white py-2 rounded disabled:bg-gray-400"
+      >
         Sign in
       </button>
     </form>

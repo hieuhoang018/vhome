@@ -47,7 +47,7 @@ export default function NavUserButton({ isMobile }: { isMobile: boolean }) {
         </button>
       </>
     ) : (
-      <Link href={"/login"}>
+      <Link className="font-medium" href={"/login"}>
         Log In
       </Link>
     )

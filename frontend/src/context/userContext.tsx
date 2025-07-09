@@ -24,7 +24,16 @@ type UserContextType = {
 const UserContext = createContext<UserContextType | undefined>(undefined)
 
 export const UserProvider = ({ children }: { children: ReactNode }) => {
-  const { data: user, error, isLoading, mutate } = useSWR("user", fetcher)
+  const {
+    data: user,
+    error,
+    isLoading,
+    mutate,
+  } = useSWR("user", fetcher, {
+    revalidateOnFocus: false,
+    revalidateOnReconnect: false,
+    dedupingInterval: 60_000, // avoid repeated calls within 1 minute
+  })
 
   const status = isLoading
     ? "loading"

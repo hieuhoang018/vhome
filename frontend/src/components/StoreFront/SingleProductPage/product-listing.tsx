@@ -1,7 +1,6 @@
 "use client"
 
 import type { Product, ProductResponse } from "@/types/products"
-// import Image from "next/image"
 import { useState, useEffect } from "react"
 import { Plus, Minus, ArrowLeft } from "lucide-react"
 import Link from "next/link"
@@ -11,6 +10,8 @@ import ColorSelection from "./color-selection"
 import { toast } from "sonner"
 import ReviewForm from "./review-form"
 import ReviewListing from "./reviews-listing"
+import ImageSlider from "./image-slider"
+import axios from "axios"
 
 export default function ProductListingSection() {
   const [product, setProduct] = useState<Product>()
@@ -26,8 +27,9 @@ export default function ProductListingSection() {
         const res = await api.get<ProductResponse>(`/products/${_id}`)
         setProduct(res.data.data.product)
       } catch (err) {
-        console.log(err)
-        setError("Failed to load product")
+        if (axios.isAxiosError(err)) {
+          setError(err.response?.data.message)
+        }
       } finally {
         setLoading(false)
       }
@@ -49,9 +51,10 @@ export default function ProductListingSection() {
         await api.post("/users/me/cart", chosenProduct)
         toast.success("Item added to cart")
       }
-    } catch (error) {
-      console.log(error)
-      setError("Failed to add to cart")
+    } catch (err) {
+      if (axios.isAxiosError(err)) {
+        toast.error(err.response?.data.message)
+      }
     }
   }
 
@@ -61,9 +64,10 @@ export default function ProductListingSection() {
         productId: product?._id,
       })
       toast.success("Item added to wishlist")
-    } catch (error) {
-      console.log(error)
-      setError("Failed to add to wishlist")
+    } catch (err) {
+      if (axios.isAxiosError(err)) {
+        toast.error(err.response?.data.message)
+      }
     }
   }
 
@@ -95,21 +99,7 @@ export default function ProductListingSection() {
         Back to shopping
       </Link>
       <div className="flex flex-col md:flex-row gap-8 mt-5 mb-20">
-        {/* <Image
-          src={product.imageCoverUrl}
-          alt="image"
-          width={610}
-          height={1}
-          className="rounded-lg"
-        /> */}
-        <div className="flex-1 flex flex-col gap-2">
-          <div className="w-full h-130 bg-red-500"></div>
-          <div className="flex flex-row gap-2">
-            <div className="w-30 h-30 bg-green-500"></div>
-            <div className="w-30 h-30 bg-green-500"></div>
-            <div className="w-30 h-30 bg-green-500"></div>
-          </div>
-        </div>
+        <ImageSlider product={product} />
         <div className="flex-1">
           <h1 className="text-7xl font-serif mb-10">{product.name}</h1>
           <h2 className="text-3xl mb-9">€{product.price}</h2>

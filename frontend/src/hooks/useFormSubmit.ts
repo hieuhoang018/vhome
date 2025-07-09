@@ -1,3 +1,4 @@
+import axios from "axios"
 import { useState } from "react"
 
 type UseFormSubmitOptions<T> = {
@@ -40,8 +41,9 @@ export function useFormSubmit<T>({
       await onSubmit(formData)
     } catch (err: unknown) {
       let msg = "Something went wrong"
-
-      if (err instanceof Error && err.message) {
+      if (axios.isAxiosError(err)) {
+        msg = err.response?.data.message
+      } else if (err instanceof Error && err.message) {
         msg = err.message
       } else if (
         typeof err === "object" &&

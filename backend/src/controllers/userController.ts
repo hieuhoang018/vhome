@@ -76,6 +76,11 @@ export const getMe = (req: Request, res: Response, next: NextFunction) => {
 
 export const updateMe = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
+    console.log(req.body);
+    if (!req.body) {
+      return next(new AppError("No data provided", 400))
+    }
+
     if (req.body.password || req.body.confirmPassword) {
       return next(
         new AppError(
@@ -84,14 +89,16 @@ export const updateMe = catchAsync(
         )
       )
     }
+    console.log("reached here");
+    const allowedFields = ["firstName", "lastName", "email", "phone"];
+    const filteredBody: any = {};
 
-    const filteredBody = filterObj(
-      req.body,
-      "firstName",
-      "lastName",
-      "email",
-      "phone"
-    )
+    allowedFields.forEach((field) => {
+      const value = req.body[field];
+      if (value !== undefined && value !== "") {
+        filteredBody[field] = value;
+      }
+    });
 
     if (req.file) filteredBody.photo = req.file.filename
 
@@ -103,6 +110,7 @@ export const updateMe = catchAsync(
         runValidators: true,
       }
     )
+
     if (!updatedUser) {
       return next(new AppError("Cant find user", 404))
     }

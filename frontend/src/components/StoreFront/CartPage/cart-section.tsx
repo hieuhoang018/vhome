@@ -6,6 +6,7 @@ import { Cart, CurrentCartResponse } from "@/types/carts"
 import { useEffect, useState } from "react"
 import CartItem from "./cart-item"
 import Link from "next/link"
+import axios from "axios"
 
 export default function CartSection() {
   const [loading, setLoading] = useState(true)
@@ -19,26 +20,29 @@ export default function CartSection() {
       const res = await api.get<CurrentCartResponse>("/users/me/cart")
       setCart(res.data.data.doc)
     } catch (err) {
-      console.error("Fetch error:", err)
-      setError("Failed to refresh cart")
+      if (axios.isAxiosError(err)) {
+        setError(err.response?.data.message)
+      }
     } finally {
       setLoading(false)
     }
   }
 
   useEffect(() => {
-    if (!user) return // Don't fetch cart if not logged in
+    if (!user) return
 
     refreshCart()
   }, [user])
 
-  if (!user) return <p>Not logged in. Please sign in.</p>
-  if (error) return <p className="text-red-500">{error}</p>
-  if (loading) return <p>Loading cart...</p>
-
   return (
     <div className="container mx-auto px-4 mt-6">
-      {!cart?.items || cart?.items.length === 0 ? (
+      {!user ? (
+        <p>Not logged in. Please sign in.</p>
+      ) : loading ? (
+        <p>Loading cart...</p>
+      ) : error ? (
+        <p className="text-red-500">{error}</p>
+      ) : !cart?.items || cart?.items.length === 0 ? (
         <p>no products yet</p>
       ) : (
         <div className="flex flex-col lg:flex-row flex-wrap gap-3">
@@ -54,7 +58,7 @@ export default function CartSection() {
               )
             })}
           </div>
-            <div className="flex-1 border rounded-md p-4 max-h-[500px] overflow-y-auto self-start w-full lg:w-auto">
+          <div className="flex-1 border rounded-md p-4 max-h-[500px] overflow-y-auto self-start w-full lg:w-auto">
             <h1 className="font-bold text-2xl mb-6">Order Summary</h1>
 
             <div className="mb-6">
