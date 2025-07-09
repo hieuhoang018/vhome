@@ -36,7 +36,7 @@ export default function CartItem({
   }
 
   return (
-    <div className="h-auto md:h-40 border rounded-md flex flex-col md:flex-row p-2 space-y-3 md:space-y-0 md:space-x-3 w-auto">
+    <div className="w-[95%] h-auto md:h-40 border rounded-md flex flex-col md:flex-row p-2 space-y-3 md:space-y-0 md:space-x-3">
       {/* Image placeholder */}
       <div className="bg-red-500 w-full md:w-1/5 h-32 md:h-auto rounded"></div>
 

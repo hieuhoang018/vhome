@@ -7,6 +7,7 @@ import api from "@/lib/axios"
 import ProductCard from "./product-card"
 import { useUpdateQueryParams } from "@/hooks/useUpdateQueryParams"
 import PaginationControl from "./pagination-control"
+import axios from "axios"
 
 export default function ProductsSection() {
   const itemsPerPage = 16
@@ -37,8 +38,9 @@ export default function ProductsSection() {
         setProducts(res.data.data.docs)
         setTotalItems(res.data.total)
       } catch (err) {
-        console.error("Fetch error:", err)
-        setError("Failed to load products")
+        if (axios.isAxiosError(err)) {
+          setError(err.response?.data.message)
+        }
       } finally {
         setLoading(false)
       }
@@ -49,7 +51,7 @@ export default function ProductsSection() {
 
   return (
     <>
-      <div className="container flex flex-col sm:flex-row mx-auto px-4 gap-3 mt-6">
+      <div className="flex flex-col sm:flex-row gap-3">
         <input
           className="flex-[3] border border-gray-300 rounded-md px-3.5 py-1 bg-beige-yellow"
           type="text"
@@ -97,7 +99,7 @@ export default function ProductsSection() {
         ) : error ? (
           <p>{error}</p>
         ) : (
-          <>
+          <div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {products.map((product) => (
                 <ProductCard key={product._id} product={product} />
@@ -108,7 +110,7 @@ export default function ProductsSection() {
               totalItems={totalItems}
               itemsPerPage={itemsPerPage}
             />
-          </>
+          </div>
         )}
       </div>
     </>

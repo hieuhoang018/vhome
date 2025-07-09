@@ -47,7 +47,7 @@ export default function Footer() {
 
             {/* Column 3 */}
             <div className="flex flex-col gap-3">
-              <h2 className="font-semibold text-2xl mb-5">Company</h2>
+              <h2 className="font-semibold text-2xl mb-5 font-serif">Company</h2>
               <Link className="hover:text-white" href={"/about"}>
                 About us
               </Link>
@@ -55,7 +55,7 @@ export default function Footer() {
 
             {/* Column 4 */}
             <div className="flex flex-col gap-3">
-              <h2 className="font-semibold text-2xl mb-5">Contact</h2>
+              <h2 className="font-semibold text-2xl mb-5 font-serif">Contact</h2>
               <div className="flex items-center gap-2">
                 <MapPin />
                 <span>Opiskelijankatu 123, Tampere</span>

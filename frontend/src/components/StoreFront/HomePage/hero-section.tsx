@@ -26,12 +26,12 @@ export default function HeroSection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href={"/products"}>
-              <button className="border rounded-lg p-3 bg-white text-black font-semibold hover:bg-gray-200 cursor-pointer">
+              <button className="rounded-lg p-3 bg-white text-black font-semibold hover:bg-gray-200 cursor-pointer">
                 Shop New Arrivals
               </button>
             </Link>
             <Link href={"/products"}>
-              <button className="border rounded-lg p-3 bg-white text-black font-semibold hover:bg-gray-200 cursor-pointer">
+              <button className="rounded-lg p-3 bg-white text-black font-semibold hover:bg-gray-200 cursor-pointer">
                 Explore Collections
               </button>
             </Link>

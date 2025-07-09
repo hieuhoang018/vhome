@@ -15,9 +15,11 @@ export default function ProductListing() {
         </p>
       </TitleCardWrapper>
 
-      <Suspense fallback={<div>Loading products...</div>}>
-        <ProductsSection />
-      </Suspense>
+      <div className="container mx-auto px-4 mt-6">
+        <Suspense fallback={<div>Loading products...</div>}>
+          <ProductsSection />
+        </Suspense>
+      </div>
     </>
   )
 }

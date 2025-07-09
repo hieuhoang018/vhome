@@ -20,8 +20,8 @@ export default function ProfileTab() {
       },
       onSubmit: async (data) => {
         await api.patch("/users/update-information", data)
+        window.location.reload() // TODO
         toast.success("Information changed successfully")
-        window.location.reload()
       },
     })
 
@@ -122,7 +122,7 @@ export default function ProfileTab() {
         <button
           type="submit"
           disabled={loading}
-          className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition"
+          className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition disabled:bg-gray-400"
         >
           Save Information
         </button>

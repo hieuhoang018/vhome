@@ -11,7 +11,7 @@ export default function SignupForm() {
   const router = useRouter()
   const { refreshUser } = useUser()
 
-  const { formData, handleChange, handleSubmit, error } =
+  const { formData, handleChange, handleSubmit, error, loading } =
     useFormSubmit({
       initialData: {
         firstName: "",
@@ -100,7 +100,8 @@ export default function SignupForm() {
 
       <button
         type="submit"
-        className="mt-3 w-full bg-blue-500 text-white py-2 rounded"
+        disabled={loading}
+        className="mt-3 w-full bg-blue-500 text-white py-2 rounded disabled:bg-gray-400"
       >
         Create Account
       </button>

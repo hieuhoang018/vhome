@@ -15,8 +15,6 @@ export default function ReviewForm({ productId }: { productId: string }) {
         review: "",
       },
       onSubmit: async (data) => {
-        console.log("request: ", data)
-        console.log(productId)
         await api.post(`/products/${productId}/reviews`, data)
         toast.success("Review submitted")
       },
