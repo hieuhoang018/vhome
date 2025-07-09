@@ -36,7 +36,7 @@ export default function CartItem({
   }
 
   return (
-    <div className="w-[95%] h-auto md:h-40 border rounded-md flex flex-col md:flex-row p-2 space-y-3 md:space-y-0 md:space-x-3">
+    <div className="w-[95%] h-auto md:h-40 border rounded-md gap-2 flex flex-col md:flex-row p-2 space-y-3 md:space-y-0 md:space-x-3">
       {/* Image placeholder */}
       <div className="bg-red-500 w-full md:w-1/5 h-32 md:h-auto rounded"></div>
 
@@ -58,19 +58,19 @@ export default function CartItem({
           <button
             onClick={() => setAmountChosen(amountChosen - 1)}
             disabled={amountChosen === 1}
-            className="px-3 py-1 text-furniture-charcoal disabled:text-gray-400"
+            className="px-3 py-1 text-furniture-charcoal hover:bg-gray-200 disabled:text-gray-400"
           >
             <Minus className="h-4 w-4" />
           </button>
           <div className="flex-1 text-center font-medium">{amountChosen}</div>
           <button
             onClick={() => setAmountChosen(amountChosen + 1)}
-            className="px-3 py-1 text-furniture-charcoal disabled:text-gray-400"
+            className="px-3 py-1 text-furniture-charcoal hover:bg-gray-200 disabled:text-gray-400"
           >
             <Plus className="h-4 w-4" />
           </button>
         </div>
-        <button onClick={handleRemoveFromCart} className="mt-2 md:mt-0">
+        <button onClick={handleRemoveFromCart} className="mt-2 md:mt-0 hover:bg-gray-200 p-1 rounded-sm">
           <Trash2 />
         </button>
       </div>

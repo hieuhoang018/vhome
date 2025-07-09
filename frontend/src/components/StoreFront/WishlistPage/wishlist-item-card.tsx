@@ -25,7 +25,7 @@ export default function WishlistItemCard({
   }
 
   return (
-    <div className="h-130 max-w-100 border border-gray-400 rounded-lg overflow-hidden relative">
+    <div className="h-130 max-w-100 border border-gray-400 rounded-lg overflow-hidden relative transition-transform duration-200 hover:-translate-y-1">
       <button
         className="absolute top-2 right-2 bg-white rounded-full p-2 shadow hover:bg-gray-100"
         aria-label="Remove"
@@ -38,7 +38,7 @@ export default function WishlistItemCard({
         <h1>{product.name}</h1>
         <h1>{product.price}</h1>
         <Link href={`/products/${product.productId}`}>
-          <button className="w-full border py-3 rounded-lg">Details</button>
+          <button className="w-full border py-3 rounded-lg hover:bg-gray-200">Details</button>
         </Link>
       </div>
     </div>

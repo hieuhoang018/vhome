@@ -8,7 +8,7 @@ export default function ReviewForm({ productId }: { productId: string }) {
   const [rating, setRating] = useState(0)
   const [hover, setHover] = useState(0)
 
-  const { formData, handleChange, handleSubmit, error, setField } =
+  const { formData, handleChange, handleSubmit, error, loading, setField } =
     useFormSubmit({
       initialData: {
         rating: rating,
@@ -62,8 +62,13 @@ export default function ReviewForm({ productId }: { productId: string }) {
           name="review"
           onChange={handleChange}
         />
-        {error && <p>{error}</p>}
-        <button className="border p-2 rounded-lg">Submit Review</button>
+        {error && <p className="text-red-500">{error}</p>}
+        <button
+          disabled={loading}
+          className="border p-2 rounded-lg bg-navi-blue text-white hover:bg-navi-blue/90 disabled:bg-gray-400"
+        >
+          Submit Review
+        </button>
       </form>
     </div>
   )

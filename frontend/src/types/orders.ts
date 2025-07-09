@@ -3,6 +3,7 @@ import { User } from "./users"
 export interface OrdersResponse {
   status: string
   results: number
+  total: number
   data: {
     docs: Order[]
   }

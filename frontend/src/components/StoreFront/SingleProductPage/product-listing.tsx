@@ -116,7 +116,7 @@ export default function ProductListingSection() {
               <button
                 onClick={() => setAmountChosen(amountChosen - 1)}
                 disabled={amountChosen === 1}
-                className="px-3 py-1 text-furniture-charcoal disabled:text-gray-400"
+                className="px-3 py-1 text-furniture-charcoal hover:bg-gray-200 disabled:text-gray-400"
               >
                 <Minus className="h-4 w-4" />
               </button>
@@ -126,7 +126,7 @@ export default function ProductListingSection() {
               <button
                 onClick={() => setAmountChosen(amountChosen + 1)}
                 disabled={amountChosen === product.stock || product.stock === 0}
-                className="px-3 py-1 text-furniture-charcoal disabled:text-gray-400"
+                className="px-3 py-1 text-furniture-charcoal hover:bg-gray-200 disabled:text-gray-400"
               >
                 <Plus className="h-4 w-4" />
               </button>
@@ -139,13 +139,13 @@ export default function ProductListingSection() {
             <button
               onClick={handleAddToCart}
               disabled={product.stock === 0}
-              className="flex-[2] rounded-lg px-4 py-2 w-full bg-navi-blue disabled:bg-gray-400 text-white hover:cursor-pointer"
+              className="flex-[2] rounded-lg px-4 py-2 w-full bg-navi-blue disabled:bg-gray-400 text-white hover:bg-navi-blue/90 hover:cursor-pointer"
             >
               Add to cart
             </button>
             <button
               onClick={handleAddToWishlist}
-              className="flex-1 border rounded-lg px-4 py-2 w-full hover:cursor-pointer"
+              className="flex-1 border rounded-lg px-4 py-2 w-full hover:bg-gray-200 hover:cursor-pointer"
             >
               Add to wishlist
             </button>

@@ -13,6 +13,7 @@ export interface User {
 export interface UsersResponse {
   status: string
   results: number
+  total: number
   data: {
     docs: User[]
   }

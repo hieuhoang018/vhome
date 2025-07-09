@@ -18,10 +18,15 @@ export default function StatisticsBlock({
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await api.get<
-        ProductsResponse | UsersResponse | OrdersResponse | RevenueResponse
-      >(`${apiEndpoint}`)
-      setData(res.data.results)
+      if (title === "Total Revenue") {
+        const res = await api.get<RevenueResponse>(`${apiEndpoint}`)
+        setData(res.data.results)
+      } else {
+        const res = await api.get<
+          ProductsResponse | UsersResponse | OrdersResponse
+        >(`${apiEndpoint}`)
+        setData(res.data.total)
+      }
     }
 
     fetchData()

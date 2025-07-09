@@ -67,14 +67,13 @@ export default function CreateProductForm() {
             value={formData.price}
             onChange={handleChange}
           />
-          <h3 className="mb-1">Stock Quantity</h3>
-          <input
-            type="text"
+          <InputField
+            label="Stock Quantity"
+            inputType="text"
             name="stock"
             placeholder="36"
             value={formData.stock}
             onChange={handleChange}
-            className="border rounded-sm px-3 py-1 w-full mb-3"
           />
           <div className="space-y-2">
             <h3 className="mb-1">Available Colors</h3>
@@ -111,7 +110,7 @@ export default function CreateProductForm() {
         <button
           type="submit"
           disabled={loading}
-          className="border px-4 bg-blue-500 text-white py-2 rounded disabled:bg-gray-400 "
+          className="border px-4 bg-navi-blue text-white py-2 rounded hover:bg-navi-blue/90 disabled:bg-gray-400 "
         >
           Create Product
         </button>

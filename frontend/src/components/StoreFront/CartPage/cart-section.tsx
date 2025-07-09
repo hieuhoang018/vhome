@@ -71,7 +71,7 @@ export default function CartSection() {
                   type="text"
                   className="flex-4 border rounded-md px-2 py-1"
                 />
-                <button className="flex-1 border rounded-md px-2 py-1">
+                <button className="flex-1 border rounded-md px-2 py-1 hover:bg-gray-200">
                   Apply
                 </button>
               </div>
@@ -100,14 +100,14 @@ export default function CartSection() {
                 </div>
               </div>
               <Link href={"/checkout"}>
-                <button className="w-full py-2 border rounded-md mb-4">
+                <button className="w-full py-2 border rounded-md mb-4 bg-navi-blue text-white hover:bg-navi-blue/90">
                   Proceed to Checkout
                 </button>
               </Link>
 
               {/* Continue Shopping */}
               <Link href="/products">
-                <button className="w-full py-2 border rounded-md">
+                <button className="w-full py-2 border rounded-md hover:bg-gray-200">
                   Continue Shopping
                 </button>
               </Link>
