@@ -121,7 +121,7 @@ export default function ProductDetailsSection() {
               <h2>Category</h2>
               <h2 className="mb-4">{product.category}</h2>
               <h2>Price</h2>
-              <h2 className="mb-4">{product.price}</h2>
+              <h2 className="mb-4">€{product.price}</h2>
             </>
           )}
         </div>

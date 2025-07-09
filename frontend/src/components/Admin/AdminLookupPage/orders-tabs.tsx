@@ -10,21 +10,18 @@ import { toast } from "sonner"
 
 export default function OrdersTab() {
   const [orders, setOrders] = useState<Order[]>()
-  const { formData, handleChange, handleSubmit, loading } =
-    useFormSubmit({
-      initialData: {
-        prompt: "",
-      },
-      onSubmit: async (data) => {
-        const res = await api.get<OrdersResponse>(
-          `/orders?search=${data.prompt}`
-        )
-        if(res.data.data.docs.length === 0) {
-          toast.info("No orders found")
-        }
-        setOrders(res.data.data.docs)
-      },
-    })
+  const { formData, handleChange, handleSubmit, loading } = useFormSubmit({
+    initialData: {
+      prompt: "",
+    },
+    onSubmit: async (data) => {
+      const res = await api.get<OrdersResponse>(`/orders?search=${data.prompt}`)
+      if (res.data.data.docs.length === 0) {
+        toast.info("No orders found")
+      }
+      setOrders(res.data.data.docs)
+    },
+  })
 
   return (
     <>
@@ -77,7 +74,9 @@ export default function OrdersTab() {
         <tbody>
           {orders?.map((order) => (
             <tr key={order._id} className="border-b hover:bg-gray-50">
-              <td className="hidden md:table-cell py-3 px-4 text-gray-600">{order._id}</td>
+              <td className="hidden md:table-cell py-3 px-4 text-gray-600">
+                {order._id}
+              </td>
               <td className="hidden xl:table-cell py-3 px-4">
                 <div className="flex items-center space-x-3">
                   <span className="font-medium text-furniture-charcoal">
@@ -94,8 +93,12 @@ export default function OrdersTab() {
               <td className="hidden xl:table-cell py-3 px-4 font-semibold text-furniture-charcoal">
                 Delivered
               </td>
-              <td className="hidden md:table-cell py-3 px-4 text-gray-600">{order.totalPrice}</td>
-              <td className="hidden xl:table-cell py-3 px-4 text-gray-600">{order.items.length}</td>
+              <td className="hidden md:table-cell py-3 px-4 text-gray-600">
+                €{order.totalPrice}
+              </td>
+              <td className="hidden xl:table-cell py-3 px-4 text-gray-600">
+                {order.items.length}
+              </td>
               <td className="py-3 px-4">
                 <div className="flex items-center space-x-2">
                   <button className="h-8 w-8">

@@ -57,7 +57,7 @@ export default function RecentOrdersListing() {
               {order.items.length}
             </td>
             <td className="py-3 px-4 font-semibold text-furniture-charcoal">
-              {order.totalPrice}
+              €{order.totalPrice}
             </td>
             <td className="py-3 px-4 text-gray-600 xl:table-cell hidden">
               Delivered

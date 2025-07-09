@@ -57,7 +57,7 @@ export default function RecentProductsListing() {
               {product.category}
             </td>
             <td className="py-3 px-4 font-semibold text-furniture-charcoal">
-              {product.price}
+              €{product.price}
             </td>
             <td className="py-3 px-4 text-gray-600 hidden xl:table-cell">
               {product.stock}

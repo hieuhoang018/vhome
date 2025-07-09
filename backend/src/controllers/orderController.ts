@@ -190,3 +190,22 @@ export const getMyOrders = catchAsync(
     })
   }
 )
+
+export const getTotalRevenue = catchAsync(
+  async (req: Request, res: Response, next: NextFunction) => {
+    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string)
+
+    const paymentIntents = await stripe.paymentIntents.list({
+      limit: 100, // adjust if needed
+    })
+
+    const totalRevenue = paymentIntents.data
+      .filter((pi) => pi.status === "succeeded")
+      .reduce((sum, pi) => sum + (pi.amount_received ?? 0), 0)
+
+    res.status(200).json({
+      status: "success",
+      results: totalRevenue / 100, // convert to EUR
+    })
+  }
+)

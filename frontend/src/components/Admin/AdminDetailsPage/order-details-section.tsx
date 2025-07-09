@@ -63,7 +63,7 @@ export default function OrderDetailsSection() {
           <h2>Status</h2>
           <h2 className="mb-4">Delivered</h2>
           <h2>Total Amount</h2>
-          <h2 className="mb-4">{order.totalPrice}</h2>
+          <h2 className="mb-4">€{order.totalPrice}</h2>
         </div>
         <div className="flex-1 border rounded-lg bg-gray-100 p-5">
           <h1 className="text-2xl font-bold mb-8">Shipping & Payment</h1>

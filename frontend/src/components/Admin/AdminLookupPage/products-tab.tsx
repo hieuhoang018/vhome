@@ -87,7 +87,7 @@ export default function ProductsTab() {
                 {product.category}
               </td>
               <td className="hidden md:table-cell py-3 px-4 font-semibold text-furniture-charcoal">
-                {product.price}
+                €{product.price}
               </td>
               <td className="hidden xl:table-cell py-3 px-4 font-semibold text-furniture-charcoal">
                 {product.stock}

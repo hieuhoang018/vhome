@@ -61,7 +61,7 @@ export default function CartDetailsSection() {
           <h2>Total Items</h2>
           <h2 className="mb-4">{cart.items.length}</h2>
           <h2>Total Amount</h2>
-          <h2 className="mb-4">{cart.totalPrice}</h2>
+          <h2 className="mb-4">€{cart.totalPrice}</h2>
         </div>
         <div className="flex-1 border rounded-lg bg-gray-100 p-5">
           <h1 className="text-2xl font-bold mb-8">Cart Details</h1>

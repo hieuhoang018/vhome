@@ -7,6 +7,7 @@ import {
   deleteOrder,
   getAllOrders,
   getOrderById,
+  getTotalRevenue,
   updateOrder,
 } from "../controllers/orderController"
 
@@ -20,6 +21,7 @@ router.get("/checkout/success", createOrderCheckout)
 
 router.use(restrictTo("admin"))
 
+router.get("/revenue", getTotalRevenue);
 router.route("/").get(getAllOrders).post(createOrder)
 router.route("/:id").get(getOrderById).patch(updateOrder).delete(deleteOrder)
 

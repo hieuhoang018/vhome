@@ -13,7 +13,7 @@ export default function ItemDetailsCard({
           <h2>{item.name}</h2>
           <h2>{item.quantity}</h2>
         </div>
-        <h2 className="ml-4">{item.price}</h2>
+        <h2 className="ml-4">€{item.price}</h2>
       </div>
     </div>
   )

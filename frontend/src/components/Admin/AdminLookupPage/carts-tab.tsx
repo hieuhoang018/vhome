@@ -87,7 +87,7 @@ export default function CartsTab() {
                 {cart.items.length}
               </td>
               <td className="hidden md:table-cell py-3 px-4 font-semibold text-furniture-charcoal">
-                {cart.totalPrice}
+                €{cart.totalPrice}
               </td>
               <td className="hidden xl:table-cell py-3 px-4 text-gray-600">
                 {new Date(cart.updatedAt).toLocaleDateString()}

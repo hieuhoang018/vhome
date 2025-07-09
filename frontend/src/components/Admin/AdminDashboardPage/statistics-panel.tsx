@@ -6,9 +6,7 @@ export default function StatisticsPanel() {
       <StatisticsBlock title="Total Products" apiEndpoint="/products" />
       <StatisticsBlock title="Total Users" apiEndpoint="/users" />
       <StatisticsBlock title="Total Orders" apiEndpoint="/orders" />
-      <div>
-        <h1>col</h1>
-      </div>
+      <StatisticsBlock title="Total Revenue" apiEndpoint="/orders/revenue" />
     </div>
   )
 }
