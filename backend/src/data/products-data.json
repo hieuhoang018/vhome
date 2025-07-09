@@ -14,13 +14,14 @@
     ],
     "createdAt": "2025-03-01T12:53:17.393155Z",
     "updatedAt": "2025-03-01T12:53:17.393155Z",
-    "rating": 3.9,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Qokago+Rack",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Qokago+Rack+1",
+      "https://placehold.co/1920x1080/png?text=Qokago+Rack+2",
+      "https://placehold.co/1920x1080/png?text=Qokago+Rack+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Woxezu Table",
@@ -37,13 +38,14 @@
     ],
     "createdAt": "2024-12-23T08:58:17.393177Z",
     "updatedAt": "2024-12-23T08:58:17.393177Z",
-    "rating": 3.6,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Woxezu+Table",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Woxezu+Table+1",
+      "https://placehold.co/1920x1080/png?text=Woxezu+Table+2",
+      "https://placehold.co/1920x1080/png?text=Woxezu+Table+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Wuxofi Vanity",
@@ -60,13 +62,14 @@
     ],
     "createdAt": "2025-05-03T10:29:17.393193Z",
     "updatedAt": "2025-05-03T10:29:17.393193Z",
-    "rating": 4.0,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Wuxofi+Vanity",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Wuxofi+Vanity+1",
+      "https://placehold.co/1920x1080/png?text=Wuxofi+Vanity+2",
+      "https://placehold.co/1920x1080/png?text=Wuxofi+Vanity+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Seyoki Rack",
@@ -83,13 +86,14 @@
     ],
     "createdAt": "2025-03-25T11:20:17.393205Z",
     "updatedAt": "2025-03-25T11:20:17.393205Z",
-    "rating": 1.6,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Seyoki+Rack",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Seyoki+Rack+1",
+      "https://placehold.co/1920x1080/png?text=Seyoki+Rack+2",
+      "https://placehold.co/1920x1080/png?text=Seyoki+Rack+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Gomuqi Bookshelf",
@@ -106,13 +110,14 @@
     ],
     "createdAt": "2025-02-11T11:22:17.393216Z",
     "updatedAt": "2025-02-11T11:22:17.393216Z",
-    "rating": 2.7,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Gomuqi+Bookshelf",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Gomuqi+Bookshelf+1",
+      "https://placehold.co/1920x1080/png?text=Gomuqi+Bookshelf+2",
+      "https://placehold.co/1920x1080/png?text=Gomuqi+Bookshelf+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Kujowo Chair",
@@ -129,13 +134,14 @@
     ],
     "createdAt": "2025-06-17T15:06:17.393227Z",
     "updatedAt": "2025-06-17T15:06:17.393227Z",
-    "rating": 3.3,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Kujowo+Chair",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Kujowo+Chair+1",
+      "https://placehold.co/1920x1080/png?text=Kujowo+Chair+2",
+      "https://placehold.co/1920x1080/png?text=Kujowo+Chair+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Ripuwo Basket",
@@ -149,13 +155,14 @@
     ],
     "createdAt": "2025-04-07T08:46:17.393236Z",
     "updatedAt": "2025-04-07T08:46:17.393236Z",
-    "rating": 4.7,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Ripuwo+Basket",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Ripuwo+Basket+1",
+      "https://placehold.co/1920x1080/png?text=Ripuwo+Basket+2",
+      "https://placehold.co/1920x1080/png?text=Ripuwo+Basket+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Saxige Nightstand",
@@ -172,13 +179,14 @@
     ],
     "createdAt": "2025-04-02T10:06:17.393248Z",
     "updatedAt": "2025-04-02T10:06:17.393248Z",
-    "rating": 3.6,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Saxige+Nightstand",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Saxige+Nightstand+1",
+      "https://placehold.co/1920x1080/png?text=Saxige+Nightstand+2",
+      "https://placehold.co/1920x1080/png?text=Saxige+Nightstand+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Rujohe Bench",
@@ -193,13 +201,14 @@
     ],
     "createdAt": "2025-05-11T21:42:17.393257Z",
     "updatedAt": "2025-05-11T21:42:17.393257Z",
-    "rating": 2.5,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Rujohe+Bench",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Rujohe+Bench+1",
+      "https://placehold.co/1920x1080/png?text=Rujohe+Bench+2",
+      "https://placehold.co/1920x1080/png?text=Rujohe+Bench+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Bedamu Chair",
@@ -214,13 +223,14 @@
     ],
     "createdAt": "2025-01-17T17:44:17.393264Z",
     "updatedAt": "2025-01-17T17:44:17.393264Z",
-    "rating": 4.8,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Bedamu+Chair",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Bedamu+Chair+1",
+      "https://placehold.co/1920x1080/png?text=Bedamu+Chair+2",
+      "https://placehold.co/1920x1080/png?text=Bedamu+Chair+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Kiqevo Shelf",
@@ -236,13 +246,14 @@
     ],
     "createdAt": "2025-04-26T23:25:17.393271Z",
     "updatedAt": "2025-04-26T23:25:17.393271Z",
-    "rating": 3.9,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Kiqevo+Shelf",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Kiqevo+Shelf+1",
+      "https://placehold.co/1920x1080/png?text=Kiqevo+Shelf+2",
+      "https://placehold.co/1920x1080/png?text=Kiqevo+Shelf+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Busize Chair",
@@ -259,13 +270,14 @@
     ],
     "createdAt": "2025-05-07T14:59:17.393277Z",
     "updatedAt": "2025-05-07T14:59:17.393277Z",
-    "rating": 2.5,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Busize+Chair",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Busize+Chair+1",
+      "https://placehold.co/1920x1080/png?text=Busize+Chair+2",
+      "https://placehold.co/1920x1080/png?text=Busize+Chair+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Xugabu Table",
@@ -279,13 +291,14 @@
     ],
     "createdAt": "2025-03-06T04:11:17.393284Z",
     "updatedAt": "2025-03-06T04:11:17.393284Z",
-    "rating": 2.1,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Xugabu+Table",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Xugabu+Table+1",
+      "https://placehold.co/1920x1080/png?text=Xugabu+Table+2",
+      "https://placehold.co/1920x1080/png?text=Xugabu+Table+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Cazoha Stand",
@@ -302,13 +315,14 @@
     ],
     "createdAt": "2025-01-05T18:24:17.393290Z",
     "updatedAt": "2025-01-05T18:24:17.393290Z",
-    "rating": 4.8,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Cazoha+Stand",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Cazoha+Stand+1",
+      "https://placehold.co/1920x1080/png?text=Cazoha+Stand+2",
+      "https://placehold.co/1920x1080/png?text=Cazoha+Stand+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Quroto Sideboard",
@@ -324,13 +338,14 @@
     ],
     "createdAt": "2025-03-10T13:16:17.393297Z",
     "updatedAt": "2025-03-10T13:16:17.393297Z",
-    "rating": 1.8,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Quroto+Sideboard",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Quroto+Sideboard+1",
+      "https://placehold.co/1920x1080/png?text=Quroto+Sideboard+2",
+      "https://placehold.co/1920x1080/png?text=Quroto+Sideboard+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Qetadi Sofa",
@@ -345,13 +360,14 @@
     ],
     "createdAt": "2025-01-11T11:50:17.393303Z",
     "updatedAt": "2025-01-11T11:50:17.393303Z",
-    "rating": 1.4,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Qetadi+Sofa",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Qetadi+Sofa+1",
+      "https://placehold.co/1920x1080/png?text=Qetadi+Sofa+2",
+      "https://placehold.co/1920x1080/png?text=Qetadi+Sofa+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Cinuye Box",
@@ -366,13 +382,14 @@
     ],
     "createdAt": "2025-03-08T11:17:17.393310Z",
     "updatedAt": "2025-03-08T11:17:17.393310Z",
-    "rating": 4.1,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Cinuye+Box",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Cinuye+Box+1",
+      "https://placehold.co/1920x1080/png?text=Cinuye+Box+2",
+      "https://placehold.co/1920x1080/png?text=Cinuye+Box+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Ragawa Shelf",
@@ -388,13 +405,14 @@
     ],
     "createdAt": "2025-06-18T12:07:17.393326Z",
     "updatedAt": "2025-06-18T12:07:17.393326Z",
-    "rating": 2.9,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Ragawa+Shelf",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Ragawa+Shelf+1",
+      "https://placehold.co/1920x1080/png?text=Ragawa+Shelf+2",
+      "https://placehold.co/1920x1080/png?text=Ragawa+Shelf+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Luniro Table",
@@ -410,13 +428,14 @@
     ],
     "createdAt": "2025-06-14T07:52:17.393332Z",
     "updatedAt": "2025-06-14T07:52:17.393332Z",
-    "rating": 3.4,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Luniro+Table",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Luniro+Table+1",
+      "https://placehold.co/1920x1080/png?text=Luniro+Table+2",
+      "https://placehold.co/1920x1080/png?text=Luniro+Table+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Xegude Bed",
@@ -431,13 +450,14 @@
     ],
     "createdAt": "2025-05-07T10:38:17.393339Z",
     "updatedAt": "2025-05-07T10:38:17.393339Z",
-    "rating": 5.0,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Xegude+Bed",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Xegude+Bed+1",
+      "https://placehold.co/1920x1080/png?text=Xegude+Bed+2",
+      "https://placehold.co/1920x1080/png?text=Xegude+Bed+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Xapiri Dresser",
@@ -452,13 +472,14 @@
     ],
     "createdAt": "2025-03-02T17:56:17.393345Z",
     "updatedAt": "2025-03-02T17:56:17.393345Z",
-    "rating": 3.6,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Xapiri+Dresser",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Xapiri+Dresser+1",
+      "https://placehold.co/1920x1080/png?text=Xapiri+Dresser+2",
+      "https://placehold.co/1920x1080/png?text=Xapiri+Dresser+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Hiruvo Chair",
@@ -474,13 +495,14 @@
     ],
     "createdAt": "2025-06-14T06:30:17.393351Z",
     "updatedAt": "2025-06-14T06:30:17.393351Z",
-    "rating": 1.0,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Hiruvo+Chair",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Hiruvo+Chair+1",
+      "https://placehold.co/1920x1080/png?text=Hiruvo+Chair+2",
+      "https://placehold.co/1920x1080/png?text=Hiruvo+Chair+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Lareto Box",
@@ -494,13 +516,14 @@
     ],
     "createdAt": "2025-05-23T01:18:17.393358Z",
     "updatedAt": "2025-05-23T01:18:17.393358Z",
-    "rating": 3.7,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Lareto+Box",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Lareto+Box+1",
+      "https://placehold.co/1920x1080/png?text=Lareto+Box+2",
+      "https://placehold.co/1920x1080/png?text=Lareto+Box+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Sugibi Box",
@@ -514,13 +537,14 @@
     ],
     "createdAt": "2025-05-08T09:40:17.393364Z",
     "updatedAt": "2025-05-08T09:40:17.393364Z",
-    "rating": 2.4,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Sugibi+Box",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Sugibi+Box+1",
+      "https://placehold.co/1920x1080/png?text=Sugibi+Box+2",
+      "https://placehold.co/1920x1080/png?text=Sugibi+Box+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Cirawa Chair",
@@ -535,13 +559,14 @@
     ],
     "createdAt": "2025-05-20T20:26:17.393370Z",
     "updatedAt": "2025-05-20T20:26:17.393370Z",
-    "rating": 2.5,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Cirawa+Chair",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Cirawa+Chair+1",
+      "https://placehold.co/1920x1080/png?text=Cirawa+Chair+2",
+      "https://placehold.co/1920x1080/png?text=Cirawa+Chair+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Piroxi Box",
@@ -556,13 +581,14 @@
     ],
     "createdAt": "2025-03-09T13:46:17.393377Z",
     "updatedAt": "2025-03-09T13:46:17.393377Z",
-    "rating": 1.7,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Piroxi+Box",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Piroxi+Box+1",
+      "https://placehold.co/1920x1080/png?text=Piroxi+Box+2",
+      "https://placehold.co/1920x1080/png?text=Piroxi+Box+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Dovawe Table",
@@ -579,13 +605,14 @@
     ],
     "createdAt": "2025-01-23T19:42:17.393383Z",
     "updatedAt": "2025-01-23T19:42:17.393383Z",
-    "rating": 1.6,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Dovawe+Table",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Dovawe+Table+1",
+      "https://placehold.co/1920x1080/png?text=Dovawe+Table+2",
+      "https://placehold.co/1920x1080/png?text=Dovawe+Table+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Nohapi Desk",
@@ -599,13 +626,14 @@
     ],
     "createdAt": "2025-02-01T19:09:17.393389Z",
     "updatedAt": "2025-02-01T19:09:17.393389Z",
-    "rating": 4.6,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Nohapi+Desk",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Nohapi+Desk+1",
+      "https://placehold.co/1920x1080/png?text=Nohapi+Desk+2",
+      "https://placehold.co/1920x1080/png?text=Nohapi+Desk+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Bivadu Vanity",
@@ -619,13 +647,14 @@
     ],
     "createdAt": "2025-03-05T04:02:17.393397Z",
     "updatedAt": "2025-03-05T04:02:17.393397Z",
-    "rating": 2.7,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Bivadu+Vanity",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Bivadu+Vanity+1",
+      "https://placehold.co/1920x1080/png?text=Bivadu+Vanity+2",
+      "https://placehold.co/1920x1080/png?text=Bivadu+Vanity+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Vutaqu Table",
@@ -640,13 +669,14 @@
     ],
     "createdAt": "2025-03-03T00:44:17.393403Z",
     "updatedAt": "2025-03-03T00:44:17.393403Z",
-    "rating": 4.8,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Vutaqu+Table",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Vutaqu+Table+1",
+      "https://placehold.co/1920x1080/png?text=Vutaqu+Table+2",
+      "https://placehold.co/1920x1080/png?text=Vutaqu+Table+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Geveqi Table",
@@ -661,13 +691,14 @@
     ],
     "createdAt": "2025-05-17T16:25:17.393410Z",
     "updatedAt": "2025-05-17T16:25:17.393410Z",
-    "rating": 4.9,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Geveqi+Table",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Geveqi+Table+1",
+      "https://placehold.co/1920x1080/png?text=Geveqi+Table+2",
+      "https://placehold.co/1920x1080/png?text=Geveqi+Table+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Rosowa Bookshelf",
@@ -681,13 +712,14 @@
     ],
     "createdAt": "2025-03-30T10:47:17.393416Z",
     "updatedAt": "2025-03-30T10:47:17.393416Z",
-    "rating": 3.4,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Rosowa+Bookshelf",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Rosowa+Bookshelf+1",
+      "https://placehold.co/1920x1080/png?text=Rosowa+Bookshelf+2",
+      "https://placehold.co/1920x1080/png?text=Rosowa+Bookshelf+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Tumuxe Chair",
@@ -704,13 +736,14 @@
     ],
     "createdAt": "2025-02-07T12:41:17.393422Z",
     "updatedAt": "2025-02-07T12:41:17.393422Z",
-    "rating": 1.2,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Tumuxe+Chair",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Tumuxe+Chair+1",
+      "https://placehold.co/1920x1080/png?text=Tumuxe+Chair+2",
+      "https://placehold.co/1920x1080/png?text=Tumuxe+Chair+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Jinuje Stand",
@@ -727,13 +760,14 @@
     ],
     "createdAt": "2025-03-18T15:28:17.393429Z",
     "updatedAt": "2025-03-18T15:28:17.393429Z",
-    "rating": 1.7,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Jinuje+Stand",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Jinuje+Stand+1",
+      "https://placehold.co/1920x1080/png?text=Jinuje+Stand+2",
+      "https://placehold.co/1920x1080/png?text=Jinuje+Stand+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Yasixo Wardrobe",
@@ -749,13 +783,14 @@
     ],
     "createdAt": "2024-12-25T03:57:17.393442Z",
     "updatedAt": "2024-12-25T03:57:17.393442Z",
-    "rating": 3.4,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Yasixo+Wardrobe",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Yasixo+Wardrobe+1",
+      "https://placehold.co/1920x1080/png?text=Yasixo+Wardrobe+2",
+      "https://placehold.co/1920x1080/png?text=Yasixo+Wardrobe+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Larigu Chair",
@@ -771,13 +806,14 @@
     ],
     "createdAt": "2025-05-03T15:28:17.393451Z",
     "updatedAt": "2025-05-03T15:28:17.393451Z",
-    "rating": 4.4,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Larigu+Chair",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Larigu+Chair+1",
+      "https://placehold.co/1920x1080/png?text=Larigu+Chair+2",
+      "https://placehold.co/1920x1080/png?text=Larigu+Chair+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Fomozi Basket",
@@ -793,13 +829,14 @@
     ],
     "createdAt": "2025-06-01T04:19:17.393461Z",
     "updatedAt": "2025-06-01T04:19:17.393461Z",
-    "rating": 1.8,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Fomozi+Basket",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Fomozi+Basket+1",
+      "https://placehold.co/1920x1080/png?text=Fomozi+Basket+2",
+      "https://placehold.co/1920x1080/png?text=Fomozi+Basket+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Karani Sofa",
@@ -813,13 +850,14 @@
     ],
     "createdAt": "2025-03-03T04:37:17.393471Z",
     "updatedAt": "2025-03-03T04:37:17.393471Z",
-    "rating": 1.9,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Karani+Sofa",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Karani+Sofa+1",
+      "https://placehold.co/1920x1080/png?text=Karani+Sofa+2",
+      "https://placehold.co/1920x1080/png?text=Karani+Sofa+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Notuku Table",
@@ -833,13 +871,14 @@
     ],
     "createdAt": "2025-03-27T02:39:17.393482Z",
     "updatedAt": "2025-03-27T02:39:17.393482Z",
-    "rating": 2.2,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Notuku+Table",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Notuku+Table+1",
+      "https://placehold.co/1920x1080/png?text=Notuku+Table+2",
+      "https://placehold.co/1920x1080/png?text=Notuku+Table+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Bagefu Bookshelf",
@@ -854,13 +893,14 @@
     ],
     "createdAt": "2025-03-19T09:59:17.393491Z",
     "updatedAt": "2025-03-19T09:59:17.393491Z",
-    "rating": 4.9,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Bagefu+Bookshelf",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Bagefu+Bookshelf+1",
+      "https://placehold.co/1920x1080/png?text=Bagefu+Bookshelf+2",
+      "https://placehold.co/1920x1080/png?text=Bagefu+Bookshelf+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Cinayu Cabinet",
@@ -876,13 +916,14 @@
     ],
     "createdAt": "2025-04-13T15:50:17.393501Z",
     "updatedAt": "2025-04-13T15:50:17.393501Z",
-    "rating": 2.8,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Cinayu+Cabinet",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Cinayu+Cabinet+1",
+      "https://placehold.co/1920x1080/png?text=Cinayu+Cabinet+2",
+      "https://placehold.co/1920x1080/png?text=Cinayu+Cabinet+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Gotaka Table",
@@ -897,13 +938,14 @@
     ],
     "createdAt": "2025-05-13T07:54:17.393512Z",
     "updatedAt": "2025-05-13T07:54:17.393512Z",
-    "rating": 4.1,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Gotaka+Table",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Gotaka+Table+1",
+      "https://placehold.co/1920x1080/png?text=Gotaka+Table+2",
+      "https://placehold.co/1920x1080/png?text=Gotaka+Table+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Ritefa Table",
@@ -918,13 +960,14 @@
     ],
     "createdAt": "2025-04-26T03:33:17.393521Z",
     "updatedAt": "2025-04-26T03:33:17.393521Z",
-    "rating": 3.7,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Ritefa+Table",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Ritefa+Table+1",
+      "https://placehold.co/1920x1080/png?text=Ritefa+Table+2",
+      "https://placehold.co/1920x1080/png?text=Ritefa+Table+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Zihuwa Bookshelf",
@@ -941,13 +984,14 @@
     ],
     "createdAt": "2025-05-18T04:26:17.393528Z",
     "updatedAt": "2025-05-18T04:26:17.393528Z",
-    "rating": 4.1,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Zihuwa+Bookshelf",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Zihuwa+Bookshelf+1",
+      "https://placehold.co/1920x1080/png?text=Zihuwa+Bookshelf+2",
+      "https://placehold.co/1920x1080/png?text=Zihuwa+Bookshelf+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Nolabi Box",
@@ -963,13 +1007,14 @@
     ],
     "createdAt": "2025-01-28T02:42:17.393596Z",
     "updatedAt": "2025-01-28T02:42:17.393596Z",
-    "rating": 1.3,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Nolabi+Box",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Nolabi+Box+1",
+      "https://placehold.co/1920x1080/png?text=Nolabi+Box+2",
+      "https://placehold.co/1920x1080/png?text=Nolabi+Box+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Gajika Rack",
@@ -985,13 +1030,14 @@
     ],
     "createdAt": "2025-03-11T16:00:17.393605Z",
     "updatedAt": "2025-03-11T16:00:17.393605Z",
-    "rating": 5.0,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Gajika+Rack",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Gajika+Rack+1",
+      "https://placehold.co/1920x1080/png?text=Gajika+Rack+2",
+      "https://placehold.co/1920x1080/png?text=Gajika+Rack+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Wonavu Box",
@@ -1007,13 +1053,14 @@
     ],
     "createdAt": "2025-06-08T18:35:17.393614Z",
     "updatedAt": "2025-06-08T18:35:17.393614Z",
-    "rating": 3.8,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Wonavu+Box",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Wonavu+Box+1",
+      "https://placehold.co/1920x1080/png?text=Wonavu+Box+2",
+      "https://placehold.co/1920x1080/png?text=Wonavu+Box+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Juhoce Desk",
@@ -1030,13 +1077,14 @@
     ],
     "createdAt": "2025-03-30T00:19:17.393622Z",
     "updatedAt": "2025-03-30T00:19:17.393622Z",
-    "rating": 2.9,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Juhoce+Desk",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Juhoce+Desk+1",
+      "https://placehold.co/1920x1080/png?text=Juhoce+Desk+2",
+      "https://placehold.co/1920x1080/png?text=Juhoce+Desk+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Xarojo Bed",
@@ -1053,13 +1101,14 @@
     ],
     "createdAt": "2025-05-12T04:16:17.393632Z",
     "updatedAt": "2025-05-12T04:16:17.393632Z",
-    "rating": 1.9,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Xarojo+Bed",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Xarojo+Bed+1",
+      "https://placehold.co/1920x1080/png?text=Xarojo+Bed+2",
+      "https://placehold.co/1920x1080/png?text=Xarojo+Bed+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Royuva Table",
@@ -1076,13 +1125,14 @@
     ],
     "createdAt": "2025-02-21T08:55:17.393642Z",
     "updatedAt": "2025-02-21T08:55:17.393642Z",
-    "rating": 1.2,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Royuva+Table",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Royuva+Table+1",
+      "https://placehold.co/1920x1080/png?text=Royuva+Table+2",
+      "https://placehold.co/1920x1080/png?text=Royuva+Table+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Gagisi Bookshelf",
@@ -1098,13 +1148,14 @@
     ],
     "createdAt": "2025-03-08T09:08:17.393653Z",
     "updatedAt": "2025-03-08T09:08:17.393653Z",
-    "rating": 2.8,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Gagisi+Bookshelf",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Gagisi+Bookshelf+1",
+      "https://placehold.co/1920x1080/png?text=Gagisi+Bookshelf+2",
+      "https://placehold.co/1920x1080/png?text=Gagisi+Bookshelf+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Kevuxe Table",
@@ -1119,13 +1170,14 @@
     ],
     "createdAt": "2025-05-13T16:50:17.393673Z",
     "updatedAt": "2025-05-13T16:50:17.393673Z",
-    "rating": 2.8,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Kevuxe+Table",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Kevuxe+Table+1",
+      "https://placehold.co/1920x1080/png?text=Kevuxe+Table+2",
+      "https://placehold.co/1920x1080/png?text=Kevuxe+Table+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Viluru Table",
@@ -1140,13 +1192,14 @@
     ],
     "createdAt": "2025-03-18T16:13:17.393684Z",
     "updatedAt": "2025-03-18T16:13:17.393684Z",
-    "rating": 1.9,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Viluru+Table",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Viluru+Table+1",
+      "https://placehold.co/1920x1080/png?text=Viluru+Table+2",
+      "https://placehold.co/1920x1080/png?text=Viluru+Table+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Jojequ Chair",
@@ -1163,13 +1216,14 @@
     ],
     "createdAt": "2025-02-18T19:12:17.393694Z",
     "updatedAt": "2025-02-18T19:12:17.393694Z",
-    "rating": 3.0,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Jojequ+Chair",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Jojequ+Chair+1",
+      "https://placehold.co/1920x1080/png?text=Jojequ+Chair+2",
+      "https://placehold.co/1920x1080/png?text=Jojequ+Chair+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Xuzite Wardrobe",
@@ -1184,13 +1238,14 @@
     ],
     "createdAt": "2025-02-12T13:45:17.393705Z",
     "updatedAt": "2025-02-12T13:45:17.393705Z",
-    "rating": 3.2,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Xuzite+Wardrobe",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Xuzite+Wardrobe+1",
+      "https://placehold.co/1920x1080/png?text=Xuzite+Wardrobe+2",
+      "https://placehold.co/1920x1080/png?text=Xuzite+Wardrobe+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Sufiqi Wardrobe",
@@ -1204,13 +1259,14 @@
     ],
     "createdAt": "2025-02-11T14:32:17.393715Z",
     "updatedAt": "2025-02-11T14:32:17.393715Z",
-    "rating": 3.0,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Sufiqi+Wardrobe",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Sufiqi+Wardrobe+1",
+      "https://placehold.co/1920x1080/png?text=Sufiqi+Wardrobe+2",
+      "https://placehold.co/1920x1080/png?text=Sufiqi+Wardrobe+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Zoduru Chair",
@@ -1224,13 +1280,14 @@
     ],
     "createdAt": "2025-01-12T09:57:17.393725Z",
     "updatedAt": "2025-01-12T09:57:17.393725Z",
-    "rating": 1.2,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Zoduru+Chair",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Zoduru+Chair+1",
+      "https://placehold.co/1920x1080/png?text=Zoduru+Chair+2",
+      "https://placehold.co/1920x1080/png?text=Zoduru+Chair+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Zowadu Rack",
@@ -1244,13 +1301,14 @@
     ],
     "createdAt": "2025-01-06T14:24:17.393736Z",
     "updatedAt": "2025-01-06T14:24:17.393736Z",
-    "rating": 2.4,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Zowadu+Rack",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Zowadu+Rack+1",
+      "https://placehold.co/1920x1080/png?text=Zowadu+Rack+2",
+      "https://placehold.co/1920x1080/png?text=Zowadu+Rack+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Malujo Sideboard",
@@ -1265,13 +1323,14 @@
     ],
     "createdAt": "2025-05-26T15:23:17.393752Z",
     "updatedAt": "2025-05-26T15:23:17.393752Z",
-    "rating": 2.4,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Malujo+Sideboard",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Malujo+Sideboard+1",
+      "https://placehold.co/1920x1080/png?text=Malujo+Sideboard+2",
+      "https://placehold.co/1920x1080/png?text=Malujo+Sideboard+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Gidezu Bench",
@@ -1285,13 +1344,14 @@
     ],
     "createdAt": "2025-03-09T00:27:17.393762Z",
     "updatedAt": "2025-03-09T00:27:17.393762Z",
-    "rating": 4.5,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Gidezu+Bench",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Gidezu+Bench+1",
+      "https://placehold.co/1920x1080/png?text=Gidezu+Bench+2",
+      "https://placehold.co/1920x1080/png?text=Gidezu+Bench+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Ropini Sofa",
@@ -1308,13 +1368,14 @@
     ],
     "createdAt": "2025-06-19T22:03:17.393773Z",
     "updatedAt": "2025-06-19T22:03:17.393773Z",
-    "rating": 1.9,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Ropini+Sofa",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Ropini+Sofa+1",
+      "https://placehold.co/1920x1080/png?text=Ropini+Sofa+2",
+      "https://placehold.co/1920x1080/png?text=Ropini+Sofa+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Kojoge Box",
@@ -1329,13 +1390,14 @@
     ],
     "createdAt": "2025-06-09T01:46:17.393783Z",
     "updatedAt": "2025-06-09T01:46:17.393783Z",
-    "rating": 4.6,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Kojoge+Box",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Kojoge+Box+1",
+      "https://placehold.co/1920x1080/png?text=Kojoge+Box+2",
+      "https://placehold.co/1920x1080/png?text=Kojoge+Box+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Vobema Chair",
@@ -1349,13 +1411,14 @@
     ],
     "createdAt": "2025-04-16T14:24:17.393792Z",
     "updatedAt": "2025-04-16T14:24:17.393792Z",
-    "rating": 4.0,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Vobema+Chair",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Vobema+Chair+1",
+      "https://placehold.co/1920x1080/png?text=Vobema+Chair+2",
+      "https://placehold.co/1920x1080/png?text=Vobema+Chair+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Rinihu Bookshelf",
@@ -1369,13 +1432,14 @@
     ],
     "createdAt": "2025-06-01T15:45:17.393800Z",
     "updatedAt": "2025-06-01T15:45:17.393800Z",
-    "rating": 3.8,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Rinihu+Bookshelf",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Rinihu+Bookshelf+1",
+      "https://placehold.co/1920x1080/png?text=Rinihu+Bookshelf+2",
+      "https://placehold.co/1920x1080/png?text=Rinihu+Bookshelf+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Pirido Wardrobe",
@@ -1391,13 +1455,14 @@
     ],
     "createdAt": "2025-04-23T01:12:17.393811Z",
     "updatedAt": "2025-04-23T01:12:17.393811Z",
-    "rating": 3.0,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Pirido+Wardrobe",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Pirido+Wardrobe+1",
+      "https://placehold.co/1920x1080/png?text=Pirido+Wardrobe+2",
+      "https://placehold.co/1920x1080/png?text=Pirido+Wardrobe+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Fiqewi Table",
@@ -1414,13 +1479,14 @@
     ],
     "createdAt": "2025-05-01T18:08:17.393821Z",
     "updatedAt": "2025-05-01T18:08:17.393821Z",
-    "rating": 3.4,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Fiqewi+Table",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Fiqewi+Table+1",
+      "https://placehold.co/1920x1080/png?text=Fiqewi+Table+2",
+      "https://placehold.co/1920x1080/png?text=Fiqewi+Table+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Lufixo Bed",
@@ -1437,13 +1503,14 @@
     ],
     "createdAt": "2025-04-06T17:49:17.393830Z",
     "updatedAt": "2025-04-06T17:49:17.393830Z",
-    "rating": 3.3,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Lufixo+Bed",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Lufixo+Bed+1",
+      "https://placehold.co/1920x1080/png?text=Lufixo+Bed+2",
+      "https://placehold.co/1920x1080/png?text=Lufixo+Bed+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Nepote Nightstand",
@@ -1458,13 +1525,14 @@
     ],
     "createdAt": "2025-06-14T18:32:17.393836Z",
     "updatedAt": "2025-06-14T18:32:17.393836Z",
-    "rating": 4.6,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Nepote+Nightstand",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Nepote+Nightstand+1",
+      "https://placehold.co/1920x1080/png?text=Nepote+Nightstand+2",
+      "https://placehold.co/1920x1080/png?text=Nepote+Nightstand+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Zivaxi Sideboard",
@@ -1479,13 +1547,14 @@
     ],
     "createdAt": "2025-04-30T05:23:17.393843Z",
     "updatedAt": "2025-04-30T05:23:17.393843Z",
-    "rating": 1.3,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Zivaxi+Sideboard",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Zivaxi+Sideboard+1",
+      "https://placehold.co/1920x1080/png?text=Zivaxi+Sideboard+2",
+      "https://placehold.co/1920x1080/png?text=Zivaxi+Sideboard+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Qaviwe Sideboard",
@@ -1502,13 +1571,14 @@
     ],
     "createdAt": "2025-03-05T19:22:17.393849Z",
     "updatedAt": "2025-03-05T19:22:17.393849Z",
-    "rating": 3.8,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Qaviwe+Sideboard",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Qaviwe+Sideboard+1",
+      "https://placehold.co/1920x1080/png?text=Qaviwe+Sideboard+2",
+      "https://placehold.co/1920x1080/png?text=Qaviwe+Sideboard+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Jupuja Dresser",
@@ -1524,13 +1594,14 @@
     ],
     "createdAt": "2025-01-12T15:49:17.393855Z",
     "updatedAt": "2025-01-12T15:49:17.393855Z",
-    "rating": 1.1,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Jupuja+Dresser",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Jupuja+Dresser+1",
+      "https://placehold.co/1920x1080/png?text=Jupuja+Dresser+2",
+      "https://placehold.co/1920x1080/png?text=Jupuja+Dresser+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Tuluro Table",
@@ -1546,13 +1617,14 @@
     ],
     "createdAt": "2025-03-21T05:17:17.393862Z",
     "updatedAt": "2025-03-21T05:17:17.393862Z",
-    "rating": 3.0,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Tuluro+Table",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Tuluro+Table+1",
+      "https://placehold.co/1920x1080/png?text=Tuluro+Table+2",
+      "https://placehold.co/1920x1080/png?text=Tuluro+Table+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Xowoge Desk",
@@ -1566,13 +1638,14 @@
     ],
     "createdAt": "2025-04-09T15:50:17.393869Z",
     "updatedAt": "2025-04-09T15:50:17.393869Z",
-    "rating": 1.2,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Xowoge+Desk",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Xowoge+Desk+1",
+      "https://placehold.co/1920x1080/png?text=Xowoge+Desk+2",
+      "https://placehold.co/1920x1080/png?text=Xowoge+Desk+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Leliqo Vanity",
@@ -1589,13 +1662,14 @@
     ],
     "createdAt": "2025-05-18T02:04:17.393875Z",
     "updatedAt": "2025-05-18T02:04:17.393875Z",
-    "rating": 1.3,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Leliqo+Vanity",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Leliqo+Vanity+1",
+      "https://placehold.co/1920x1080/png?text=Leliqo+Vanity+2",
+      "https://placehold.co/1920x1080/png?text=Leliqo+Vanity+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Picivu Chair",
@@ -1610,13 +1684,14 @@
     ],
     "createdAt": "2025-03-14T08:13:17.393881Z",
     "updatedAt": "2025-03-14T08:13:17.393881Z",
-    "rating": 4.2,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Picivu+Chair",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Picivu+Chair+1",
+      "https://placehold.co/1920x1080/png?text=Picivu+Chair+2",
+      "https://placehold.co/1920x1080/png?text=Picivu+Chair+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Domine Bookshelf",
@@ -1632,13 +1707,14 @@
     ],
     "createdAt": "2025-05-31T19:48:17.393887Z",
     "updatedAt": "2025-05-31T19:48:17.393887Z",
-    "rating": 4.9,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Domine+Bookshelf",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Domine+Bookshelf+1",
+      "https://placehold.co/1920x1080/png?text=Domine+Bookshelf+2",
+      "https://placehold.co/1920x1080/png?text=Domine+Bookshelf+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Xijiqi Wardrobe",
@@ -1654,13 +1730,14 @@
     ],
     "createdAt": "2025-02-08T15:24:17.393893Z",
     "updatedAt": "2025-02-08T15:24:17.393893Z",
-    "rating": 4.8,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Xijiqi+Wardrobe",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Xijiqi+Wardrobe+1",
+      "https://placehold.co/1920x1080/png?text=Xijiqi+Wardrobe+2",
+      "https://placehold.co/1920x1080/png?text=Xijiqi+Wardrobe+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Wuvemo Shelf",
@@ -1676,13 +1753,14 @@
     ],
     "createdAt": "2025-03-06T18:15:17.393899Z",
     "updatedAt": "2025-03-06T18:15:17.393899Z",
-    "rating": 3.4,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Wuvemo+Shelf",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Wuvemo+Shelf+1",
+      "https://placehold.co/1920x1080/png?text=Wuvemo+Shelf+2",
+      "https://placehold.co/1920x1080/png?text=Wuvemo+Shelf+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Lasuga Stand",
@@ -1698,13 +1776,14 @@
     ],
     "createdAt": "2025-02-27T04:57:17.393906Z",
     "updatedAt": "2025-02-27T04:57:17.393906Z",
-    "rating": 1.3,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Lasuga+Stand",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Lasuga+Stand+1",
+      "https://placehold.co/1920x1080/png?text=Lasuga+Stand+2",
+      "https://placehold.co/1920x1080/png?text=Lasuga+Stand+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Cudiki Wardrobe",
@@ -1720,13 +1799,14 @@
     ],
     "createdAt": "2025-02-15T23:11:17.393912Z",
     "updatedAt": "2025-02-15T23:11:17.393912Z",
-    "rating": 1.2,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Cudiki+Wardrobe",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Cudiki+Wardrobe+1",
+      "https://placehold.co/1920x1080/png?text=Cudiki+Wardrobe+2",
+      "https://placehold.co/1920x1080/png?text=Cudiki+Wardrobe+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Suvade Chair",
@@ -1742,13 +1822,14 @@
     ],
     "createdAt": "2025-01-02T01:38:17.393919Z",
     "updatedAt": "2025-01-02T01:38:17.393919Z",
-    "rating": 4.6,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Suvade+Chair",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Suvade+Chair+1",
+      "https://placehold.co/1920x1080/png?text=Suvade+Chair+2",
+      "https://placehold.co/1920x1080/png?text=Suvade+Chair+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Gupeqi Table",
@@ -1765,13 +1846,14 @@
     ],
     "createdAt": "2024-12-29T01:56:17.393925Z",
     "updatedAt": "2024-12-29T01:56:17.393925Z",
-    "rating": 4.7,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Gupeqi+Table",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Gupeqi+Table+1",
+      "https://placehold.co/1920x1080/png?text=Gupeqi+Table+2",
+      "https://placehold.co/1920x1080/png?text=Gupeqi+Table+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Voboxe Cabinet",
@@ -1785,13 +1867,14 @@
     ],
     "createdAt": "2024-12-25T08:10:17.393932Z",
     "updatedAt": "2024-12-25T08:10:17.393932Z",
-    "rating": 4.2,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Voboxe+Cabinet",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Voboxe+Cabinet+1",
+      "https://placehold.co/1920x1080/png?text=Voboxe+Cabinet+2",
+      "https://placehold.co/1920x1080/png?text=Voboxe+Cabinet+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Calave Vanity",
@@ -1807,13 +1890,14 @@
     ],
     "createdAt": "2025-05-26T21:16:17.393938Z",
     "updatedAt": "2025-05-26T21:16:17.393938Z",
-    "rating": 1.8,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Calave+Vanity",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Calave+Vanity+1",
+      "https://placehold.co/1920x1080/png?text=Calave+Vanity+2",
+      "https://placehold.co/1920x1080/png?text=Calave+Vanity+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Sayaxo Bench",
@@ -1829,13 +1913,14 @@
     ],
     "createdAt": "2025-03-27T05:03:17.393944Z",
     "updatedAt": "2025-03-27T05:03:17.393944Z",
-    "rating": 2.1,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Sayaxo+Bench",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Sayaxo+Bench+1",
+      "https://placehold.co/1920x1080/png?text=Sayaxo+Bench+2",
+      "https://placehold.co/1920x1080/png?text=Sayaxo+Bench+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Kotefa Box",
@@ -1850,13 +1935,14 @@
     ],
     "createdAt": "2025-01-10T15:29:17.393950Z",
     "updatedAt": "2025-01-10T15:29:17.393950Z",
-    "rating": 2.7,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Kotefa+Box",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Kotefa+Box+1",
+      "https://placehold.co/1920x1080/png?text=Kotefa+Box+2",
+      "https://placehold.co/1920x1080/png?text=Kotefa+Box+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Kivola Bench",
@@ -1872,13 +1958,14 @@
     ],
     "createdAt": "2025-02-14T03:37:17.393956Z",
     "updatedAt": "2025-02-14T03:37:17.393956Z",
-    "rating": 1.4,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Kivola+Bench",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Kivola+Bench+1",
+      "https://placehold.co/1920x1080/png?text=Kivola+Bench+2",
+      "https://placehold.co/1920x1080/png?text=Kivola+Bench+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Zagata Sofa",
@@ -1893,13 +1980,14 @@
     ],
     "createdAt": "2025-05-10T05:33:17.393964Z",
     "updatedAt": "2025-05-10T05:33:17.393964Z",
-    "rating": 1.3,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Zagata+Sofa",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Zagata+Sofa+1",
+      "https://placehold.co/1920x1080/png?text=Zagata+Sofa+2",
+      "https://placehold.co/1920x1080/png?text=Zagata+Sofa+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Dayotu Table",
@@ -1914,13 +2002,14 @@
     ],
     "createdAt": "2025-01-03T11:23:17.393974Z",
     "updatedAt": "2025-01-03T11:23:17.393974Z",
-    "rating": 3.4,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Dayotu+Table",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Dayotu+Table+1",
+      "https://placehold.co/1920x1080/png?text=Dayotu+Table+2",
+      "https://placehold.co/1920x1080/png?text=Dayotu+Table+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Peciqa Table",
@@ -1935,13 +2024,14 @@
     ],
     "createdAt": "2025-02-09T21:14:17.393984Z",
     "updatedAt": "2025-02-09T21:14:17.393984Z",
-    "rating": 3.6,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Peciqa+Table",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Peciqa+Table+1",
+      "https://placehold.co/1920x1080/png?text=Peciqa+Table+2",
+      "https://placehold.co/1920x1080/png?text=Peciqa+Table+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Guwifo Table",
@@ -1955,13 +2045,14 @@
     ],
     "createdAt": "2025-04-04T20:23:17.393996Z",
     "updatedAt": "2025-04-04T20:23:17.393996Z",
-    "rating": 2.2,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Guwifo+Table",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Guwifo+Table+1",
+      "https://placehold.co/1920x1080/png?text=Guwifo+Table+2",
+      "https://placehold.co/1920x1080/png?text=Guwifo+Table+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Cafuha Box",
@@ -1977,13 +2068,14 @@
     ],
     "createdAt": "2025-05-09T12:43:17.394014Z",
     "updatedAt": "2025-05-09T12:43:17.394014Z",
-    "rating": 1.9,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Cafuha+Box",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Cafuha+Box+1",
+      "https://placehold.co/1920x1080/png?text=Cafuha+Box+2",
+      "https://placehold.co/1920x1080/png?text=Cafuha+Box+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Nagiqu Desk",
@@ -1998,13 +2090,14 @@
     ],
     "createdAt": "2025-01-12T22:56:17.394022Z",
     "updatedAt": "2025-01-12T22:56:17.394022Z",
-    "rating": 3.9,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Nagiqu+Desk",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Nagiqu+Desk+1",
+      "https://placehold.co/1920x1080/png?text=Nagiqu+Desk+2",
+      "https://placehold.co/1920x1080/png?text=Nagiqu+Desk+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Tugoja Desk",
@@ -2019,13 +2112,14 @@
     ],
     "createdAt": "2025-05-20T08:59:17.394028Z",
     "updatedAt": "2025-05-20T08:59:17.394028Z",
-    "rating": 4.0,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Tugoja+Desk",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Tugoja+Desk+1",
+      "https://placehold.co/1920x1080/png?text=Tugoja+Desk+2",
+      "https://placehold.co/1920x1080/png?text=Tugoja+Desk+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Qewixe Table",
@@ -2039,13 +2133,14 @@
     ],
     "createdAt": "2025-06-03T15:19:17.394034Z",
     "updatedAt": "2025-06-03T15:19:17.394034Z",
-    "rating": 3.1,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Qewixe+Table",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Qewixe+Table+1",
+      "https://placehold.co/1920x1080/png?text=Qewixe+Table+2",
+      "https://placehold.co/1920x1080/png?text=Qewixe+Table+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Rakena Vanity",
@@ -2062,13 +2157,14 @@
     ],
     "createdAt": "2025-05-05T14:08:17.394040Z",
     "updatedAt": "2025-05-05T14:08:17.394040Z",
-    "rating": 4.8,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Rakena+Vanity",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Rakena+Vanity+1",
+      "https://placehold.co/1920x1080/png?text=Rakena+Vanity+2",
+      "https://placehold.co/1920x1080/png?text=Rakena+Vanity+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Sezaqu Table",
@@ -2084,13 +2180,14 @@
     ],
     "createdAt": "2025-01-02T09:29:17.394046Z",
     "updatedAt": "2025-01-02T09:29:17.394046Z",
-    "rating": 3.2,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Sezaqu+Table",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Sezaqu+Table+1",
+      "https://placehold.co/1920x1080/png?text=Sezaqu+Table+2",
+      "https://placehold.co/1920x1080/png?text=Sezaqu+Table+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Cuxuwu Bed",
@@ -2105,13 +2202,14 @@
     ],
     "createdAt": "2025-02-27T22:48:17.394053Z",
     "updatedAt": "2025-02-27T22:48:17.394053Z",
-    "rating": 2.8,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Cuxuwu+Bed",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Cuxuwu+Bed+1",
+      "https://placehold.co/1920x1080/png?text=Cuxuwu+Bed+2",
+      "https://placehold.co/1920x1080/png?text=Cuxuwu+Bed+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Beniva Basket",
@@ -2127,13 +2225,14 @@
     ],
     "createdAt": "2025-02-04T15:57:17.394060Z",
     "updatedAt": "2025-02-04T15:57:17.394060Z",
-    "rating": 4.9,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Beniva+Basket",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Beniva+Basket+1",
+      "https://placehold.co/1920x1080/png?text=Beniva+Basket+2",
+      "https://placehold.co/1920x1080/png?text=Beniva+Basket+3"
+    ],
+    "ratingQuantity": 0
   },
   {
     "name": "Xomehi Cabinet",
@@ -2149,12 +2248,13 @@
     ],
     "createdAt": "2025-03-30T23:58:17.394066Z",
     "updatedAt": "2025-03-30T23:58:17.394066Z",
-    "rating": 3.3,
-    "imageCoverUrl": "https://via.placeholder.com/600x400?text=Image+Cover",
+    "rating": 0,
+    "imageCoverUrl": "https://placehold.co/1920x1080/png?text=Xomehi+Cabinet",
     "imagesUrl": [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ]
+      "https://placehold.co/1920x1080/png?text=Xomehi+Cabinet+1",
+      "https://placehold.co/1920x1080/png?text=Xomehi+Cabinet+2",
+      "https://placehold.co/1920x1080/png?text=Xomehi+Cabinet+3"
+    ],
+    "ratingQuantity": 0
   }
 ]
