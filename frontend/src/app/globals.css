@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-beige-yellow: #f5f2ea;
+  --color-beige-yellow: #fcfaf5;
   --color-navi-blue: #3d5a80;
+  
 }

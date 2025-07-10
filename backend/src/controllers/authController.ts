@@ -72,6 +72,7 @@ export const signUp = catchAsync(
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       role: req.body.role,
+      phone: req.body.phone || "",
       cart: cart._id,
       wishlist: wishlist._id,
     })

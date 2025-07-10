@@ -1,11 +1,13 @@
 import { NextFunction, Request, Response } from "express"
-import User from "../models/userModel"
+import User, { IUser } from "../models/userModel"
 import catchAsync from "../utils/catchAsync"
 import { AppError } from "../utils/appError"
 import { createOne, deleteOne, getAll, updateOne } from "./handlerFactory"
 import multer, { FileFilterCallback } from "multer"
 import sharp from "sharp"
 import Product from "../models/productModel"
+import Cart, { CartDocument } from "../models/cartModel"
+import Wishlist, { WishlistDocument } from "../models/wishlistModel"
 
 // const multerStorage = multer.diskStorage({
 //   destination: (req, file, cb) => {
@@ -141,8 +143,39 @@ export const getUserById = catchAsync(
   }
 )
 
-export const createUser = createOne(User)
+export const createUser = catchAsync(
+  async (req: Request, res: Response, next: NextFunction) => {
 
+    const cart: CartDocument = await Cart.create({})
+    const wishlist: WishlistDocument = await Wishlist.create({})
+    
+    const newUser: IUser = await User.create({
+      email: req.body.email,
+      password: req.body.password,
+      confirmPassword: req.body.confirmPassword,
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      role: req.body.role,
+      phone: req.body.phone || "",
+      cart: cart._id,
+      wishlist: wishlist._id,
+    })
+    
+    cart.user = newUser._id
+    await cart.save()
+    
+    wishlist.user = newUser._id
+    await wishlist.save()
+
+    res.status(201).json({
+      status: "success",
+      data: {
+        data: newUser,
+      },
+    })
+  }
+)
+    
 export const updateUser = updateOne(User)
 
 export const deleteUser = deleteOne(User)

@@ -67,10 +67,10 @@ export default function AdminHeader() {
             </button>
             <button className="flex items-center gap-2 hover:bg-gray-200 hover:cursor-pointer font-medium transition-colors focus:outline-none p-2 rounded-sm">
               <Link
-                href="/create-product"
+                href="/add"
                 className="text-furniture-charcoal hover:red font-medium transition-colors"
               >
-                Create Product
+                Add
               </Link>
             </button>
             <button className="flex items-center gap-2 hover:bg-gray-200 hover:cursor-pointer font-medium transition-colors focus:outline-none p-2 rounded-sm">
@@ -106,11 +106,11 @@ export default function AdminHeader() {
                 Dashboard
               </Link>
               <Link
-                href="/create-product"
+                href="/add"
                 className="text-furniture-charcoal hover:red font-medium transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
-                Create Product
+                Add
               </Link>
               <Link
                 href="/lookup"
@@ -120,9 +120,7 @@ export default function AdminHeader() {
                 Look Up
               </Link>
               <NavUserButton isMobile={true} />
-              <Link href={"/"}>
-                  View Store
-              </Link>
+              <Link href={"/"}>View Store</Link>
             </nav>
           </div>
         )}
