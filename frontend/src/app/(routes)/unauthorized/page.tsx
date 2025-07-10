@@ -1,5 +1,3 @@
-import Link from "next/link"
-
 export default function UnauthorizedPage() {
   return (
     <section className="relative w-full h-screen flex items-center">

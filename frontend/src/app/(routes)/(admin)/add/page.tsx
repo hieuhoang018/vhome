@@ -7,7 +7,7 @@ export default function AddModelsPage() {
         Add New
       </h1>
       <h2 className="text-2xl mb-6">
-        Choose what you'd like to add to your system
+        Choose what you&apos;d like to add to your system
       </h2>
       <div className="flex flex-col md:flex-row gap-6">
         <AddBlock title="Add Product" subtitle="Create a new product for your furniture store" linkTo="/create-product"/>
