@@ -68,14 +68,22 @@ export default function CreateUserForm() {
         </div>
         <div className="rounded-lg bg-gray-100 border shadow-sm px-4 py-7">
           <h2 className="font-bold text-2xl mb-4">Security Settings</h2>
-          <InputField
-            label="Role"
-            placeholder="user"
-            inputType="text"
-            name="role"
-            value={formData.role}
-            onChange={handleChange}
-          />
+          <div className="mb-4">
+            <label className="block text-sm font-medium mb-1" htmlFor="role">
+              Role
+            </label>
+            <select
+              id="role"
+              name="role"
+              value={formData.role}
+              onChange={handleChange}
+              className="w-full border rounded-lg px-3 py-2"
+            >
+              <option value="">Select role</option>
+              <option value="user">User</option>
+              <option value="admin">Admin</option>
+            </select>
+          </div>
           <InputField
             label="Password"
             inputType="text"

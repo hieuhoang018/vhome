@@ -78,7 +78,6 @@ export const getMe = (req: Request, res: Response, next: NextFunction) => {
 
 export const updateMe = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
-    console.log(req.body);
     if (!req.body) {
       return next(new AppError("No data provided", 400))
     }
@@ -91,16 +90,15 @@ export const updateMe = catchAsync(
         )
       )
     }
-    console.log("reached here");
-    const allowedFields = ["firstName", "lastName", "email", "phone"];
-    const filteredBody: any = {};
+    const allowedFields = ["firstName", "lastName", "email", "phone"]
+    const filteredBody: any = {}
 
     allowedFields.forEach((field) => {
-      const value = req.body[field];
+      const value = req.body[field]
       if (value !== undefined && value !== "") {
-        filteredBody[field] = value;
+        filteredBody[field] = value
       }
-    });
+    })
 
     if (req.file) filteredBody.photo = req.file.filename
 
@@ -145,10 +143,6 @@ export const getUserById = catchAsync(
 
 export const createUser = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
-
-    const cart: CartDocument = await Cart.create({})
-    const wishlist: WishlistDocument = await Wishlist.create({})
-    
     const newUser: IUser = await User.create({
       email: req.body.email,
       password: req.body.password,
@@ -157,13 +151,19 @@ export const createUser = catchAsync(
       lastName: req.body.lastName,
       role: req.body.role,
       phone: req.body.phone || "",
-      cart: cart._id,
-      wishlist: wishlist._id,
+      // cart: cart._id,
+      // wishlist: wishlist._id,
     })
-    
+
+    const cart: CartDocument = await Cart.create({})
+    const wishlist: WishlistDocument = await Wishlist.create({})
+
+    newUser.cart = cart._id
+    newUser.wishlist = wishlist._id
+
     cart.user = newUser._id
     await cart.save()
-    
+
     wishlist.user = newUser._id
     await wishlist.save()
 
@@ -175,7 +175,7 @@ export const createUser = catchAsync(
     })
   }
 )
-    
+
 export const updateUser = updateOne(User)
 
 export const deleteUser = deleteOne(User)
