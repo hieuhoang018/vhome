@@ -24,7 +24,19 @@ A fullstack application built with a **Next.js (TypeScript)** frontend and an **
 - Responsive UI
 - Type-safe with TypeScript
 - Database integration MongoDB
-- [Add more features here]
+- Dockerization for easy deployment
+
+### App-Specific Features
+
+- Product catalog with categories and search functionality
+- Product detail pages with images, descriptions, and reviews
+- Shopping cart with add, update, and remove item capabilities
+- Wishlist management for saving favorite products
+- Secure checkout process with Stripe payment integration
+- Order history and tracking for users
+- Admin dashboard for managing products, orders, and users
+- Admin lookup pages for reviewing, editing and removing products, orders, carts and users
+- Email notifications for order confirmations and password resets
 
 ---
 
