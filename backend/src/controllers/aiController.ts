@@ -12,18 +12,13 @@ export const completeRecommendedRoom = catchAsync(
     }
 
     const anchor = await Product.findById(productId).lean()
-    console.log(anchor)
     if (
       !anchor ||
       !Array.isArray(anchor.embedding) ||
       anchor.embedding.length === 0
     ) {
-      console.log(anchor?.embedding)
-      console.log("reached if block")
       return res.json({ results: [] })
     }
-
-    console.log("reached here")
 
     const results = await Product.aggregate([
       {
