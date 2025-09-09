@@ -4,7 +4,8 @@ import { useEffect, useState } from "react"
 import Link from "next/link"
 import api from "@/lib/axios"
 import { Product } from "@/types/products"
-
+import Image from "next/image"
+import axios from "axios"
 
 export default function CompleteTheRoom({ productId }: { productId: string }) {
   const [items, setItems] = useState<Product[]>([])
@@ -20,8 +21,10 @@ export default function CompleteTheRoom({ productId }: { productId: string }) {
           { params: { productId } }
         )
         if (!cancelled) setItems(res.data.results || [])
-      } catch (e: any) {
-        if (!cancelled) setError(e?.response?.data?.error || "Failed to load")
+      } catch (err) {
+        if (axios.isAxiosError(err)) {
+        setError(err.response?.data.message)
+      }
       } finally {
         if (!cancelled) setLoading(false)
       }
@@ -44,7 +47,7 @@ export default function CompleteTheRoom({ productId }: { productId: string }) {
             className="min-w-[220px] max-w-[220px] border rounded-lg p-3 hover:shadow transition"
           >
             <div className="bg-gray-100 overflow-hidden rounded">
-              <img
+              <Image
                 src={item.imageCoverUrl}
                 alt={item.name}
                 className="w-full h-full object-cover"
