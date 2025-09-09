@@ -21,6 +21,7 @@ export interface IProduct {
   colors: string[]
   ratingQuantity: number
   rating: number
+  embedding?: number[]
 }
 
 const productSchema = new mongoose.Schema<IProduct>(
@@ -70,6 +71,11 @@ const productSchema = new mongoose.Schema<IProduct>(
       min: [0, "Rating must be above 0"],
       max: [5, "Rating must be below 5.0"],
       set: (val: number) => Math.round(val * 10) / 10,
+    },
+    embedding: {
+      type: [Number],
+      default: undefined,
+      select: true,
     },
   },
   {

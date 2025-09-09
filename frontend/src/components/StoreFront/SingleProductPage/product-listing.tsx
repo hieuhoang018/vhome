@@ -12,6 +12,7 @@ import ReviewForm from "./review-form"
 import ReviewListing from "./reviews-listing"
 import ImageSlider from "./image-slider"
 import axios from "axios"
+import CompleteTheRoom from "./recommendation-section"
 
 export default function ProductListingSection() {
   const [product, setProduct] = useState<Product>()
@@ -98,7 +99,7 @@ export default function ProductListingSection() {
         <ArrowLeft className="h-4" />
         Back to shopping
       </Link>
-      <div className="flex flex-col md:flex-row gap-8 mt-5 mb-20">
+      <div className="flex flex-col md:flex-row gap-8 mt-5 mb-5">
         <ImageSlider product={product} />
         <div className="flex-1">
           <h1 className="text-7xl font-serif mb-10">{product.name}</h1>
@@ -152,6 +153,7 @@ export default function ProductListingSection() {
           </div>
         </div>
       </div>
+      <CompleteTheRoom productId={_id} />
       <ReviewForm productId={_id} />
       <ReviewListing product={product} />
     </>
