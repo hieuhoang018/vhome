@@ -16,13 +16,17 @@ export default function ReviewForm({ productId }: { productId: string }) {
       },
       onSubmit: async (data) => {
         await api.post(`/products/${productId}/reviews`, data)
+        setRating(0)
+        setField("rating", 0)
+        setField("review", "")
+        
         toast.success("Review submitted")
       },
     })
 
   return (
     <div className="mb-20">
-      <h1 className="mb-3 text-3xl">Write a Review</h1>
+      <h1 className="mb-3 text-3xl font-bold">Write a Review</h1>
       <form onSubmit={handleSubmit} className="border rounded-lg p-6">
         <div className="mb-4">
           <label className="block mb-1 font-medium" htmlFor="star-rating">

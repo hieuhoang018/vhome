@@ -5,7 +5,7 @@ import StarRatingDisplay from "./star-rating-display"
 export default function ReviewListing({ product }: { product: Product }) {
   return (
     <div className="">
-      <h1 className="mb-3 text-3xl">Customers Reviews</h1>
+      <h1 className="mb-3 text-3xl font-bold">Customers Reviews</h1>
       <div className="flex flex-row gap-5 mb-4">
         <StarRatingDisplay rating={product.rating} />
         <h2 className="font-medium">{product.rating} out of 5</h2>
