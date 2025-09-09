@@ -6,9 +6,26 @@ import api from "@/lib/axios"
 import InputField from "../../input"
 import { toast } from "sonner"
 import { useRouter } from "next/navigation"
+import { useState } from "react"
 
 export default function CreateProductForm() {
+  const [colors, setColors] = useState<string[]>([])
+  const [colorInput, setColorInput] = useState("")
   const router = useRouter()
+
+  const addColor = () => {
+    if (colorInput.trim() && !colors.includes(colorInput.trim())) {
+      setColors([
+        ...colors,
+        colorInput
+          .trim()
+          .toLowerCase()
+          .replace(/\b\w/g, (char) => char.toUpperCase()),
+      ])
+      setColorInput("")
+    }
+  }
+
   const { formData, handleChange, handleSubmit, error, loading } =
     useFormSubmit({
       initialData: {
@@ -17,11 +34,12 @@ export default function CreateProductForm() {
         category: "",
         price: "",
         stock: "",
-        colors: "",
+        colors: colors,
         imageCoverUrl: "",
       },
       onSubmit: async (data) => {
-        await api.post("/products", data)
+        const submitData = { ...data, colors }
+        await api.post("/products", submitData)
         toast.success("Product created")
         router.push("/dashboard")
       },
@@ -76,17 +94,43 @@ export default function CreateProductForm() {
             onChange={handleChange}
           />
           <div className="space-y-2">
-            <h3 className="mb-1">Available Colors</h3>
+            <h3 className="mb-1 font-semibold">Available Colors</h3>
             <div className="flex gap-2">
               <input
-                name="colors"
-                value={formData.colors}
-                onChange={handleChange}
-                className="border rounded-sm px-3 py-1 w-full mb-3"
+                className="border rounded-lg px-3 py-1 w-full"
                 placeholder="Enter color name"
+                value={colorInput}
+                onChange={(e) => setColorInput(e.target.value)}
               />
-              <Plus className="h-4 w-4" />
+              <button
+                type="button"
+                onClick={addColor}
+                className="flex items-center justify-center border px-2 rounded-lg hover:bg-gray-300 cursor-pointer"
+              >
+                <Plus className="h-4 w-4" />
+              </button>
             </div>
+            {colors.length > 0 && (
+              <div className="flex flex-wrap gap-2 mt-2">
+                {colors.map((color, index) => (
+                  <span
+                    key={index}
+                    className="border bg-blue-100 px-2 py-1 rounded-md text-sm flex items-center gap-1"
+                  >
+                    {color}
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setColors(colors.filter((_, i) => i !== index))
+                      }
+                      className="text-red-600 hover:text-red-800 ml-1 cursor-pointer"
+                    >
+                      x
+                    </button>
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>

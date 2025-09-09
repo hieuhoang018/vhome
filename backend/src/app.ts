@@ -4,6 +4,8 @@ import userRoutes from "./routes/userRouter"
 import reviewRoutes from "./routes/reviewRouter"
 import cartRoutes from "./routes/cartRouter"
 import orderRoutes from "./routes/orderRouter"
+import adminEmbeddingRouter from "./routes/adminEmbeddingRouter"
+import recommendRouter from "./routes/recommendRouter"
 import cors from "cors"
 import morgan from "morgan"
 import rateLimit from "express-rate-limit"
@@ -47,6 +49,8 @@ app.use("/api/v1/users", userRoutes)
 app.use("/api/v1/reviews", reviewRoutes)
 app.use("/api/v1/carts", cartRoutes)
 app.use("/api/v1/orders", orderRoutes)
+app.use("/api/v1/admin", adminEmbeddingRouter)
+app.use("/api/v1/recommend", recommendRouter)
 
 app.use((req: Request, res: Response, next: NextFunction) => {
   next(new AppError(`Cannot find ${req.originalUrl} on this server!`, 404))
