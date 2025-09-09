@@ -23,22 +23,29 @@ export default function CompleteTheRoom({ productId }: { productId: string }) {
         if (!cancelled) setItems(res.data.results || [])
       } catch (err) {
         if (axios.isAxiosError(err)) {
-        setError(err.response?.data.message)
-      }
+          setError(err.response?.data.message)
+        }
       } finally {
         if (!cancelled) setLoading(false)
       }
     }
     load()
-    return () => { cancelled = true }
+    return () => {
+      cancelled = true
+    }
   }, [productId])
 
-  if (loading) return <div className="mt-10 text-sm text-gray-500">Loading complementary items…</div>
+  if (loading)
+    return (
+      <div className="mt-10 text-sm text-gray-500">
+        Loading complementary items…
+      </div>
+    )
   if (error || items.length === 0) return null
 
   return (
     <section className="mt-12 mb-20">
-      <h3 className="mb-3 text-3xl">Complete the room</h3>
+      <h3 className="mb-3 text-3xl font-bold">Complete the room</h3>
       <div className="flex gap-4 overflow-x-auto pb-2">
         {items.map((item) => (
           <Link
@@ -50,6 +57,8 @@ export default function CompleteTheRoom({ productId }: { productId: string }) {
               <Image
                 src={item.imageCoverUrl}
                 alt={item.name}
+                width={1080}
+                height={1920}
                 className="w-full h-full object-cover"
               />
             </div>

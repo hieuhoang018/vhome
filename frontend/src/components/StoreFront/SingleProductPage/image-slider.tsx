@@ -17,7 +17,7 @@ export default function ImageSlider({ product }: { product: Product }) {
         className="w-full h-130 object-cover rounded-lg"
       />
       {/* Thumbnails */}
-      <div className="flex flex-row gap-2 mt-2">
+      <div className="flex flex-row flex-wrap gap-2 mt-2">
         <Image
           src={product.imageCoverUrl}
           alt={product.name}
