@@ -140,6 +140,22 @@ export default function CreateProductForm() {
           <h2 className="font-bold text-2xl ">Product Image</h2>
           <h3 className="text-gray-500">Please enter URL or upload file</h3>
         </div>
+        <div className="mb-4">
+          <label className="block font-semibold mb-2">Upload Image File</label>
+          <input
+            type="file"
+            accept="image/*"
+            className="border rounded-lg px-3 py-2 w-full file:mr-4 file:px-4 file:py-2 file:rounded-md 
+             file:border-0 file:bg-gray-200 file:text-gray-700 
+             hover:file:bg-gray-300"
+            onChange={async (e) => {
+              const file = e.target.files?.[0]
+              if (!file) return
+              const formData = new FormData()
+              formData.append("file", file)
+            }}
+          />
+        </div>
         <InputField
           label="Cover Image"
           placeholder="https://example.com"
