@@ -9,9 +9,8 @@ A fullstack application built with a **Next.js (TypeScript)** frontend and an **
 - [Features](#features)
 - [Screenshots](#screenshots)
 - [Tech Stack](#tech-stack)
-- [Installation](#installation)
+- [Installation and Running the App](#installation)
 - [Environment Variables](#environment-variables)
-- [Running the App](#running-the-app)
 - [API Documentation](#api-documentation)
 - [Contact](#contact)
 
@@ -30,6 +29,7 @@ A fullstack application built with a **Next.js (TypeScript)** frontend and an **
 
 - Product catalog with categories and search functionality
 - Product detail pages with images, descriptions, and reviews
+- AI-powered recommendation of complimentary items based on chosen items
 - Shopping cart with add, update, and remove item capabilities
 - Wishlist management for saving favorite products
 - Secure checkout process with Stripe payment integration
@@ -41,8 +41,30 @@ A fullstack application built with a **Next.js (TypeScript)** frontend and an **
 ---
 
 ## 🖼️ Screenshots
+**Home Page**
+![Home Page](./images/hero-section.png)
 
-_(Add screenshots or GIFs here to showcase your app)_
+**Product Catalog**
+![Product Catalog](./images/shop-section.png)
+
+**Product Detail**
+![Product Detail](./images/single-product-section.png)
+
+**Cart Section**
+![Cart Section](./images/cart-section.png)
+
+**Account Settings**
+![Account Settings](./images/account-settings.png)
+
+**Admin Dashboard**
+![Admin Dashboard](./images/admin-dashboard.png)
+
+**Admin Create Forms**
+![Product Form](./images/product-form.png)
+![User Form](./images/user-form.png)
+
+**Admin Lookup Section**
+![Lookup Section](./images/lookup-section.png)
 
 ---
 
@@ -51,16 +73,17 @@ _(Add screenshots or GIFs here to showcase your app)_
 - **Frontend:** Next.js (TypeScript)
 - **Backend:** Express.js (TypeScript)
 - **Database:** MongoDB
-- **Other tools:** Tailwind CSS, JSON Web Token, Stripe API, NodeMailer, Axios
+- **Other tools:** Tailwind CSS, JSON Web Token, Stripe API, NodeMailer, Axios, OpenAI API
 
 ---
 
-## ⚙️ Installation
+## ⚙️ Installation and Running the App
 
 ### Prerequisites
 
 - Node.js >= 18
 - npm / pnpm / yarn
+- **Or:** [Docker](https://www.docker.com/) (for containerized setup)
 
 ### Clone the repository
 
@@ -68,17 +91,30 @@ _(Add screenshots or GIFs here to showcase your app)_
 git clone https://github.com/hieuhoang018/vhome.git
 ```
 
-### Install dependencies
+### Using NPM
 
 ```bash
 # install frontend
 cd frontend
 npm install
+npm run dev
 
 # install backend
 cd ../backend
 npm install
+npm run dev
 ```
+
+### Run with Docker (optional)
+
+```bash
+# from the project root
+docker compose --profile dev up
+or
+docker compose --profile prod up
+```
+
+This will build and start both frontend and backend containers.
 
 ---
 
@@ -113,35 +149,8 @@ STRIPE_SECRET_KEY=your_stripe_secret_key_here
 
 FRONTEND_URL=http://localhost:3000
 
-```
+OPENAI_API_KEY=
 
----
-
-## ▶️ Running the App
-
-### Development
-
-```bash
-# start backend
-cd backend
-npm run dev
-
-# start frontend
-cd frontend
-npm run dev
-```
-
-### Production
-
-```bash
-# build backend
-cd backend
-npm run build
-
-# build and start frontend
-cd frontend
-npm run build
-npm start
 ```
 
 ---
@@ -177,6 +186,7 @@ DEL /api/v1/users/delete-account : Delete Current User
 ```
 GET /api/v1/products : Get All Product
 GET /api/v1/products/:id : Get Product By ID
+GET /api/v1/recommend/complete-room/:id : Get AI Recommended Items
 POST /api/v1/products : Create New Product
 PATCH /api/v1/products/:id : Update Product
 DEL /api/v1/products/:id : Delete Product
